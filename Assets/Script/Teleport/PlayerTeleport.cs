@@ -8,24 +8,20 @@ public class PlayerTeleport : MonoBehaviour
     private GameObject currentTeleporter;
     public GameObject fadeEffect;
 
-    private void Start()
-    {
-        //test.GetComponent<FadeScript>();
-    }
     // Update is called once per frame
     void Update()
     {
         // 위 화살표 누르고 현재 currentTeleporter가 null이 아니라면 목적지 위치로 이동
         // Invoke 기능을 사용하여 0.5초뒤에 이동
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            
+            this.GetComponent<PlayerController>().playerMove = false;
             if (currentTeleporter != null)
             {
                 fadeEffect.GetComponent<FadeScript>().Fade();
-                this.GetComponent<PlayerController>().playerMove = false;
-                Invoke("MovePosition", 0.5f);
-                
+
+                Invoke("MovePosition", 1.5f);
+
             }
         }
     }
@@ -42,6 +38,8 @@ public class PlayerTeleport : MonoBehaviour
         {
             currentTeleporter = collision.gameObject;
         }
+
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
