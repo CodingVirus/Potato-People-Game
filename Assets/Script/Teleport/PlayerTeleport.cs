@@ -13,13 +13,13 @@ public class PlayerTeleport : MonoBehaviour
     {
         // 위 화살표 누르고 현재 currentTeleporter가 null이 아니라면 목적지 위치로 이동
         // Invoke 기능을 사용하여 0.5초뒤에 이동
-        if (Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            this.GetComponent<PlayerController>().playerMove = false;
+            
             if (currentTeleporter != null)
             {
                 fadeEffect.GetComponent<FadeScript>().Fade();
-
+                this.GetComponent<PlayerController>().playerMove = false;
                 Invoke("MovePosition", 1.5f);
 
             }

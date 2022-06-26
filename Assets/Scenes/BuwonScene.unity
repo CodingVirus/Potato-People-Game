@@ -607,11 +607,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.4
+      value: -10.31
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3
+      value: -22.64
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -933,8 +933,8 @@ GameObject:
   m_Component:
   - component: {fileID: 254589845}
   - component: {fileID: 254589844}
-  - component: {fileID: 254589843}
   - component: {fileID: 254589842}
+  - component: {fileID: 254589846}
   m_Layer: 0
   m_Name: stairs 1_2 (1)
   m_TagString: Door
@@ -955,19 +955,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 573516580}
---- !u!65 &254589843
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 254589841}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.186455, y: 4.0027895, z: 0.2}
-  m_Center: {x: -0.0063056946, y: -0.1260348, z: 0}
 --- !u!212 &254589844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1036,6 +1023,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &254589846
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 254589841}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10441208, y: -0.06264782}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.14, y: 5.49}
+    newSize: {x: 7.14, y: 5.49}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.926445, y: 3.944683}
+  m_EdgeRadius: 0
 --- !u!1 &331696331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1807,8 +1820,8 @@ GameObject:
   m_Component:
   - component: {fileID: 718924198}
   - component: {fileID: 718924201}
-  - component: {fileID: 718924200}
   - component: {fileID: 718924199}
+  - component: {fileID: 718924202}
   m_Layer: 0
   m_Name: door1
   m_TagString: Door
@@ -1824,7 +1837,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 718924197}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 140.39787, y: 51.373215, z: 0}
+  m_LocalPosition: {x: 140.39786, y: 51.373215, z: 0}
   m_LocalScale: {x: 1.7479461, y: 1.7479461, z: 1.7479461}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1845,19 +1858,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1476001270}
---- !u!65 &718924200
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 718924197}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.7133969, y: 3.4922485, z: 0.20000345}
-  m_Center: {x: 0.0060056457, y: -0.090142794, z: 0}
 --- !u!212 &718924201
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1910,6 +1910,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &718924202
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 718924197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.09278059, y: -0.06185174}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.36, y: 4.61}
+    newSize: {x: 3.36, y: 4.61}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6899989, y: 3.6203704}
+  m_EdgeRadius: 0
 --- !u!1 &760909152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,7 +2370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 955631125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.000008729553, y: -1.77, z: 0}
+  m_LocalPosition: {x: -0.000008729553, y: -1.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2887,7 +2913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1404958693}
   - component: {fileID: 1404958692}
-  - component: {fileID: 1404958691}
+  - component: {fileID: 1404958694}
   m_Layer: 0
   m_Name: stairs 1_2
   m_TagString: Door
@@ -2895,19 +2921,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1404958691
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404958690}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.186455, y: 4.0027895, z: 0.2}
-  m_Center: {x: -0.0063056946, y: -0.1260348, z: 0}
 --- !u!212 &1404958692
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2975,6 +2988,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1404958694
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404958690}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.083530426, y: -0.041765213}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.14, y: 5.49}
+    newSize: {x: 7.14, y: 5.49}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.717613, y: 4.2370396}
+  m_EdgeRadius: 0
 --- !u!1 &1474223833
 GameObject:
   m_ObjectHideFlags: 0
