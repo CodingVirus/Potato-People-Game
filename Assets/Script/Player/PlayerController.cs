@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     bool facingRight = true;
 
     // 텔레포트 하는 동안 움직임 멈추기 위한 bool 변수.
-    public bool playerMove = true;
+    public bool playerMove = false;
 
     Animator anim;
 
