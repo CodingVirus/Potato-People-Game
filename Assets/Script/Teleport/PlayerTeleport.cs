@@ -21,7 +21,7 @@ public class PlayerTeleport : MonoBehaviour
                 currentTeleporter.GetComponent<AudioSource>().Play();
                 fadeEffect.GetComponent<FadeScript>().Fade();
                 this.GetComponent<PlayerController>().speed = 0.0f;
-
+              
                 Invoke("MovePosition", 1.3f);
             }
         }
