@@ -20,7 +20,7 @@ public class PlayerTeleport : MonoBehaviour
             {
                 fadeEffect.GetComponent<FadeScript>().Fade();
                 this.GetComponent<PlayerController>().playerMove = false;
-                Invoke("MovePosition", 1.5f);
+                Invoke("MovePosition", 1.3f);
 
             }
         }
