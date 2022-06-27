@@ -23,7 +23,7 @@ public class PlayerTeleport : MonoBehaviour
                 this.GetComponent<PlayerController>().speed = 0.0f;
 
 
-                Invoke("MovePosition", 1.5f);
+                Invoke("MovePosition", 1.3f);
             }
         }
     }
