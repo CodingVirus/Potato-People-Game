@@ -20,8 +20,9 @@ public class PlayerTeleport : MonoBehaviour
             {
                 currentTeleporter.GetComponent<AudioSource>().Play();
                 fadeEffect.GetComponent<FadeScript>().Fade();
-                this.GetComponent<PlayerController>().playerMove = false;
-                
+                this.GetComponent<PlayerController>().speed = 0.0f;
+
+
                 Invoke("MovePosition", 1.5f);
             }
         }
@@ -30,7 +31,7 @@ public class PlayerTeleport : MonoBehaviour
     private void MovePosition()
     {
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
-        this.GetComponent<PlayerController>().playerMove = true;
+        this.GetComponent<PlayerController>().speed = 6.0f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
