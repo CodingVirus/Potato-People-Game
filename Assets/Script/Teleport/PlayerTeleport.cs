@@ -15,13 +15,14 @@ public class PlayerTeleport : MonoBehaviour
         // Invoke 기능을 사용하여 0.5초뒤에 이동
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            
+
             if (currentTeleporter != null)
             {
+                //currentTeleporter.GetComponent<AudioSource>().Play();
                 fadeEffect.GetComponent<FadeScript>().Fade();
-                this.GetComponent<PlayerController>().playerMove = false;
-                Invoke("MovePosition", 1.3f);
+                this.GetComponent<PlayerController>().speed = 0.0f;
 
+                Invoke("MovePosition", 1.3f);
             }
         }
     }
@@ -29,7 +30,7 @@ public class PlayerTeleport : MonoBehaviour
     private void MovePosition()
     {
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
-        this.GetComponent<PlayerController>().playerMove = true;
+        this.GetComponent<PlayerController>().speed = 6.0f;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -39,7 +40,7 @@ public class PlayerTeleport : MonoBehaviour
             currentTeleporter = collision.gameObject;
         }
 
-        
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

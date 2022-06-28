@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 6.0f;
+    public float speed = 6.0f;
     Rigidbody2D rb;
     bool facingRight = true;
 
@@ -41,6 +41,11 @@ public class PlayerController : MonoBehaviour
                 anim.SetBool("isWalking", true);
             }
             else
+            {
+                anim.SetBool("isWalking", false);
+            }
+
+            if (speed == 0)
             {
                 anim.SetBool("isWalking", false);
             }
