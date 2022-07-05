@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject drugCombiner;
     public float speed = 6.0f;
     Rigidbody2D rb;
     bool facingRight = true;
@@ -56,5 +57,16 @@ public class PlayerController : MonoBehaviour
     {
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         facingRight = !facingRight;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DrugCombiner"))
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                drugCombiner.SetActive(true);
+            }
+        }
     }
 }
