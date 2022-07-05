@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public GameObject drugCombiner;
+    //public GameObject drugCombiner;
     public float speed = 6.0f;
     Rigidbody2D rb;
     bool facingRight = true;
@@ -65,8 +65,15 @@ public class PlayerController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                drugCombiner.SetActive(true);
+                collision.transform.GetChild(0).gameObject.SetActive(true);
+                //drugCombiner.SetActive(true);
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                collision.transform.GetChild(0).gameObject.SetActive(false);
+                //drugCombiner.SetActive(false);
             }
         }
+
     }
 }

@@ -2467,7 +2467,7 @@ GameObject:
   - component: {fileID: 1594683266910176691}
   - component: {fileID: 1594683266910176690}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: DrugCombinerUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
