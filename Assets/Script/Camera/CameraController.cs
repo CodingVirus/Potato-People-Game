@@ -17,6 +17,6 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         // camera가 player를 따라감
-        transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y + 2.5f, transform.position.z);
+        transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y + 5.5f, transform.position.z);
     }
 }
