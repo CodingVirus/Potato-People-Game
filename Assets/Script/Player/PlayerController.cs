@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+<<<<<<< HEAD
+=======
+    //public GameObject drugCombiner;
+>>>>>>> f1e5708da954cdb7c366cf61f84f05b726d64c2b
     public float speed = 6.0f;
     Rigidbody2D rb;
     bool facingRight = true;
@@ -41,9 +45,25 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isWalking", false);
         }
 
+<<<<<<< HEAD
         if (speed == 0)
         {
             anim.SetBool("isWalking", false);
+=======
+            if (input != 0)
+            {
+                anim.SetBool("isWalking", true);
+            }
+            else
+            {
+                anim.SetBool("isWalking", false);
+            }
+
+            if (speed == 0)
+            {
+                anim.SetBool("isWalking", false);
+            }
+>>>>>>> f1e5708da954cdb7c366cf61f84f05b726d64c2b
         }
     }
 
@@ -51,5 +71,23 @@ public class PlayerController : MonoBehaviour
     {
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         facingRight = !facingRight;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DrugCombiner"))
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                collision.transform.GetChild(0).gameObject.SetActive(true);
+                //drugCombiner.SetActive(true);
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                collision.transform.GetChild(0).gameObject.SetActive(false);
+                //drugCombiner.SetActive(false);
+            }
+        }
+
     }
 }
