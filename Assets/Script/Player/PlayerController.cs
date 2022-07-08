@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-<<<<<<< HEAD
-=======
     //public GameObject drugCombiner;
->>>>>>> f1e5708da954cdb7c366cf61f84f05b726d64c2b
     public float speed = 6.0f;
     Rigidbody2D rb;
     bool facingRight = true;
@@ -45,11 +42,9 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("isWalking", false);
         }
 
-<<<<<<< HEAD
         if (speed == 0)
         {
             anim.SetBool("isWalking", false);
-=======
             if (input != 0)
             {
                 anim.SetBool("isWalking", true);
@@ -63,7 +58,7 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetBool("isWalking", false);
             }
->>>>>>> f1e5708da954cdb7c366cf61f84f05b726d64c2b
+
         }
     }
 
