@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    //public GameObject drugCombiner;
+    private GameObject drugCombiner;
     public float speed = 6.0f;
     Rigidbody2D rb;
     bool facingRight = true;
+
+    Vector3 mousePos, transPos, targetPos;
 
     Animator anim;
 
@@ -17,8 +19,20 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    void CalTargetPos()
+    {
+        mousePos = Input.mousePosition;
+        transPos = Camera.main.ScreenToWorldPoint(mousePos);
+        targetPos = new Vector3(transPos.x, transPos.y, 0);
+    }
+
+    void MoveToTarget()
+    {
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime + speed);
+    }
     private void Update()
     {
+
 
         float input = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(input * speed, rb.velocity.y);
@@ -60,6 +74,21 @@ public class PlayerController : MonoBehaviour
             }
 
         }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (drugCombiner != null)
+            {
+                drugCombiner.SetActive(true);
+            }
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (drugCombiner != null)
+            {
+                drugCombiner.SetActive(false);
+            }
+        }
     }
 
     void Flip()
@@ -72,17 +101,16 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.CompareTag("DrugCombiner"))
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                collision.transform.GetChild(0).gameObject.SetActive(true);
-                //drugCombiner.SetActive(true);
-            }
-            else if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                collision.transform.GetChild(0).gameObject.SetActive(false);
-                //drugCombiner.SetActive(false);
-            }
+            drugCombiner = collision.gameObject.transform.GetChild(0).gameObject;
         }
 
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DrugCombiner"))
+        {
+            drugCombiner = null;
+        }
     }
 }
