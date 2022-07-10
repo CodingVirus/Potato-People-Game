@@ -1131,6 +1131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DrugCombinerUI
       objectReference: {fileID: 0}
+    - target: {fileID: 1594683266910176689, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1594683266910176691, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
       propertyPath: m_UiScaleMode
       value: 0
