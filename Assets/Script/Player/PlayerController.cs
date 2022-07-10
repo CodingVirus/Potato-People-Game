@@ -80,6 +80,7 @@ public class PlayerController : MonoBehaviour
             if (drugCombiner != null)
             {
                 drugCombiner.SetActive(true);
+                speed = 0;
             }
         }
         else if(Input.GetKeyDown(KeyCode.Escape))
@@ -87,6 +88,7 @@ public class PlayerController : MonoBehaviour
             if (drugCombiner != null)
             {
                 drugCombiner.SetActive(false);
+                speed = 6.0f;
             }
         }
     }
