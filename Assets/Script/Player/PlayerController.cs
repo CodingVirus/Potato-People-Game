@@ -9,7 +9,11 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rb;
     bool facingRight = true;
 
-    Vector3 mousePos, transPos, targetPos;
+    Vector3 mousePosition;
+    Vector2 dir;
+    Vector3 storeYpos;
+
+    bool playerMove = true;
 
     Animator anim;
 
@@ -18,22 +22,61 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
     }
-
-    void CalTargetPos()
-    {
-        mousePos = Input.mousePosition;
-        transPos = Camera.main.ScreenToWorldPoint(mousePos);
-        targetPos = new Vector3(transPos.x, transPos.y, 0);
-    }
-
-    void MoveToTarget()
-    {
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime + speed);
-    }
+    
     private void Update()
     {
+        if (playerMove == true)
+            PlayerMouseMove();
+        //PlayerKeyMove();
+        DrugCombinerActive();
+    }
 
+    void Flip()
+    {
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        facingRight = !facingRight;
+    }
 
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DrugCombiner"))
+        {
+            drugCombiner = collision.gameObject.transform.GetChild(0).gameObject;
+        }
+
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("DrugCombiner"))
+        {
+            drugCombiner = null;
+        }
+    }
+
+    private void DrugCombinerActive()
+    {
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            if (drugCombiner != null)
+            {
+                drugCombiner.SetActive(true);
+                playerMove = false;
+                //speed = 0;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (drugCombiner != null)
+            {
+                drugCombiner.SetActive(false);
+                playerMove = true;
+                //speed = 6.0f;
+            }
+        }
+    }
+    private void PlayerKeyMove()
+    {
         float input = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(input * speed, rb.velocity.y);
 
@@ -74,45 +117,33 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-
-        if (Input.GetKeyDown(KeyCode.F))
+    }
+    private void PlayerMouseMove()
+    {
+        if (Input.GetMouseButton(0))
         {
-            if (drugCombiner != null)
+            storeYpos.y = transform.position.y;
+            mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition.y = storeYpos.y;
+
+            dir = mousePosition - transform.position;
+
+            if (dir.x > 0 && facingRight == false)
             {
-                drugCombiner.SetActive(true);
-                speed = 0;
+                Flip();
             }
-        }
-        else if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (drugCombiner != null)
+            else if (dir.x < 0 && facingRight == true)
             {
-                drugCombiner.SetActive(false);
-                speed = 6.0f;
+                Flip();
             }
+            if (dir != Vector2.zero)
+                anim.SetBool("isWalking", true);
+            
+
+            transform.position = Vector2.MoveTowards(transform.position, mousePosition, Time.deltaTime * speed);
+            Debug.Log(transform.position+" " +mousePosition);
         }
-    }
-
-    void Flip()
-    {
-        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
-        facingRight = !facingRight;
-    }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.CompareTag("DrugCombiner"))
-        {
-            drugCombiner = collision.gameObject.transform.GetChild(0).gameObject;
-        }
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("DrugCombiner"))
-        {
-            drugCombiner = null;
-        }
+        else
+            anim.SetBool("isWalking", false);
     }
 }
