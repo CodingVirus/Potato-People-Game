@@ -4,11 +4,11 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 
-public class Clickable : MonoBehaviour
+public class ClickableItem : MonoBehaviour
 {
     public void OnMouseEnter() 
     {
-        CursorController.instance.Clickable();  
+        CursorController.instance.Item_Click();  
     }
 
     public void OnMouseExit() 

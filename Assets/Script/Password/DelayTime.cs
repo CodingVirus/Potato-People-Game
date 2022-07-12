@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DelayTime : Clickable
+public class DelayTime : ClickableItem
 {
 
     void OnMouseDown()

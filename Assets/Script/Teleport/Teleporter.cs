@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Teleporter : MonoBehaviour
+public class Teleporter : ClickablePortal
 {
-    // SerializeField ±â´ÉÀ» »ç¿ëÇÏ¿© private º¯¼ö¸¦ ÀÎ½ºÆåÅÍ¿¡¼­ Á¢±Ù °¡´ÉÇÏ°Ô ¸¸µç´Ù.
-    // ¸ñÀûÁö À§Ä¡¸¦ ÀúÀåÇÏ´Â º¯¼ö
+    // SerializeField ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ private ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½ï¿½ï¿½Í¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½
     [SerializeField] private Transform destination;
 
     public Transform GetDestination()
