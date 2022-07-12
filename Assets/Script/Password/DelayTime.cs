@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DelayTime : MonoBehaviour
+public class DelayTime : Clickable
 {
+
     void OnMouseDown()
     {
         Invoke("OnDisplay", 0.5f);

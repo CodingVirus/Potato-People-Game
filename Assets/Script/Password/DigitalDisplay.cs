@@ -15,16 +15,16 @@ public class DigitalDisplay : MonoBehaviour
     private string codeTextValue;
     public CanvasGroup passwordgroup;
 
-    public void Click()
-    {
-        passwordgroup.alpha = 1;
-    }
-
     private void Start() 
     {
         pw = () => {Click();};
         codeTextValue = "";
         passwordgroup.alpha = 0;
+    }
+
+    public void Click()
+    {
+        passwordgroup.alpha = 1;
     }
 
     public void AddDigitToCodeTextValue(string digitEntered)
