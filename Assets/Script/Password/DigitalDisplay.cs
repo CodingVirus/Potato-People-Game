@@ -43,6 +43,8 @@ public class DigitalDisplay : MonoBehaviour
         {
             Debug.Log("Correct!");
             passwordgroup.alpha = 0;
+            Destroy(gameObject);
+            Debug.Log("Destroy");
         }
         else
         {
