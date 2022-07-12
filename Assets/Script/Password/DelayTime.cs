@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Password : MonoBehaviour
+public class DelayTime : MonoBehaviour
 {
     void OnMouseDown()
     {
