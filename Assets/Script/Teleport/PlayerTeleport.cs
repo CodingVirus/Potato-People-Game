@@ -18,6 +18,10 @@ public class PlayerTeleport : MonoBehaviour
 
             if (currentTeleporter != null)
             {
+                currentTeleporter.GetComponent<AudioSource>().Play();
+                fadeEffect.GetComponent<FadeScript>().Fade();
+                this.GetComponent<PlayerController>().speed = 0.0f;
+              
                 //currentTeleporter.GetComponent<AudioSource>().Play();
                 fadeEffect.GetComponent<FadeScript>().Fade();
                 this.GetComponent<PlayerController>().speed = 0.0f;
