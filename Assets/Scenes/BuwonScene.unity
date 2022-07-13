@@ -218,6 +218,10 @@ PrefabInstance:
       propertyPath: pad
       value: 
       objectReference: {fileID: 31694269}
+    - target: {fileID: 8952994893067871549, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
+      propertyPath: ply
+      value: 
+      objectReference: {fileID: 2114640883}
     - target: {fileID: 8952994893403686849, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
       propertyPath: m_Pivot.x
       value: 0
