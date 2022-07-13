@@ -5,9 +5,12 @@ using UnityEngine;
 public class NPCSentence : MonoBehaviour
 {
     public string[] sentences;
+    public GameObject MoveController;
 
     private void OnMouseDown() 
     {
+        MoveController.GetComponent<PlayerController>().playerMove = false;
+
         if(DialogueManager.instance.dialoguegroup.alpha == 0)
         {
             DialogueManager.instance.Ondialogue(sentences);

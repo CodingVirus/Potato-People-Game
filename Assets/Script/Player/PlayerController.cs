@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     Vector2 dir;
     Vector3 storeYpos;
 
-    bool playerMove = true;
+    public bool playerMove = true;
 
     Animator anim;
 
@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
         float input = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(input * speed, rb.velocity.y);
 
-        // Ä³¸¯ÅÍ ÁÂ¿ì ÀÌµ¿½Ã ¹Ù¶óº¸´Â ¹æÇâ ÀüÈ¯
+        // Ä³ï¿½ï¿½ï¿½ï¿½ ï¿½Â¿ï¿½ ï¿½Ìµï¿½ï¿½ï¿½ ï¿½Ù¶óº¸´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯
         if (input > 0 && facingRight == false)
         {
             Flip();
