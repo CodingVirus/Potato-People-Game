@@ -11,20 +11,20 @@ public class DigitalDisplay : MonoBehaviour
 
     [SerializeField]
     public Text codeText;
+    public GameObject pad;
 
     private string codeTextValue;
-    public CanvasGroup passwordgroup;
 
     private void Start() 
     {
         pw = () => {Click();};
         codeTextValue = "";
-        passwordgroup.alpha = 0;
+        pad.SetActive(false);
     }
 
     public void Click()
     {
-        passwordgroup.alpha = 1;
+        pad.SetActive(true);
     }
 
     public void AddDigitToCodeTextValue(string digitEntered)
@@ -42,7 +42,7 @@ public class DigitalDisplay : MonoBehaviour
         if(codeTextValue == "0921")
         {
             Debug.Log("Correct!");
-            passwordgroup.alpha = 0;
+            pad.SetActive(false);
             Destroy(gameObject);
             Debug.Log("Destroy");
         }
@@ -62,7 +62,7 @@ public class DigitalDisplay : MonoBehaviour
     public void CloseDisplay()
     {
         ResetDisplay();
-        passwordgroup.alpha = 0;
+        pad.SetActive(false);
     }
     
 }

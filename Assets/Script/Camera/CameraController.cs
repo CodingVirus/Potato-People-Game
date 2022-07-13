@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField]
     Transform playerTransform;
+    public float height;
     [SerializeField]
     Vector3 cameraPosition;
 
@@ -17,6 +18,6 @@ public class CameraController : MonoBehaviour
     void LateUpdate()
     {
         // camera�� player�� ����
-        transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y + 3.5f, transform.position.z);
+        transform.position = new Vector3(playerTransform.position.x, playerTransform.position.y + height, transform.position.z);
     }
 }

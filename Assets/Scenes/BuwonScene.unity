@@ -1017,7 +1017,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1061,6 +1061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 2114640890}
+  height: 4.5
   cameraPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &525542269
 GameObject:
@@ -3145,6 +3146,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}
   m_PrefabInstance: {fileID: 251221499}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2126792904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8952994893067871544, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
+  m_PrefabInstance: {fileID: 8952994894523543024}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1013135801252081413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3318,6 +3324,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8952994893067871544, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952994893067871549, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
+      propertyPath: pad
+      value: 
+      objectReference: {fileID: 2126792904}
     - target: {fileID: 8952994893403686849, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3406,5 +3420,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Password
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8952994894177739204, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
+      propertyPath: pad
+      value: 
+      objectReference: {fileID: 2126792904}
+    m_RemovedComponents:
+    - {fileID: 8952994893403686850, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
