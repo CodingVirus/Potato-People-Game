@@ -8,6 +8,7 @@ public class DialogueManager : MonoBehaviour, IPointerDownHandler
 {
     public Text dialogueText;
     public GameObject nextText;
+    public GameObject MoveController;
     public CanvasGroup dialoguegroup;
     public Queue<string> sentences;
 
@@ -54,6 +55,7 @@ public class DialogueManager : MonoBehaviour, IPointerDownHandler
         {
             dialoguegroup.alpha = 0;
             dialoguegroup.blocksRaycasts = false;
+            MoveController.GetComponent<PlayerController>().playerMove = true;
         }
     }
 

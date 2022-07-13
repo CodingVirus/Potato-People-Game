@@ -4885,6 +4885,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: 688d50aa2fc191446b7dfd0d99866f57, type: 3}
     - target: {fileID: 3458594461682484304, guid: d03acb2d4d868450e8def4f0ad7527f9, type: 3}
+      propertyPath: clickDialogue
+      value: 
+      objectReference: {fileID: 2800000, guid: 0c689591aa23a7249a8ad1247671e115, type: 3}
+    - target: {fileID: 3458594461682484304, guid: d03acb2d4d868450e8def4f0ad7527f9, type: 3}
       propertyPath: defaultCursor
       value: 
       objectReference: {fileID: 2800000, guid: bab58494ad24bb542815278e2ca08d27, type: 3}
@@ -5895,6 +5899,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2348940034411613459, guid: e35a143c785e748aba002796020769b4, type: 3}
+      propertyPath: MoveController
+      value: 
+      objectReference: {fileID: 2114640883}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e35a143c785e748aba002796020769b4, type: 3}
 --- !u!1 &1551713439
