@@ -11,14 +11,14 @@ public class PlayerTeleport : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // À§ È­»ìÇ¥ ´©¸£°í ÇöÀç currentTeleporter°¡ nullÀÌ ¾Æ´Ï¶ó¸é ¸ñÀûÁö À§Ä¡·Î ÀÌµ¿
-        // Invoke ±â´ÉÀ» »ç¿ëÇÏ¿© 0.5ÃÊµÚ¿¡ ÀÌµ¿
+        // ï¿½ï¿½ È­ï¿½ï¿½Ç¥ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ currentTeleporterï¿½ï¿½ nullï¿½ï¿½ ï¿½Æ´Ï¶ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½Ìµï¿½
+        // Invoke ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ 0.5ï¿½ÊµÚ¿ï¿½ ï¿½Ìµï¿½
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
 
             if (currentTeleporter != null)
             {
-                currentTeleporter.GetComponent<AudioSource>().Play();
+                //currentTeleporter.GetComponent<AudioSource>().Play();
                 fadeEffect.GetComponent<FadeScript>().Fade();
                 this.GetComponent<PlayerController>().speed = 0.0f;
               

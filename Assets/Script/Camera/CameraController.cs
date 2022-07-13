@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour
 {
     [SerializeField]
     Transform playerTransform;
-    public float height;
+    public float height = 4.5f;
     [SerializeField]
     Vector3 cameraPosition;
 
