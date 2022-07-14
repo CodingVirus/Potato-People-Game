@@ -141,7 +141,7 @@ public class PlayerController : MonoBehaviour
             
 
             transform.position = Vector2.MoveTowards(transform.position, mousePosition, Time.deltaTime * speed);
-            Debug.Log(transform.position+" " +mousePosition);
+            //Debug.Log(transform.position+" " +mousePosition);
         }
         else
             anim.SetBool("isWalking", false);
