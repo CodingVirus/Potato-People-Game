@@ -496,6 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1992964634}
+  mytest: 0
 --- !u!61 &173868265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -824,6 +825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1358147814}
+  mytest: 0
 --- !u!61 &210358737
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3005,6 +3007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
+  mytest: 0
 --- !u!61 &650232312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4501,6 +4504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1355189176}
+  mytest: 0
 --- !u!61 &986976928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5174,6 +5178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1758904004}
+  mytest: 0
 --- !u!61 &1231022506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5560,6 +5565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 986976925}
+  mytest: 0
 --- !u!61 &1355189179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5685,6 +5691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 210358734}
+  mytest: 0
 --- !u!61 &1358147817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6803,6 +6810,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1231022503}
+  mytest: 0
 --- !u!61 &1758904007
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7039,6 +7047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 173868262}
+  mytest: 0
 --- !u!61 &1769384216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7164,6 +7173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1769384213}
+  mytest: 0
 --- !u!61 &1774356222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7997,6 +8007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 173868262}
+  mytest: 0
 --- !u!61 &1992964637
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8380,6 +8391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  playerMove: 1
 --- !u!1 &2119865408
 GameObject:
   m_ObjectHideFlags: 0
