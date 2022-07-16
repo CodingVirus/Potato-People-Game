@@ -55,7 +55,7 @@ public class DialogueManager : MonoBehaviour, IPointerDownHandler
         {
             dialoguegroup.alpha = 0;
             dialoguegroup.blocksRaycasts = false;
-            MoveController.GetComponent<PlayerController>().playerMove = true;
+            MoveController.GetComponent<PlayerMouseControll>().playerMove = true;
         }
     }
 

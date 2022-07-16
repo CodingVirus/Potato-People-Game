@@ -11,6 +11,7 @@ public class PlayerMouseControll : MonoBehaviour
 
     Animator anim;
     bool facingRight = true;
+    public bool playerMove = true;
     
     void Start()
     {
@@ -20,33 +21,43 @@ public class PlayerMouseControll : MonoBehaviour
 
     void Update()
     {
+        if(playerMove)
+        {
         target.y = transform.position.y;
 
         if(Input.GetMouseButtonDown(0))
         {
             target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
+            anim.SetBool("isWalking", true);
             dir = target - transform.position;
             if (dir.x > 0 && facingRight == false)
             {
-                transform.localScale = new Vector3(1, 1, 0);
-                facingRight = !facingRight;
+                Flip();
             }
-            else if (dir.x < 0 && facingRight == true)
+            if (dir.x < 0 && facingRight == true)
             {
-                transform.localScale = new Vector3(-1, 1, 0);
-                facingRight = !facingRight;
+                Flip();
             }
-            if (dir != Vector3.zero)
-            {
-                anim.SetBool("isWalking", true);
-            }
-            else
+        }
+        transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * speed);
+        dir = target - transform.position;
+        }
+        else{
+            if(dir.x == 0)
             {
                 anim.SetBool("isWalking", false);
             }
         }
-        transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * speed);
+        
+    }
+
+    void Flip()
+    {
+        Vector3 currentScale = gameObject.transform.localScale;
+        currentScale.x *= -1;
+        gameObject.transform.localScale = currentScale;
+
+        facingRight = !facingRight;
     }
     
 }

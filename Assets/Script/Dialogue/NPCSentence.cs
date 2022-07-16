@@ -9,7 +9,7 @@ public class NPCSentence : MonoBehaviour
 
     private void OnMouseDown() 
     {
-        MoveController.GetComponent<PlayerController>().playerMove = false;
+        MoveController.GetComponent<PlayerMouseControll>().playerMove = false;
 
         if(DialogueManager.instance.dialoguegroup.alpha == 0)
         {
