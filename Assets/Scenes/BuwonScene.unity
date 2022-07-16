@@ -8349,20 +8349,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2114640888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114640883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33820987e7daf4f4b9edacce4ddde0d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  playerMove: 1
 --- !u!114 &2114640889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8381,6 +8367,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}
   m_PrefabInstance: {fileID: 251221499}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2114640891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114640883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719422f9f12d54bbaa18c0f160abbf5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
 --- !u!1 &2119865408
 GameObject:
   m_ObjectHideFlags: 0
