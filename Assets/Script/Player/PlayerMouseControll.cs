@@ -21,8 +21,6 @@ public class PlayerMouseControll : MonoBehaviour
 
     void Update()
     {
-        if(playerMove)
-        {
         target.y = transform.position.y;
 
         if(Input.GetMouseButtonDown(0))
@@ -41,12 +39,9 @@ public class PlayerMouseControll : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * speed);
         dir = target - transform.position;
-        }
-        else{
-            if(dir.x == 0)
-            {
-                anim.SetBool("isWalking", false);
-            }
+        if(dir.x == 0)
+        {
+            anim.SetBool("isWalking", false);
         }
         
     }

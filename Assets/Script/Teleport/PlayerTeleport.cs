@@ -26,7 +26,7 @@ public class PlayerTeleport : MonoBehaviour
                 fadeEffect.GetComponent<FadeScript>().Fade();
                 this.GetComponent<PlayerMouseControll>().speed = 0.0f;
 
-                Invoke("MovePosition", 1.3f);
+                MovePosition();
             }
         }
     }
