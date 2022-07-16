@@ -55,4 +55,18 @@ public class PlayerMouseControll : MonoBehaviour
         facingRight = !facingRight;
     }
     
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (other.CompareTag("Door"))
+        {
+            if (other.GetComponent<Teleporter>().mytest == true)
+            {
+                Debug.Log("Hi");
+                
+                transform.position = other.GetComponent<Teleporter>().GetDestination().position;
+                other.GetComponent<Teleporter>().mytest = false;
+                
+            }
+        }
+    }
 }
