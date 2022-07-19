@@ -4,57 +4,45 @@ using UnityEngine;
 
 public class PlayerTeleport : MonoBehaviour
 {
-
     private GameObject currentTeleporter;
     public GameObject fadeEffect;
+    public bool transferStart = false;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other) 
     {
-        // �� ȭ��ǥ ������ ���� currentTeleporter�� null�� �ƴ϶�� ������ ��ġ�� �̵�
-        // Invoke ����� ����Ͽ� 0.5�ʵڿ� �̵�
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if(transferStart == true)
         {
-
-            if (currentTeleporter != null)
+            if(other.CompareTag("Door"))
             {
-                //currentTeleporter.GetComponent<AudioSource>().Play();
-                fadeEffect.GetComponent<FadeScript>().Fade();
-                this.GetComponent<PlayerMouseControll>().speed = 0.0f;
-              
-                //currentTeleporter.GetComponent<AudioSource>().Play();
-                fadeEffect.GetComponent<FadeScript>().Fade();
-                this.GetComponent<PlayerMouseControll>().speed = 0.0f;
-
-                MovePosition();
+                currentTeleporter = other.gameObject;
+                DoorEnter();
             }
         }
     }
 
-    private void MovePosition()
+    private void DoorEnter() 
+    {
+        //currentTeleporter.GetComponent<AudioSource>().Play();
+        fadeEffect.GetComponent<FadeScript>().Fade();
+        this.GetComponent<PlayerMouseControll>().playerMove = false;
+        //currentTeleporter.GetComponent<AudioSource>().Play();
+        Invoke("Moving", 1.2f);
+    }
+
+    private void Moving()
     {
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
-        this.GetComponent<PlayerMouseControll>().speed = 6.0f;
+        this.GetComponent<PlayerMouseControll>().target = transform.position;
+        transferStart = false;
+        currentTeleporter = null;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Door"))
-        {
-            currentTeleporter = collision.gameObject;
-        }
+    //private void OnTriggerExit2D(Collider2D other)
+    //{
+    //    if(other.CompareTag("Door"))
+    //    {
+    //        currentTeleporter = null;
+    //    }
+    //}
 
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Door"))
-        {
-            if (collision.gameObject == currentTeleporter)
-            {
-                currentTeleporter = null;
-            }
-        }
-    }
 }

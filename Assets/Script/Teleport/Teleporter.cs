@@ -1,20 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Teleporter : ClickablePortal
 {
-    // SerializeField ����� ����Ͽ� private ������ �ν����Ϳ��� ���� �����ϰ� �����.
-    // ������ ��ġ�� �����ϴ� ����
     [SerializeField] private Transform destination;
-    public bool mytest = false;
+    public GameObject PlayerPosition;
+    
     public Transform GetDestination()
     {
         return destination;
     }
 
-    private void OnMouseDown() 
+    private void Update() 
     {
-        mytest = true;
+        if(Input.GetMouseButtonDown(0))
+        {
+            PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
+        }
     }
+
+    //private void OnMouseDown() 
+    //{
+    //    PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
+    //}
 }
