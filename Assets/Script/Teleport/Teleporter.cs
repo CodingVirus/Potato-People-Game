@@ -22,8 +22,8 @@ public class Teleporter : ClickablePortal
         return destination;
     }
     
-    private void Update() 
-    {
+    //private void Update() 
+    //{
         //if(PlayerPosition.GetComponent<PlayerTeleport>().T_camera == true)
         //{
             //theCamera.limitMinX = T_limitMinX;
@@ -32,19 +32,14 @@ public class Teleporter : ClickablePortal
             //theCamera.limitMaxY = T_limitMaxY;
             //PlayerPosition.GetComponent<PlayerTeleport>().T_camera = false;
         //}
-    }
+    //}
     
     private void OnMouseDown() 
     {
         //if(PlayerPosition.GetComponent<PlayerMouseControll>().target.x == )
         //{
         PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
-        //theCamera.clampX = PlayerPosition.transform.position.x;
-        //theCamera.clampY = PlayerPosition.transform.position.y;
-        theCamera.limitMinX = T_limitMinX;
-        theCamera.limitMaxX = T_limitMaxX;
-        theCamera.limitMinY = T_limitMinY;
-        theCamera.limitMaxY = T_limitMaxY;
+        //Invoke("CameraPositionReset", 2.0f);
 
             //if(PlayerPosition.CompareTag("Player") && PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true)
             //{
@@ -52,6 +47,14 @@ public class Teleporter : ClickablePortal
             //    PlayerPosition.GetComponent<PlayerTeleport>().DoorEnter();
             //}
         //}
+    }
+
+    public void CameraPositionReset()
+    {
+        theCamera.limitMinX = T_limitMinX;
+        theCamera.limitMaxX = T_limitMaxX;
+        theCamera.limitMinY = T_limitMinY;
+        theCamera.limitMaxY = T_limitMaxY;
     }
    
 }

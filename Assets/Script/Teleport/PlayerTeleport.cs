@@ -34,14 +34,15 @@ public class PlayerTeleport : MonoBehaviour
         this.GetComponent<PlayerMouseControll>().speed = 0.0f;
         //currentTeleporter.GetComponent<AudioSource>().Play();
         fadeEffect.GetComponent<FadeScript>().Fade();
-        //T_camera = true;
         //currentTeleporter.GetComponent<AudioSource>().Play();
         Invoke("Moving", 1.4f);
+        //T_camera = true;
     }
 
     private void Moving()
     {
         //theCamera.SetBound(targetBound);
+        currentTeleporter.GetComponent<Teleporter>().CameraPositionReset();
 
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
         this.GetComponent<PlayerMouseControll>().target = transform.position;
