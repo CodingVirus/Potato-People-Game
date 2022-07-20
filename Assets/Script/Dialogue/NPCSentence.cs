@@ -5,11 +5,11 @@ using UnityEngine;
 public class NPCSentence : MonoBehaviour
 {
     public string[] sentences;
-    public GameObject MoveController;
+    //public GameObject MoveController;
 
     private void OnMouseDown() 
     {
-        MoveController.GetComponent<PlayerController>().playerMove = false;
+        PlayerMouseControll.instance.StopMove();
 
         if(DialogueManager.instance.dialoguegroup.alpha == 0)
         {
