@@ -7,19 +7,24 @@ using System;
 
 public class DigitalDisplay : MonoBehaviour
 {
-    public static Action pw;
+    //public static Action pw;
 
     [SerializeField]
     public Text codeText;
     public GameObject pad;
+    public GameObject player;
+    //public bool uiOn = false;
 
-    private string codeTextValue;
+    private string codeTextValue;    
 
     private void Start() 
     {
-        pw = () => {Click();};
         codeTextValue = "";
-        pad.SetActive(false);
+    }
+
+    private void Update() 
+    {
+        CursorController.instance.Default();
     }
 
     public void Click()
@@ -29,12 +34,12 @@ public class DigitalDisplay : MonoBehaviour
 
     public void AddDigitToCodeTextValue(string digitEntered)
     {
-        codeTextValue += digitEntered;
-        codeText.text = codeTextValue;
-        if(codeTextValue.Length > 4)
-        {
-            ResetDisplay();
-        }
+            codeTextValue += digitEntered;
+            codeText.text = codeTextValue;
+            if(codeTextValue.Length > 4)
+            {
+                ResetDisplay();
+            }
     }
 
     public void CheckResults()
@@ -43,8 +48,10 @@ public class DigitalDisplay : MonoBehaviour
         {
             Debug.Log("Correct!");
             pad.SetActive(false);
+            //uiOn = false;
             Destroy(gameObject);
             Debug.Log("Destroy");
+            Invoke("StartToMove", 0.5f);
         }
         else
         {
@@ -63,6 +70,14 @@ public class DigitalDisplay : MonoBehaviour
     {
         ResetDisplay();
         pad.SetActive(false);
+        //uiOn = false;
+        Invoke("StartToMove", 0.3f);
+    }
+
+    private void StartToMove()
+    {
+        player.GetComponent<PlayerMouseControll>().target = player.transform.position;
+        PlayerMouseControll.instance.StartMove();
     }
     
 }

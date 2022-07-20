@@ -4,45 +4,50 @@ using UnityEngine;
 
 public class PlayerTeleport : MonoBehaviour
 {
-    private GameObject currentTeleporter;
+    public GameObject currentTeleporter;
     public GameObject fadeEffect;
     public bool transferStart = false;
+    public bool T_camera = false;
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    //카메라 설정
+    //public BoxCollider2D targetBound;
+
+    private void Start() 
+    {
+        //theCamera = FindObjectOfType<CameraController>();
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(transferStart == true)
         {
             if(other.CompareTag("Door"))
             {
                 currentTeleporter = other.gameObject;
-                DoorEnter();
+                Invoke("DoorEnter", 0.5f);
             }
         }
     }
 
-    private void DoorEnter() 
+    public void DoorEnter() 
     {
+        this.GetComponent<PlayerMouseControll>().speed = 0.0f;
         //currentTeleporter.GetComponent<AudioSource>().Play();
         fadeEffect.GetComponent<FadeScript>().Fade();
-        this.GetComponent<PlayerMouseControll>().playerMove = false;
+        //T_camera = true;
         //currentTeleporter.GetComponent<AudioSource>().Play();
-        Invoke("Moving", 1.2f);
+        Invoke("Moving", 1.4f);
     }
 
     private void Moving()
     {
+        //theCamera.SetBound(targetBound);
+
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
         this.GetComponent<PlayerMouseControll>().target = transform.position;
+        this.GetComponent<PlayerMouseControll>().speed = 5.0f;
         transferStart = false;
         currentTeleporter = null;
     }
-
-    //private void OnTriggerExit2D(Collider2D other)
-    //{
-    //    if(other.CompareTag("Door"))
-    //    {
-    //        currentTeleporter = null;
-    //    }
-    //}
 
 }

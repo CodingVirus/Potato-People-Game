@@ -55,7 +55,7 @@ public class DialogueManager : MonoBehaviour, IPointerDownHandler
         {
             dialoguegroup.alpha = 0;
             dialoguegroup.blocksRaycasts = false;
-            MoveController.GetComponent<PlayerMouseControll>().playerMove = true;
+            Invoke("StartToMove", 0.5f);
         }
     }
 
@@ -84,5 +84,10 @@ public class DialogueManager : MonoBehaviour, IPointerDownHandler
     {
         if(!istyping)
         NextSentence();
+    }
+
+    private void StartToMove()
+    {
+        PlayerMouseControll.instance.StartMove();
     }
 }

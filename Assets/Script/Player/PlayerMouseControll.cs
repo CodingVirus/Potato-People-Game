@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerMouseControll : MonoBehaviour
 {
+
     public float speed = 5f;
     public Vector3 target;
     private Vector3 transPos;
     private Vector3 mousePos;
-    private Vector3 dir;
+    public Vector3 dir;
 
     Animator anim;
     bool facingRight = true;
     public bool playerMove = true;
+
+    public static PlayerMouseControll instance;
+
+    private void Awake() 
+    {
+        instance = this;
+    }
     
     void Start()
     {
@@ -22,9 +31,10 @@ public class PlayerMouseControll : MonoBehaviour
     private void Update()
     {
         target.y = transform.position.y;
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0))// && this.GetComponent<PlayerTeleport>().transferStart == false)
         {
             playerMove = true;
+
             if(playerMove == true)
             {
                 mousePos = Input.mousePosition;
@@ -43,20 +53,31 @@ public class PlayerMouseControll : MonoBehaviour
             }
         }
         transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * speed);
-        if(target == transform.position)
+        if(target.x == transform.position.x)
         {
-            StopMove();
+            playerMove = false;
+            anim.SetBool("isWalking", false);
         }
         if(playerMove == false)
         {
-            StopMove();
+            anim.SetBool("isWalking", false);
+        }
+        if(speed == 0.0f) //&& this.GetComponent<PlayerTeleport>().transferStart == true)
+        {
+            anim.SetBool("isWalking", false);
         }
     }
 
-    void StopMove()
+    public void StopMove()
     {
-        playerMove = false;
+        speed = 0.0f;
         anim.SetBool("isWalking", false);
+    }
+
+    public void StartMove()
+    {
+        speed = 5.0f;
+        anim.SetBool("isWalking", true);
     }
 
     void Flip()
