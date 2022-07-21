@@ -9,7 +9,6 @@ public class CameraController : MonoBehaviour
     public float height = 4.5f;
     [SerializeField]
     Vector3 cameraPosition;
-
     void Start()
     {
         playerTransform = GameObject.Find("Player").GetComponent<Transform>();
