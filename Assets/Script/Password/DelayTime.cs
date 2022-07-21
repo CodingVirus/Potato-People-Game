@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class DelayTime : ClickableItem
 {
+    public GameObject pad;
 
     void OnMouseDown()
     {
@@ -12,7 +13,10 @@ public class DelayTime : ClickableItem
 
     public void OnDisplay()
     {
-        DigitalDisplay.pw();
+        //DigitalDisplay.pw();
+        pad.GetComponent<DigitalDisplay>().Click();
+        //DigitalDisplay.pw();
+        PlayerMouseControll.instance.StopMove();
     }
 
 }
