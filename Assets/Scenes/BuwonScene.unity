@@ -214,6 +214,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8952994893067871544, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8952994893067871549, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
       propertyPath: pad
       value: 
@@ -309,6 +313,10 @@ PrefabInstance:
     - target: {fileID: 8952994893403686877, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
       propertyPath: m_Name
       value: Password
+      objectReference: {fileID: 0}
+    - target: {fileID: 8952994893403686877, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8952994894177739204, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
       propertyPath: pad
@@ -660,6 +668,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 167042113}
+  - {fileID: 1173578667}
   m_Father: {fileID: 1551713440}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -727,7 +736,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68fdeef7ccbb16c4a91049961f2c822c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destination: {fileID: 0}
+  destination: {fileID: 1650744325}
+  PlayerPosition: {fileID: 2114640883}
 --- !u!61 &173868265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -973,6 +983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1358147814}
+  PlayerPosition: {fileID: 2114640883}
 --- !u!61 &210358737
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1219,11 +1230,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.6
+      value: -14.4
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.2
+      value: -2.83
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3378,7 +3389,7 @@ Transform:
   m_Children:
   - {fileID: 1538744490}
   m_Father: {fileID: 1819502004}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &650232310
 SpriteRenderer:
@@ -3445,6 +3456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
+  PlayerPosition: {fileID: 0}
 --- !u!61 &650232312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5318,6 +5330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1355189176}
+  PlayerPosition: {fileID: 2114640883}
 --- !u!61 &986976928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5845,12 +5858,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173578666}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.960001, y: 52.61, z: 0}
+  m_LocalPosition: {x: 0.03999901, y: -0.0099983215, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1819502004}
-  m_RootOrder: 0
+  m_Father: {fileID: 173868262}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1173578668
 SpriteRenderer:
@@ -6135,6 +6148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1758904004}
+  PlayerPosition: {fileID: 2114640883}
 --- !u!61 &1231022506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6604,6 +6618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 986976925}
+  PlayerPosition: {fileID: 0}
 --- !u!61 &1355189179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6662,8 +6677,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 709473599}
+  - {fileID: 1907311138}
   m_Father: {fileID: 1819502004}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1358147815
 SpriteRenderer:
@@ -6730,6 +6746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 210358734}
+  PlayerPosition: {fileID: 2114640883}
 --- !u!61 &1358147817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7825,6 +7842,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: fce0408a14738064b9751509f75ed415, type: 3}
+    - target: {fileID: 8536376594527588415, guid: c696816c591504ba59717b20794e35c4, type: 3}
+      propertyPath: pad
+      value: 
+      objectReference: {fileID: 31694269}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c696816c591504ba59717b20794e35c4, type: 3}
 --- !u!1 &1650744324
@@ -8023,7 +8044,7 @@ Transform:
   m_Children:
   - {fileID: 313736440}
   m_Father: {fileID: 1819502004}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1758904005
 SpriteRenderer:
@@ -8090,6 +8111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1231022503}
+  PlayerPosition: {fileID: 2114640883}
 --- !u!61 &1758904007
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8327,6 +8349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 167042113}
+  PlayerPosition: {fileID: 2114640883}
 --- !u!61 &1769384216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8453,6 +8476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1769384213}
+  PlayerPosition: {fileID: 2114640883}
 --- !u!61 &1774356222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8596,8 +8620,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1173578667}
-  - {fileID: 1907311138}
   - {fileID: 1358147814}
   - {fileID: 1758904004}
   - {fileID: 650232309}
@@ -9067,11 +9089,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907311137}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.82, y: 52.61, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.2091617, y: -0.17898525, z: 0}
+  m_LocalScale: {x: 0.9861476, y: 0.98614746, z: 0.98614746}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1819502004}
+  m_Father: {fileID: 1358147814}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1907311139
@@ -9616,6 +9638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 173868262}
+  PlayerPosition: {fileID: 0}
 --- !u!61 &1992964637
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10026,20 +10049,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2114640888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114640883}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33820987e7daf4f4b9edacce4ddde0d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  playerMove: 1
 --- !u!114 &2114640889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10052,12 +10061,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb2f9fe28082c94f951bff55254c372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentTeleporter: {fileID: 0}
   fadeEffect: {fileID: 760909152}
+  transferStart: 0
 --- !u!4 &2114640890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}
   m_PrefabInstance: {fileID: 251221499}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2114640891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114640883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 719422f9f12d54bbaa18c0f160abbf5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  target: {x: 0, y: 0, z: 0}
+  dir: {x: 0, y: 0, z: 0}
+  playerMove: 1
 --- !u!1 &2118726590
 GameObject:
   m_ObjectHideFlags: 0
