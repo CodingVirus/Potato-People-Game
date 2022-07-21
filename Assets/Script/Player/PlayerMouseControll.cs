@@ -31,20 +31,20 @@ public class PlayerMouseControll : MonoBehaviour
     private void Update()
     {
         target.y = transform.position.y;
-        if(Input.GetMouseButtonDown(0))// && this.GetComponent<PlayerTeleport>().transferStart == false)
+        if(Input.GetMouseButton(0))
         {
             playerMove = true;
-
             if(playerMove == true)
             {
+                speed = 5f;
                 mousePos = Input.mousePosition;
                 transPos = Camera.main.ScreenToWorldPoint(mousePos);
-                target = new Vector3(transPos.x, 0, 0);
+                target = new Vector3(transPos.x, target.y, 0);
                 anim.SetBool("isWalking", true);
                 dir = target - transform.position;
                 if (dir.x > 0 && facingRight == false)
                 {
-                    Flip();
+                     Flip();
                 }
                 if (dir.x < 0 && facingRight == true)
                 {
@@ -52,7 +52,28 @@ public class PlayerMouseControll : MonoBehaviour
                 }
             }
         }
-        transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * speed);
+        if(Input.GetMouseButton(1))
+        {
+            playerMove = true;
+            if(playerMove == true)
+            {
+                mousePos = Input.mousePosition;
+                transPos = Camera.main.ScreenToWorldPoint(mousePos);
+                target = new Vector3(transPos.x, target.y, 0);
+                anim.SetBool("isWalking", true);
+                speed = 10f;
+                dir = target - transform.position;
+                if (dir.x > 0 && facingRight == false)
+                {
+                     Flip();
+                }
+                if (dir.x < 0 && facingRight == true)
+                {
+                     Flip();
+                }
+            }
+        }
+        transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * speed);
         if(target.x == transform.position.x)
         {
             playerMove = false;
@@ -62,7 +83,7 @@ public class PlayerMouseControll : MonoBehaviour
         {
             anim.SetBool("isWalking", false);
         }
-        if(speed == 0.0f) //&& this.GetComponent<PlayerTeleport>().transferStart == true)
+        if(speed == 0.0f)
         {
             anim.SetBool("isWalking", false);
         }

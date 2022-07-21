@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Teleporter : ClickablePortal
+public class Teleporter : MonoBehaviour
 {
     [SerializeField] private Transform destination;
     public GameObject PlayerPosition;
@@ -22,36 +22,47 @@ public class Teleporter : ClickablePortal
         return destination;
     }
     
-    private void Update() 
-    {
-        //if(PlayerPosition.GetComponent<PlayerTeleport>().T_camera == true)
-        //{
-            //theCamera.limitMinX = T_limitMinX;
-            //theCamera.limitMaxX = T_limitMaxX;
-            //theCamera.limitMinY = T_limitMinY;
-            //theCamera.limitMaxY = T_limitMaxY;
-            //PlayerPosition.GetComponent<PlayerTeleport>().T_camera = false;
-        //}
-    }
-    
     private void OnMouseDown() 
     {
-        //if(PlayerPosition.GetComponent<PlayerMouseControll>().target.x == )
-        //{
         PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
-        //theCamera.clampX = PlayerPosition.transform.position.x;
-        //theCamera.clampY = PlayerPosition.transform.position.y;
+        Debug.Log("MouseDown : true");
+    }
+
+    private void OnMouseEnter() 
+    {
+        CursorController.instance.Portal_Click();
+
+        if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter == null)
+        {
+            PlayerPosition.GetComponent<PlayerTeleport>().transferStart = false;
+            Debug.Log("MouseEnter : false");
+        }
+    }
+
+    private void OnMouseExit() 
+    {
+        CursorController.instance.Default();
+
+        //if(Input.GetMouseButtonDown(0))
+        //{
+        //    PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter = null;
+        //    Debug.Log("MouseExit : null");
+        //}
+
+        //if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter == null)
+        //{
+        //    PlayerPosition.GetComponent<PlayerTeleport>().transferStart = false;
+        //}
+    }
+
+    
+
+    public void CameraPositionReset()
+    {
         theCamera.limitMinX = T_limitMinX;
         theCamera.limitMaxX = T_limitMaxX;
         theCamera.limitMinY = T_limitMinY;
         theCamera.limitMaxY = T_limitMaxY;
-
-            //if(PlayerPosition.CompareTag("Player") && PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true)
-            //{
-            //    PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter = this.gameObject;
-            //    PlayerPosition.GetComponent<PlayerTeleport>().DoorEnter();
-            //}
-        //}
     }
    
 }
