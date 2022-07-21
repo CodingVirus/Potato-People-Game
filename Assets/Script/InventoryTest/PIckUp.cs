@@ -14,7 +14,14 @@ public class PIckUp : MonoBehaviour
         {
             this.transform.GetChild(0).gameObject.SetActive(true);
             ply = collision.gameObject;
-            ply.GetComponent<PlayerController>().playerMove = false;
+            ply.GetComponent<PlayerMouseControll>().StopMove();
+        }
+
+        else if (this.name == "조합도구1" && collision.CompareTag("Player") && active == true)
+        {
+            this.transform.GetChild(0).gameObject.SetActive(true);
+            ply = collision.gameObject;
+            ply.GetComponent<PlayerMouseControll>().StopMove();
         }
     }
 
@@ -28,25 +35,36 @@ public class PIckUp : MonoBehaviour
                 Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
                 inven.slots[i].isEmpty = false;
                 this.transform.GetChild(0).gameObject.SetActive(false);
-                ply.GetComponent<PlayerController>().playerMove = true;
+                Invoke("DelayPlayerStartMove", 0.2f);
                 break;
             }
         }
+        active = false;
     }
 
     public void PreesNoButton()
     {
         this.transform.GetChild(0).gameObject.SetActive(false);
-        ply.GetComponent<PlayerController>().playerMove = true;
+        active = false;
+        Invoke("DelayPlayerStartMove", 0.2f);
     }
 
-    private void OnMouseEnter()
+    private void OnMouseDown()
     {
         active = true;
     }
 
-    private void OnMouseExit()
+    private void DelayPlayerStartMove()
     {
-        active = false;
+        ply.GetComponent<PlayerMouseControll>().StartMove();
     }
+    //private void OnMouseEnter()
+    //{
+    //    active = true;
+    //}
+
+    //private void OnMouseExit()
+    //{
+    //    active = false;
+    //}
 }
