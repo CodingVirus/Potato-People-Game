@@ -39,8 +39,6 @@ public class PlayerTeleport : MonoBehaviour
 
     private void Moving()
     {
-        currentTeleporter.GetComponent<Teleporter>().CameraPositionReset();
-
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
         this.GetComponent<PlayerMouseControll>().target = transform.position;
         this.GetComponent<PlayerMouseControll>().speed = 5.0f;

@@ -7,16 +7,7 @@ public class Teleporter : MonoBehaviour
 {
     [SerializeField] private Transform destination;
     public GameObject PlayerPosition;
-
-    private CameraFollow theCamera;
-    [SerializeField]
-    public float T_limitMinX, T_limitMaxX, T_limitMinY, T_limitMaxY;
-
-    private void Awake() 
-    {
-        theCamera = Camera.main.GetComponent<CameraFollow>();
-    }
-    
+ 
     public Transform GetDestination()
     {
         return destination;
@@ -53,16 +44,6 @@ public class Teleporter : MonoBehaviour
         //{
         //    PlayerPosition.GetComponent<PlayerTeleport>().transferStart = false;
         //}
-    }
-
-    
-
-    public void CameraPositionReset()
-    {
-        theCamera.limitMinX = T_limitMinX;
-        theCamera.limitMaxX = T_limitMaxX;
-        theCamera.limitMinY = T_limitMinY;
-        theCamera.limitMaxY = T_limitMaxY;
     }
    
 }
