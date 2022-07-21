@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class DialogueManager : MonoBehaviour, IPointerDownHandler
 {
+
     public Text dialogueText;
     public GameObject nextText;
     public GameObject MoveController;
@@ -18,6 +19,7 @@ public class DialogueManager : MonoBehaviour, IPointerDownHandler
     private bool istyping;
 
     public static DialogueManager instance;
+
     private void Awake()
     {
         instance = this;

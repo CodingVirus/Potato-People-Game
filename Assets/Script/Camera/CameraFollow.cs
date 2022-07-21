@@ -6,8 +6,8 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform cameraTarget;
 
-    [SerializeField]
-    Vector3 cameraPosition;
+    //[SerializeField]
+    //Vector3 cameraPosition;
 
     public float cameraMoveSpeed;
     public Vector2 offset;
@@ -26,10 +26,10 @@ public class CameraFollow : MonoBehaviour
     void LateUpdate()
     {
         //cameraPosition.y = 4f;
-        transform.position = Vector3.Lerp(transform.position, cameraTarget.position, Time.deltaTime * cameraMoveSpeed);
+        transform.position = Vector3.Lerp(transform.position, cameraTarget.position, Time.smoothDeltaTime * cameraMoveSpeed);
 
         float clampX = Mathf.Clamp(cameraTarget.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth);
         float clampY = Mathf.Clamp(cameraTarget.position.y + offset.y, limitMinY + cameraHalfHeight, limitMaxY - cameraHalfHeight);
-        transform.position = new Vector3(clampX, clampY, -10);
+        transform.position = new Vector3(clampX, clampY - 1f, -10);
     }
 }

@@ -7,15 +7,6 @@ public class PlayerTeleport : MonoBehaviour
     public GameObject currentTeleporter;
     public GameObject fadeEffect;
     public bool transferStart = false;
-    public bool T_camera = false;
-
-    //카메라 설정
-    //public BoxCollider2D targetBound;
-
-    private void Start() 
-    {
-        //theCamera = FindObjectOfType<CameraController>();
-    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,23 +16,29 @@ public class PlayerTeleport : MonoBehaviour
             {
                 currentTeleporter = other.gameObject;
                 Invoke("DoorEnter", 0.5f);
+                Debug.Log("이동");
             }
         }
     }
 
     public void DoorEnter() 
     {
-        this.GetComponent<PlayerMouseControll>().speed = 0.0f;
-        //currentTeleporter.GetComponent<AudioSource>().Play();
-        fadeEffect.GetComponent<FadeScript>().Fade();
-        //currentTeleporter.GetComponent<AudioSource>().Play();
-        Invoke("Moving", 1.4f);
-        //T_camera = true;
+        if(currentTeleporter == null)
+        {
+            transferStart = false;
+            Debug.Log("Moving : 이동 false");
+        }
+        else
+        {
+            //currentTeleporter.GetComponent<AudioSource>().Play();
+            fadeEffect.GetComponent<FadeScript>().Fade();
+            //currentTeleporter.GetComponent<AudioSource>().Play();
+            Invoke("Moving", 1.4f);
+        }
     }
 
     private void Moving()
     {
-        //theCamera.SetBound(targetBound);
         currentTeleporter.GetComponent<Teleporter>().CameraPositionReset();
 
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
@@ -49,6 +46,13 @@ public class PlayerTeleport : MonoBehaviour
         this.GetComponent<PlayerMouseControll>().speed = 5.0f;
         transferStart = false;
         currentTeleporter = null;
+        
+    }
+
+    private void OnTriggerExit2D() 
+    {
+        currentTeleporter = null;
+        Debug.Log("Exit : null");
     }
 
 }

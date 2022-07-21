@@ -31,7 +31,7 @@ public class PlayerMouseControll : MonoBehaviour
     private void Update()
     {
         target.y = transform.position.y;
-        if(Input.GetMouseButtonDown(0))// && this.GetComponent<PlayerTeleport>().transferStart == false)
+        if(Input.GetMouseButtonDown(0))
         {
             playerMove = true;
 
@@ -44,7 +44,7 @@ public class PlayerMouseControll : MonoBehaviour
                 dir = target - transform.position;
                 if (dir.x > 0 && facingRight == false)
                 {
-                    Flip();
+                     Flip();
                 }
                 if (dir.x < 0 && facingRight == true)
                 {
@@ -52,7 +52,7 @@ public class PlayerMouseControll : MonoBehaviour
                 }
             }
         }
-        transform.position = Vector2.MoveTowards(transform.position, target, Time.deltaTime * speed);
+        transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * speed);
         if(target.x == transform.position.x)
         {
             playerMove = false;
@@ -62,7 +62,7 @@ public class PlayerMouseControll : MonoBehaviour
         {
             anim.SetBool("isWalking", false);
         }
-        if(speed == 0.0f) //&& this.GetComponent<PlayerTeleport>().transferStart == true)
+        if(speed == 0.0f)
         {
             anim.SetBool("isWalking", false);
         }

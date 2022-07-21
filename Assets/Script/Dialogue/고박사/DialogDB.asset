@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b1336a223304a81a3461384065840e, type: 3}
+  m_Name: DialogDB
+  m_EditorClassIdentifier: 
+  Entities:
+  - branch: 1
+    name: "\uC2A4\uD2F0\uBE0C"
+    dialogue: "\uC774\uBD10! \uC5EC\uAE34 \uB300\uCCB4 \uC5B4\uB514\uC9C0? \uB2F9\uC2E0
+      \uAF34\uC774 \uB9D0\uC774 \uC544\uB2C8\uAD70..."
+  - branch: 2
+    name: "\uD074\uB85C\uC774"
+    dialogue: "\uB09C \uC5EC\uAE30 \uC5F0\uAD6C\uC6D0\uC774\uC5C8\uC5B4... \uC774
+      \uAF34\uC774 \uB418\uAE30 \uC804\uC5D0\uB294 \uBC15\uC0AC\uC640 \uD568\uAED8
+      \uC77C\uD588\uC9C0"
+  - branch: 1
+    name: "\uC2A4\uD2F0\uBE0C"
+    dialogue: "\uB098\uC5D0\uAC8C \uC758\uB8B0\uB97C \uD55C \uADF8 \uBC15\uC0AC\uC778\uAC00...?
+      \uB300\uCCB4 \uBB34\uC2A8 \uC2E4\uD5D8\uC744 \uD55C\uAC70\uC57C?"
+  - branch: 2
+    name: "\uD074\uB85C\uC774"
+    dialogue: "\uBC15\uC0AC \uC774\uB984\uC740 \uC874... \uC0C8\uB85C\uC6B4 \uC0DD\uBA85\uCCB4\uB97C
+      \uB9CC\uB4E4\uAE30 \uC704\uD55C \uC5F0\uAD6C\uC911\uC774\uC5C8\uC5B4"
+  - branch: 2
+    name: "\uD074\uB85C\uC774"
+    dialogue: "\uC5B4\uB290 \uC21C\uAC04\uBD80\uD130 \uC2E4\uD5D8\uCCB4\uB97C \uAD6C\uD558\uAE30
+      \uD798\uB4E4\uC5B4\uC9C0\uC790 \uC5F0\uAD6C\uC6D0\uB4E4\uC744 \uB370\uB9AC\uACE0
+      \uC2E4\uD5D8\uC744 \uD558\uB354\uAD70"
+  - branch: 2
+    name: "\uD074\uB85C\uC774"
+    dialogue: "\uB098\uB3C4 \uB9C8\uCC2C\uAC00\uC9C0\uB85C \uC2E4\uD5D8\uC744 \uB2F9\uD558\uB2E4
+      \uB2E4\uB9AC\uB97C \uC783\uC5C8\uC9C0 \uD558\uD558..."
+  - branch: 2
+    name: "\uD074\uB85C\uC774"
+    dialogue: "\uC5B4\uCC28\uD53C \uB09C \uC5BC\uB9C8 \uBABB\uBC84\uD2F0\uACE0 \uC8FD\uC744\uAC70\uC57C
+      \uB0A0 \uC880 \uB3C4\uC640\uC918"
+  - branch: 1
+    name: "\uC2A4\uD2F0\uBE0C"
+    dialogue: "\uC0DD\uAE34\uAC70\uBD80\uD130 \uB9D8\uC5D0 \uC548\uB4E4\uC5C8\uC5B4!
+      \uBB58 \uD558\uBA74 \uB418\uC9C0?"
+  - branch: 2
+    name: "\uD074\uB85C\uC774"
+    dialogue: "\uC218\uC220\uC2E4\uC5D0 \uAC00\uBA74 \uC57D\uBB3C \uBC30\uD569\uAE30\uAC00
+      \uC788\uC744\uAC70\uC57C \uBC30\uD569\uD574\uC11C \uB098\uC5D0\uAC8C \uAC00\uC838\uB2E4\uC918"
+  - branch: 3
+    name: "\uD074\uB85C\uC774"
+    dialogue: "\uC218\uC220\uC2E4\uB85C \uAC00\uBA74 \uB41C\uB2E4\uB124"
