@@ -757,10 +757,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1992964634}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -28.5
-  T_limitMaxX: 47.5
-  T_limitMinY: -28
-  T_limitMaxY: -16.5
 --- !u!61 &173868265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1090,10 +1086,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1358147814}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -28
-  T_limitMaxX: 28
-  T_limitMinY: -39
-  T_limitMaxY: -30
 --- !u!61 &210358737
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2217,16 +2209,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 502670324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db3bc71490f6a432c81127e59372b7bf, type: 3}
+  m_Script: {fileID: 11500000, guid: 3d9cf391acf83d842beb2b7f7891d123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraTarget: {fileID: 2114640890}
-  cameraMoveSpeed: 3
-  offset: {x: 0, y: 0}
-  limitMinX: -28
-  limitMaxX: 28
-  limitMinY: -4
-  limitMaxY: 5
+  playerTransform: {fileID: 2114640890}
+  height: 4.5
+  cameraPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &525542269
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,10 +3275,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1167917302}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: 110
-  T_limitMaxX: 147.5
-  T_limitMinY: -39
-  T_limitMaxY: -30
 --- !u!61 &650232312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4788,10 +4772,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1992964634}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -28.5
-  T_limitMaxX: 47.5
-  T_limitMinY: -28
-  T_limitMaxY: -16.5
 --- !u!61 &986976928
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5309,10 +5289,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 650232309}
   PlayerPosition: {fileID: 0}
-  T_limitMinX: -28
-  T_limitMaxX: 28
-  T_limitMinY: -39
-  T_limitMaxY: -30
 --- !u!61 &1167917305
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5512,10 +5488,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1758904004}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -28
-  T_limitMaxX: 28
-  T_limitMinY: -39
-  T_limitMaxY: -30
 --- !u!61 &1231022506
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5903,10 +5875,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 986976925}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -28.5
-  T_limitMaxX: 47.5
-  T_limitMinY: -16.5
-  T_limitMaxY: -5
 --- !u!61 &1355189179
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6033,10 +6001,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 210358734}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: 30
-  T_limitMaxX: 48.5
-  T_limitMinY: -39
-  T_limitMaxY: -30
 --- !u!61 &1358147817
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7054,10 +7018,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1231022503}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: 56
-  T_limitMaxX: 96
-  T_limitMinY: -39
-  T_limitMaxY: -30
 --- !u!61 &1758904007
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7295,10 +7255,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 173868262}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -28
-  T_limitMaxX: 28
-  T_limitMinY: -39
-  T_limitMaxY: -30
 --- !u!61 &1769384216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7425,10 +7381,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1769384213}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -28
-  T_limitMaxX: 28
-  T_limitMinY: -4
-  T_limitMaxY: 5
 --- !u!61 &1774356222
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -8263,10 +8215,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 173868262}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -28.5
-  T_limitMaxX: 28
-  T_limitMinY: -39
-  T_limitMaxY: -30
 --- !u!61 &1992964637
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -34,12 +34,13 @@ public class DigitalDisplay : MonoBehaviour
 
     public void AddDigitToCodeTextValue(string digitEntered)
     {
-            codeTextValue += digitEntered;
-            codeText.text = codeTextValue;
-            if(codeTextValue.Length > 4)
-            {
-                ResetDisplay();
-            }
+        PlayerMouseControll.instance.StopMove();
+        codeTextValue += digitEntered;
+        codeText.text = codeTextValue;
+        if(codeTextValue.Length > 4)
+        {
+            ResetDisplay();
+        }
     }
 
     public void CheckResults()
