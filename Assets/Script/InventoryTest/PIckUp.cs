@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PIckUp : MonoBehaviour
 {
@@ -33,20 +34,30 @@ public class PIckUp : MonoBehaviour
             if (inven.slots[i].isEmpty)
             {
                 Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
+                slotItem.GetComponent<Button>().onClick.AddListener(UseItem);
                 inven.slots[i].isEmpty = false;
                 this.transform.GetChild(0).gameObject.SetActive(false);
-                Invoke("DelayPlayerStartMove", 0.2f);
                 break;
             }
         }
+        ply.GetComponent<PlayerMouseControll>().target = ply.transform.position;
+        ply.GetComponent<PlayerMouseControll>().StartMove();
         active = false;
     }
 
+    public void UseItem()
+    {
+        if (slotItem.name == "Coke(Clone)")
+        {
+            Debug.Log("Coke!!!");
+        }
+    }
     public void PreesNoButton()
     {
         this.transform.GetChild(0).gameObject.SetActive(false);
         active = false;
-        Invoke("DelayPlayerStartMove", 0.2f);
+        ply.GetComponent<PlayerMouseControll>().target = ply.transform.position;
+        ply.GetComponent<PlayerMouseControll>().StartMove();
     }
 
     private void OnMouseDown()

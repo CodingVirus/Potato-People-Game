@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InventoryTest : MonoBehaviour
 {
     public GameObject slotPanel;
     public List<SlotDataTest> slots = new List<SlotDataTest>();
-    private int maxSlot = 3;
+    private int maxSlot = 4;
     public GameObject slotPrefab;
 
     private void Start()
@@ -15,6 +16,7 @@ public class InventoryTest : MonoBehaviour
         {
             GameObject go = Instantiate(slotPrefab, slotPanel.transform, false);
             go.name = "Slot_" + i;
+            //go.GetComponent<Button>().onClick.AddListener(UseItem);
             SlotDataTest slot = new SlotDataTest();
             slot.isEmpty = true;
             slot.slotObj = go;
@@ -22,14 +24,12 @@ public class InventoryTest : MonoBehaviour
         }
     }
 
-    public void InvenCheck()
-    {
-        for (int i = 0; i < slots.Count; i++)
-        {
-            if (slots[i].isEmpty)
-            {
+    //public void UseItem()
+    //{
+    //    if (this.transform.GetChild(0).name == "Coke")
+    //    {
+    //        Debug.Log("Use Coke!!!");
 
-            }
-        }
-    }
+    //    }
+    //}    
 }
