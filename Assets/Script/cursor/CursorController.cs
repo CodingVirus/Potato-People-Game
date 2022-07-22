@@ -5,7 +5,7 @@ using UnityEngine;
 public class CursorController : MonoBehaviour
 {
     [SerializeField]
-    public Texture2D defaultCursor, clickItem, clickPortal, clickDialogue;
+    public Texture2D defaultCursor, clickItem, clickPortal, clickDialogue, clickHide;
 
     public static CursorController instance;
 
@@ -49,6 +49,12 @@ public class CursorController : MonoBehaviour
     {
         Vector2 hotspot = new Vector2(clickDialogue.width / 2, clickDialogue.height / 2);
         Cursor.SetCursor(clickDialogue, hotspot, CursorMode.Auto);
+    }
+
+    public void Hide_Click()
+    {
+        Vector2 hotspot = new Vector2(clickHide.width / 2, clickHide.height / 2);
+        Cursor.SetCursor(clickHide, hotspot, CursorMode.Auto);
     }
 
 }
