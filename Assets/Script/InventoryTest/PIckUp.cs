@@ -7,7 +7,6 @@ public class PIckUp : MonoBehaviour
 {
     private bool active = false;
     public GameObject slotItem;
-    public GameObject currentThis;
     public GameObject ply;
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -33,8 +32,8 @@ public class PIckUp : MonoBehaviour
         {
             if (inven.slots[i].isEmpty)
             {
+                //slotItem.GetComponent<Button>().onClick.AddListener(UseItem);
                 Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
-                slotItem.GetComponent<Button>().onClick.AddListener(UseItem);
                 inven.slots[i].isEmpty = false;
                 this.transform.GetChild(0).gameObject.SetActive(false);
                 break;
@@ -47,6 +46,7 @@ public class PIckUp : MonoBehaviour
 
     public void UseItem()
     {
+        Debug.Log(slotItem.name);
         if (slotItem.name == "Coke(Clone)")
         {
             Debug.Log("Coke!!!");
@@ -63,11 +63,6 @@ public class PIckUp : MonoBehaviour
     private void OnMouseDown()
     {
         active = true;
-    }
-
-    private void DelayPlayerStartMove()
-    {
-        ply.GetComponent<PlayerMouseControll>().StartMove();
     }
     //private void OnMouseEnter()
     //{

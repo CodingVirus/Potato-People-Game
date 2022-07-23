@@ -16,7 +16,7 @@ public class InventoryTest : MonoBehaviour
         {
             GameObject go = Instantiate(slotPrefab, slotPanel.transform, false);
             go.name = "Slot_" + i;
-            //go.GetComponent<Button>().onClick.AddListener(UseItem);
+            go.GetComponent<Button>().onClick.AddListener(UseItem);
             SlotDataTest slot = new SlotDataTest();
             slot.isEmpty = true;
             slot.slotObj = go;
@@ -24,12 +24,13 @@ public class InventoryTest : MonoBehaviour
         }
     }
 
-    //public void UseItem()
-    //{
-    //    if (this.transform.GetChild(0).name == "Coke")
-    //    {
-    //        Debug.Log("Use Coke!!!");
+    public void UseItem()
+    {
+        Debug.Log(transform.GetChild(0).name);
+        if (transform.GetChild(0).name == "Coke")
+        {
+            Debug.Log("Use Coke!!!");
 
-    //    }
-    //}    
+        }
+    }
 }
