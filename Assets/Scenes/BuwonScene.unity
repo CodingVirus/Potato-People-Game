@@ -3949,7 +3949,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.358013
+  orthographic size: 4.2640233
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3973,7 +3973,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502670324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -35.6, y: -2.53, z: -10}
+  m_LocalPosition: {x: -37.25, y: -78.27, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3993,9 +3993,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTarget: {fileID: 2114640890}
-  cameraPosition: {x: 0, y: 4, z: 0}
+  cameraPosition: {x: 0, y: 0, z: 0}
   cameraMoveSpeed: 3
-  offset: {x: 0, y: 0}
+  offset: {x: 0, y: 4.2}
   limitMinX: -45
   limitMaxX: 11
   limitMinY: -8
@@ -11805,8 +11805,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1365274170}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -47.5
-  T_limitMaxX: -28.5
+  T_limitMinX: -45
+  T_limitMaxX: -29
   T_limitMinY: -83.5
   T_limitMaxY: -72.5
 --- !u!61 &1358147817
@@ -17700,7 +17700,6 @@ MonoBehaviour:
   currentTeleporter: {fileID: 0}
   fadeEffect: {fileID: 760909152}
   transferStart: 0
-  T_camera: 0
 --- !u!4 &2114640890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 373b4e53711259f40bbca62e22a75ff6, type: 3}

@@ -25,7 +25,7 @@ public class CameraFollow : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        cameraPosition.y = 4f;
+        //cameraPosition.y = 4f;
         transform.position = Vector3.Lerp(transform.position, cameraTarget.position + cameraPosition, Time.smoothDeltaTime * cameraMoveSpeed);
 
         float clampX = Mathf.Clamp(cameraTarget.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth);
