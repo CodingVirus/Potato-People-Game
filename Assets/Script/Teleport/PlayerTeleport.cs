@@ -12,18 +12,18 @@ public class PlayerTeleport : MonoBehaviour
     {
         if(transferStart == true)
         {
-            if(other.CompareTag("Door"))
-            {
+            //if(other.CompareTag("Door"))
+            //{
                 currentTeleporter = other.gameObject;
                 Invoke("DoorEnter", 0.5f);
                 Debug.Log("이동");
-            }
-            else
-            {
-                currentTeleporter = other.gameObject;
-                Invoke("DoorEnter", 0.5f);
-                Debug.Log("이동");
-            }
+            //}
+            //else
+            //{
+            //    currentTeleporter = other.gameObject;
+            //    Invoke("DoorEnter", 0.5f);
+            //    Debug.Log("이동");
+            //}
         }
     }
 
