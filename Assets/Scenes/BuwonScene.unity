@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 66223798}
   - component: {fileID: 66223799}
   m_Layer: 0
-  m_Name: "\uCC45\uC7A51_3"
+  m_Name: bookshelf 1_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3017,7 +3017,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331984260}
   m_Layer: 0
-  m_Name: observationB
+  m_Name: ObservationB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3471,7 +3471,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 101
+  m_SortingOrder: 401
   m_Sprite: {fileID: 21300000, guid: ee91ee5aafbc65449b910697025f2795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6237,7 +6237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 714019008}
   m_Layer: 0
-  m_Name: observationA
+  m_Name: ObservationA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7206,7 +7206,7 @@ GameObject:
   - component: {fileID: 873548703}
   - component: {fileID: 873548704}
   m_Layer: 0
-  m_Name: "\uC758\uC7901_1"
+  m_Name: chair 1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7784,7 +7784,7 @@ GameObject:
   - component: {fileID: 915345116}
   - component: {fileID: 915345117}
   m_Layer: 0
-  m_Name: "\uC758\uC7901_2"
+  m_Name: chair 1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9124,7 +9124,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1075481308}
   m_Layer: 0
-  m_Name: restroom
+  m_Name: Restroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10928,7 +10928,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 400
   m_Sprite: {fileID: 21300000, guid: ee91ee5aafbc65449b910697025f2795, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -12135,7 +12135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1405080427}
   m_Layer: 0
-  m_Name: Setting
+  m_Name: Map Component
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13039,7 +13039,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1536210319}
   m_Layer: 0
-  m_Name: laboratoryA
+  m_Name: LaboratoryA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13615,7 +13615,7 @@ GameObject:
   - component: {fileID: 1586997964}
   - component: {fileID: 1586997965}
   m_Layer: 0
-  m_Name: "\uCC45\uC7A51_1"
+  m_Name: bookshelf 1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14691,7 +14691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1740735982}
   m_Layer: 0
-  m_Name: laboratoryB
+  m_Name: LaboratoryB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15856,7 +15856,7 @@ GameObject:
   - component: {fileID: 1883454416}
   - component: {fileID: 1883454417}
   m_Layer: 0
-  m_Name: "\uCC45\uC7A51_2"
+  m_Name: bookshelf 1_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15940,7 +15940,7 @@ GameObject:
   - component: {fileID: 1884394793}
   - component: {fileID: 1884394794}
   m_Layer: 0
-  m_Name: "\uCC45\uC0C11"
+  m_Name: desk 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16562,7 +16562,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1936482627}
   m_Layer: 0
-  m_Name: storage
+  m_Name: Storage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
