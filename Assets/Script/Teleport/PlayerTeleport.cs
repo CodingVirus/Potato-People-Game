@@ -18,6 +18,12 @@ public class PlayerTeleport : MonoBehaviour
                 Invoke("DoorEnter", 0.5f);
                 Debug.Log("이동");
             }
+            else
+            {
+                currentTeleporter = other.gameObject;
+                Invoke("DoorEnter", 0.5f);
+                Debug.Log("이동");
+            }
         }
     }
 
