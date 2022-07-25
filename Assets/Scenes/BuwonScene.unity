@@ -349,6 +349,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8952994893067871546, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8952994893067871549, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
       propertyPath: pad
       value: 
@@ -19100,6 +19104,7 @@ MonoBehaviour:
   runspeed: 10
   playerWalk: 0
   playerRun: 0
+  playerFilp: 1
   target: {x: -30, y: 0, z: 0}
   dir: {x: 0, y: 0, z: 0}
   playerMove: 1
