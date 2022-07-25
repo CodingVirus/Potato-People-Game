@@ -5,27 +5,17 @@ using UnityEngine;
 public class UseItem : MonoBehaviour
 {
     public int num;
+    public GameObject useItemPlayer;
+    
     public void Useitem()
     {
-        Debug.Log(this.name);
-        if (this.name == "Coke(Clone)")
-        {
-            GameObject go = this.transform.parent.gameObject;
-            //Debug.Log(this.transform.parent.name);
-            num = int.Parse(go.name.Substring(go.name.IndexOf("_") + 1));
-            Debug.Log("Use Coke!!!");
-            
-            Destroy(this.gameObject);
-        }
-    }
-
-    public void UseTest()
-    {
-        Debug.Log(this.transform.GetChild(0).name);
-        if (this.transform.GetChild(0).name == "Coke")
+        num = int.Parse(this.name.Substring(this.name.IndexOf("_") + 1));
+        
+        if (this.transform.GetChild(0).name == "Coke(Clone)")
         {
             Debug.Log("Coke!!!");
+            Destroy(this.transform.GetChild(0).gameObject);
+            useItemPlayer.GetComponent<InventoryTest>().slots[num].isEmpty = true;
         }
     }
-
 }

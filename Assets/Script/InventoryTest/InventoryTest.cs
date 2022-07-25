@@ -16,21 +16,11 @@ public class InventoryTest : MonoBehaviour
         {
             GameObject go = Instantiate(slotPrefab, slotPanel.transform, false);
             go.name = "Slot_" + i;
-            //go.GetComponent<Button>().onClick.AddListener(UseItem);
+            go.GetComponent<UseItem>().useItemPlayer = this.gameObject;
             SlotDataTest slot = new SlotDataTest();
             slot.isEmpty = true;
             slot.slotObj = go;
             slots.Add(slot);
-        }
-    }
-
-    public void UseItem()
-    {
-        Debug.Log(transform.GetChild(0).name);
-        if (transform.GetChild(0).name == "Coke(Clone)")
-        {
-            Debug.Log("Use Coke!!!");
-
         }
     }
 }
