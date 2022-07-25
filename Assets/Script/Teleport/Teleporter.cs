@@ -7,6 +7,10 @@ public class Teleporter : MonoBehaviour
 {
     [SerializeField] private Transform destination;
     public GameObject PlayerPosition;
+
+    //private CameraFollow theCamera;
+    [SerializeField]
+    public float T_limitMinX, T_limitMaxX, T_limitMinY, T_limitMaxY;
  
     public Transform GetDestination()
     {
