@@ -15618,7 +15618,7 @@ MonoBehaviour:
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -8
-  T_limitMaxY: -3
+  T_limitMaxY: 3
 --- !u!61 &1774356222
 BoxCollider2D:
   m_ObjectHideFlags: 0
