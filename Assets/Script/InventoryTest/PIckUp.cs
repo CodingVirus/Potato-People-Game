@@ -10,14 +10,14 @@ public class PIckUp : MonoBehaviour
     public GameObject ply;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (this.name == "자판기1" && collision.CompareTag("Player") && active == true)
+        if (this.name == "Vending Machine" && collision.CompareTag("Player") && active == true)
         {
             this.transform.GetChild(0).gameObject.SetActive(true);
             ply = collision.gameObject;
             ply.GetComponent<PlayerMouseControll>().StopMove();
         }
 
-        else if (this.name == "조합도구1" && collision.CompareTag("Player") && active == true)
+        else if (this.name == "Drug Combiner" && collision.CompareTag("Player") && active == true)
         {
             this.transform.GetChild(0).gameObject.SetActive(true);
             ply = collision.gameObject;
@@ -32,8 +32,8 @@ public class PIckUp : MonoBehaviour
         {
             if (inven.slots[i].isEmpty)
             {
-                //slotItem.GetComponent<Button>().onClick.AddListener(UseItem);
-                Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
+                GameObject test = Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
+                //test.GetComponent<Button>().onClick.AddListener(UseItem);
                 inven.slots[i].isEmpty = false;
                 this.transform.GetChild(0).gameObject.SetActive(false);
                 break;
@@ -46,12 +46,18 @@ public class PIckUp : MonoBehaviour
 
     public void UseItem()
     {
-        Debug.Log(slotItem.name);
-        if (slotItem.name == "Coke(Clone)")
+        if (slotItem.name == "Coke")
         {
             Debug.Log("Coke!!!");
+            
+        }
+
+        else if (slotItem.name == "Drug")
+        {
+            Debug.Log("Drug!!!");
         }
     }
+
     public void PreesNoButton()
     {
         this.transform.GetChild(0).gameObject.SetActive(false);
@@ -73,4 +79,5 @@ public class PIckUp : MonoBehaviour
     //{
     //    active = false;
     //}
+    
 }

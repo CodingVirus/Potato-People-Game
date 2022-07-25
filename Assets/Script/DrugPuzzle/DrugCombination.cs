@@ -201,16 +201,21 @@ public class DrugCombination : MonoBehaviour
             result = 0;
             four.GetComponent<Text>().text = result + "L";
 
-            //Debug.Log("추출 성공!!");
-            notice.GetComponent<Text>().text = "추출 성공!!!";
+            //Debug.Log("???? ????!!");
+            notice.GetComponent<Text>().text = "???? ????!!!";
             Invoke("NoticeInitialization", 1.0f);
         }
 
         else
         {
-            //Debug.Log("추출 불가!!");
-            notice.GetComponent<Text>().text = "추출 불가!!!";
+            //Debug.Log("???? ????!!");
+            notice.GetComponent<Text>().text = "???? ????!!!";
             Invoke("NoticeInitialization", 1.0f);
         }
+    }
+
+    public void ExitUI()
+    {
+        this.transform.parent.gameObject.SetActive(false);
     }
 }

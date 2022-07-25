@@ -27,7 +27,7 @@ public class InventoryTest : MonoBehaviour
     public void UseItem()
     {
         Debug.Log(transform.GetChild(0).name);
-        if (transform.GetChild(0).name == "Coke")
+        if (transform.GetChild(0).name == "Coke(Clone)")
         {
             Debug.Log("Use Coke!!!");
 
