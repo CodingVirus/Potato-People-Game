@@ -4225,7 +4225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502670324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.31, y: -28.29, z: -10}
+  m_LocalPosition: {x: -22.9, y: -2.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15615,10 +15615,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destination: {fileID: 1650744325}
   PlayerPosition: {fileID: 2114640883}
-  T_limitMinX: -45
+  T_limitMinX: -45.5
   T_limitMaxX: 11
   T_limitMinY: -8
-  T_limitMaxY: -3
+  T_limitMaxY: 3
 --- !u!61 &1774356222
 BoxCollider2D:
   m_ObjectHideFlags: 0
