@@ -7,6 +7,8 @@ public class DrugCombination : MonoBehaviour
 {
     public GameObject three, four, five, notice;
     public GameObject threeSprite, fourSprite, fiveSprite;
+    public GameObject drugCombinerPlayerObj;
+    public GameObject drugItem;
 
     public Sprite[] spritesFour = new Sprite[2];
     public Sprite[] spritesThree = new Sprite[4];
@@ -201,15 +203,24 @@ public class DrugCombination : MonoBehaviour
             result = 0;
             four.GetComponent<Text>().text = result + "L";
 
-            //Debug.Log("???? ????!!");
-            notice.GetComponent<Text>().text = "???? ????!!!";
+            notice.GetComponent<Text>().text = "Success!!!";
             Invoke("NoticeInitialization", 1.0f);
+
+            InventoryTest inven = drugCombinerPlayerObj.GetComponent<InventoryTest>();
+            for (int i = 0; i < inven.slots.Count; i++)
+            {
+                if (inven.slots[i].isEmpty)
+                {
+                    Instantiate(drugItem, inven.slots[i].slotObj.transform, false);
+                    inven.slots[i].isEmpty = false;
+                    break;
+                }
+            }
         }
 
         else
         {
-            //Debug.Log("???? ????!!");
-            notice.GetComponent<Text>().text = "???? ????!!!";
+            notice.GetComponent<Text>().text = "Try Again!!!";
             Invoke("NoticeInitialization", 1.0f);
         }
     }
@@ -217,5 +228,8 @@ public class DrugCombination : MonoBehaviour
     public void ExitUI()
     {
         this.transform.parent.gameObject.SetActive(false);
+        this.transform.parent.parent.GetComponent<PIckUp>().active = false;
+        drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().target = drugCombinerPlayerObj.transform.position;
+        drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().StartMove();
     }
 }

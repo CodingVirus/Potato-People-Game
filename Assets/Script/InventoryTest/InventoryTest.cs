@@ -16,7 +16,7 @@ public class InventoryTest : MonoBehaviour
         {
             GameObject go = Instantiate(slotPrefab, slotPanel.transform, false);
             go.name = "Slot_" + i;
-            go.GetComponent<UseItem>().useItemPlayer = this.gameObject;
+            go.GetComponent<UseItem>().playerObj = this.gameObject;
             SlotDataTest slot = new SlotDataTest();
             slot.isEmpty = true;
             slot.slotObj = go;

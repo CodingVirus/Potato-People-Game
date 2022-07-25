@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class PIckUp : MonoBehaviour
 {
-    private bool active = false;
+    public bool active = false;
     public GameObject slotItem;
     public GameObject ply;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,6 +21,7 @@ public class PIckUp : MonoBehaviour
         {
             this.transform.GetChild(0).gameObject.SetActive(true);
             ply = collision.gameObject;
+            this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<DrugCombination>().drugCombinerPlayerObj = ply.gameObject;
             ply.GetComponent<PlayerMouseControll>().StopMove();
         }
     }
@@ -32,8 +33,7 @@ public class PIckUp : MonoBehaviour
         {
             if (inven.slots[i].isEmpty)
             {
-                GameObject test = Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
-                //test.GetComponent<Button>().onClick.AddListener(UseItem);
+                Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
                 inven.slots[i].isEmpty = false;
                 this.transform.GetChild(0).gameObject.SetActive(false);
                 break;
@@ -42,20 +42,6 @@ public class PIckUp : MonoBehaviour
         ply.GetComponent<PlayerMouseControll>().target = ply.transform.position;
         ply.GetComponent<PlayerMouseControll>().StartMove();
         active = false;
-    }
-
-    public void UseItem()
-    {
-        if (slotItem.name == "Coke")
-        {
-            Debug.Log("Coke!!!");
-            
-        }
-
-        else if (slotItem.name == "Drug")
-        {
-            Debug.Log("Drug!!!");
-        }
     }
 
     public void PreesNoButton()
