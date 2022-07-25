@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5339553529676623146}
   - component: {fileID: 87199489429816030}
   - component: {fileID: 8101656478473431462}
+  - component: {fileID: 8520065377749733489}
   m_Layer: 5
   m_Name: slotPrefab
   m_TagString: Untagged
@@ -121,15 +122,28 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 32c017992a152b74cb0e218f6681c419, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 8520065377749733489}
+        m_TargetAssemblyTypeName: UseItem, Assembly-CSharp
+        m_MethodName: UseTest
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8520065377749733489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2169270916814959921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d1f844b031c4cffa298f052e0063a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  num: 0
