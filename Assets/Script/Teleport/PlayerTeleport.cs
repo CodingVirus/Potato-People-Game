@@ -44,7 +44,7 @@ public class PlayerTeleport : MonoBehaviour
         }
         else
         {
-            Invoke("Fade", 0.6f);
+            Invoke("Fade", 0.5f);
         }
     }
 
