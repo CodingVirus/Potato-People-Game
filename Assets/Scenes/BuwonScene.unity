@@ -13491,7 +13491,7 @@ GameObject:
   - component: {fileID: 1555764892}
   m_Layer: 0
   m_Name: "\uCCA0\uC81C \uCE90\uBE44\uB1371_2"
-  m_TagString: Untagged
+  m_TagString: Hide
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16746,6 +16746,10 @@ PrefabInstance:
     - target: {fileID: 4125612171632752042, guid: 2706c53d0bacd4237863e00f84eb2f42, type: 3}
       propertyPath: m_Name
       value: HideEffect
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125612171632752042, guid: 2706c53d0bacd4237863e00f84eb2f42, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4125612171632752043, guid: 2706c53d0bacd4237863e00f84eb2f42, type: 3}
       propertyPath: player
