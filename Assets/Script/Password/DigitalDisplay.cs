@@ -50,9 +50,8 @@ public class DigitalDisplay : MonoBehaviour
             Debug.Log("Correct!");
             pad.SetActive(false);
             //uiOn = false;
-            Destroy(gameObject);
-            Debug.Log("Destroy");
-            Invoke("StartToMove", 0.5f);
+            Invoke("StartToMove", 0.3f);
+            Invoke("padDestroy", 0.4f);
         }
         else
         {
@@ -73,6 +72,12 @@ public class DigitalDisplay : MonoBehaviour
         pad.SetActive(false);
         //uiOn = false;
         Invoke("StartToMove", 0.3f);
+    }
+
+    private void padDestroy()
+    {
+        Destroy(gameObject);
+        Debug.Log("Destroy");
     }
 
     private void StartToMove()

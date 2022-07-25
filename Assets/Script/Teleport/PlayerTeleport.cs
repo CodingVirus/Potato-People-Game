@@ -7,7 +7,6 @@ public class PlayerTeleport : MonoBehaviour
     public GameObject currentTeleporter;
     public GameObject fadeEffect;
     public bool transferStart = false;
-    public bool fade = true;
     
     //public bool T_camera = false;
     private CameraFollow theCamera;
@@ -38,37 +37,40 @@ public class PlayerTeleport : MonoBehaviour
 
     public void DoorEnter() 
     {
-        if(fade == true)
-        {
-            Invoke("FadeEffect", 1.0f);
-        }
         if(currentTeleporter == null)
         {
             transferStart = false;
             Debug.Log("Moving : 이동 false");
-            fade = false;
+        }
+        else
+        {
+            Invoke("Fade", 0.6f);
+        }
+    }
+
+    private void Fade()
+    {
+        if(currentTeleporter != null)
+        {
+            //currentTeleporter.GetComponent<AudioSource>().Play();
+            this.GetComponent<PlayerMouseControll>().walkspeed = 0.0f;
+            fadeEffect.GetComponent<FadeScript>().Fade();
+            Debug.Log("fade");
+            //currentTeleporter.GetComponent<AudioSource>().Play();
+            Invoke("Moving", 1.0f);
         }
     }
 
     private void Moving()
     {
-        CameraMove();
         Debug.Log("moving 시작");
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
         this.GetComponent<PlayerMouseControll>().target = transform.position;
-        this.GetComponent<PlayerMouseControll>().speed = 5.0f;
+        CameraMove();
+        this.GetComponent<PlayerMouseControll>().walkspeed = 5.0f;
         transferStart = false;
         currentTeleporter = null;
         
-    }
-
-    private void FadeEffect()
-    {
-        //currentTeleporter.GetComponent<AudioSource>().Play();
-        fadeEffect.GetComponent<FadeScript>().Fade();
-        Debug.Log("fade");
-        //currentTeleporter.GetComponent<AudioSource>().Play();
-        Invoke("Moving", 1.4f);
     }
 
     private void CameraMove()
