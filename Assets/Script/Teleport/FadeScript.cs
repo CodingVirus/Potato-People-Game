@@ -7,7 +7,7 @@ public class FadeScript : MonoBehaviour
 {
     public Image Panel;
     float time = 0f;
-    float F_time = 1.5f;
+    float F_time = 1.1f;
     public void Fade()
     {
         StartCoroutine(FadeFlow());

@@ -6,7 +6,11 @@ using System;
 public class PlayerMouseControll : MonoBehaviour
 {
 
-    public float speed = 5f;
+    public float walkspeed = 5f;
+    public float runspeed = 10f;
+    public bool playerWalk;
+    public bool playerRun;
+    //public float speed = 5f;
     public Vector3 target;
     private Vector3 transPos;
     private Vector3 mousePos;
@@ -33,10 +37,10 @@ public class PlayerMouseControll : MonoBehaviour
         target.y = transform.position.y;
         if(Input.GetMouseButton(0))
         {
+            playerWalk = true;
             playerMove = true;
             if(playerMove == true)
             {
-                speed = 5f;
                 mousePos = Input.mousePosition;
                 transPos = Camera.main.ScreenToWorldPoint(mousePos);
                 target = new Vector3(transPos.x, target.y, 0);
@@ -52,8 +56,14 @@ public class PlayerMouseControll : MonoBehaviour
                 }
             }
         }
+        if(playerWalk == true)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * walkspeed);
+        }
+
         if(Input.GetMouseButton(1))
         {
+            playerRun = true;
             playerMove = true;
             if(playerMove == true)
             {
@@ -61,7 +71,6 @@ public class PlayerMouseControll : MonoBehaviour
                 transPos = Camera.main.ScreenToWorldPoint(mousePos);
                 target = new Vector3(transPos.x, target.y, 0);
                 anim.SetBool("isWalking", true);
-                speed = 10f;
                 dir = target - transform.position;
                 if (dir.x > 0 && facingRight == false)
                 {
@@ -73,17 +82,23 @@ public class PlayerMouseControll : MonoBehaviour
                 }
             }
         }
-        transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * speed);
+        if(playerRun == true)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * runspeed);
+        }
+
         if(target.x == transform.position.x)
         {
             playerMove = false;
+            playerWalk = false;
+            playerRun = false;
             anim.SetBool("isWalking", false);
         }
         if(playerMove == false)
         {
             anim.SetBool("isWalking", false);
         }
-        if(speed == 0.0f)
+        if(walkspeed == 0.0f || runspeed == 0.0f)
         {
             anim.SetBool("isWalking", false);
         }
@@ -91,13 +106,15 @@ public class PlayerMouseControll : MonoBehaviour
 
     public void StopMove()
     {
-        speed = 0.0f;
+        walkspeed = 0.0f;
+        runspeed = 0.0f;
         anim.SetBool("isWalking", false);
     }
 
     public void StartMove()
     {
-        speed = 5.0f;
+        walkspeed = 5.0f;
+        runspeed = 10.0f;
         anim.SetBool("isWalking", true);
     }
 

@@ -28,9 +28,9 @@ public class PlayerTeleport : MonoBehaviour
             //}
             //else
             //{
-                currentTeleporter = other.gameObject;
-                Invoke("DoorEnter", 0.5f);
-                Debug.Log("이동");
+            //    currentTeleporter = other.gameObject;
+            //    Invoke("DoorEnter", 0.5f);
+            //    Debug.Log("이동");
             //}
         }
     }
@@ -44,21 +44,30 @@ public class PlayerTeleport : MonoBehaviour
         }
         else
         {
+            Invoke("Fade", 0.6f);
+        }
+    }
+
+    private void Fade()
+    {
+        if(currentTeleporter != null)
+        {
             //currentTeleporter.GetComponent<AudioSource>().Play();
+            this.GetComponent<PlayerMouseControll>().walkspeed = 0.0f;
             fadeEffect.GetComponent<FadeScript>().Fade();
             Debug.Log("fade");
             //currentTeleporter.GetComponent<AudioSource>().Play();
-            Invoke("Moving", 1.4f);
+            Invoke("Moving", 1.0f);
         }
     }
 
     private void Moving()
     {
-        CameraMove();
         Debug.Log("moving 시작");
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
         this.GetComponent<PlayerMouseControll>().target = transform.position;
-        this.GetComponent<PlayerMouseControll>().speed = 5.0f;
+        CameraMove();
+        this.GetComponent<PlayerMouseControll>().walkspeed = 5.0f;
         transferStart = false;
         currentTeleporter = null;
         
