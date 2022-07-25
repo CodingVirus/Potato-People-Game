@@ -125,6 +125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dc3d4ad387309d46ac460d4d8d401e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 0
   slotItem: {fileID: 7233765201568342653, guid: 2110f284420997e43bef596e89727d1f, type: 3}
   ply: {fileID: 0}
 --- !u!1001 &4489419043820466164
@@ -138,13 +139,25 @@ PrefabInstance:
       propertyPath: drugItem
       value: 
       objectReference: {fileID: 7233765201568342653, guid: 2110f284420997e43bef596e89727d1f, type: 3}
+    - target: {fileID: 1594683266116734227, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
+      propertyPath: fourButton
+      value: 
+      objectReference: {fileID: 2912963844957036143}
+    - target: {fileID: 1594683266767696281, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594683266767696283, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1594683266910176689, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
       propertyPath: m_Name
       value: DrugCombinerUI
       objectReference: {fileID: 0}
     - target: {fileID: 1594683266910176689, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1594683266910176693, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
       propertyPath: m_Pivot.x
@@ -237,3 +250,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1594683266910176693, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
   m_PrefabInstance: {fileID: 4489419043820466164}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2912963844957036143 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1594683266767696283, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
+  m_PrefabInstance: {fileID: 4489419043820466164}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

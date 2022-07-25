@@ -10,6 +10,8 @@ public class DrugCombination : MonoBehaviour
     public GameObject drugCombinerPlayerObj;
     public GameObject drugItem;
 
+    public Button fourButton;
+
     public Sprite[] spritesFour = new Sprite[2];
     public Sprite[] spritesThree = new Sprite[4];
     public Sprite[] spritesFive = new Sprite[6];
@@ -128,7 +130,7 @@ public class DrugCombination : MonoBehaviour
     public void FourButton()
     {
         result = fiveCurrentState + threeCurrentState;
-
+        
         if (result == 4)
         {
             fourSprite.GetComponent<Image>().sprite = spritesFour[1];
@@ -137,11 +139,12 @@ public class DrugCombination : MonoBehaviour
             fiveCurrentState = 0;
             five.GetComponent<Text>().text = fiveCurrentState + "L";
             three.GetComponent<Text>().text = threeCurrentState + "L";
+            fourButton.GetComponent<Button>().interactable = false;
+            
         }
 
         else
         {
-            //Debug.Log("Error!!!");
             notice.GetComponent<Text>().text = "Error!!!";
             Invoke("NoticeInitialization", 1.0f);
         }
@@ -199,6 +202,7 @@ public class DrugCombination : MonoBehaviour
     {
         if (result == 4)
         {
+            fourButton.GetComponent<Button>().interactable = true;
             fourSprite.GetComponent<Image>().sprite = spritesFour[0];
             result = 0;
             four.GetComponent<Text>().text = result + "L";
