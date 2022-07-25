@@ -75,7 +75,7 @@ public class PlayerTeleport : MonoBehaviour
         }
         else
         {
-            Invoke("Fade", 0.6f);
+            Invoke("Fade", 0.5f);
         }
     }
 
@@ -84,7 +84,7 @@ public class PlayerTeleport : MonoBehaviour
         if(currentTeleporter != null)
         {
             //currentTeleporter.GetComponent<AudioSource>().Play();
-            this.GetComponent<PlayerMouseControll>().walkspeed = 0.0f;
+            PlayerMouseControll.instance.StopMove();
             fadeEffect.GetComponent<FadeScript>().Fade();
             Debug.Log("fade");
             //currentTeleporter.GetComponent<AudioSource>().Play();
@@ -98,7 +98,7 @@ public class PlayerTeleport : MonoBehaviour
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
         this.GetComponent<PlayerMouseControll>().target = transform.position;
         CameraMove();
-        this.GetComponent<PlayerMouseControll>().walkspeed = 5.0f;
+        PlayerMouseControll.instance.StartMove();
         transferStart = false;
         currentTeleporter = null;
         

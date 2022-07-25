@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - DrugCombiner
+  - Hide
   layers:
   - Default
   - TransparentFX

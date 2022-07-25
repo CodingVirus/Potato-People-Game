@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class Teleporter : MonoBehaviour
+public class Teleporter : ClickablePortal
 {
     [SerializeField] private Transform destination;
     public GameObject PlayerPosition;
@@ -23,20 +23,20 @@ public class Teleporter : MonoBehaviour
         Debug.Log("MouseDown : true");
     }
 
-    private void OnMouseEnter() 
-    {
-        CursorController.instance.Portal_Click();
+    //private void OnMouseEnter() 
+    //{
+    //    CursorController.instance.Portal_Click();
 
-        if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter == null)
-        {
-            PlayerPosition.GetComponent<PlayerTeleport>().transferStart = false;
-            Debug.Log("MouseEnter : false");
-        }
-    }
+        //if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter == null)
+        //{
+        //    PlayerPosition.GetComponent<PlayerTeleport>().transferStart = false;
+        //    Debug.Log("MouseEnter : false");
+        //}
+    //}
 
-    private void OnMouseExit() 
-    {
-        CursorController.instance.Default();
+    //private void OnMouseExit() 
+    //{
+    //    CursorController.instance.Default();
 
         //if(Input.GetMouseButtonDown(0))
         //{
@@ -47,7 +47,9 @@ public class Teleporter : MonoBehaviour
         //if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter == null)
         //{
         //    PlayerPosition.GetComponent<PlayerTeleport>().transferStart = false;
+        //    Debug.Log("MouseExit : fasle");
         //}
-    }
+        //}
+    //}
    
 }
