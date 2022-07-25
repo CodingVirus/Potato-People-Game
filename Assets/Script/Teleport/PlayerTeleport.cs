@@ -7,7 +7,6 @@ public class PlayerTeleport : MonoBehaviour
     public GameObject currentTeleporter;
     public GameObject fadeEffect;
     public bool transferStart = false;
-    public bool fade = true;
     
     //public bool T_camera = false;
     private CameraFollow theCamera;
@@ -29,24 +28,27 @@ public class PlayerTeleport : MonoBehaviour
             //}
             //else
             //{
-            //    currentTeleporter = other.gameObject;
-            //    Invoke("DoorEnter", 0.5f);
-            //    Debug.Log("이동");
+                currentTeleporter = other.gameObject;
+                Invoke("DoorEnter", 0.5f);
+                Debug.Log("이동");
             //}
         }
     }
 
     public void DoorEnter() 
     {
-        if(fade == true)
-        {
-            Invoke("FadeEffect", 1.0f);
-        }
         if(currentTeleporter == null)
         {
             transferStart = false;
             Debug.Log("Moving : 이동 false");
-            fade = false;
+        }
+        else
+        {
+            //currentTeleporter.GetComponent<AudioSource>().Play();
+            fadeEffect.GetComponent<FadeScript>().Fade();
+            Debug.Log("fade");
+            //currentTeleporter.GetComponent<AudioSource>().Play();
+            Invoke("Moving", 1.4f);
         }
     }
 
@@ -60,15 +62,6 @@ public class PlayerTeleport : MonoBehaviour
         transferStart = false;
         currentTeleporter = null;
         
-    }
-
-    private void FadeEffect()
-    {
-        //currentTeleporter.GetComponent<AudioSource>().Play();
-        fadeEffect.GetComponent<FadeScript>().Fade();
-        Debug.Log("fade");
-        //currentTeleporter.GetComponent<AudioSource>().Play();
-        Invoke("Moving", 1.4f);
     }
 
     private void CameraMove()
