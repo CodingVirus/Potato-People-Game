@@ -39,10 +39,10 @@ public class FadeIn : MonoBehaviour
         player.SetActive(false);
         Black.gameObject.SetActive(true);
         time = 0f;
-        while (playerLight.intensity > 0.1f)
+        while (playerLight.intensity > 0f)
         {
             time += Time.deltaTime / F_time;
-            playerLight.intensity = Mathf.Lerp(1, 0.1f, time);
+            playerLight.intensity = Mathf.Lerp(1, 0f, time);
             //Black.color = alpha;
             yield return null;
         }
