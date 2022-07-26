@@ -32,6 +32,25 @@ public class PIckUp : MonoBehaviour
             //ply.GetComponent<PlayerMouseControll>().StartMove();
             active = false;
         }
+
+        else if (this.name == "Refrigerator" && collision.CompareTag("Player") && active == true)
+        {
+            ply = collision.gameObject;
+            Inventory inven = ply.GetComponent<Inventory>();
+            for (int i = 0; i < inven.slots.Count; i++)
+            {
+                if (inven.slots[i].isEmpty)
+                {
+                    Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
+                    inven.slots[i].isEmpty = false;
+                    //this.transform.GetChild(0).gameObject.SetActive(false);
+                    break;
+                }
+            }
+            //ply.GetComponent<PlayerMouseControll>().target = ply.transform.position;
+            //ply.GetComponent<PlayerMouseControll>().StartMove();
+            active = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

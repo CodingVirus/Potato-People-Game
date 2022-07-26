@@ -26,7 +26,7 @@ public class UseItem : MonoBehaviour
             playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
         }
 
-        else if (this.transform.GetChild(0).name == "Apple(Clone)")
+        else if (this.transform.GetChild(0).name == "Lighter(Clone)")
         { 
             if (playerObj.GetComponent<Inventory>().slots[num].usingItem == false)
             {
