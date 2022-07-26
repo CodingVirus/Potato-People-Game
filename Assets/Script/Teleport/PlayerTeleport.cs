@@ -19,7 +19,7 @@ public class PlayerTeleport : MonoBehaviour
     }
     private void FindItem()
     {
-        InventoryTest inven = this.GetComponent<InventoryTest>();
+        Inventory inven = this.GetComponent<Inventory>();
         for (int i = 0; i < inven.slots.Count; i++)
         {
             if (inven.slots[i].isEmpty == false && inven.slots[i].slotObj.transform.GetChild(0).name == "Drug(Clone)")

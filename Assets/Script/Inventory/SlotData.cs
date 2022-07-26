@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class SlotDataTest : MonoBehaviour
+public class SlotData : MonoBehaviour
 {
     public bool isEmpty;
     public bool usingItem = false;

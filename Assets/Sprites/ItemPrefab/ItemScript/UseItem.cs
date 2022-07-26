@@ -16,27 +16,27 @@ public class UseItem : MonoBehaviour
         {
             Debug.Log("Coke!!!");
             Destroy(this.transform.GetChild(0).gameObject);
-            playerObj.GetComponent<InventoryTest>().slots[num].isEmpty = true;
+            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
         }
 
         else if (this.transform.GetChild(0).name == "Drug(Clone)")
         {
             Destroy(this.transform.GetChild(0).gameObject);
             Debug.Log(this.transform.GetChild(0).name);
-            playerObj.GetComponent<InventoryTest>().slots[num].isEmpty = true;
+            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
         }
 
         else if (this.transform.GetChild(0).name == "Apple(Clone)")
         { 
-            if (playerObj.GetComponent<InventoryTest>().slots[num].usingItem == false)
+            if (playerObj.GetComponent<Inventory>().slots[num].usingItem == false)
             {
-                playerObj.GetComponent<InventoryTest>().slots[num].usingItem = true;
+                playerObj.GetComponent<Inventory>().slots[num].usingItem = true;
                 playerObj.transform.Find("Lighter").gameObject.SetActive(true);
             }
 
-            else if (playerObj.GetComponent<InventoryTest>().slots[num].usingItem == true)
+            else if (playerObj.GetComponent<Inventory>().slots[num].usingItem == true)
             {
-                playerObj.GetComponent<InventoryTest>().slots[num].usingItem = false;
+                playerObj.GetComponent<Inventory>().slots[num].usingItem = false;
                 playerObj.transform.Find("Lighter").gameObject.SetActive(false);
             }
         }

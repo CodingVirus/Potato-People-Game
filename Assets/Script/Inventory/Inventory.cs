@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InventoryTest : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
     public GameObject slotPanel;
-    public List<SlotDataTest> slots = new List<SlotDataTest>();
+    public List<SlotData> slots = new List<SlotData>();
     private int maxSlot = 4;
     public GameObject slotPrefab;
 
@@ -19,7 +19,7 @@ public class InventoryTest : MonoBehaviour
             GameObject go = Instantiate(slotPrefab, slotPanel.transform, false);
             go.name = "Slot_" + i;
             go.GetComponent<UseItem>().playerObj = this.gameObject;
-            SlotDataTest slot = new SlotDataTest();
+            SlotData slot = new SlotData();
             slot.isEmpty = true;
             slot.slotObj = go;
             slots.Add(slot);

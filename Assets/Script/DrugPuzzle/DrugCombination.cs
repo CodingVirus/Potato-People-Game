@@ -210,7 +210,7 @@ public class DrugCombination : MonoBehaviour
             notice.GetComponent<Text>().text = "Success!!!";
             Invoke("NoticeInitialization", 1.0f);
 
-            InventoryTest inven = drugCombinerPlayerObj.GetComponent<InventoryTest>();
+            Inventory inven = drugCombinerPlayerObj.GetComponent<Inventory>();
             for (int i = 0; i < inven.slots.Count; i++)
             {
                 if (inven.slots[i].isEmpty)

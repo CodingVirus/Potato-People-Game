@@ -16,7 +16,7 @@ public class PIckUp : MonoBehaviour
             ply = collision.gameObject;
             //ply.GetComponent<PlayerMouseControll>().StopMove();
 
-            InventoryTest inven = ply.GetComponent<InventoryTest>();
+            Inventory inven = ply.GetComponent<Inventory>();
             for (int i = 0; i < inven.slots.Count; i++)
             {
                 if (inven.slots[i].isEmpty)
@@ -54,7 +54,7 @@ public class PIckUp : MonoBehaviour
 
     public void PressYesButton()
     {
-        InventoryTest inven = ply.GetComponent<InventoryTest>();
+        Inventory inven = ply.GetComponent<Inventory>();
         for (int i = 0; i < inven.slots.Count; i++)
         {
             if (inven.slots[i].isEmpty)
