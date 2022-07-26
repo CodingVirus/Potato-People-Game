@@ -10,6 +10,8 @@ public class InventoryTest : MonoBehaviour
     private int maxSlot = 4;
     public GameObject slotPrefab;
 
+    //public bool usingItem = false;
+
     private void Start()
     {
         for (int i = 0; i < maxSlot; i++)

@@ -8,6 +8,32 @@ public class PIckUp : MonoBehaviour
     public bool active = false;
     public GameObject slotItem;
     public GameObject ply;
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (this.name == "Surgery Desk" && collision.CompareTag("Player") && active == true)
+        {
+            ply = collision.gameObject;
+            //ply.GetComponent<PlayerMouseControll>().StopMove();
+
+            InventoryTest inven = ply.GetComponent<InventoryTest>();
+            for (int i = 0; i < inven.slots.Count; i++)
+            {
+                if (inven.slots[i].isEmpty)
+                {
+                    //ply.GetComponent<LightControll>().global.GetComponent<>
+                    Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
+                    inven.slots[i].isEmpty = false;
+                    //this.transform.GetChild(0).gameObject.SetActive(false);
+                    break;
+                }
+            }
+            //ply.GetComponent<PlayerMouseControll>().target = ply.transform.position;
+            //ply.GetComponent<PlayerMouseControll>().StartMove();
+            active = false;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (this.name == "Vending Machine" && collision.CompareTag("Player") && active == true)

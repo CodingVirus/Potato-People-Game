@@ -6,5 +6,6 @@ using UnityEngine;
 public class SlotDataTest : MonoBehaviour
 {
     public bool isEmpty;
+    public bool usingItem = false;
     public GameObject slotObj;
 }

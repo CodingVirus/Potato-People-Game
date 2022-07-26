@@ -6,7 +6,7 @@ public class UseItem : MonoBehaviour
 {
     public int num;
     public GameObject playerObj;
-    
+
     public void Useitem()
     {
         //playerObj.GetComponent<PlayerMouseControll>().StopMove();
@@ -14,7 +14,7 @@ public class UseItem : MonoBehaviour
         
         if (this.transform.GetChild(0).name == "Coke(Clone)")
         {
-            //Debug.Log("Coke!!!");
+            Debug.Log("Coke!!!");
             Destroy(this.transform.GetChild(0).gameObject);
             playerObj.GetComponent<InventoryTest>().slots[num].isEmpty = true;
         }
@@ -24,6 +24,21 @@ public class UseItem : MonoBehaviour
             Destroy(this.transform.GetChild(0).gameObject);
             Debug.Log(this.transform.GetChild(0).name);
             playerObj.GetComponent<InventoryTest>().slots[num].isEmpty = true;
+        }
+
+        else if (this.transform.GetChild(0).name == "Apple(Clone)")
+        { 
+            if (playerObj.GetComponent<InventoryTest>().slots[num].usingItem == false)
+            {
+                playerObj.GetComponent<InventoryTest>().slots[num].usingItem = true;
+                playerObj.transform.Find("Lighter").gameObject.SetActive(true);
+            }
+
+            else if (playerObj.GetComponent<InventoryTest>().slots[num].usingItem == true)
+            {
+                playerObj.GetComponent<InventoryTest>().slots[num].usingItem = false;
+                playerObj.transform.Find("Lighter").gameObject.SetActive(false);
+            }
         }
     }
 }
