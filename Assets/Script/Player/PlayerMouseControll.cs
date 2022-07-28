@@ -128,6 +128,11 @@ public class PlayerMouseControll : MonoBehaviour
         anim.SetBool("isWalking", true);
     }
 
+    public void MaintainPosition()
+    {
+        target = this.transform.position;
+    }
+
     void Flip()
     {
         Vector3 currentScale = gameObject.transform.localScale;

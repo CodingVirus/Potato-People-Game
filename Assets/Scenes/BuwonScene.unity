@@ -798,12 +798,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2114640891}
     - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2114640891}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StopMove
       objectReference: {fileID: 0}
     - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: StartMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: MaintainPosition
       objectReference: {fileID: 0}
     - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -814,11 +822,19 @@ PrefabInstance:
       value: PlayerMouseControll, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerMouseControll, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5502784556733167654, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
