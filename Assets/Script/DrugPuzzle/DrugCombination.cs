@@ -7,6 +7,10 @@ public class DrugCombination : MonoBehaviour
 {
     public GameObject three, four, five, notice;
     public GameObject threeSprite, fourSprite, fiveSprite;
+    public GameObject drugCombinerPlayerObj;
+    public GameObject drugItem;
+
+    public Button fourButton;
 
     public Sprite[] spritesFour = new Sprite[2];
     public Sprite[] spritesThree = new Sprite[4];
@@ -126,7 +130,7 @@ public class DrugCombination : MonoBehaviour
     public void FourButton()
     {
         result = fiveCurrentState + threeCurrentState;
-
+        
         if (result == 4)
         {
             fourSprite.GetComponent<Image>().sprite = spritesFour[1];
@@ -135,11 +139,12 @@ public class DrugCombination : MonoBehaviour
             fiveCurrentState = 0;
             five.GetComponent<Text>().text = fiveCurrentState + "L";
             three.GetComponent<Text>().text = threeCurrentState + "L";
+            fourButton.GetComponent<Button>().interactable = false;
+            
         }
 
         else
         {
-            //Debug.Log("Error!!!");
             notice.GetComponent<Text>().text = "Error!!!";
             Invoke("NoticeInitialization", 1.0f);
         }
@@ -197,20 +202,38 @@ public class DrugCombination : MonoBehaviour
     {
         if (result == 4)
         {
+            fourButton.GetComponent<Button>().interactable = true;
             fourSprite.GetComponent<Image>().sprite = spritesFour[0];
             result = 0;
             four.GetComponent<Text>().text = result + "L";
 
-            //Debug.Log("추출 성공!!");
-            notice.GetComponent<Text>().text = "추출 성공!!!";
+            notice.GetComponent<Text>().text = "Success!!!";
             Invoke("NoticeInitialization", 1.0f);
+
+            Inventory inven = drugCombinerPlayerObj.GetComponent<Inventory>();
+            for (int i = 0; i < inven.slots.Count; i++)
+            {
+                if (inven.slots[i].isEmpty)
+                {
+                    Instantiate(drugItem, inven.slots[i].slotObj.transform, false);
+                    inven.slots[i].isEmpty = false;
+                    break;
+                }
+            }
         }
 
         else
         {
-            //Debug.Log("추출 불가!!");
-            notice.GetComponent<Text>().text = "추출 불가!!!";
+            notice.GetComponent<Text>().text = "Try Again!!!";
             Invoke("NoticeInitialization", 1.0f);
         }
+    }
+
+    public void ExitUI()
+    {
+        this.transform.parent.gameObject.SetActive(false);
+        this.transform.parent.parent.GetComponent<PIckUp>().active = false;
+        drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().target = drugCombinerPlayerObj.transform.position;
+        drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().StartMove();
     }
 }

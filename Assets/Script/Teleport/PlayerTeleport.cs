@@ -7,10 +7,27 @@ public class PlayerTeleport : MonoBehaviour
     public GameObject currentTeleporter;
     public GameObject fadeEffect;
     public bool transferStart = false;
+
+    public bool key = false;
     
     //public bool T_camera = false;
     private CameraFollow theCamera;
 
+    private void Update()
+    {
+       // FindItem();
+    }
+    private void FindItem()
+    {
+        Inventory inven = this.GetComponent<Inventory>();
+        for (int i = 0; i < inven.slots.Count; i++)
+        {
+            if (inven.slots[i].isEmpty == false && inven.slots[i].slotObj.transform.GetChild(0).name == "CardKey(Clone)")
+            {
+                key = true;
+            }
+        }
+    }
     private void Awake() 
     {
         theCamera = Camera.main.GetComponent<CameraFollow>();
@@ -18,13 +35,27 @@ public class PlayerTeleport : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        FindItem();
         if(transferStart == true)
         {
+            if (other.name == "door3_1")
+            {
+                currentTeleporter = null;
+                if (key == true)
+                {
+                    currentTeleporter = other.gameObject;
+                    Invoke("DoorEnter", 0.5f);
+                    Debug.Log("이동");
+                }
+            }
             //if(other.CompareTag("Door"))
             //{
+            else
+            {
                 currentTeleporter = other.gameObject;
                 Invoke("DoorEnter", 0.5f);
                 Debug.Log("이동");
+            }
             //}
             //else
             //{
@@ -44,7 +75,7 @@ public class PlayerTeleport : MonoBehaviour
         }
         else
         {
-            Invoke("Fade", 0.6f);
+            Invoke("Fade", 0.5f);
         }
     }
 
@@ -53,7 +84,7 @@ public class PlayerTeleport : MonoBehaviour
         if(currentTeleporter != null)
         {
             //currentTeleporter.GetComponent<AudioSource>().Play();
-            this.GetComponent<PlayerMouseControll>().walkspeed = 0.0f;
+            PlayerMouseControll.instance.StopMove();
             fadeEffect.GetComponent<FadeScript>().Fade();
             Debug.Log("fade");
             //currentTeleporter.GetComponent<AudioSource>().Play();
@@ -67,7 +98,7 @@ public class PlayerTeleport : MonoBehaviour
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
         this.GetComponent<PlayerMouseControll>().target = transform.position;
         CameraMove();
-        this.GetComponent<PlayerMouseControll>().walkspeed = 5.0f;
+        PlayerMouseControll.instance.StartMove();
         transferStart = false;
         currentTeleporter = null;
         

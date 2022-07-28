@@ -10,6 +10,7 @@ public class PlayerMouseControll : MonoBehaviour
     public float runspeed = 10f;
     public bool playerWalk;
     public bool playerRun;
+    public bool playerFilp = true;
     //public float speed = 5f;
     public Vector3 target;
     private Vector3 transPos;
@@ -46,13 +47,17 @@ public class PlayerMouseControll : MonoBehaviour
                 target = new Vector3(transPos.x, target.y, 0);
                 anim.SetBool("isWalking", true);
                 dir = target - transform.position;
-                if (dir.x > 0 && facingRight == false)
+                if(playerFilp == true)
                 {
-                     Flip();
-                }
-                if (dir.x < 0 && facingRight == true)
-                {
-                     Flip();
+                    dir = target - transform.position;
+                    if (dir.x > 0 && facingRight == false)
+                    {
+                         Flip();
+                    }
+                    if (dir.x < 0 && facingRight == true)
+                    {
+                         Flip();
+                    }
                 }
             }
         }
@@ -71,14 +76,17 @@ public class PlayerMouseControll : MonoBehaviour
                 transPos = Camera.main.ScreenToWorldPoint(mousePos);
                 target = new Vector3(transPos.x, target.y, 0);
                 anim.SetBool("isWalking", true);
-                dir = target - transform.position;
-                if (dir.x > 0 && facingRight == false)
+                if(playerFilp == true)
                 {
-                     Flip();
-                }
-                if (dir.x < 0 && facingRight == true)
-                {
-                     Flip();
+                    dir = target - transform.position;
+                    if (dir.x > 0 && facingRight == false)
+                    {
+                         Flip();
+                    }
+                    if (dir.x < 0 && facingRight == true)
+                    {
+                         Flip();
+                    }
                 }
             }
         }
@@ -108,6 +116,7 @@ public class PlayerMouseControll : MonoBehaviour
     {
         walkspeed = 0.0f;
         runspeed = 0.0f;
+        playerFilp = false;
         anim.SetBool("isWalking", false);
     }
 
@@ -115,6 +124,7 @@ public class PlayerMouseControll : MonoBehaviour
     {
         walkspeed = 5.0f;
         runspeed = 10.0f;
+        playerFilp = true;
         anim.SetBool("isWalking", true);
     }
 
