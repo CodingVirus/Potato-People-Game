@@ -5,6 +5,7 @@ using UnityEngine.Rendering.Universal;
 
 public class LightControll : MonoBehaviour
 {
+
     public Light2D global;
 
 }
