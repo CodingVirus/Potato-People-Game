@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1613870295}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -22.5
   T_limitMaxX: -2.8
   T_limitMinY: -58.5
@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 382233267}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -6.5
   T_limitMaxX: 13.5
   T_limitMinY: -33
@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 2096571280}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -1426,7 +1426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 635450508}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45.5
   T_limitMaxX: -25.8
   T_limitMinY: -33
@@ -1677,7 +1677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 709473599}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45.5
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -1756,7 +1756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 479264807}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -2683,7 +2683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1346499487}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: 14.3
   T_limitMaxX: 36
   T_limitMinY: -33
@@ -3323,7 +3323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 773145925}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -3736,6 +3736,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &409435232 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5502784556733167655, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+  m_PrefabInstance: {fileID: 424270591}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &421032313
 GameObject:
   m_ObjectHideFlags: 0
@@ -3820,6 +3825,159 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &424270591
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1422621683}
+    m_Modifications:
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1422621679}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1422621679}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1422621679}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: MaintainPosition
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMouseControll, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMouseControll, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PlayerMouseControll, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4802989275872696999, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556733167654, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161764, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Name
+      value: Inventory
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5502784556860161768, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1cd91b22b5b32a44ba330b65cbe93303, type: 3}
 --- !u!1 &451134928
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,7 +4026,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 247474350}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -5105,7 +5263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1979650427}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -25.2
   T_limitMaxX: -7.4
   T_limitMinY: -33
@@ -6087,7 +6245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 511672817}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: 0.5
   T_limitMaxX: 18
   T_limitMinY: -83.5
@@ -7509,7 +7667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1287740769}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -9507,7 +9665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1349676477}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -9755,7 +9913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 173150792}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -10122,7 +10280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 480618129}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -10537,7 +10695,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1177148832}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: 19
   T_limitMaxX: 36.5
   T_limitMinY: -83.5
@@ -10953,7 +11111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 517270766}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -11085,7 +11243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1427534535}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: -23.5
   T_limitMinY: -58.5
@@ -11331,7 +11489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1538744490}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -11916,7 +12074,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 313736440}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -12770,7 +12928,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1126336142}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -2.3
   T_limitMaxX: 15.4
   T_limitMinY: -58.5
@@ -12953,7 +13111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1886991629}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -13085,7 +13243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1365274170}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45.5
   T_limitMaxX: -28.3
   T_limitMinY: -83.5
@@ -13608,7 +13766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c017992a152b74cb0e218f6681c419, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slotPanel: {fileID: 0}
+  slotPanel: {fileID: 409435232}
   slots: []
   slotPrefab: {fileID: 2169270916814959921, guid: e7e2c0e42c2fc4b40873d333fd5d2af5, type: 3}
 --- !u!114 &1422621679
@@ -13667,6 +13825,11 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1422621683 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 6b7d8291d5521b845bccfb65e770acbd, type: 3}
+  m_PrefabInstance: {fileID: 1762471397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1427534534
 GameObject:
   m_ObjectHideFlags: 0
@@ -14112,7 +14275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 890608966}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -14628,7 +14791,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1238930521}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: 57.3
   T_limitMaxX: 77.2
   T_limitMinY: -58.5
@@ -15052,7 +15215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1d35055ef414901b99d20d3b555dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1422621673}
 --- !u!61 &1555764893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16347,7 +16510,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1405189587}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: 34.2
   T_limitMaxX: 56.8
   T_limitMinY: -58.5
@@ -16562,7 +16725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1231413003}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -16962,7 +17125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 89113513}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -27.5
   T_limitMaxX: -0.5
   T_limitMinY: -83.5
@@ -17545,7 +17708,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 167042113}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45.5
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -17676,7 +17839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1650744325}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -8
@@ -17908,7 +18071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 585965510}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: 16
   T_limitMaxX: 33.7
   T_limitMinY: -58.5
@@ -19090,7 +19253,7 @@ PrefabInstance:
     - target: {fileID: 4125612171632752043, guid: 2706c53d0bacd4237863e00f84eb2f42, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1422621673}
     - target: {fileID: 4125612171632752047, guid: 2706c53d0bacd4237863e00f84eb2f42, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -19597,7 +19760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1065861433}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -20336,7 +20499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 167042113}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -20415,7 +20578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1257779272}
-  PlayerPosition: {fileID: 0}
+  PlayerPosition: {fileID: 1422621673}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
