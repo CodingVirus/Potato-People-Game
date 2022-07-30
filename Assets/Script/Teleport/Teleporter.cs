@@ -11,7 +11,7 @@ public class Teleporter : ClickablePortal
     //private CameraFollow theCamera;
     [SerializeField]
     public float T_limitMinX, T_limitMaxX, T_limitMinY, T_limitMaxY;
- 
+
     public Transform GetDestination()
     {
         return destination;
