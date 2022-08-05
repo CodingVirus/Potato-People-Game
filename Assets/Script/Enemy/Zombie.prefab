@@ -997,6 +997,9 @@ GameObject:
   - component: {fileID: 8017139243658372842}
   - component: {fileID: 8677679611046010635}
   - component: {fileID: 8677679611046010634}
+  - component: {fileID: 709944965557542852}
+  - component: {fileID: 6529560842795359479}
+  - component: {fileID: 8487184972853717457}
   m_Layer: 0
   m_Name: Zombie
   m_TagString: Untagged
@@ -1062,3 +1065,54 @@ CapsuleCollider2D:
   m_Offset: {x: -0.062108133, y: 2.0503662}
   m_Size: {x: 1.7900807, y: 3.4484012}
   m_Direction: 0
+--- !u!114 &709944965557542852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190299270565248649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bba4034993b94ea2904d2b67ce6e5ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playertel: {fileID: 0}
+--- !u!114 &6529560842795359479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190299270565248649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21c5defbc9e6a41c4b73d6d0962e8a73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  montarget: {fileID: 0}
+  nextMove: 0
+  thinkTime: 0
+  monSpeed: 3
+  traceSpeed: 5
+  traceState: 0
+--- !u!95 &8487184972853717457
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9190299270565248649}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3db15084731436d44a41974665bc42fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
