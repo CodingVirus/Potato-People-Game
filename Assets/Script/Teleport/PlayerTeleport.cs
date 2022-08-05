@@ -7,6 +7,7 @@ public class PlayerTeleport : MonoBehaviour
     public GameObject currentTeleporter;
     public GameObject fadeEffect;
     public bool transferStart = false;
+    public bool transferState = false;
 
     public bool key = false;
     
