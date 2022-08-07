@@ -4498,7 +4498,7 @@ GameObject:
   - component: {fileID: 308485612}
   - component: {fileID: 308485613}
   m_Layer: 0
-  m_Name: Light 2D (2)
+  m_Name: B3_Light2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8912,7 +8912,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0
+  m_Intensity: 0.07
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -11421,7 +11421,7 @@ GameObject:
   - component: {fileID: 785140957}
   - component: {fileID: 785140958}
   m_Layer: 0
-  m_Name: Light 2D (3)
+  m_Name: B3_Light3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16643,7 +16643,7 @@ GameObject:
   - component: {fileID: 1149405743}
   - component: {fileID: 1149405744}
   m_Layer: 0
-  m_Name: Light 2D (4)
+  m_Name: B3_Light4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18058,7 +18058,7 @@ GameObject:
   - component: {fileID: 1259491317}
   - component: {fileID: 1259491318}
   m_Layer: 0
-  m_Name: Light 2D (5)
+  m_Name: B3_Light5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20294,6 +20294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: {fileID: 607846195}
+  allB3: {fileID: 301446069}
 --- !u!114 &1422621677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24051,7 +24052,7 @@ GameObject:
   - component: {fileID: 1702199771}
   - component: {fileID: 1702199772}
   m_Layer: 0
-  m_Name: Light 2D (1)
+  m_Name: B3_Light1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
