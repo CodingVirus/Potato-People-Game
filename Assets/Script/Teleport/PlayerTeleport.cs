@@ -6,7 +6,11 @@ public class PlayerTeleport : MonoBehaviour
 {
     public GameObject currentTeleporter;
     public GameObject fadeEffect;
+    
     public bool transferStart = false;
+    public bool transferState = false;
+
+    public Vector3 p_Teleport;
 
     public bool key = false;
     
@@ -45,24 +49,15 @@ public class PlayerTeleport : MonoBehaviour
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
-                    Debug.Log("이동");
+                    //Debug.Log("이동");
                 }
             }
-            //if(other.CompareTag("Door"))
-            //{
             else
             {
                 currentTeleporter = other.gameObject;
                 Invoke("DoorEnter", 0.5f);
-                Debug.Log("이동");
+                //Debug.Log("이동");
             }
-            //}
-            //else
-            //{
-            //    currentTeleporter = other.gameObject;
-            //    Invoke("DoorEnter", 0.5f);
-            //    Debug.Log("이동");
-            //}
         }
     }
 
@@ -71,7 +66,7 @@ public class PlayerTeleport : MonoBehaviour
         if(currentTeleporter == null)
         {
             transferStart = false;
-            Debug.Log("Moving : 이동 false");
+            //Debug.Log("Moving : 이동 false");
         }
         else
         {
@@ -83,10 +78,11 @@ public class PlayerTeleport : MonoBehaviour
     {
         if(currentTeleporter != null)
         {
+            transferState = true;
             //currentTeleporter.GetComponent<AudioSource>().Play();
             PlayerMouseControll.instance.StopMove();
             fadeEffect.GetComponent<FadeScript>().Fade();
-            Debug.Log("fade");
+            //Debug.Log("fade");
             //currentTeleporter.GetComponent<AudioSource>().Play();
             Invoke("Moving", 1.0f);
         }
@@ -94,12 +90,14 @@ public class PlayerTeleport : MonoBehaviour
 
     private void Moving()
     {
-        Debug.Log("moving 시작");
+        //Debug.Log("moving 시작");
         transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
         this.GetComponent<PlayerMouseControll>().target = transform.position;
+        p_Teleport = transform.position;
         CameraMove();
         PlayerMouseControll.instance.StartMove();
         transferStart = false;
+        transferState = false;
         currentTeleporter = null;
         
     }
@@ -117,7 +115,7 @@ public class PlayerTeleport : MonoBehaviour
     private void OnTriggerExit2D() 
     {
         currentTeleporter = null;
-        Debug.Log("Exit : null");
+        //Debug.Log("Exit : null");
     }
 
 }
