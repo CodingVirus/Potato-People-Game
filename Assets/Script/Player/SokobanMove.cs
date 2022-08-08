@@ -12,7 +12,7 @@ public class SokobanMove : MonoBehaviour
     private void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        this.transform.position = new Vector2(8.41f, -0.62f);
+        //this.transform.position = new Vector2(8.41f, -0.62f);
     }
     private void Update()
     {
@@ -22,8 +22,6 @@ public class SokobanMove : MonoBehaviour
         if (Input.GetMouseButton(0))
             inputPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         dir = inputPos - transform.position;
-
-        //transform.position = Vector2.MoveTowards(transform.position, inputPos, Time.deltaTime * moveSpeed);
 
         rigidbody2D.MovePosition(Vector2.MoveTowards(transform.position, inputPos, Time.deltaTime * moveSpeed));
         //transform.Translate(new Vector2(inputX, inputY) * Time.deltaTime * moveSpeed);

@@ -7,6 +7,8 @@ TagManager:
   - Door
   - DrugCombiner
   - Hide
+  - Box
+  - EndPoint
   layers:
   - Default
   - TransparentFX
