@@ -12,8 +12,6 @@ public class PlayerSokobanMove : MonoBehaviour
     {
         Obstacles = GameObject.FindGameObjectsWithTag("Obstacles");
         ObjToPush = GameObject.FindGameObjectsWithTag("ObjToPush");
-
-        
     }
 
     private void Update()
