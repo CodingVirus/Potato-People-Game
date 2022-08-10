@@ -9,6 +9,8 @@ TagManager:
   - Hide
   - Box
   - EndPoint
+  - Obstacles
+  - ObjToPush
   layers:
   - Default
   - TransparentFX
