@@ -14,12 +14,6 @@ public class Push : MonoBehaviour
         ObjToPush = GameObject.FindGameObjectsWithTag("ObjToPush");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public bool Move(Vector2 direction)
     {
         if (ObjToBlocked(transform.position, direction))
