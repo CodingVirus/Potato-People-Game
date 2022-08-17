@@ -22,7 +22,7 @@ public class MonsterMove : MonoBehaviour
     private void Awake() 
     {
         rigid = GetComponent<Rigidbody2D>();
-        Invoke("Think", 5);
+        StartCoroutine("Think");
     }
 
     private void FixedUpdate() 
@@ -44,12 +44,15 @@ public class MonsterMove : MonoBehaviour
             //추적
             if(dis <= 10)
             {
-                traceState = true;
-                if(traceState == true)
+                Trace();
+                StopCoroutine("Think");
+                if(montarget.GetComponent<PlayerHide>().hideStart == true)
                 {
-                    Trace();
+                    traceState = false;
+                    StartCoroutine("Think");
                 }
             }
+            
         }
     }
     
@@ -59,15 +62,11 @@ public class MonsterMove : MonoBehaviour
         Flip();
     }
 
-    private void Think()
+    IEnumerator Think()
     {
-        if(traceState == false)
-        {
-            Debug.Log("think");
-            nextMove = Random.Range(-1, 2);
-            thinkTime = Random.Range(1, 10);
-            Invoke("Think", thinkTime);
-        }
+        nextMove = Random.Range(-1, 2);
+        thinkTime = Random.Range(1, 10);
+        yield return new WaitForSeconds(thinkTime);
     }
 
     private void Trace()
@@ -75,10 +74,6 @@ public class MonsterMove : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, montarget.position, Time.smoothDeltaTime * traceSpeed);
         dir = montarget.position - transform.position;
         Flip();
-        if(montarget.GetComponent<PlayerHide>().hideStart == true)
-        {
-            traceState = false;
-        }
     }
 
     void OnCollisionEnter2D(Collision2D other)

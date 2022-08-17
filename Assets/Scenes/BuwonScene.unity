@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1613870295}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -22.5
   T_limitMaxX: -2.8
   T_limitMinY: -58.5
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 382233267}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -6.5
   T_limitMaxX: 13.5
   T_limitMinY: -33
@@ -2203,7 +2203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 2096571280}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -2525,7 +2525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 635450508}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45.5
   T_limitMaxX: -25.8
   T_limitMinY: -33
@@ -3199,7 +3199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 709473599}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45.5
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -3278,7 +3278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 479264807}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -4319,7 +4319,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1346499487}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: 14.3
   T_limitMaxX: 36
   T_limitMinY: -33
@@ -5361,7 +5361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 773145925}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -6575,7 +6575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 247474350}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -8271,7 +8271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1979650427}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -25.2
   T_limitMaxX: -7.4
   T_limitMinY: -33
@@ -9537,7 +9537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9190299270565248649, guid: 5b84e1afa260e4a4b85a5336bec6d868, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8677679611046010632, guid: 5b84e1afa260e4a4b85a5336bec6d868, type: 3}
@@ -9865,7 +9865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 511672817}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: 0.5
   T_limitMaxX: 18
   T_limitMinY: -83.5
@@ -11947,7 +11947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1287740769}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -14436,7 +14436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1349676477}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -14685,7 +14685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 173150792}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -15418,7 +15418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 480618129}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -16202,7 +16202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1177148832}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: 19
   T_limitMaxX: 36.5
   T_limitMinY: -83.5
@@ -16815,7 +16815,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 517270766}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -17030,7 +17030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1427534535}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: -23.5
   T_limitMinY: -58.5
@@ -17557,7 +17557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1538744490}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -18468,7 +18468,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 313736440}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -20232,7 +20232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1126336142}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -2.3
   T_limitMaxX: 15.4
   T_limitMinY: -58.5
@@ -20415,7 +20415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1886991629}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -20547,7 +20547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1365274170}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45.5
   T_limitMaxX: -28.3
   T_limitMinY: -83.5
@@ -21297,9 +21297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkspeed: 5
-  runspeed: 10
   playerWalk: 0
-  playerRun: 0
   playerFilp: 1
   target: {x: -30, y: 0, z: 0}
   dir: {x: 0, y: 0, z: 0}
@@ -22079,7 +22077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 890608966}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -22680,7 +22678,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1238930521}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: 57.3
   T_limitMaxX: 77.2
   T_limitMinY: -58.5
@@ -24970,7 +24968,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1405189587}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: 34.2
   T_limitMaxX: 56.8
   T_limitMinY: -58.5
@@ -25416,7 +25414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1231413003}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -26069,7 +26067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 89113513}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -27.5
   T_limitMaxX: -0.5
   T_limitMinY: -83.5
@@ -26844,7 +26842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 167042113}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45.5
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -26975,7 +26973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1650744325}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -8
@@ -27748,7 +27746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 585965510}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: 16
   T_limitMaxX: 33.7
   T_limitMinY: -58.5
@@ -30143,7 +30141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1065861433}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -20
@@ -30882,7 +30880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 167042113}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 11
   T_limitMinY: -72
@@ -31089,7 +31087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1257779272}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: -45
   T_limitMaxX: 30
   T_limitMinY: -46
@@ -32328,7 +32326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1650744325}
-  PlayerPosition: {fileID: 1422621673}
+  PlayerPosition: {fileID: 1422621683}
   T_limitMinX: 0
   T_limitMaxX: 0
   T_limitMinY: 0
