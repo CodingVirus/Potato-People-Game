@@ -901,6 +901,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 396683349}
     - target: {fileID: 6568915776842786747, guid: 1f2d84aa35d364e6988fd12606057ca8, type: 3}
+      propertyPath: B.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: e4b73c9db20dd4710a9883bdf87846b0, type: 3}
+    - target: {fileID: 6568915776842786747, guid: 1f2d84aa35d364e6988fd12606057ca8, type: 3}
       propertyPath: Ball.Array.data[0]
       value: 
       objectReference: {fileID: 1262144780}
