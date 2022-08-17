@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Paddle : MonoBehaviour
 {
@@ -248,6 +249,11 @@ public class Paddle : MonoBehaviour
         Vector2 dir = ThisBallRg.velocity.normalized;
         ThisBallRg.velocity = Vector2.zero;
         ThisBallRg.AddForce(dir * ballSpeed);
+    }
+
+    public void CloseGame()
+    {
+        SceneManager.LoadScene("BuwonScene");
     }
 
 }
