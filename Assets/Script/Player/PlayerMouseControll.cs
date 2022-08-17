@@ -66,36 +66,36 @@ public class PlayerMouseControll : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * walkspeed);
         }
 
-        //if(Input.GetMouseButton(1))
-        //{
-        //    playerRun = true;
-        //    playerMove = true;
-        //    if(playerMove == true)
-        //    {
-        //        mousePos = Input.mousePosition;
-        //        transPos = Camera.main.ScreenToWorldPoint(mousePos);
-        //        target = new Vector3(transPos.x, target.y, 0);
-        //        anim.SetBool("isWalking", true);
-        //        if(playerFilp == true)
-        //        {
-        //            dir = target - transform.position;
-        //            if (dir.x > 0 && facingRight == false)
-        //            {
-        //                 Flip();
-        //            }
-        //            if (dir.x < 0 && facingRight == true)
-        //            {
-        //                 Flip();
-        //            }
-        //        }
-        //    }
-        //}
+        /*if(Input.GetMouseButton(1))
+        {
+            // playerRun = true;
+            playerMove = true;
+            if(playerMove == true)
+            {
+                mousePos = Input.mousePosition;
+                transPos = Camera.main.ScreenToWorldPoint(mousePos);
+                target = new Vector3(transPos.x, target.y, 0);
+                anim.SetBool("isWalking", true);
+                if(playerFilp == true)
+                {
+                    dir = target - transform.position;
+                    if (dir.x > 0 && facingRight == false)
+                    {
+                         Flip();
+                    }
+                    if (dir.x < 0 && facingRight == true)
+                    {
+                         Flip();
+                    }
+                }
+            }
+        }*/
         //if(playerRun == true)
         //{
         //    transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * runspeed);
         //}
 
-        if(target.x == transform.position.x)
+        if (target.x == transform.position.x)
         {
             playerMove = false;
             playerWalk = false;
