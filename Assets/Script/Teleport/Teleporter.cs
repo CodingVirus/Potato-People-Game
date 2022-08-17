@@ -8,9 +8,9 @@ public class Teleporter : ClickablePortal
     [SerializeField] private Transform destination;
     public Transform PlayerPosition;
 
-    public float walkspeed = 5f;
-    public Vector3 target;
-    private Vector3 transPos;
+    //public float walkspeed = 5f;
+    //public Vector3 target;
+    //private Vector3 transPos;
 
     //private CameraFollow theCamera;
     [SerializeField]
@@ -21,20 +21,20 @@ public class Teleporter : ClickablePortal
         return destination;
     }
 
-    private void Update() 
-    {
-        if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && Input.GetMouseButtonDown(0))
-        {
-            Move();
-        }
-    }
+    //private void Update() 
+    //{
+        //if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && Input.GetMouseButtonDown(0))
+        //{
+        //    Move();
+        //}
+    //}
     
-    void Move()
-    {
-        transPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        target = new Vector3(transPos.x, PlayerPosition.position.y, 0);
-        PlayerPosition.position = Vector2.MoveTowards(PlayerPosition.position, target, Time.smoothDeltaTime * walkspeed);
-    }
+    //void Move()
+    //{
+        //transPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //target = new Vector3(transPos.x, PlayerPosition.position.y, 0);
+        //PlayerPosition.position = Vector2.MoveTowards(PlayerPosition.position, target, Time.smoothDeltaTime * walkspeed);
+    //}
     
     private void OnMouseDown() 
     {
