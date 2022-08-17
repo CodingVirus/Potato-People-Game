@@ -24,7 +24,7 @@ public class PIckUp : MonoBehaviour
                     ply.GetComponent<LightControll>().global.intensity = 0.1f;
                     Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
                     inven.slots[i].isEmpty = false;
-                    //this.transform.GetChild(0).gameObject.SetActive(false);
+                    this.GetComponent<BoxCollider2D>().enabled = false;
                     break;
                 }
             }
@@ -43,7 +43,7 @@ public class PIckUp : MonoBehaviour
                 {
                     Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
                     inven.slots[i].isEmpty = false;
-                    //this.transform.GetChild(0).gameObject.SetActive(false);
+                    this.GetComponent<BoxCollider2D>().enabled = false;
                     break;
                 }
             }
@@ -101,14 +101,5 @@ public class PIckUp : MonoBehaviour
     {
         active = true;
     }
-    //private void OnMouseEnter()
-    //{
-    //    active = true;
-    //}
-
-    //private void OnMouseExit()
-    //{
-    //    active = false;
-    //}
     
 }
