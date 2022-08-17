@@ -18,10 +18,10 @@ TagManager:
   - platform
   - Water
   - UI
-  - 
-  - 
-  - No Passing
-  - 
+  - Wall
+  - Player
+  - Bullet
+  - Enemy
   - 
   - 
   - 

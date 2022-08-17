@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Main : MonoBehaviour
 {
-    
+    public void start()
+    {
+        
+            SceneManager.LoadScene("BuwonScene");
+        
+    }
     void Start()
     {
         
@@ -14,10 +19,8 @@ public class Main : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.anyKeyDown)
-        {
-            SceneManager.LoadScene("BuwonScene");
-        }
+        
+       
 
     }
 }

@@ -13,6 +13,7 @@ public class FadeIn : MonoBehaviour
     float F_time = 0.5f;
 
     public Light2D playerLight;
+    public GameObject test;
 
     public void Fade()
     {
@@ -36,6 +37,10 @@ public class FadeIn : MonoBehaviour
     IEnumerator FadeStart()
     {
         playerLight = player.GetComponent<LightControll>().global;
+
+        test = player.GetComponent<LightControll>().allB3;
+
+        test.SetActive(false);
         player.SetActive(false);
         Black.gameObject.SetActive(true);
         time = 0f;

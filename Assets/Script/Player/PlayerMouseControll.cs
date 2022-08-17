@@ -7,9 +7,9 @@ public class PlayerMouseControll : MonoBehaviour
 {
 
     public float walkspeed = 5f;
-    public float runspeed = 10f;
+    //public float runspeed = 10f;
     public bool playerWalk;
-    public bool playerRun;
+    //public bool playerRun;
     public bool playerFilp = true;
     //public float speed = 5f;
     public Vector3 target;
@@ -66,47 +66,47 @@ public class PlayerMouseControll : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * walkspeed);
         }
 
-        if(Input.GetMouseButton(1))
-        {
-            playerRun = true;
-            playerMove = true;
-            if(playerMove == true)
-            {
-                mousePos = Input.mousePosition;
-                transPos = Camera.main.ScreenToWorldPoint(mousePos);
-                target = new Vector3(transPos.x, target.y, 0);
-                anim.SetBool("isWalking", true);
-                if(playerFilp == true)
-                {
-                    dir = target - transform.position;
-                    if (dir.x > 0 && facingRight == false)
-                    {
-                         Flip();
-                    }
-                    if (dir.x < 0 && facingRight == true)
-                    {
-                         Flip();
-                    }
-                }
-            }
-        }
-        if(playerRun == true)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * runspeed);
-        }
+        //if(Input.GetMouseButton(1))
+        //{
+        //    playerRun = true;
+        //    playerMove = true;
+        //    if(playerMove == true)
+        //    {
+        //        mousePos = Input.mousePosition;
+        //        transPos = Camera.main.ScreenToWorldPoint(mousePos);
+        //        target = new Vector3(transPos.x, target.y, 0);
+        //        anim.SetBool("isWalking", true);
+        //        if(playerFilp == true)
+        //        {
+        //            dir = target - transform.position;
+        //            if (dir.x > 0 && facingRight == false)
+        //            {
+        //                 Flip();
+        //            }
+        //            if (dir.x < 0 && facingRight == true)
+        //            {
+        //                 Flip();
+        //            }
+        //        }
+        //    }
+        //}
+        //if(playerRun == true)
+        //{
+        //    transform.position = Vector2.MoveTowards(transform.position, target, Time.smoothDeltaTime * runspeed);
+        //}
 
         if(target.x == transform.position.x)
         {
             playerMove = false;
             playerWalk = false;
-            playerRun = false;
+            //playerRun = false;
             anim.SetBool("isWalking", false);
         }
         if(playerMove == false)
         {
             anim.SetBool("isWalking", false);
         }
-        if(walkspeed == 0.0f || runspeed == 0.0f)
+        if(walkspeed == 0.0f) //|| runspeed == 0.0f)
         {
             anim.SetBool("isWalking", false);
         }
@@ -115,7 +115,7 @@ public class PlayerMouseControll : MonoBehaviour
     public void StopMove()
     {
         walkspeed = 0.0f;
-        runspeed = 0.0f;
+        //runspeed = 0.0f;
         playerFilp = false;
         anim.SetBool("isWalking", false);
     }
@@ -123,7 +123,7 @@ public class PlayerMouseControll : MonoBehaviour
     public void StartMove()
     {
         walkspeed = 5.0f;
-        runspeed = 10.0f;
+        //runspeed = 10.0f;
         playerFilp = true;
         anim.SetBool("isWalking", true);
     }
