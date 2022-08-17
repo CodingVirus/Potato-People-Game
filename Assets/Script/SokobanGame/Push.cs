@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Push : MonoBehaviour
 {
-
+    Color test;
     private GameObject[] Obstacles;
     private GameObject[] ObjToPush;
     // Start is called before the first frame update
@@ -47,5 +47,14 @@ public class Push : MonoBehaviour
             }
         }
         return false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("EndPoint"))
+        {
+            this.GetComponent<SpriteRenderer>().color = Color.green;
+            Debug.Log("HI");
+        }
     }
 }
