@@ -327,7 +327,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 1bd2231214016114da64f7f93999393f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 940777704740c784690c873c383c5d0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16829,7 +16829,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d27b86d2e8a7fe54285af4fa08f10749, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e0b5fd8c361b384c9e4195e3e9677b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -16875,7 +16875,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.86, y: 5.24}
+    oldSize: {x: 3.07, y: 4.5}
     newSize: {x: 6.86, y: 5.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -24714,7 +24714,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 1bd2231214016114da64f7f93999393f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 940777704740c784690c873c383c5d0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -27392,7 +27392,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.10708237, y: -0.114219904}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -27403,7 +27403,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.0428314, y: 0.97144556}
   m_EdgeRadius: 0
 --- !u!1 &1650744324
 GameObject:
@@ -29004,7 +29004,7 @@ GameObject:
   - component: {fileID: 1714621948}
   - component: {fileID: 1714621947}
   m_Layer: 0
-  m_Name: house_2
+  m_Name: house door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29051,7 +29051,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d27b86d2e8a7fe54285af4fa08f10749, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e0b5fd8c361b384c9e4195e3e9677b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -29070,7 +29070,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714621944}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.4900017, y: -1.5900002, z: 0}
+  m_LocalPosition: {x: -2.4900017, y: -1.39, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29109,18 +29109,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16569138, y: 0.05826235}
+  m_Offset: {x: 0.19203758, y: -0.16023898}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.86, y: 5.24}
+    oldSize: {x: 3.07, y: 4.5}
     newSize: {x: 6.86, y: 5.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2971802, y: 4.1159887}
+  m_Size: {x: 2.3498726, y: 4.078757}
   m_EdgeRadius: 0
 --- !u!1 &1723001042
 GameObject:
@@ -32179,7 +32179,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 1bd2231214016114da64f7f93999393f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 940777704740c784690c873c383c5d0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -34192,7 +34192,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d27b86d2e8a7fe54285af4fa08f10749, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8e0b5fd8c361b384c9e4195e3e9677b7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -34238,7 +34238,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.86, y: 5.24}
+    oldSize: {x: 3.07, y: 4.5}
     newSize: {x: 6.86, y: 5.24}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
