@@ -7,6 +7,10 @@ TagManager:
   - Door
   - DrugCombiner
   - Hide
+  - Box
+  - EndPoint
+  - Obstacles
+  - ObjToPush
   layers:
   - Default
   - TransparentFX
