@@ -36,7 +36,7 @@ public class PlayerMouseControll : MonoBehaviour
     private void Update()
     {
         target.y = transform.position.y;
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(1))
         {
             playerWalk = true;
             playerMove = true;
