@@ -21,7 +21,7 @@ public class PIckUp : MonoBehaviour
             {
                 if (inven.slots[i].isEmpty)
                 {
-                    ply.GetComponent<LightControll>().global.intensity = 0.1f;
+                    //ply.GetComponent<LightControll>().global.intensity = 0.1f;
                     Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
                     inven.slots[i].isEmpty = false;
                     this.GetComponent<BoxCollider2D>().enabled = false;
