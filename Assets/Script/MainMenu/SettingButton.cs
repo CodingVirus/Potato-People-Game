@@ -23,4 +23,9 @@ public class SettingButton : MonoBehaviour
         state = true;
         SettingMenu.SetActive(state);
     }
+    public void settingMenuExit()
+    {
+        
+        SettingMenu.SetActive(state);
+    }
 }
