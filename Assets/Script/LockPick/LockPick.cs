@@ -13,6 +13,8 @@ public class LockPick : MonoBehaviour
     public GameObject lockPick_5;
     public GameObject lockPick_6;
     public GameObject lockPick_7;
+    private AudioSource UnLockAudio;
+    [SerializeField] private AudioClip[] clip;
     public static int i ;
     int Randomnum;
 
@@ -65,15 +67,20 @@ public class LockPick : MonoBehaviour
         if(i == Randomnum)
         {
             Debug.Log("UnLock");
+            UnLockAudio.clip = clip[0]; 
+            UnLockAudio.Play();
         }
         else
         {
             Debug.Log("Lock");
+            UnLockAudio.clip = clip[1];
+            UnLockAudio.Play();
         }
        
        
         
     }
+ 
   
 
     public void Start()
@@ -81,6 +88,7 @@ public class LockPick : MonoBehaviour
         LockPickAdd();
         Randomnum = Random.Range(0, 8);
         Debug.Log(Randomnum);
+        UnLockAudio = GetComponent<AudioSource>();
 
     }
 
@@ -90,4 +98,6 @@ public class LockPick : MonoBehaviour
 
 
     }
+
+    // https://flowersayo.tistory.com/18 오디오소스
 }
