@@ -17538,13 +17538,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 66331314}
     m_Modifications:
+    - target: {fileID: 8242355195736867220, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
+      propertyPath: m_Size.x
+      value: 2.4898167
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242355195736867220, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.010977745
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242355195736867220, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242355195736867220, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242355195736867222, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3b3f2d1a4c030244f850f6d5bba70713, type: 3}
     - target: {fileID: 8242355195736867304, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
       propertyPath: m_Name
       value: Vending Machine
       objectReference: {fileID: 0}
     - target: {fileID: 8242355195736867305, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242355195736867305, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8242355195736867305, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8242355195736867305, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17552,7 +17580,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8242355195736867305, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.4724
+      value: -1.49
       objectReference: {fileID: 0}
     - target: {fileID: 8242355195736867305, guid: 3d4b2eafeb0034ad882bbdb1609aff06, type: 3}
       propertyPath: m_LocalPosition.z
