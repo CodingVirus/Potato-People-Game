@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using PixelCrushers.DialogueSystem;
 
 public class Inventory : MonoBehaviour
 {
@@ -24,5 +25,29 @@ public class Inventory : MonoBehaviour
             slot.slotObj = go;
             slots.Add(slot);
         }
+    }
+
+    //public string currentItem = null;
+    public bool FindItem(string itemName)
+    {
+        bool checkItem = false;
+        for (int i = 0; i < this.slots.Count; i++)
+        {
+            if (this.slots[i].isEmpty == false && this.slots[i].slotObj.transform.GetChild(0).name == itemName)
+            {
+                checkItem = true;
+            }
+        }
+        return checkItem;
+    }
+    void OnEnable()
+    {
+        Lua.RegisterFunction("FindItem", this, SymbolExtensions.GetMethodInfo(() => FindItem(string.Empty)));
+        //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
+    }
+
+    void OnDisable()
+    {
+        Lua.UnregisterFunction("FindItem");
     }
 }
