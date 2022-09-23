@@ -87,10 +87,10 @@ public class MonsterMove : MonoBehaviour
     {
         transform.position = Vector2.MoveTowards(transform.position, montarget.position, Time.smoothDeltaTime * traceSpeed);
         dir = montarget.position - transform.position;
-        if(dir > 10)
-        {
-            StartCoroutine("Think");
-        }
+        //if(dir > 10)
+        //{
+        //    StartCoroutine("Think");
+        //}
         Flip();
     }
 
