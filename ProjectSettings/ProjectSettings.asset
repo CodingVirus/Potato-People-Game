@@ -756,7 +756,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: TextMeshPro
+    Android: TextMeshPro;USE_PHYSICS2D
     CloudRendering: TextMeshPro
     EmbeddedLinux: TextMeshPro
     GameCoreXboxOne: TextMeshPro
@@ -769,7 +769,7 @@ PlayerSettings:
     WebGL: TextMeshPro
     Windows Store Apps: TextMeshPro
     XboxOne: TextMeshPro
-    iPhone: TextMeshPro
+    iPhone: TextMeshPro;USE_PHYSICS2D
     tvOS: TextMeshPro
   additionalCompilerArguments: {}
   platformArchitecture: {}

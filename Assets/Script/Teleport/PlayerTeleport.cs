@@ -118,4 +118,9 @@ public class PlayerTeleport : MonoBehaviour
         //Debug.Log("Exit : null");
     }
 
+    public void DoctorTalkAndMove()
+    {
+        Moving();
+    }
+
 }

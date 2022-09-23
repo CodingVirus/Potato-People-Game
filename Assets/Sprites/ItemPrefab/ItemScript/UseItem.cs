@@ -41,4 +41,22 @@ public class UseItem : MonoBehaviour
             }
         }
     }
+
+    public void UseClueyQuest()
+    {
+        for (int i = 0; i < playerObj.GetComponent<Inventory>().slots.Count; i++)
+        {
+            if (playerObj.GetComponent<Inventory>().slots[i].isEmpty == false && playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).name == "Drug(Clone)")
+            {
+                //Debug.Log("HI");
+                Destroy(playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).gameObject);
+                playerObj.GetComponent<Inventory>().slots[i].isEmpty = true;
+            }
+
+            else
+            {
+                continue;
+            }
+        }
+    }
 }

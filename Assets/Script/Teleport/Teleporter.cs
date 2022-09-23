@@ -36,6 +36,11 @@ public class Teleporter : ClickablePortal
         //PlayerPosition.position = Vector2.MoveTowards(PlayerPosition.position, target, Time.smoothDeltaTime * walkspeed);
     //}
     
+    public void DoctorTalkMove()
+    {
+        OnMouseDown();
+    }
+
     private void OnMouseDown() 
     {
         PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
