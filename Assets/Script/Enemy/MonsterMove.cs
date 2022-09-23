@@ -45,6 +45,7 @@ public class MonsterMove : MonoBehaviour
             if(dis <= 10)
             {
                 Trace();
+                traceState = true;
                 StopCoroutine("Think");
                 if(montarget.GetComponent<PlayerHide>().hideStart == true)
                 {
@@ -64,15 +65,32 @@ public class MonsterMove : MonoBehaviour
 
     IEnumerator Think()
     {
+        while (true)
+        {
+            yield return new WaitForSeconds(thinkTime);
+            MonMove();
+            //nextMove = Random.Range(-1, 2);
+            //thinkTime = Random.Range(1, 10);
+            //yield return new WaitForSeconds(thinkTime);
+        }
+    }
+
+    public void MonMove()
+    {
         nextMove = Random.Range(-1, 2);
         thinkTime = Random.Range(1, 10);
-        yield return new WaitForSeconds(thinkTime);
+        Debug.Log(nextMove);
+        Debug.Log(thinkTime);
     }
 
     private void Trace()
     {
         transform.position = Vector2.MoveTowards(transform.position, montarget.position, Time.smoothDeltaTime * traceSpeed);
         dir = montarget.position - transform.position;
+        if(dir > 10)
+        {
+            StartCoroutine("Think");
+        }
         Flip();
     }
 
@@ -99,15 +117,15 @@ public class MonsterMove : MonoBehaviour
         {
             //Debug.Log("낭떠러지");
             nextMove = nextMove * (-1);
-            if(dis > 10)
-            {
-                CancelInvoke();
-                Invoke("Think", 5);
-            }
-            if(dis <= 10)
-            {
-                CancelInvoke();
-            }
+            //if(dis > 10)
+            //{
+            //    CancelInvoke();
+            //    Invoke("Think", 5);
+            //}
+            //if(dis <= 10)
+            //{
+            //   CancelInvoke();
+            //}
         }
     }
 
