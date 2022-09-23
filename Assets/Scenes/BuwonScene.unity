@@ -18339,7 +18339,6 @@ GameObject:
   - component: {fileID: 1030952856}
   - component: {fileID: 1030952859}
   - component: {fileID: 1030952861}
-  - component: {fileID: 1030952860}
   m_Layer: 0
   m_Name: Dialogue Data
   m_TagString: Untagged
@@ -18439,24 +18438,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 0
   playerObj: {fileID: 1363097352}
---- !u!114 &1030952860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030952855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68fdeef7ccbb16c4a91049961f2c822c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  destination: {fileID: 89113513}
-  PlayerPosition: {fileID: 1363097358}
-  T_limitMinX: -45
-  T_limitMaxX: 11
-  T_limitMinY: -72
-  T_limitMaxY: -61
 --- !u!61 &1030952861
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -23801,11 +23782,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 34a06007f6880bc43af01e79bbf87051, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.91
+      value: -16.3
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 34a06007f6880bc43af01e79bbf87051, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.552
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: -7552582706839291426, guid: 34a06007f6880bc43af01e79bbf87051, type: 3}
       propertyPath: m_LocalPosition.z
@@ -32646,7 +32627,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1363097357}
           m_TargetAssemblyTypeName: PlayerTeleport, Assembly-CSharp
-          m_MethodName: DoctorTalkAndMove
+          m_MethodName: SceneTeleport
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

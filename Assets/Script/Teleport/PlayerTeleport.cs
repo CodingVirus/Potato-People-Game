@@ -123,4 +123,13 @@ public class PlayerTeleport : MonoBehaviour
         Moving();
     }
 
+    public void SceneTeleport()
+    {
+        transform.position = new Vector2(-16.3f, -82.61f);
+        theCamera.limitMinX = -27.5f;
+        theCamera.limitMaxX = -0.5f;
+        theCamera.limitMinY = -83.5f;
+        theCamera.limitMaxY = -72.5f;
+    }
+
 }
