@@ -120,6 +120,12 @@ public class PlayerMouseControll : MonoBehaviour
         anim.SetBool("isWalking", false);
     }
 
+    public void DialogueStartMove()
+    {
+        MaintainPosition();
+        Invoke("StartMove", 0.5f);
+    }
+
     public void StartMove()
     {
         walkspeed = 5.0f;

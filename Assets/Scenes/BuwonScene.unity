@@ -38026,7 +38026,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1363097356}
           m_TargetAssemblyTypeName: PlayerMouseControll, Assembly-CSharp
-          m_MethodName: StartMove
+          m_MethodName: DialogueStartMove
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
