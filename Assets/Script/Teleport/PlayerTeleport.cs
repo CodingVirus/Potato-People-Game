@@ -6,6 +6,7 @@ public class PlayerTeleport : MonoBehaviour
 {
     public GameObject currentTeleporter;
     public GameObject fadeEffect;
+    public GameObject gameData;
     
     public bool transferStart = false;
     public bool transferState = false;
@@ -17,10 +18,6 @@ public class PlayerTeleport : MonoBehaviour
     //public bool T_camera = false;
     private CameraFollow theCamera;
 
-    private void Update()
-    {
-       // FindItem();
-    }
     private void FindItem()
     {
         Inventory inven = this.GetComponent<Inventory>();
@@ -50,6 +47,25 @@ public class PlayerTeleport : MonoBehaviour
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
                     //Debug.Log("이동");
+                }
+            }
+            else if (other.name == "Upstairs_B3")
+            {
+                currentTeleporter = null;
+                if (gameData.GetComponent<GameDataControl>().b3Door == true)
+                {
+                    currentTeleporter = other.gameObject;
+                    Invoke("DoorEnter", 0.5f);
+                }
+            }
+
+            else if (other.name == "door3_3" || other.name == "door3_4")
+            {
+                currentTeleporter = null;
+                if (gameData.GetComponent<GameDataControl>().clueyQuest == true)
+                {
+                    currentTeleporter = other.gameObject;
+                    Invoke("DoorEnter", 0.5f);
                 }
             }
             else
