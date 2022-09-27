@@ -58,8 +58,13 @@ public class PlayerTeleport : MonoBehaviour
                     Invoke("DoorEnter", 0.5f);
                 }
             }
+            
+            else if (other.name == "door3_3")
+            {
+                currentTeleporter = null;
+            }
 
-            else if (other.name == "door3_3" || other.name == "door3_4")
+            else if (other.name == "door3_4")
             {
                 currentTeleporter = null;
                 if (gameData.GetComponent<GameDataControl>().clueyQuest == true)

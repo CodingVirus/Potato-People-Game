@@ -20017,6 +20017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e59df046ca75f349a8be649cf24a739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  door3: {fileID: 1173578666}
   ply: {fileID: 1363097352}
   b3Door: 0
   b2Door: 0
@@ -32683,6 +32684,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1157142035}
           m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
           m_MethodName: ClueyQuestClear
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1157142035}
+          m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
+          m_MethodName: DoorOpen3F
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
