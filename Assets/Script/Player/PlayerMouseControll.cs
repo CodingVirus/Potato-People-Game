@@ -131,8 +131,16 @@ public class PlayerMouseControll : MonoBehaviour
         walkspeed = 5.0f;
         //runspeed = 10.0f;
         playerFilp = true;
-        anim.SetBool("isWalking", true);
+        anim.SetBool("isWalking", false);
     }
+
+    //public void DiealogueMove()
+    //{
+    //    walkspeed = 5.0f;
+    //    //runspeed = 10.0f;
+    //    playerFilp = true;
+    //    anim.SetBool("isWalking", false);
+    //}
 
     public void MaintainPosition()
     {

@@ -15814,7 +15814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 0
-  slotItem: {fileID: 963190720608678682, guid: 63a20be70a2fd4504953b9c93c1668aa, type: 3}
+  slotItem: {fileID: 3990573139370791849, guid: 41488c5b1eaa029448d3f89dfbdd1dc5, type: 3}
   ply: {fileID: 0}
 --- !u!61 &899408046
 BoxCollider2D:
