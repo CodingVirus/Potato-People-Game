@@ -10,6 +10,7 @@ public class PlayerTeleport : MonoBehaviour
     
     public bool transferStart = false;
     public bool transferState = false;
+    public bool next = true;
 
     public Vector3 p_Teleport;
 
@@ -23,7 +24,7 @@ public class PlayerTeleport : MonoBehaviour
         Inventory inven = this.GetComponent<Inventory>();
         for (int i = 0; i < inven.slots.Count; i++)
         {
-            if (inven.slots[i].isEmpty == false && inven.slots[i].slotObj.transform.GetChild(0).name == "Key(Clone)")
+            if (inven.slots[i].isEmpty == false && inven.slots[i].slotObj.transform.GetChild(0).name == "CardKey(Clone)")
             {
                 key = true;
             }
@@ -34,7 +35,7 @@ public class PlayerTeleport : MonoBehaviour
         theCamera = Camera.main.GetComponent<CameraFollow>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         FindItem();
         if(transferStart == true)
@@ -77,6 +78,7 @@ public class PlayerTeleport : MonoBehaviour
             {
                 currentTeleporter = other.gameObject;
                 Invoke("DoorEnter", 0.5f);
+                transferStart = false;
                 //Debug.Log("이동");
             }
         }
@@ -120,6 +122,7 @@ public class PlayerTeleport : MonoBehaviour
         transferStart = false;
         transferState = false;
         currentTeleporter = null;
+        next = false;
         
     }
 
@@ -154,3 +157,4 @@ public class PlayerTeleport : MonoBehaviour
     }
 
 }
+
