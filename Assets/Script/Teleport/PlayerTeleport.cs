@@ -47,6 +47,7 @@ public class PlayerTeleport : MonoBehaviour
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
+                    transferStart = false;
                     //Debug.Log("이동");
                 }
             }
@@ -57,6 +58,7 @@ public class PlayerTeleport : MonoBehaviour
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
+                    transferStart = false;
                 }
             }
             
@@ -72,6 +74,7 @@ public class PlayerTeleport : MonoBehaviour
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
+                    transferStart = false;
                 }
             }
             else
