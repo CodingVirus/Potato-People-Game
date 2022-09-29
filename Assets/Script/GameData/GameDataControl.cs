@@ -17,21 +17,31 @@ public class GameDataControl : MonoBehaviour
     {
         clueyQuest = true;
     }
+    public bool ReturnClueyQuest()
+    {
+        return clueyQuest;
+    }
 
     public void DoorOpen3F()
     {
         b3Door = true;
         door3.transform.position += new Vector3(-2, 0, 0);
     }
+    public bool ReturnB3Door()
+    {
+        return b3Door;
+    }
 
     void OnEnable()
     {
-        //Lua.RegisterFunction("FindItem", this, SymbolExtensions.GetMethodInfo(() => FindItem(string.Empty)));
+        Lua.RegisterFunction("ReturnClueyQuest", this, SymbolExtensions.GetMethodInfo(() => ReturnClueyQuest()));
+        Lua.RegisterFunction("ReturnB3Door", this, SymbolExtensions.GetMethodInfo(() => ReturnB3Door()));
         //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
     }
 
     void OnDisable()
     {
-        //Lua.UnregisterFunction("FindItem");
+        Lua.UnregisterFunction("ReturnClueyQuest");
+        Lua.UnregisterFunction("ReturnB3Door");
     }
 }

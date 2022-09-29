@@ -1024,7 +1024,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 627.7757
-        y: 116.33246
+        y: 114.839935
         width: 160
         height: 30
     - id: 9
@@ -2844,15 +2844,15 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: ReturnClueyQuest()  == false
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 295
-        y: 150
+        x: 293
+        y: 162
         width: 160
         height: 30
     entryGroups: []
@@ -3701,7 +3701,7 @@ MonoBehaviour:
       isGroup: 0
       nodeColor: 
       delaySimStatus: 0
-      falseConditionAction: 
+      falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks:
       - originConversationID: 14
@@ -3759,7 +3759,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: ReturnB3Door()  == false
       userScript: 
       onExecute:
         m_PersistentCalls:

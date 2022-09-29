@@ -3869,7 +3869,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 272
-        y: 99
+        y: 97.96907
         width: 160
         height: 30
     - id: 1
@@ -3911,14 +3911,14 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: FindItem("Key(Clone)")  == false
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 272
+        x: 273.03094
         y: 149
         width: 160
         height: 30
