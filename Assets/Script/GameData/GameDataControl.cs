@@ -12,6 +12,7 @@ public class GameDataControl : MonoBehaviour
     public bool b2Door = false;
     public bool b1Door = false;
     public bool clueyQuest = false;
+    public bool sokobanGame = false;
 
     public void ClueyQuestClear()
     {
