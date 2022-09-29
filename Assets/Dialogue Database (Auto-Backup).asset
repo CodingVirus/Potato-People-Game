@@ -186,6 +186,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 6
+    fields:
+    - title: Name
+      value: StartTrigger
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -2176,7 +2190,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["StartTrigger"] == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -2184,7 +2198,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 128
+        y: 127
         width: 160
         height: 30
     - id: 2
@@ -2226,7 +2240,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["StartTrigger"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2678,8 +2692,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
-      userScript: 
+      conditionsString: Variable["TriggerCount"] == false
+      userScript: Variable["TriggerCount"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2690,8 +2704,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 1
+    canvasScrollPosition: {x: 0, y: 0.24742213}
+    canvasZoom: 0.97
   - id: 11
     fields:
     - title: Title
@@ -2787,8 +2801,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 20
+        x: 290
+        y: 67
         width: 160
         height: 30
     - id: 1
@@ -2837,8 +2851,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 70
+        x: 295
+        y: 150
         width: 160
         height: 30
     entryGroups: []
@@ -3271,7 +3285,7 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 282
+        x: 283.02618
         y: 143
         width: 160
         height: 30
@@ -3498,7 +3512,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 282
-        y: 352
+        y: 350.97382
         width: 160
         height: 30
     - id: 11
@@ -3730,7 +3744,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\uBB38\uC774 \uC7A0\uACA8\uC788\uB2E4"
+        value: "\uBB38\uC774 \uC7A0\uACA8\uC788\uB2E4."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -3759,6 +3773,158 @@ MonoBehaviour:
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
     canvasZoom: 1
+  - id: 15
+    fields:
+    - title: Title
+      value: Cluey Door
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Description
+      value: 
+      type: 0
+      typeString: CustomFieldType_Text
+    - title: Actor
+      value: 1
+      type: 5
+      typeString: CustomFieldType_Actor
+    - title: Conversant
+      value: 2
+      type: 5
+      typeString: CustomFieldType_Actor
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries:
+    - id: 0
+      fields:
+      - title: Title
+        value: START
+        type: 0
+        typeString: 
+      - title: Description
+        value: 
+        type: 0
+        typeString: 
+      - title: Actor
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Dialogue Text
+        value: 
+        type: 0
+        typeString: 
+      - title: Sequence
+        value: None()
+        type: 0
+        typeString: 
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks:
+      - originConversationID: 15
+        originDialogueID: 0
+        destinationConversationID: 15
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 272
+        y: 99
+        width: 160
+        height: 30
+    - id: 1
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\uC778\uAE30\uCC99\uC774 \uB290\uAEF4\uC9C4\uB2E4. \uC5F4\uC1E0\uB85C
+          \uBB38\uC744 \uC5F4 \uC218 \uC788\uC744 \uAC83 \uAC19\uB2E4."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 15
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 272
+        y: 149
+        width: 160
+        height: 30
+    entryGroups: []
+    canvasScrollPosition: {x: 36.80401, y: 11.176189}
+    canvasZoom: 0.97
   syncInfo:
     syncActors: 0
     syncItems: 0

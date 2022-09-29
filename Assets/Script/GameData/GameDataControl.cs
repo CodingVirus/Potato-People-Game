@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class GameDataControl : MonoBehaviour
 {
@@ -21,5 +22,16 @@ public class GameDataControl : MonoBehaviour
     {
         b3Door = true;
         door3.transform.position += new Vector3(-2, 0, 0);
+    }
+
+    void OnEnable()
+    {
+        //Lua.RegisterFunction("FindItem", this, SymbolExtensions.GetMethodInfo(() => FindItem(string.Empty)));
+        //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
+    }
+
+    void OnDisable()
+    {
+        //Lua.UnregisterFunction("FindItem");
     }
 }
