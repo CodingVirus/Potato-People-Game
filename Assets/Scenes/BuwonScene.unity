@@ -20641,6 +20641,7 @@ MonoBehaviour:
   b2Door: 0
   b1Door: 0
   clueyQuest: 0
+  sokobanGame: 0
 --- !u!4 &1157142036
 Transform:
   m_ObjectHideFlags: 0
@@ -33161,6 +33162,14 @@ PrefabInstance:
       objectReference: {fileID: 177140, guid: 77d31c2998b2bd148b0ede2a5ab00489, type: 3}
     - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: displaySettings.subtitleSettings.continueButton
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.showNPCSubtitlesDuringLine
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11426072, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
+      propertyPath: displaySettings.subtitleSettings.showNPCSubtitlesWithResponses
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
