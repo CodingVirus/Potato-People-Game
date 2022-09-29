@@ -2678,8 +2678,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
-      userScript: 
+      conditionsString: Variable["TriggerCount"] == false
+      userScript: Variable["TriggerCount"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
