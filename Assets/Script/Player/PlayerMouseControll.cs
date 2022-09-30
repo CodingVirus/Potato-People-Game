@@ -36,6 +36,18 @@ public class PlayerMouseControll : MonoBehaviour
     private void Update()
     {
         target.y = transform.position.y;
+        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
+        if (pos.x < 0.05f) {
+            playerMove = false;
+            pos.x = 0.05f;
+        }
+        if (pos.x > 0.95f) {
+            playerMove = false;
+            pos.x = 0.95f;
+        }
+        if (pos.y < 0f) pos.y = 0f;
+        if (pos.y > 1f) pos.y = 1f;
+        transform.position = Camera.main.ViewportToWorldPoint(pos);
         if(Input.GetMouseButton(0))
         {
             playerWalk = true;
