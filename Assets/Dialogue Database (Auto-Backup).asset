@@ -827,7 +827,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\uC57D\uC740 \uC218\uC220\uC2E4\uC5D0 \uC788\uC5B4...."
+        value: "\uBC30\uD569\uAE30\uB294 \uC218\uC220\uC2E4\uC5D0 \uC788\uC5B4...."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence

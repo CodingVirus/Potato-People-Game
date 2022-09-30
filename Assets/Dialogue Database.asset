@@ -827,7 +827,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\uC57D\uC740 \uC218\uC220\uC2E4\uC5D0 \uC788\uC5B4...."
+        value: "\uBC30\uD569\uAE30\uB294 \uC218\uC220\uC2E4\uC5D0 \uC788\uC5B4...."
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -1742,8 +1742,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.67000014
+    canvasScrollPosition: {x: 0, y: 6.25}
+    canvasZoom: 0.64000016
   - id: 4
     fields:
     - title: Title
