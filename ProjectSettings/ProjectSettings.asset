@@ -765,7 +765,7 @@ PlayerSettings:
     PS4: TextMeshPro
     PS5: TextMeshPro
     Stadia: TextMeshPro
-    Standalone: TextMeshPro;USE_PHYSICS2D
+    Standalone: TextMeshPro;USE_PHYSICS2D;USE_ARTICY
     WebGL: TextMeshPro
     Windows Store Apps: TextMeshPro
     XboxOne: TextMeshPro
