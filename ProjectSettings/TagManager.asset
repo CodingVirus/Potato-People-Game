@@ -14,6 +14,7 @@ TagManager:
   - Refrigerator
   - ClueyKey
   - Item
+  - Ladder
   layers:
   - Default
   - TransparentFX

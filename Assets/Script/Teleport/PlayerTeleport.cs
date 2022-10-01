@@ -47,6 +47,7 @@ public class PlayerTeleport : MonoBehaviour
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
+                    gameData.GetComponent<GameDataControl>().prisonDoor = true;
                     transferStart = false;
                     //Debug.Log("이동");
                 }

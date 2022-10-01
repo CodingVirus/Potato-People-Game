@@ -11,48 +11,7 @@ public class PIckUp : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (this.name == "Surgery Desk" && collision.CompareTag("Player") && active == true)
-        {
-            ply = collision.gameObject;
-            //ply.GetComponent<PlayerMouseControll>().StopMove();
-
-            Inventory inven = ply.GetComponent<Inventory>();
-            for (int i = 0; i < inven.slots.Count; i++)
-            {
-                if (inven.slots[i].isEmpty)
-                {
-                    //ply.GetComponent<LightControll>().global.intensity = 0.1f;
-                    Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
-                    inven.slots[i].isEmpty = false;
-                    this.GetComponent<BoxCollider2D>().enabled = false;
-                    break;
-                }
-            }
-            //ply.GetComponent<PlayerMouseControll>().target = ply.transform.position;
-            //ply.GetComponent<PlayerMouseControll>().StartMove();
-            active = false;
-        }
-
-        else if (this.name == "Refrigerator" && collision.CompareTag("Player") && active == true)
-        {
-            ply = collision.gameObject;
-            Inventory inven = ply.GetComponent<Inventory>();
-            for (int i = 0; i < inven.slots.Count; i++)
-            {
-                if (inven.slots[i].isEmpty)
-                {
-                    Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
-                    inven.slots[i].isEmpty = false;
-                    this.GetComponent<BoxCollider2D>().enabled = false;
-                    break;
-                }
-            }
-            //ply.GetComponent<PlayerMouseControll>().target = ply.transform.position;
-            //ply.GetComponent<PlayerMouseControll>().StartMove();
-            active = false;
-        }
-
-        else if (this.name == "Vending Machine" && collision.CompareTag("Player") && active == true)
+        if (this.name == "Vending Machine" && collision.CompareTag("Player") && active == true)
         {
             ply = collision.gameObject;
             Inventory inven = ply.GetComponent<Inventory>();
@@ -66,8 +25,6 @@ public class PIckUp : MonoBehaviour
                     break;
                 }
             }
-            //ply.GetComponent<PlayerMouseControll>().target = ply.transform.position;
-            //ply.GetComponent<PlayerMouseControll>().StartMove();
             active = false;
         }
     }

@@ -37,7 +37,24 @@ public class GetItem : MonoBehaviour
                             break;
                         }
                     }
-                    ply.GetComponent<PlayerMouseControll>().DialogueStartMove();
+                    Invoke("PlyMoveStart", 0.5f);
+                    hit.transform.GetComponent<BoxCollider2D>().enabled = false;
+                }
+
+                if (hit.transform.gameObject.tag == "Ladder")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    Inventory inven = ply.GetComponent<Inventory>();
+                    for (int i = 0; i < inven.slots.Count; i++)
+                    {
+                        if (inven.slots[i].isEmpty)
+                        {
+                            Instantiate(ItemList[3], inven.slots[i].slotObj.transform, false);
+                            inven.slots[i].isEmpty = false;
+                            break;
+                        }
+                    }
+                    Invoke("PlyMoveStart", 0.5f);
                     hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                 }
 
@@ -47,5 +64,11 @@ public class GetItem : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void PlyMoveStart()
+    {
+        ply.GetComponent<PlayerMouseControll>().MaintainPosition();
+        ply.GetComponent<PlayerMouseControll>().StartMove();
     }
 }
