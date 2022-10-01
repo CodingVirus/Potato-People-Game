@@ -11,6 +11,9 @@ TagManager:
   - EndPoint
   - Obstacles
   - ObjToPush
+  - Refrigerator
+  - ClueyKey
+  - Item
   layers:
   - Default
   - TransparentFX
