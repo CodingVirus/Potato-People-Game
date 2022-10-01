@@ -42,11 +42,11 @@ public class UseItem : MonoBehaviour
         }
     }
 
-    public void UseClueyQuest()
+    public void UseItemDialogue(string input)
     {
         for (int i = 0; i < playerObj.GetComponent<Inventory>().slots.Count; i++)
         {
-            if (playerObj.GetComponent<Inventory>().slots[i].isEmpty == false && playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).name == "Drug(Clone)")
+            if (playerObj.GetComponent<Inventory>().slots[i].isEmpty == false && playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).name == input)
             {
                 //Debug.Log("HI");
                 Destroy(playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).gameObject);
