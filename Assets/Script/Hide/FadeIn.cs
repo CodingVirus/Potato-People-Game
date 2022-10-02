@@ -14,6 +14,7 @@ public class FadeIn : MonoBehaviour
 
     public Light2D playerLight;
     public GameObject test;
+    public GameObject test2;
 
     public void Fade()
     {
@@ -37,9 +38,10 @@ public class FadeIn : MonoBehaviour
     IEnumerator FadeStart()
     {
         playerLight = player.GetComponent<LightControll>().global;
-
+        test2 = player.GetComponent<LightControll>().allB2;
         test = player.GetComponent<LightControll>().allB3;
 
+        test2.SetActive(false);
         test.SetActive(false);
         player.SetActive(false);
         Black.gameObject.SetActive(true);
@@ -67,6 +69,9 @@ public class FadeIn : MonoBehaviour
     {
         playerLight = player.GetComponent<LightControll>().global;
         test = player.GetComponent<LightControll>().allB3;
+        test2 = player.GetComponent<LightControll>().allB2;
+
+        test2.SetActive(true);
         test.SetActive(true);
         player.SetActive(true);
         Black.gameObject.SetActive(false);
