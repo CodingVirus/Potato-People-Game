@@ -52,6 +52,33 @@ public class PlayerTeleport : MonoBehaviour
                     //Debug.Log("이동");
                 }
             }
+
+            else if (other.name == "door2_1")
+            {
+                currentTeleporter = null;
+                if (key == true)
+                {
+                    currentTeleporter = other.gameObject;
+                    Invoke("DoorEnter", 0.5f);
+                    gameData.GetComponent<GameDataControl>().prisonDoor = true;
+                    transferStart = false;
+                    //Debug.Log("이동");
+                }
+            }
+
+            else if (other.name == "door2_2")
+            {
+                currentTeleporter = null;
+                if (key == true)
+                {
+                    currentTeleporter = other.gameObject;
+                    Invoke("DoorEnter", 0.5f);
+                    gameData.GetComponent<GameDataControl>().prisonDoor = true;
+                    transferStart = false;
+                    //Debug.Log("이동");
+                }
+            }
+
             else if (other.name == "Upstairs_B3")
             {
                 currentTeleporter = null;
