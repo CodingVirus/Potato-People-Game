@@ -47,7 +47,7 @@ public class FadeIn : MonoBehaviour
         while (playerLight.intensity > 0f)
         {
             time += Time.deltaTime / F_time;
-            playerLight.intensity = Mathf.Lerp(1, 0f, time);
+            playerLight.intensity = Mathf.Lerp(0.3f, 0f, time);
             //Black.color = alpha;
             yield return null;
         }
@@ -66,13 +66,15 @@ public class FadeIn : MonoBehaviour
     IEnumerator FadeEnd()
     {
         playerLight = player.GetComponent<LightControll>().global;
+        test = player.GetComponent<LightControll>().allB3;
+        test.SetActive(true);
         player.SetActive(true);
         Black.gameObject.SetActive(false);
         time = 0f;
-        while (playerLight.intensity < 1.0f)
+        while (playerLight.intensity < 0.3f)
         {
             time += Time.deltaTime / F_time;
-            playerLight.intensity = Mathf.Lerp(0, 1, time);
+            playerLight.intensity = Mathf.Lerp(0f, 0.3f, time);
             //Black.color = alpha;
             yield return null;
         }

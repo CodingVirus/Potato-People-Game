@@ -200,6 +200,20 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
+  - id: 7
+    fields:
+    - title: Name
+      value: Ladder
+      type: 0
+      typeString: 
+    - title: Initial Value
+      value: False
+      type: 2
+      typeString: CustomFieldType_Boolean
+    - title: Description
+      value: 
+      type: 0
+      typeString: 
   conversations:
   - id: 1
     fields:
@@ -4068,7 +4082,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
+      conditionsString: FindItem("Ladder(Clone)")  == false and (Variable["Ladder"]
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4129,7 +4144,7 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: FindItem("Ladder(Clone)")  == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4137,7 +4152,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 243
-        y: 111
+        y: 110
         width: 160
         height: 30
     - id: 3
@@ -4170,6 +4185,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: ea3becf7-c494-40b8-b404-2d816f13a182
+        type: 0
+        typeString: 
       conversationID: 16
       isRoot: 0
       isGroup: 0
@@ -4179,14 +4198,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: Variable["Ladder"] = true
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 243
-        y: 161
+        y: 162
         width: 160
         height: 30
     - id: 4
@@ -4234,8 +4253,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 422
-        y: 158
+        x: 427
+        y: 161
         width: 160
         height: 30
     entryGroups: []
