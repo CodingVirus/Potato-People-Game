@@ -52,6 +52,12 @@ public class UseItem : MonoBehaviour
             Destroy(this.transform.GetChild(0).gameObject);
             playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
         }
+
+        else
+        {
+            Destroy(this.transform.GetChild(0).gameObject);
+            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
+        }
     }
 
     public void UseItemDialogue(string input)
@@ -60,7 +66,6 @@ public class UseItem : MonoBehaviour
         {
             if (playerObj.GetComponent<Inventory>().slots[i].isEmpty == false && playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).name == input)
             {
-                //Debug.Log("HI");
                 Destroy(playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).gameObject);
                 playerObj.GetComponent<Inventory>().slots[i].isEmpty = true;
             }
