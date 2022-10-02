@@ -42,6 +42,18 @@ public class UseItem : MonoBehaviour
         }
     }
 
+    public void ThrowItem(string name)
+    {
+        num = int.Parse(this.name.Substring(this.name.IndexOf("_") + 1));
+
+        if (name == "Coke(Clone)")
+        {
+            Debug.Log("Thorw Coke!!!");
+            Destroy(this.transform.GetChild(0).gameObject);
+            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
+        }
+    }
+
     public void UseItemDialogue(string input)
     {
         for (int i = 0; i < playerObj.GetComponent<Inventory>().slots.Count; i++)
