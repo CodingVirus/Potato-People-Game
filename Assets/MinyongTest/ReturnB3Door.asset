@@ -16,4 +16,7 @@ MonoBehaviour:
   - functionName: GameDataControl/ReturnB3Door
     parameters: 
     returnValue: 1
+  - functionName: GameDataControl/ReturnPrisonDoor
+    parameters: 
+    returnValue: 1
   scriptFunctions: []

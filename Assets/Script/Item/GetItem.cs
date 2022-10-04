@@ -79,7 +79,7 @@ public class GetItem : MonoBehaviour
                     }
                 }
 
-                else if (hit.transform.gameObject.name == "desk 2")
+                else if (hit.transform.gameObject.name == "box 2_1")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     Inventory inven = ply.GetComponent<Inventory>();

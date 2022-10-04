@@ -37,11 +37,15 @@ public class GameDataControl : MonoBehaviour
     {
         return b3Door;
     }
-
+    public bool ReturnPrisonDoor()
+    {
+        return prisonDoor;
+    }
     void OnEnable()
     {
         Lua.RegisterFunction("ReturnClueyQuest", this, SymbolExtensions.GetMethodInfo(() => ReturnClueyQuest()));
         Lua.RegisterFunction("ReturnB3Door", this, SymbolExtensions.GetMethodInfo(() => ReturnB3Door()));
+        Lua.RegisterFunction("ReturnPrisonDoor", this, SymbolExtensions.GetMethodInfo(() => ReturnPrisonDoor()));
         //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
     }
 
@@ -49,5 +53,6 @@ public class GameDataControl : MonoBehaviour
     {
         Lua.UnregisterFunction("ReturnClueyQuest");
         Lua.UnregisterFunction("ReturnB3Door");
+        Lua.UnregisterFunction("ReturnPrisonDoor");
     }
 }

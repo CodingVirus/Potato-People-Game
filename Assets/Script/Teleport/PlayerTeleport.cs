@@ -7,6 +7,7 @@ public class PlayerTeleport : MonoBehaviour
     public GameObject currentTeleporter;
     public GameObject fadeEffect;
     public GameObject gameData;
+    public GameObject dialogueData;
     
     public bool transferStart = false;
     public bool transferState = false;
@@ -37,17 +38,22 @@ public class PlayerTeleport : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        FindItem();
         if(transferStart == true)
         {
             if (other.name == "door3_1")
             {
+                FindItem();
                 currentTeleporter = null;
                 if (key == true)
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
+
                     gameData.GetComponent<GameDataControl>().prisonDoor = true;
+                    dialogueData.GetComponent<UseItem>().UseItemDialogue("Key(Clone)");
+                    other.transform.GetChild(1).position += new Vector3(-2, 0, 0);
+                    other.name = "door3_1_open";
+                    
                     transferStart = false;
                     //Debug.Log("이동");
                 }
