@@ -41,7 +41,7 @@ public class GetItem : MonoBehaviour
                     hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                 }
 
-                if (hit.transform.gameObject.tag == "Ladder")
+                else if (hit.transform.gameObject.tag == "Ladder")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     Inventory inven = ply.GetComponent<Inventory>();
@@ -77,6 +77,23 @@ public class GetItem : MonoBehaviour
                         Invoke("PlyMoveStart", 0.5f);
                         hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                     }
+                }
+
+                else if (hit.transform.gameObject.name == "desk 2")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    Inventory inven = ply.GetComponent<Inventory>();
+                    for (int i = 0; i < inven.slots.Count; i++)
+                    {
+                        if (inven.slots[i].isEmpty)
+                        {
+                            Instantiate(ItemList[4], inven.slots[i].slotObj.transform, false);
+                            inven.slots[i].isEmpty = false;
+                            break;
+                        }
+                    }
+                    Invoke("PlyMoveStart", 0.5f);
+                    hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                 }
             }
         }

@@ -8687,6 +8687,7 @@ MonoBehaviour:
   - {fileID: 3990573139370791849, guid: 41488c5b1eaa029448d3f89dfbdd1dc5, type: 3}
   - {fileID: 3990573139370791849, guid: ac9b0ec41cc8a401ab7d1edd2bfe1e5a, type: 3}
   - {fileID: 1009379388818141154, guid: 23dee35dfd8c66e44a2d8c53f35bcd8c, type: 3}
+  - {fileID: 3990573139370791849, guid: df9ae6ee2b317ea42a63dddcd9af5878, type: 3}
 --- !u!1 &509231011
 GameObject:
   m_ObjectHideFlags: 0
@@ -28717,6 +28718,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1535780014}
   - component: {fileID: 1535780015}
+  - component: {fileID: 1535780016}
   m_Layer: 0
   m_Name: desk 2
   m_TagString: Untagged
@@ -28791,6 +28793,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1535780016
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535780013}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.8419361, y: 0.2812128}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.67, y: 2.31}
+    newSize: {x: 6.67, y: 2.31}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8050346, y: 1.185152}
+  m_EdgeRadius: 0
 --- !u!1 &1536210318
 GameObject:
   m_ObjectHideFlags: 0
