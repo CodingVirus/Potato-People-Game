@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1920
     height: 1037
   m_ShowMode: 4
+<<<<<<< Updated upstream
   m_Title: Dialogue
+=======
+  m_Title: Scene
+>>>>>>> Stashed changes
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +124,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< Updated upstream
   controlID: 15
+=======
+  controlID: 352
+>>>>>>> Stashed changes
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +232,11 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
+<<<<<<< Updated upstream
   controlID: 130
+=======
+  controlID: 43
+>>>>>>> Stashed changes
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -242,8 +254,13 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< Updated upstream
     width: 408
     height: 443
+=======
+    width: 516
+    height: 446
+>>>>>>> Stashed changes
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 18}
@@ -294,11 +311,19 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1551
     y: 0
+<<<<<<< Updated upstream
     width: 369
     height: 987
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
+=======
+    width: 391
+    height: 947
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 20}
+>>>>>>> Stashed changes
   m_Panes:
   - {fileID: 13}
   - {fileID: 20}
@@ -332,6 +357,7 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
+<<<<<<< Updated upstream
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
@@ -346,6 +372,294 @@ MonoBehaviour:
     m_IsLocked: 0
   m_PreviewWindow: {fileID: 0}
 --- !u!114 &14
+=======
+  actorFoldouts:
+    propertiesKeys: 
+    propertiesValues: 
+    fieldsKeys: 
+    fieldsValues: 
+  actorFilter: 
+  actorListSelectedIndex: -1
+  actorTexturesFoldout: 0
+  actorSpritesFoldout: 0
+  showNodeEditor: 1
+  currentConversationID: 1
+  globalSearchText: 
+  globalReplaceText: 
+  globalSearchSpecificConversation: 0
+  globalSearchConversationIndex: -1
+  globalSearchUseRegex: 0
+  databaseFoldouts:
+    database: 1
+    emphasisSettings: 0
+    emphasisSetting: 
+    globalReplace: 0
+    merge: 0
+    export: 0
+    localization: 0
+    editorSettings: 0
+  databaseToMerge: {fileID: 0}
+  conflictingIDRule: 0
+  mergeProperties: 1
+  mergeEmphases: 1
+  mergeActors: 1
+  mergeItems: 1
+  mergeLocations: 1
+  mergeVariables: 1
+  mergeConversations: 1
+  exportFormat: 0
+  chatMapperExportPath: 
+  csvExportPath: 
+  jsonExportPath: 
+  voiceoverExportPath: 
+  languageTextExportPath: 
+  screenplayExportPath: 
+  entrytagFormat: 0
+  encodingType: 4
+  isSearchBarOpen: 0
+  searchString: 
+  searchCaseSensitive: 0
+  currentEntryID: -1
+  itemFoldouts:
+    propertiesKeys: 
+    propertiesValues: 
+    fieldsKeys: 00000000
+    fieldsValues: 00
+  itemFilter: 
+  itemListSelectedIndex: 0
+  questEntrySelectedIdx: -1
+  showCompactQuestEntryList: 1
+  localizationLanguages:
+    languages: []
+    extraEntryFields: []
+    extraQuestFields: []
+    importMainTextIndex: -1
+    outputFolder: 
+  exportLocalizationConversationTitle: 0
+  exportLocalizationKeyField: 0
+  exportAssignFieldValues: 0
+  exportLocalizationCreateNewFields: 0
+  localizationKeyField: Articy Id
+  locationFoldouts:
+    propertiesKeys: 
+    propertiesValues: 
+    fieldsKeys: 
+    fieldsValues: 
+  locationFilter: 
+  locationListSelectedIndex: -1
+  toolbar:
+    current: 5
+  database: {fileID: 11400000, guid: 6c13e6d334731b143b403029d2763db7, type: 2}
+  debug: 0
+  registerCompleteObjectUndo: 1
+  scrollPosition: {x: 0, y: 0}
+  templateFoldouts:
+    templates: 0
+    actors: 0
+    items: 0
+    quests: 0
+    locations: 0
+    conversations: 0
+    dialogueEntries: 0
+    variables: 0
+  variableView:
+    database: {fileID: 11400000, guid: 6c13e6d334731b143b403029d2763db7, type: 2}
+    isDialogueEditorWindow: 1
+    variableFilter: 
+    showVariableGroupFoldouts: 0
+    expandedVariableGroups: []
+  watches: []
+  autoUpdateWatches: 0
+  watchUpdateFrequency: 1
+  nextWatchUpdateTime: 2179.395062
+  watchableVariableNames:
+  - Actor
+  - ActorIndex
+  - Alert
+  - AtWork
+  - Conversant
+  - ConversantIndex
+  - DrugUse
+  - StartTrigger
+  - TriggerCount
+  - TryAgain
+  watchableQuestNames:
+  - ClueyQuest
+  luaCommand: 
+  showNodeIDs: 0
+  showTitlesInsteadOfText: 0
+  showAllActorNames: 0
+  showOtherActorNames: 1
+  showActorPortraits: 0
+  showDescriptions: 0
+  showParticipantNames: 1
+  showEndNodeMarkers: 1
+  showFullTextOnHover: 1
+  addNewNodesToRight: 0
+  autoArrangeOnCreate: 0
+  zoomLocked: 0
+  _zoom: 0.673
+  canvasRectWidthMultiplier: 1
+  canvasScrollView: {x: 100000, y: 100000}
+  canvasScrollPosition: {x: 45.963024, y: 6.3870983}
+  conversationTitles:
+  - Doctor Conversations
+  - Cluey Dialogue
+  - 3F Trigger Test
+  - Trigger2
+  - Start conversation
+  - Surgery Conversation
+  - New Conversation 9
+  - New Conversation 10
+  - New Conversation 11
+  - Ending
+  - B3 Door Lock
+  - Cluey Door
+  conversationIndex: 0
+  snapToGridAmount: 0
+  confirmDelete: 1
+  trimWhitespaceAroundPipes: 1
+  conversationTitleFilter: 
+  prevConversationStack:
+  - Cluey Dialogue
+  - Questioning
+  - Cluey Dialogue
+  - Doctor Conversations
+  - ' 1'
+  - Doctor Conversations
+  - ' 1'
+  - Cluey Dialogue
+  - Doctor Conversations
+  - New Conversation 13
+  - New Conversation 12
+  - Doctor Conversations
+  - ' 1'
+  - Cluey Dialogue
+  - New Conversation 9
+  - Doctor Conversations
+  - New Conversation 9
+  - New Conversation 10
+  - New Conversation 11
+  - New Conversation 12
+  - Cluey Dialogue
+  - Doctor Conversations
+  - Surgery Conversation
+  - New Conversation 9
+  - New Conversation 10
+  - New Conversation 11
+  - Surgery Conversation
+  - Cluey Dialogue
+  - Doctor Conversations
+  - Trigger2
+  - Start conversation
+  - Surgery Conversation
+  - 3F Trigger Test
+  - New Conversation 9
+  - New Conversation 13
+  - New Conversation 12
+  - 3F Trigger Test
+  - Cluey Dialogue
+  - New Conversation 13
+  - New Conversation 12
+  - New Conversation 13
+  - Cluey Dialogue
+  - Surgery Conversation
+  - Cluey Dialogue
+  - New Conversation 12
+  - Cluey Dialogue
+  - Cluey Dialogue
+  - Trigger2
+  - New Conversation 9
+  - Surgery Conversation
+  - New Conversation 9
+  - New Conversation 10
+  - Trigger2
+  - B3 Door Lock
+  - Ending
+  - New Conversation 11
+  - New Conversation 10
+  - New Conversation 11
+  - New Conversation 9
+  - Ending
+  - B3 Door Lock
+  - Cluey Dialogue
+  - 3F Trigger Test
+  - Cluey Dialogue
+  - Doctor Conversations
+  - Cluey Dialogue
+  - Doctor Conversations
+  - New Conversation 11
+  - New Conversation 9
+  - New Conversation 10
+  - Surgery Conversation
+  - Doctor Conversations
+  - New Conversation 9
+  - New Conversation 10
+  - Surgery Conversation
+  - Doctor Conversations
+  - Cluey Dialogue
+  - Doctor Conversations
+  - Cluey Dialogue
+  nextConversationStack: []
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8155808f9cfb949478e4a643e4111363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 370, y: 600}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Welcome
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1529
+    y: 73
+    width: 390
+    height: 926
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+  showOnStart: 1
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 528
+    width: 1012
+    height: 471
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &16
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -592,9 +906,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< Updated upstream
     m_Target: {x: 2.9300895, y: -52.602493, z: 0.49195454}
     speed: 2
     m_Value: {x: 3.3555822, y: -52.222366, z: 0.48552522}
+=======
+    m_Target: {x: 27.960297, y: -78.665, z: 0}
+    speed: 2
+    m_Value: {x: 27.960295, y: -78.665, z: -0.000000018867679}
+>>>>>>> Stashed changes
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -645,9 +965,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< Updated upstream
     m_Target: 13.644442
     speed: 2
     m_Value: 14.287374
+=======
+    m_Target: 10.645545
+    speed: 2
+    m_Value: 10.645552
+>>>>>>> Stashed changes
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -759,7 +1085,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -770,16 +1096,24 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
+<<<<<<< Updated upstream
       width: 1142
       height: 487
     m_Scale: {x: 0.4509259, y: 0.45092592}
     m_Translation: {x: 571, y: 243.5}
+=======
+      width: 1012
+      height: 450
+    m_Scale: {x: 0.43611112, y: 0.4361111}
+    m_Translation: {x: 506, y: 225}
+>>>>>>> Stashed changes
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< Updated upstream
       x: -1266.2834
       y: -540
       width: 2532.567
@@ -787,6 +1121,15 @@ MonoBehaviour:
     m_MinimalGUI: 1
   m_defaultScale: 0.45092592
   m_LastWindowPixelSize: {x: 1142, y: 508}
+=======
+      x: -1160.2548
+      y: -515.9236
+      width: 2320.5095
+      height: 1031.8472
+    m_MinimalGUI: 1
+  m_defaultScale: 0.43611112
+  m_LastWindowPixelSize: {x: 1012, y: 471}
+>>>>>>> Stashed changes
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1113,10 +1456,17 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
+<<<<<<< Updated upstream
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 3a830000
       m_LastClickedID: 0
       m_ExpandedIDs: 28fbffff0a790000a87a0000fc7a0000787c0000ec7c00004c7d0000b67e0000c6810000
+=======
+      scrollPos: {x: 0, y: 268}
+      m_SelectedIDs: 40780000
+      m_LastClickedID: 30784
+      m_ExpandedIDs: 2cfbffff4e790000bc8000003082000070830000
+>>>>>>> Stashed changes
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1193,10 +1543,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< Updated upstream
     scrollPos: {x: 0, y: 79}
     m_SelectedIDs: 10910000
     m_LastClickedID: 37136
     m_ExpandedIDs: 0000000010910000129100001491000016910000189100001a9100001c910000209100006e93000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: e8940000
+    m_LastClickedID: 38120
+    m_ExpandedIDs: 00000000c892000000ca9a3b
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1224,7 +1581,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< Updated upstream
     m_ExpandedIDs: 0000000010910000129100001491000016910000189100001a9100001c9100001e91000020910000
+=======
+    m_ExpandedIDs: 00000000c8920000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1252,7 +1613,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
+<<<<<<< Updated upstream
     m_ExpandedInstanceIDs: c25f0000aea60000d0a6000088e00000f8df00002e8c00009a8600007086000050b30000000000003e850000
+=======
+    m_ExpandedInstanceIDs: c25f0000aea60000d0a6000088e00000f8df00002e8c00009a8600007086000050b3000000000000
+>>>>>>> Stashed changes
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
