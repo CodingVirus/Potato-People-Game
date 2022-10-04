@@ -6,11 +6,12 @@ using System;
 public class Teleporter : ClickablePortal
 {
     [SerializeField] private Transform destination;
+    public Camera getCamera;
     public Transform PlayerPosition;
 
     //public float walkspeed = 5f;
     //public Vector3 target;
-    //private Vector3 transPos;
+    private Vector3 transPos;
 
     //private CameraFollow theCamera;
     [SerializeField]
@@ -21,13 +22,23 @@ public class Teleporter : ClickablePortal
         return destination;
     }
 
-    //private void Update() 
-    //{
+    private void Update() 
+    {
+        if(Input.GetMouseButton(0))
+        {
+            Ray ray = getCamera.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if(Physics2D.Raycast(ray, out hit))
+            {
+                string objectName = hit.collider.gameObject.name;
+                Debug.Log(objectName);
+            }
+        }
         //if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && Input.GetMouseButtonDown(0))
         //{
         //    Move();
         //}
-    //}
+    }
     
     //void Move()
     //{
@@ -44,6 +55,7 @@ public class Teleporter : ClickablePortal
     private void OnMouseDown() 
     {
         PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
+        //PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
         Debug.Log("MouseDown : true");
     }
 

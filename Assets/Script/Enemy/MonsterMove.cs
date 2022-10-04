@@ -10,8 +10,8 @@ public class MonsterMove : MonoBehaviour
 
     public int nextMove;
     public float thinkTime;
-    public float monSpeed = 2f;
-    public float traceSpeed = 3.5f;
+    public float monSpeed;
+    public float traceSpeed;
 
     private bool facingRight;
     private Vector3 dir;
@@ -31,11 +31,9 @@ public class MonsterMove : MonoBehaviour
         {
             dis = Vector3.Distance(transform.position, montarget.position);
 
-            if(dis > 10 || traceState == false)
+            if(dis > 10)
             {
                 Move();
-                traceState = false;
-                //monteleport = false;
             }
 
             //낭떠러지 감지
@@ -53,7 +51,12 @@ public class MonsterMove : MonoBehaviour
                     StartCoroutine("Think");
                 }
             }
-            
+
+            if(dis > 10 && traceState == true)
+            {
+                StartCoroutine("Think");
+                traceState = false;
+            }
         }
     }
     
@@ -62,6 +65,11 @@ public class MonsterMove : MonoBehaviour
         rigid.velocity = new Vector2(nextMove * monSpeed,rigid.velocity.y);
         Flip();
     }
+
+    //public void MonStop()
+    //{
+    //    traceSpeed = 0f;
+    //}
 
     IEnumerator Think()
     {
@@ -86,11 +94,6 @@ public class MonsterMove : MonoBehaviour
     private void Trace()
     {
         transform.position = Vector2.MoveTowards(transform.position, montarget.position, Time.smoothDeltaTime * traceSpeed);
-        dir = montarget.position - transform.position;
-        //if(dir > 10)
-        //{
-        //    StartCoroutine("Think");
-        //}
         Flip();
     }
 

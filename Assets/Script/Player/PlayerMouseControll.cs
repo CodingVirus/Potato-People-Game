@@ -35,6 +35,7 @@ public class PlayerMouseControll : MonoBehaviour
 
     private void Update()
     {
+        //카메라 영역 내 이동 제한
         target.y = transform.position.y;
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
         if (pos.x < 0.05f) {
@@ -45,8 +46,7 @@ public class PlayerMouseControll : MonoBehaviour
             playerMove = false;
             pos.x = 0.95f;
         }
-        if (pos.y < 0f) pos.y = 0f;
-        if (pos.y > 1f) pos.y = 1f;
+
         transform.position = Camera.main.ViewportToWorldPoint(pos);
         if(Input.GetMouseButton(0))
         {

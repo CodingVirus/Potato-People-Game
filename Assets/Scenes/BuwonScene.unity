@@ -360,7 +360,7 @@ PrefabInstance:
     - target: {fileID: 8952994893067871549, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1363097352}
     - target: {fileID: 8952994893403686849, guid: 5deaa3e9724204b169fb7ccba2d66b31, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8389,6 +8389,7 @@ GameObject:
   - component: {fileID: 502670325}
   - component: {fileID: 502670328}
   - component: {fileID: 502670329}
+  - component: {fileID: 502670330}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8515,6 +8516,25 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &502670330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502670324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af33a602e20a3d4ca46c8a6ef942618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: 
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 1
+  m_restoreStateOnStart: 0
+  m_target: {fileID: 0}
+  m_usePlayerSpawnpoint: 1
+  m_multiscene: 0
 --- !u!1 &509231011
 GameObject:
   m_ObjectHideFlags: 0
@@ -10989,7 +11009,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9190299270565248649, guid: 5b84e1afa260e4a4b85a5336bec6d868, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8677679611046010632, guid: 5b84e1afa260e4a4b85a5336bec6d868, type: 3}
@@ -18658,7 +18678,6 @@ GameObject:
   - component: {fileID: 1030952857}
   - component: {fileID: 1030952856}
   - component: {fileID: 1030952859}
-  - component: {fileID: 1030952861}
   m_Layer: 0
   m_Name: Dialogue Data
   m_TagString: Untagged
@@ -18758,32 +18777,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 0
   playerObj: {fileID: 1363097352}
---- !u!61 &1030952861
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1030952855}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &1036335192
 GameObject:
   m_ObjectHideFlags: 0
@@ -24560,6 +24553,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTeleporter: {fileID: 0}
   fadeEffect: {fileID: 760909152}
+  mon: {fileID: 637100712}
   transferStart: 0
   transferState: 0
   p_Teleport: {x: 0, y: 0, z: 0}

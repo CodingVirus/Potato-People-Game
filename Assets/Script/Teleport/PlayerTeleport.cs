@@ -6,6 +6,7 @@ public class PlayerTeleport : MonoBehaviour
 {
     public GameObject currentTeleporter;
     public GameObject fadeEffect;
+    public GameObject mon;
     
     public bool transferStart = false;
     public bool transferState = false;
@@ -37,7 +38,7 @@ public class PlayerTeleport : MonoBehaviour
         theCamera = Camera.main.GetComponent<CameraFollow>();
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         FindItem();
         if(transferStart == true)
@@ -55,6 +56,7 @@ public class PlayerTeleport : MonoBehaviour
             else
             {
                 currentTeleporter = other.gameObject;
+                transferStart = false;
                 Invoke("DoorEnter", 0.5f);
                 //Debug.Log("이동");
             }
@@ -70,6 +72,7 @@ public class PlayerTeleport : MonoBehaviour
         }
         else
         {
+            //if(mon.GetComponent<MonsterMove>().traceState == true) mon.GetComponent<MonsterMove>().MonStop();
             Invoke("Fade", 0.5f);
         }
     }
@@ -99,7 +102,7 @@ public class PlayerTeleport : MonoBehaviour
         transferStart = false;
         transferState = false;
         currentTeleporter = null;
-        
+        //mon.GetComponent<MonsterMove>().traceSpeed = 4.5f;
     }
 
     private void CameraMove()
