@@ -217,7 +217,7 @@ MonoBehaviour:
   - id: 8
     fields:
     - title: Name
-      value: VentMove
+      value: Driver
       type: 0
       typeString: 
     - title: Initial Value
@@ -4678,8 +4678,7 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: FindItem("Ladder(Clone)")  == false and (Variable["VentMove"]
-        == false)
+      conditionsString: FindItem("Ladder(Clone)")  == false
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -4849,8 +4848,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 579
-        y: 194
+        x: 586
+        y: 188
         width: 160
         height: 30
     entryGroups: []
