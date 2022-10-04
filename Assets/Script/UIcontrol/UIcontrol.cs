@@ -7,6 +7,7 @@ public class UIcontrol : MonoBehaviour
     float MaxDistance = 15f;
     Vector3 MousePostion;
     Camera Camera;
+    public GameObject ply;
 
     private void Start()
     {
@@ -24,12 +25,26 @@ public class UIcontrol : MonoBehaviour
             {
                 if (hit.transform.gameObject.tag == "Sheet")
                 {
-                    this.GetComponent<PlayerMouseControll>().StopMove();
-                    
-                    
-                    Invoke("PlyMoveStart", 0.5f);
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    hit.transform.GetChild(0).gameObject.SetActive(true);
+
+                    //Invoke("PlyMoveStart", 0.5f);
+                }
+
+                else if (hit.transform.gameObject.tag == "Diary")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+
+
+                    //Invoke("PlyMoveStart", 0.5f);
                 }
             }
         }
+    }
+
+    public void PlyMoveStart()
+    {
+        ply.GetComponent<PlayerMouseControll>().MaintainPosition();
+        ply.GetComponent<PlayerMouseControll>().StartMove();
     }
 }

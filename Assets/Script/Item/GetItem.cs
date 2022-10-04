@@ -98,4 +98,10 @@ public class GetItem : MonoBehaviour
             }
         }
     }
+
+    public void PlyMoveStart()
+    {
+        ply.GetComponent<PlayerMouseControll>().MaintainPosition();
+        ply.GetComponent<PlayerMouseControll>().StartMove();
+    }
 }
