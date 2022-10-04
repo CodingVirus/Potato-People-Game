@@ -15,6 +15,7 @@ TagManager:
   - ClueyKey
   - Item
   - Ladder
+  - Sheet
   layers:
   - Default
   - TransparentFX
