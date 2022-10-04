@@ -16,6 +16,7 @@ TagManager:
   - Item
   - Ladder
   - Sheet
+  - Diary
   layers:
   - Default
   - TransparentFX

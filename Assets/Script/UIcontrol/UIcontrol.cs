@@ -34,7 +34,7 @@ public class UIcontrol : MonoBehaviour
                 else if (hit.transform.gameObject.tag == "Diary")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
-
+                    hit.transform.GetChild(0).gameObject.SetActive(true);
 
                     //Invoke("PlyMoveStart", 0.5f);
                 }
