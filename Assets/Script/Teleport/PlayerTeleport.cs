@@ -31,6 +31,10 @@ public class PlayerTeleport : MonoBehaviour
             }
         }
     }
+    public void UseKey()
+    {
+        
+    }
     private void Awake() 
     {
         theCamera = Camera.main.GetComponent<CameraFollow>();

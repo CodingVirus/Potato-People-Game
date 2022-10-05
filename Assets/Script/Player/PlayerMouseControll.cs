@@ -145,6 +145,7 @@ public class PlayerMouseControll : MonoBehaviour
     public void MaintainPosition()
     {
         target = this.transform.position;
+        anim.SetBool("isWalking", false);
     }
 
     void Flip()

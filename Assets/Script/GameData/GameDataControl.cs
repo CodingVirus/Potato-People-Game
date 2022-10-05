@@ -18,6 +18,8 @@ public class GameDataControl : MonoBehaviour
     public bool sokobanGame = false;
     public bool cirCuitGame = false;
 
+    public GameObject ventLadderState;
+
 
     public void ClueyQuestClear()
     {
@@ -41,11 +43,25 @@ public class GameDataControl : MonoBehaviour
     {
         return prisonDoor;
     }
+    public bool CheckVentState()
+    {
+        if (ventLadderState.activeSelf == true)
+        {
+            return true;
+        }
+
+        else
+        {
+            return false;
+        }
+        //return true;
+    }
     void OnEnable()
     {
         Lua.RegisterFunction("ReturnClueyQuest", this, SymbolExtensions.GetMethodInfo(() => ReturnClueyQuest()));
         Lua.RegisterFunction("ReturnB3Door", this, SymbolExtensions.GetMethodInfo(() => ReturnB3Door()));
         Lua.RegisterFunction("ReturnPrisonDoor", this, SymbolExtensions.GetMethodInfo(() => ReturnPrisonDoor()));
+        Lua.RegisterFunction("CheckVentState", this, SymbolExtensions.GetMethodInfo(() => CheckVentState()));
         //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
     }
 
@@ -54,5 +70,6 @@ public class GameDataControl : MonoBehaviour
         Lua.UnregisterFunction("ReturnClueyQuest");
         Lua.UnregisterFunction("ReturnB3Door");
         Lua.UnregisterFunction("ReturnPrisonDoor");
+        Lua.UnregisterFunction("CheckVentState");
     }
 }
