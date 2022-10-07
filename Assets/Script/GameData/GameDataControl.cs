@@ -21,7 +21,7 @@ public class GameDataControl : MonoBehaviour
     public bool sokobanGame = false;
     public bool cirCuitGame = false;
 
-    public bool gassMachineState = false;
+    public bool gasMachineState = false;
 
     public GameObject ventLadderState;
 
@@ -56,6 +56,10 @@ public class GameDataControl : MonoBehaviour
     {
         return b1Door;
     }
+    public bool ReturnGasState()
+    {
+        return gasMachineState;
+    }
     public bool CheckVentState()
     {
         if (ventLadderState.activeSelf == true)
@@ -85,6 +89,7 @@ public class GameDataControl : MonoBehaviour
         Lua.RegisterFunction("CheckVentState", this, SymbolExtensions.GetMethodInfo(() => CheckVentState()));
         Lua.RegisterFunction("ReturnOfficeDoor", this, SymbolExtensions.GetMethodInfo(() => ReturnOfficeDoor()));
         Lua.RegisterFunction("Returnb1Door", this, SymbolExtensions.GetMethodInfo(() => Returnb1Door()));
+        Lua.RegisterFunction("ReturnGasState", this, SymbolExtensions.GetMethodInfo(() => ReturnGasState()));
         //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
     }
 
@@ -96,5 +101,6 @@ public class GameDataControl : MonoBehaviour
         Lua.UnregisterFunction("CheckVentState");
         Lua.UnregisterFunction("ReturnOfficeDoor");
         Lua.UnregisterFunction("Returnb1Door");
+        Lua.UnregisterFunction("ReturnGasState");
     }
 }

@@ -28,4 +28,7 @@ MonoBehaviour:
   - functionName: GameDataControl/Returnb1Door
     parameters: 
     returnValue: 1
+  - functionName: GameDataControl/ReturnGasState
+    parameters: 
+    returnValue: 1
   scriptFunctions: []
