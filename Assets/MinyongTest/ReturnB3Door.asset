@@ -31,4 +31,7 @@ MonoBehaviour:
   - functionName: GameDataControl/ReturnGasState
     parameters: 
     returnValue: 1
+  - functionName: GameDataControl/ReturnCrematoriumPassword
+    parameters: 
+    returnValue: 1
   scriptFunctions: []

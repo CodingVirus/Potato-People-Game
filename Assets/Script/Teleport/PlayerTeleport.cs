@@ -102,7 +102,7 @@ public class PlayerTeleport : MonoBehaviour
             else if (other.name == "door3_3")
             {
                 currentTeleporter = null;
-                if (gameData.GetComponent<GameDataControl>().password == true)
+                if (gameData.GetComponent<GameDataControl>().CrematoriumPassword == true)
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);

@@ -49,7 +49,7 @@ public class DigitalDisplay : MonoBehaviour
         if(codeTextValue == "0921")
         {
             Debug.Log("Correct!");
-            gameData.GetComponent<GameDataControl>().password = true;
+            gameData.GetComponent<GameDataControl>().CrematoriumPassword = true;
             pad.SetActive(false);
             //uiOn = false;
             Invoke("StartToMove", 0.3f);

@@ -16,7 +16,7 @@ public class GameDataControl : MonoBehaviour
     public bool laboratoryA_Door = false;
 
     public bool clueyQuest = false;
-    public bool password = false;
+    public bool CrematoriumPassword = false;
 
     public bool sokobanGame = false;
     public bool cirCuitGame = false;
@@ -56,6 +56,10 @@ public class GameDataControl : MonoBehaviour
     {
         return b1Door;
     }
+    public bool ReturnCrematoriumPassword()
+    {
+        return CrematoriumPassword;
+    }
     public bool ReturnGasState()
     {
         return gasMachineState;
@@ -90,6 +94,7 @@ public class GameDataControl : MonoBehaviour
         Lua.RegisterFunction("ReturnOfficeDoor", this, SymbolExtensions.GetMethodInfo(() => ReturnOfficeDoor()));
         Lua.RegisterFunction("Returnb1Door", this, SymbolExtensions.GetMethodInfo(() => Returnb1Door()));
         Lua.RegisterFunction("ReturnGasState", this, SymbolExtensions.GetMethodInfo(() => ReturnGasState()));
+        Lua.RegisterFunction("ReturnCrematoriumPassword", this, SymbolExtensions.GetMethodInfo(() => ReturnCrematoriumPassword()));
         //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
     }
 
@@ -102,5 +107,6 @@ public class GameDataControl : MonoBehaviour
         Lua.UnregisterFunction("ReturnOfficeDoor");
         Lua.UnregisterFunction("Returnb1Door");
         Lua.UnregisterFunction("ReturnGasState");
+        Lua.UnregisterFunction("ReturnCrematoriumPassword");
     }
 }
