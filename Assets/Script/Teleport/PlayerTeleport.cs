@@ -103,6 +103,12 @@ public class PlayerTeleport : MonoBehaviour
             else if (other.name == "door3_3")
             {
                 currentTeleporter = null;
+                if (gameData.GetComponent<GameDataControl>().password == true)
+                {
+                    currentTeleporter = other.gameObject;
+                    Invoke("DoorEnter", 0.5f);
+                    transferStart = false;
+                }
             }
 
             else if (other.name == "door3_4")
@@ -112,6 +118,21 @@ public class PlayerTeleport : MonoBehaviour
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
+                    transferStart = false;
+                }
+            }
+
+            else if (other.name == "door1_1")
+            {
+                currentTeleporter = null;
+                Inventory inven = this.GetComponent<Inventory>();
+                if (inven.FindItem("OfficeKey(Clone)") == true)
+                {
+                    currentTeleporter = other.gameObject;
+                    Invoke("DoorEnter", 0.5f);
+                    gameData.GetComponent<GameDataControl>().officeDoor = true;
+                    dialogueData.GetComponent<UseItem>().UseItemDialogue("OfficeKey(Clone)");
+                    other.name = "door1_1_open";
                     transferStart = false;
                 }
             }

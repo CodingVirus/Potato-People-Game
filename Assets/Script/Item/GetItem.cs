@@ -95,6 +95,59 @@ public class GetItem : MonoBehaviour
                     Invoke("PlyMoveStart", 0.5f);
                     hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                 }
+
+                else if (hit.transform.gameObject.name == "casket 1_2")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    Inventory inven = ply.GetComponent<Inventory>();
+                    for (int i = 0; i < inven.slots.Count; i++)
+                    {
+                        if (inven.slots[i].isEmpty)
+                        {
+                            Instantiate(ItemList[5], inven.slots[i].slotObj.transform, false);
+                            inven.slots[i].isEmpty = false;
+                            break;
+                        }
+                    }
+                    Invoke("PlyMoveStart", 0.5f);
+                    hit.transform.GetComponent<BoxCollider2D>().enabled = false;
+                }
+                
+                else if (hit.transform.gameObject.name == "drawer 1")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    Inventory inven = ply.GetComponent<Inventory>();
+                    for (int i = 0; i < inven.slots.Count; i++)
+                    {
+                        if (inven.slots[i].isEmpty)
+                        {
+                            Instantiate(ItemList[6], inven.slots[i].slotObj.transform, false);
+                            inven.slots[i].isEmpty = false;
+                            break;
+                        }
+                    }
+                    Invoke("PlyMoveStart", 0.5f);
+                    hit.transform.GetComponent<BoxCollider2D>().enabled = false;
+                }
+
+                else if (hit.transform.gameObject.name == "drawer 2")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    Inventory inven = ply.GetComponent<Inventory>();
+                    for (int i = 0; i < inven.slots.Count; i++)
+                    {
+                        if (inven.slots[i].isEmpty)
+                        {
+                            Instantiate(ItemList[7], inven.slots[i].slotObj.transform, false);
+                            inven.slots[i].isEmpty = false;
+                            break;
+                        }
+                    }
+                    Invoke("PlyMoveStart", 0.5f);
+                    hit.transform.GetComponent<BoxCollider2D>().enabled = false;
+                }
+
+
             }
         }
     }

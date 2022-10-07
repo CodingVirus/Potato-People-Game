@@ -22,4 +22,7 @@ MonoBehaviour:
   - functionName: GameDataControl/CheckVentState
     parameters: 
     returnValue: 1
+  - functionName: GameDataControl/ReturnOfficeDoor
+    parameters: 
+    returnValue: 1
   scriptFunctions: []
