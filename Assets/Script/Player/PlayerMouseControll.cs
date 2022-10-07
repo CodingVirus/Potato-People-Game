@@ -36,7 +36,7 @@ public class PlayerMouseControll : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(this.GetComponent<PlayerTeleport>().transferStart);
+        //Debug.Log(this.GetComponent<PlayerTeleport>().transferStart);
         target.y = transform.position.y;
         if(Input.GetMouseButton(0))
         {

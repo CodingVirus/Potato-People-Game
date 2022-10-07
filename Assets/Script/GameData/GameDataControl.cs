@@ -7,6 +7,8 @@ public class GameDataControl : MonoBehaviour
 {
     public GameObject door3;
     public GameObject ply;
+    public GameObject doctor;
+    public GameObject endingDoctor;
 
     public bool b3Door = false;
     public bool b2Door = false;

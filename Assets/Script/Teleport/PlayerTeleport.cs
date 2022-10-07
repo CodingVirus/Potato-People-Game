@@ -14,27 +14,22 @@ public class PlayerTeleport : MonoBehaviour
     public bool next = true;
 
     public Vector3 p_Teleport;
-
-    public bool key = false;
     
     //public bool T_camera = false;
     private CameraFollow theCamera;
 
-    private void FindItem()
-    {
-        Inventory inven = this.GetComponent<Inventory>();
-        for (int i = 0; i < inven.slots.Count; i++)
-        {
-            if (inven.slots[i].isEmpty == false && inven.slots[i].slotObj.transform.GetChild(0).name == "Key(Clone)")
-            {
-                key = true;
-            }
-        }
-    }
-    public void UseKey()
-    {
-        
-    }
+    //private void FindItem()
+    //{
+    //    Inventory inven = this.GetComponent<Inventory>();
+    //    for (int i = 0; i < inven.slots.Count; i++)
+    //    {
+    //        if (inven.slots[i].isEmpty == false && inven.slots[i].slotObj.transform.GetChild(0).name == "Key(Clone)")
+    //        {
+    //            key = true;
+    //        }
+    //    }
+    //}
+    
     private void Awake() 
     {
         theCamera = Camera.main.GetComponent<CameraFollow>();
@@ -46,21 +41,21 @@ public class PlayerTeleport : MonoBehaviour
         {
             if (other.name == "door3_1")
             {
-                FindItem();
                 currentTeleporter = null;
-                if (key == true)
+                Inventory inven = this.GetComponent<Inventory>();
+
+                if (inven.FindItem("Key(Clone)") == true)
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
-
                     gameData.GetComponent<GameDataControl>().prisonDoor = true;
                     dialogueData.GetComponent<UseItem>().UseItemDialogue("Key(Clone)");
                     other.transform.GetChild(1).position += new Vector3(-2, 0, 0);
                     other.name = "door3_1_open";
-                    
                     transferStart = false;
-                    //Debug.Log("이동");
                 }
+
+
             }
 
             else if (other.name == "door2_1")
@@ -78,14 +73,14 @@ public class PlayerTeleport : MonoBehaviour
             else if (other.name == "door2_2")
             {
                 currentTeleporter = null;
-                if (key == true)
-                {
-                    currentTeleporter = other.gameObject;
-                    Invoke("DoorEnter", 0.5f);
-                    gameData.GetComponent<GameDataControl>().prisonDoor = true;
-                    transferStart = false;
-                    //Debug.Log("이동");
-                }
+                //if (key == true)
+                //{
+                //    currentTeleporter = other.gameObject;
+                //    Invoke("DoorEnter", 0.5f);
+                //    gameData.GetComponent<GameDataControl>().prisonDoor = true;
+                //    transferStart = false;
+                //    //Debug.Log("이동");
+                //}
             }
 
             else if (other.name == "Upstairs_B3")
@@ -145,6 +140,8 @@ public class PlayerTeleport : MonoBehaviour
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
                     gameData.GetComponent<GameDataControl>().b1Door = true;
+                    gameData.GetComponent<GameDataControl>().doctor.SetActive(false);
+                    gameData.GetComponent<GameDataControl>().endingDoctor.SetActive(true);
                     transferStart = false;
                 }
             }
