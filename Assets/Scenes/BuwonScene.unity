@@ -38957,6 +38957,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameData: {fileID: 1157142034}
+  dialogueData: {fileID: 1030952855}
 --- !u!1 &1833158904
 GameObject:
   m_ObjectHideFlags: 0

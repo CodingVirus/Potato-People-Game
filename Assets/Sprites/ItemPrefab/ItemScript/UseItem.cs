@@ -68,6 +68,7 @@ public class UseItem : MonoBehaviour
             {
                 Destroy(playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).gameObject);
                 playerObj.GetComponent<Inventory>().slots[i].isEmpty = true;
+                break;
             }
 
             else
