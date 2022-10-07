@@ -47205,6 +47205,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7232462790664101669, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: events.onSelect.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232462790664101669, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: events.onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232462790664101669, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: events.onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1363097356}
+    - target: {fileID: 7232462790664101669, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: events.onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232462790664101669, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: events.onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StopMove
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232462790664101669, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: events.onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerMouseControll, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7232462790664101669, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: events.onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7819506439142994334, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
       propertyPath: slotItem
       value: 
