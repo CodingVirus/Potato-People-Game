@@ -22009,6 +22009,7 @@ GameObject:
   - component: {fileID: 1030952857}
   - component: {fileID: 1030952856}
   - component: {fileID: 1030952859}
+  - component: {fileID: 1030952860}
   m_Layer: 0
   m_Name: Dialogue Data
   m_TagString: Untagged
@@ -22053,7 +22054,7 @@ MonoBehaviour:
   useDefaultGUI: 1
   guiSkin: {fileID: 0}
   guiStyleName: label
-  alignment: 4
+  alignment: 7
   textStyle: 1
   textStyleColor: {r: 0, g: 0, b: 0, a: 1}
   inRangeColor: {r: 1, g: 0.89133024, b: 0, a: 1}
@@ -22108,6 +22109,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   num: 0
   playerObj: {fileID: 1363097352}
+--- !u!114 &1030952860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030952855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37f9837a261a7d04ab92e117a5389cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainGraphic: {fileID: 0}
+  nameText:
+    m_uiText: {fileID: 0}
+  useMessageText:
+    m_uiText: {fileID: 0}
+  useRangeColors: 0
+  inRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  outOfRangeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  reticleInRange: {fileID: 0}
+  reticleOutOfRange: {fileID: 0}
+  animationTransitions:
+    showTrigger: Show
+    hideTrigger: Hide
 --- !u!1 &1036335192
 GameObject:
   m_ObjectHideFlags: 0
@@ -38062,7 +38088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: inputDevice
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11424616, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
       propertyPath: controlCursorState
