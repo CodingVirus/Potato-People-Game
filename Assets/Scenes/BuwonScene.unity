@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 694282}
   - component: {fileID: 694286}
   - component: {fileID: 694285}
+  - component: {fileID: 694287}
   m_Layer: 0
   m_Name: door2_2
   m_TagString: Door
@@ -353,6 +354,19 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: 6c13e6d334731b143b403029d2763db7, type: 2}
+--- !u!114 &694287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &10334726
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,6 +2666,7 @@ GameObject:
   - component: {fileID: 173868264}
   - component: {fileID: 173868267}
   - component: {fileID: 173868266}
+  - component: {fileID: 173868268}
   m_Layer: 0
   m_Name: Upstairs_B3
   m_TagString: Door
@@ -2869,6 +2884,19 @@ MonoBehaviour:
     onUse:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &173868268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173868261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &176063080
 GameObject:
   m_ObjectHideFlags: 0
@@ -3125,6 +3153,7 @@ GameObject:
   - component: {fileID: 181428003}
   - component: {fileID: 181428007}
   - component: {fileID: 181428006}
+  - component: {fileID: 181428008}
   m_Layer: 0
   m_Name: door1_1
   m_TagString: Door
@@ -3341,6 +3370,19 @@ MonoBehaviour:
     onUse:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &181428008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181428001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &181739669
 GameObject:
   m_ObjectHideFlags: 0
@@ -7903,6 +7945,7 @@ GameObject:
   - component: {fileID: 421032318}
   - component: {fileID: 421032317}
   - component: {fileID: 421032316}
+  - component: {fileID: 421032319}
   m_Layer: 0
   m_Name: Basin
   m_TagString: Untagged
@@ -8100,6 +8143,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.44, y: 2.7}
   m_EdgeRadius: 0
+--- !u!114 &421032319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421032313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &448069898
 GameObject:
   m_ObjectHideFlags: 0
@@ -12544,6 +12600,7 @@ GameObject:
   - component: {fileID: 650232311}
   - component: {fileID: 650232314}
   - component: {fileID: 650232313}
+  - component: {fileID: 650232315}
   m_Layer: 0
   m_Name: door3_3
   m_TagString: Untagged
@@ -12760,6 +12817,19 @@ MonoBehaviour:
     onUse:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &650232315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650232308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &655027407
 GameObject:
   m_ObjectHideFlags: 0
@@ -19933,6 +20003,11 @@ MonoBehaviour:
   - {x: -4.066935, y: 6.072714, z: 0.0000003874302}
   - {x: -6.0410414, y: 5.7492948, z: 0}
   - {x: -3.3924277, y: 1.3840184, z: 0.0000003874302}
+--- !u!1 &943278177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4489419045412388068, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+  m_PrefabInstance: {fileID: 4489419044397354630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &957144106
 GameObject:
   m_ObjectHideFlags: 0
@@ -20514,6 +20589,7 @@ GameObject:
   - component: {fileID: 976078928}
   - component: {fileID: 976078927}
   - component: {fileID: 976078929}
+  - component: {fileID: 976078930}
   m_Layer: 0
   m_Name: Prison Key
   m_TagString: ClueyKey
@@ -20724,6 +20800,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad8b08976d56481ab419ec01a6149da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &976078930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976078923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &978410020
 GameObject:
   m_ObjectHideFlags: 0
@@ -21086,6 +21175,7 @@ GameObject:
   - component: {fileID: 994151168}
   - component: {fileID: 994151170}
   - component: {fileID: 994151171}
+  - component: {fileID: 994151172}
   m_Layer: 0
   m_Name: ventilation 1
   m_TagString: Untagged
@@ -21295,6 +21385,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cad8b08976d56481ab419ec01a6149da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &994151172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994151165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1001 &995435098
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22325,6 +22428,7 @@ GameObject:
   - component: {fileID: 1049086272}
   - component: {fileID: 1049086276}
   - component: {fileID: 1049086275}
+  - component: {fileID: 1049086277}
   m_Layer: 0
   m_Name: door3_4
   m_TagString: Untagged
@@ -22541,6 +22645,19 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: 6c13e6d334731b143b403029d2763db7, type: 2}
+--- !u!114 &1049086277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1049086270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &1054451433
 GameObject:
   m_ObjectHideFlags: 0
@@ -23420,6 +23537,7 @@ GameObject:
   - component: {fileID: 1117041771}
   - component: {fileID: 1117041775}
   - component: {fileID: 1117041774}
+  - component: {fileID: 1117041776}
   m_Layer: 0
   m_Name: door2_1
   m_TagString: Door
@@ -23636,6 +23754,19 @@ MonoBehaviour:
     onUse:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &1117041776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117041769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &1126336141
 GameObject:
   m_ObjectHideFlags: 0
@@ -23783,6 +23914,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4489419045412388069, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
   m_PrefabInstance: {fileID: 4489419044397354630}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1149252201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943278177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &1149405742
 GameObject:
   m_ObjectHideFlags: 0
@@ -26414,7 +26558,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1265543726
 Transform:
   m_ObjectHideFlags: 0
@@ -27840,6 +27984,7 @@ GameObject:
   - component: {fileID: 1358147816}
   - component: {fileID: 1358147819}
   - component: {fileID: 1358147818}
+  - component: {fileID: 1358147820}
   m_Layer: 0
   m_Name: door3_1
   m_TagString: Door
@@ -28057,6 +28202,19 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: 6c13e6d334731b143b403029d2763db7, type: 2}
+--- !u!114 &1358147820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358147813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1001 &1363097351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37245,6 +37403,7 @@ GameObject:
   - component: {fileID: 1774356221}
   - component: {fileID: 1774356224}
   - component: {fileID: 1774356223}
+  - component: {fileID: 1774356225}
   m_Layer: 0
   m_Name: Upstairs_B1
   m_TagString: Door
@@ -37461,6 +37620,19 @@ MonoBehaviour:
     onUse:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &1774356225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774356218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &1776331701
 GameObject:
   m_ObjectHideFlags: 0
@@ -39407,6 +39579,7 @@ GameObject:
   - component: {fileID: 1832246737}
   - component: {fileID: 1832246736}
   - component: {fileID: 1832246741}
+  - component: {fileID: 1832246742}
   m_Layer: 0
   m_Name: GasMachine
   m_TagString: Untagged
@@ -39630,6 +39803,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameData: {fileID: 1157142034}
   dialogueData: {fileID: 1030952855}
+--- !u!114 &1832246742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1832246734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1 &1833158904
 GameObject:
   m_ObjectHideFlags: 0
@@ -47119,6 +47305,19 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: 6c13e6d334731b143b403029d2763db7, type: 2}
+--- !u!114 &1670789331564565112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569652437504248337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef01c83c2afac1b40b80227c7ac61fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1363097352}
 --- !u!1001 &2821635179027637026
 PrefabInstance:
   m_ObjectHideFlags: 0

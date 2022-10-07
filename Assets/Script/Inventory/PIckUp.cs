@@ -14,6 +14,7 @@ public class PIckUp : MonoBehaviour
         if (this.name == "Vending Machine" && collision.CompareTag("Player") && active == true)
         {
             ply = collision.gameObject;
+            //ply.GetComponent<PlayerMouseControll>().StopMove();
             Inventory inven = ply.GetComponent<Inventory>();
             for (int i = 0; i < inven.slots.Count; i++)
             {
