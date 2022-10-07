@@ -25,4 +25,7 @@ MonoBehaviour:
   - functionName: GameDataControl/ReturnOfficeDoor
     parameters: 
     returnValue: 1
+  - functionName: GameDataControl/Returnb1Door
+    parameters: 
+    returnValue: 1
   scriptFunctions: []

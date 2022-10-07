@@ -136,6 +136,19 @@ public class PlayerTeleport : MonoBehaviour
                 }
             }
 
+            else if (other.name == "Upstairs_B1")
+            {
+                currentTeleporter = null;
+                Inventory inven = this.GetComponent<Inventory>();
+                if (inven.FindItem("FinalCardKey(Clone)") == true)
+                {
+                    currentTeleporter = other.gameObject;
+                    Invoke("DoorEnter", 0.5f);
+                    gameData.GetComponent<GameDataControl>().b1Door = true;
+                    transferStart = false;
+                }
+            }
+
             else
             {
                 currentTeleporter = other.gameObject;
