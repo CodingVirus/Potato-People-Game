@@ -13,7 +13,7 @@ public class GameDataControl : MonoBehaviour
     public bool b1Door = false;
     public bool prisonDoor = false;
     public bool officeDoor = false;
-
+    public bool laboratoryA_Door = false;
     public bool clueyQuest = false;
     public bool password = false;
 
@@ -61,6 +61,14 @@ public class GameDataControl : MonoBehaviour
             return false;
         }
         //return true;
+    }
+    public void LaboratoryALock()
+    {
+        laboratoryA_Door = false;
+    }
+    public void LaboratoryAUnLock()
+    {
+        laboratoryA_Door = true;
     }
     void OnEnable()
     {

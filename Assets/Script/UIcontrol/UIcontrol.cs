@@ -38,6 +38,22 @@ public class UIcontrol : MonoBehaviour
 
                     //Invoke("PlyMoveStart", 0.5f);
                 }
+
+                else if (hit.transform.gameObject.name == "bookcase 2_1")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    hit.transform.GetChild(0).gameObject.SetActive(true);
+
+                    //Invoke("PlyMoveStart", 0.5f);
+                }
+
+                else if (hit.transform.gameObject.name == "Center Computer")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    hit.transform.GetChild(0).gameObject.SetActive(true);
+
+                    //Invoke("PlyMoveStart", 0.5f);
+                }
             }
         }
     }

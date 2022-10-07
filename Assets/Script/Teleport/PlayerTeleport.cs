@@ -66,13 +66,12 @@ public class PlayerTeleport : MonoBehaviour
             else if (other.name == "door2_1")
             {
                 currentTeleporter = null;
-                if (key == true)
+                Inventory inven = this.GetComponent<Inventory>();
+                if (inven.FindItem("CardKeyA1(Clone)") == true)
                 {
                     currentTeleporter = other.gameObject;
                     Invoke("DoorEnter", 0.5f);
-                    gameData.GetComponent<GameDataControl>().prisonDoor = true;
                     transferStart = false;
-                    //Debug.Log("이동");
                 }
             }
 
@@ -136,6 +135,7 @@ public class PlayerTeleport : MonoBehaviour
                     transferStart = false;
                 }
             }
+
             else
             {
                 currentTeleporter = other.gameObject;
