@@ -186,38 +186,10 @@ MonoBehaviour:
       value: 
       type: 0
       typeString: 
-  - id: 6
-    fields:
-    - title: Name
-      value: StartTrigger
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
   - id: 7
     fields:
     - title: Name
       value: Ladder
-      type: 0
-      typeString: 
-    - title: Initial Value
-      value: False
-      type: 2
-      typeString: CustomFieldType_Boolean
-    - title: Description
-      value: 
-      type: 0
-      typeString: 
-  - id: 8
-    fields:
-    - title: Name
-      value: Driver
       type: 0
       typeString: 
     - title: Initial Value
@@ -324,8 +296,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 30
-        y: 20
+        x: 77.748985
+        y: 28.185547
         width: 160
         height: 30
     - id: 5
@@ -713,8 +685,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.7329999
+    canvasScrollPosition: {x: 0, y: 3.9225216}
+    canvasZoom: 1.0029997
   - id: 3
     fields:
     - title: Title
@@ -1915,7 +1887,7 @@ MonoBehaviour:
         destinationDialogueID: 2
         isConnector: 0
         priority: 2
-      conditionsString: Variable["StartTrigger"] == false
+      conditionsString: 
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -1956,6 +1928,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 117a9464-5537-4f4e-a422-5e3681c13cab
+        type: 0
+        typeString: 
       conversationID: 6
       isRoot: 0
       isGroup: 0
@@ -1965,14 +1941,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: Variable["StartTrigger"] = true
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 178
+        y: 177
         width: 160
         height: 30
     entryGroups: []
@@ -2376,7 +2352,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 30
-        y: 20
+        y: 18.96907
         width: 160
         height: 30
     - id: 1
@@ -2409,6 +2385,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 46d70fc1-0c39-4fdd-963e-78d63be5ef9b
+        type: 0
+        typeString: 
       conversationID: 10
       isRoot: 0
       isGroup: 0
@@ -2417,8 +2397,8 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: Variable["TriggerCount"] == false
-      userScript: Variable["TriggerCount"] = true
+      conditionsString: 
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -2748,11 +2728,11 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Actor
-        value: 1
+        value: 2
         type: 5
         typeString: CustomFieldType_Actor
       - title: Conversant
-        value: 2
+        value: 1
         type: 5
         typeString: CustomFieldType_Actor
       - title: Menu Text
@@ -3270,6 +3250,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: fc008271-a006-4671-aae5-371535b53d93
+        type: 0
+        typeString: 
       conversationID: 13
       isRoot: 0
       isGroup: 0
@@ -3346,7 +3330,7 @@ MonoBehaviour:
         height: 30
     entryGroups: []
     canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.9744984
+    canvasZoom: 0.8544985
   - id: 14
     fields:
     - title: Title
@@ -5447,7 +5431,13 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks: []
+      outgoingLinks:
+      - originConversationID: 22
+        originDialogueID: 1
+        destinationConversationID: 22
+        destinationDialogueID: 8
+        isConnector: 0
+        priority: 2
       conditionsString: ReturnGasState()  == false and (FindItem("Gas(Clone)")  ==
         false)
       userScript: 
@@ -5783,8 +5773,58 @@ MonoBehaviour:
         y: 129
         width: 160
         height: 30
+    - id: 8
+      fields:
+      - title: Title
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Description
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Actor
+        value: 2
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Conversant
+        value: 1
+        type: 5
+        typeString: CustomFieldType_Actor
+      - title: Menu Text
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Dialogue Text
+        value: "\uC606\uC5D0 \uC2E4\uD5D8\uC2E4\uD558\uACE0 \uC5F0\uACB0\uB418\uC5B4
+          \uC788\uB294\uB4EF\uD558\uB2E4."
+        type: 0
+        typeString: CustomFieldType_Text
+      - title: Sequence
+        value: 
+        type: 0
+        typeString: CustomFieldType_Text
+      conversationID: 22
+      isRoot: 0
+      isGroup: 0
+      nodeColor: 
+      delaySimStatus: 0
+      falseConditionAction: Block
+      conditionPriority: 2
+      outgoingLinks: []
+      conditionsString: 
+      userScript: 
+      onExecute:
+        m_PersistentCalls:
+          m_Calls: []
+      canvasRect:
+        serializedVersion: 2
+        x: 275
+        y: 283
+        width: 160
+        height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 72.48418, y: 16.340633}
+    canvasScrollPosition: {x: 86.24565, y: 51.20303}
     canvasZoom: 1.0899999
   - id: 23
     fields:
