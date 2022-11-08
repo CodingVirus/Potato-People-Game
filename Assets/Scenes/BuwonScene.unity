@@ -19428,12 +19428,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2681111631162765907, guid: 119ee9eaa3baab8439ea63e8afb7d180, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 31793febd14fbde49870922edd18638a, type: 3}
+    - target: {fileID: 2681111631162765907, guid: 119ee9eaa3baab8439ea63e8afb7d180, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 7299899440083191529, guid: 119ee9eaa3baab8439ea63e8afb7d180, type: 3}
       propertyPath: m_Name
-      value: house_1
+      value: house_entrance
       objectReference: {fileID: 0}
     - target: {fileID: 7299899440083191529, guid: 119ee9eaa3baab8439ea63e8afb7d180, type: 3}
       propertyPath: m_TagString
@@ -36178,7 +36182,7 @@ GameObject:
   - component: {fileID: 1714621948}
   - component: {fileID: 1714621947}
   m_Layer: 0
-  m_Name: house door
+  m_Name: house door to B1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46423,18 +46427,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00000047683716, y: -0.03291285}
+  m_Offset: {x: -0.026386261, y: -0.19122243}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.36, y: 4.61}
+    oldSize: {x: 3.61, y: 3.9}
     newSize: {x: 3.36, y: 4.61}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.0435057, y: 3.490978}
+  m_Size: {x: 3.0725174, y: 3.1743588}
   m_EdgeRadius: 0
 --- !u!4 &2098364438 stripped
 Transform:
