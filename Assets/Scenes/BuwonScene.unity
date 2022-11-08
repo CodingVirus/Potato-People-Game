@@ -9691,6 +9691,7 @@ GameObject:
   - component: {fileID: 502670329}
   - component: {fileID: 502670330}
   - component: {fileID: 502670331}
+  - component: {fileID: 502670332}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9853,6 +9854,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ply: {fileID: 1363097352}
+--- !u!114 &502670332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 502670324}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dfc86b435c1b433e9180c4a51f6aac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1688645041}
+  ply: {fileID: 0}
 --- !u!1 &509231011
 GameObject:
   m_ObjectHideFlags: 0
@@ -24104,6 +24119,7 @@ MonoBehaviour:
   sokobanGame: 0
   cirCuitGame: 0
   gasMachineState: 0
+  monsterState: 0
   ventLadderState: {fileID: 1402067085}
 --- !u!4 &1157142036
 Transform:
@@ -39125,6 +39141,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 502670332}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - guid: bf4643ec-f3ec-4ec8-8e8b-b47b856b93c6
     onExecute:
       m_PersistentCalls:
@@ -39209,6 +39237,22 @@ MonoBehaviour:
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
           m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 63afbc10-5d9c-4c86-aa91-f67d4eeedb15
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 502670332}
+          m_TargetAssemblyTypeName: MoveToCamera, Assembly-CSharp
+          m_MethodName: MoveCamera
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

@@ -34,4 +34,7 @@ MonoBehaviour:
   - functionName: GameDataControl/ReturnCrematoriumPassword
     parameters: 
     returnValue: 1
+  - functionName: GameDataControl/ReturnMonsterState
+    parameters: 
+    returnValue: 1
   scriptFunctions: []
