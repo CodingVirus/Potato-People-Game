@@ -9,6 +9,8 @@ public class GameDataControl : MonoBehaviour
     public GameObject ply;
     public GameObject doctor;
     public GameObject endingDoctor;
+    public GameObject cluey;
+    public GameObject clueyDie;
 
     public bool b3Door = false;
     public bool b2Door = false;
@@ -29,10 +31,27 @@ public class GameDataControl : MonoBehaviour
 
     public GameObject ventLadderState;
 
+    private void Update()
+    {
+        // for test
+        // Delete after
+        if (clueyQuest == true)
+        {
+            cluey.SetActive(false);
+            clueyDie.SetActive(true);
+        }
+        else
+        {
+            cluey.SetActive(true);
+            clueyDie.SetActive(false);
+        }    
+    }
 
     public void ClueyQuestClear()
     {
         clueyQuest = true;
+        cluey.SetActive(false);
+        clueyDie.SetActive(true);
     }
     public bool ReturnClueyQuest()
     {
