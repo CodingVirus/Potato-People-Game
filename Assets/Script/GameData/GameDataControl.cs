@@ -63,6 +63,10 @@ public class GameDataControl : MonoBehaviour
         b3Door = true;
         door3.transform.position += new Vector3(-2, 0, 0);
     }
+    public void SetMonsterState()
+    {
+        monsterState = true;
+    }
     public bool ReturnB3Door()
     {
         return b3Door;
