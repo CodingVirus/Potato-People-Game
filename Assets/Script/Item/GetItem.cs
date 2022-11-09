@@ -8,6 +8,7 @@ public class GetItem : MonoBehaviour
     Vector3 MousePostion;
     Camera Camera;
     public GameObject ply;
+    public GameObject gameData;
     public List<GameObject> ItemList = new List<GameObject>();
 
     private void Start()
@@ -22,7 +23,7 @@ public class GetItem : MonoBehaviour
             MousePostion = Camera.ScreenToWorldPoint(MousePostion);
 
             RaycastHit2D hit = Physics2D.Raycast(MousePostion, transform.forward, MaxDistance);
-            if (hit)
+            if (hit && gameData.GetComponent<GameDataControl>().UIstart == false)
             {
                 if (hit.transform.gameObject.tag == "Item")
                 {

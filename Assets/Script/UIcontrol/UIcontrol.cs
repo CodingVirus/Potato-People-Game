@@ -8,6 +8,7 @@ public class UIcontrol : MonoBehaviour
     Vector3 MousePostion;
     Camera Camera;
     public GameObject ply;
+    public GameObject gameData;
 
     private void Start()
     {
@@ -21,13 +22,13 @@ public class UIcontrol : MonoBehaviour
             MousePostion = Camera.ScreenToWorldPoint(MousePostion);
 
             RaycastHit2D hit = Physics2D.Raycast(MousePostion, transform.forward, MaxDistance);
-            if (hit)
+            if (hit && gameData.GetComponent<GameDataControl>().UIstart == false)
             {
                 if (hit.transform.gameObject.tag == "Sheet")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
-
+                    gameData.GetComponent<GameDataControl>().UIstart = true;
                     //Invoke("PlyMoveStart", 0.5f);
                 }
 
@@ -35,7 +36,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
-
+                    gameData.GetComponent<GameDataControl>().UIstart = true;
                     //Invoke("PlyMoveStart", 0.5f);
                 }
 
@@ -43,7 +44,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
-
+                    gameData.GetComponent<GameDataControl>().UIstart = true;
                     //Invoke("PlyMoveStart", 0.5f);
                 }
 

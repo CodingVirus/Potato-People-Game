@@ -9,6 +9,7 @@ public class DrugCombination : MonoBehaviour
     public GameObject threeSprite, fourSprite, fiveSprite;
     public GameObject drugCombinerPlayerObj;
     public GameObject drugItem;
+    public GameObject gameData;
 
     public Button fourButton;
 
@@ -220,6 +221,7 @@ public class DrugCombination : MonoBehaviour
                     break;
                 }
             }
+            gameData.GetComponent<GameDataControl>().UIstart = false;
         }
 
         else

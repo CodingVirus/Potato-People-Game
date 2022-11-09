@@ -8,6 +8,7 @@ public class PIckUp : MonoBehaviour
     public bool active = false;
     public GameObject slotItem;
     public GameObject ply;
+    public GameObject gameData;
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -38,6 +39,7 @@ public class PIckUp : MonoBehaviour
             ply = collision.gameObject;
             this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<DrugCombination>().drugCombinerPlayerObj = ply.gameObject;
             ply.GetComponent<PlayerMouseControll>().StopMove();
+            gameData.GetComponent<GameDataControl>().UIstart = true;
         }
     }
 

@@ -9295,7 +9295,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477570178}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -9837,6 +9837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ply: {fileID: 1363097352}
+  gameData: {fileID: 1157142034}
   ItemList:
   - {fileID: 6142454421711314284, guid: d0131a817c0b50b45b359c96efcd9867, type: 3}
   - {fileID: 3990573139370791849, guid: 41488c5b1eaa029448d3f89dfbdd1dc5, type: 3}
@@ -9860,6 +9861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ply: {fileID: 1363097352}
+  gameData: {fileID: 1157142034}
 --- !u!114 &502670332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16563,6 +16565,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1157142035}
+        m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
+        m_MethodName: SetUIstartFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &805214921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19149,6 +19163,7 @@ MonoBehaviour:
   active: 0
   slotItem: {fileID: 3990573139370791849, guid: 41488c5b1eaa029448d3f89dfbdd1dc5, type: 3}
   ply: {fileID: 0}
+  gameData: {fileID: 0}
 --- !u!61 &899408046
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24524,6 +24539,7 @@ MonoBehaviour:
   cirCuitGame: 0
   gasMachineState: 0
   monsterState: 0
+  UIstart: 0
   ventLadderState: {fileID: 1402067085}
 --- !u!4 &1157142036
 Transform:
@@ -27001,7 +27017,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1265543726
 Transform:
   m_ObjectHideFlags: 0
@@ -34398,6 +34414,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1157142035}
+        m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
+        m_MethodName: SetUIstartFalse
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1636595662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39547,6 +39575,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1157142035}
+          m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
+          m_MethodName: SetMonsterState
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - guid: bf4643ec-f3ec-4ec8-8e8b-b47b856b93c6
     onExecute:
       m_PersistentCalls:
@@ -40899,6 +40939,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1363097356}
         m_TargetAssemblyTypeName: PlayerMouseControll, Assembly-CSharp
         m_MethodName: StartMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1157142035}
+        m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
+        m_MethodName: SetUIstartFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -42374,6 +42426,7 @@ MonoBehaviour:
   active: 0
   slotItem: {fileID: 3990573139370791849, guid: ac9b0ec41cc8a401ab7d1edd2bfe1e5a, type: 3}
   ply: {fileID: 0}
+  gameData: {fileID: 0}
 --- !u!61 &1909161027
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -44058,7 +44111,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1975133931
 BoxCollider2D:
@@ -48038,6 +48091,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NumLock
       objectReference: {fileID: 0}
+    - target: {fileID: 666685224843394810, guid: b4c9c7a566a891f4e9b88188434cb48a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 666685224843394814, guid: b4c9c7a566a891f4e9b88188434cb48a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -48415,6 +48472,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1684588407}
     m_Modifications:
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1157142035}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetUIstartFalse
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameDataControl, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2912963844848101957, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -48499,6 +48584,10 @@ PrefabInstance:
       propertyPath: events.onSelect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7819506439142994334, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: gameData
+      value: 
+      objectReference: {fileID: 1157142034}
     - target: {fileID: 7819506439142994334, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
       propertyPath: slotItem
       value: 

@@ -130,6 +130,7 @@ MonoBehaviour:
   active: 0
   slotItem: {fileID: 7233765201568342653, guid: 2110f284420997e43bef596e89727d1f, type: 3}
   ply: {fileID: 0}
+  gameData: {fileID: 0}
 --- !u!114 &8604272549436512648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,6 +342,22 @@ PrefabInstance:
     - target: {fileID: 1594683266910176693, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323717156262727448, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323717156262727448, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323717156262727448, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2323717156262727448, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DrugCombination, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eeaf9e3ac7993f444914721d198e0452, type: 3}
