@@ -12,33 +12,21 @@ public class PlayerTeleport : MonoBehaviour
     public bool transferState = false;
 
     public Vector3 p_Teleport;
+    public Vector3 targetPoint;
+    private Vector3 transPosition;
+    private Vector3 mouse;
 
     public bool key = false;
+    public bool door3 = false;
     
-    //public bool T_camera = false;
     private CameraFollow theCamera;
 
-    private void Update()
-    {
-       // FindItem();
-    }
-    private void FindItem()
-    {
-        Inventory inven = this.GetComponent<Inventory>();
-        for (int i = 0; i < inven.slots.Count; i++)
-        {
-            if (inven.slots[i].isEmpty == false && inven.slots[i].slotObj.transform.GetChild(0).name == "CardKey(Clone)")
-            {
-                key = true;
-            }
-        }
-    }
     private void Awake() 
     {
         theCamera = Camera.main.GetComponent<CameraFollow>();
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         FindItem();
         if(transferStart == true)
@@ -49,17 +37,31 @@ public class PlayerTeleport : MonoBehaviour
                 if (key == true)
                 {
                     currentTeleporter = other.gameObject;
+                    transferStart = false;
+                    door3 = true;
                     Invoke("DoorEnter", 0.5f);
-                    //Debug.Log("이동");
+                    Debug.Log("이동");
+                    
                 }
             }
             else
             {
+                Debug.Log("이동");
                 currentTeleporter = other.gameObject;
                 transferStart = false;
                 Invoke("DoorEnter", 0.5f);
-                //Debug.Log("이동");
             }
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other) 
+    {
+        if(transferStart == true)
+        {
+            Debug.Log("이동");
+                currentTeleporter = other.gameObject;
+                transferStart = false;
+                Invoke("DoorEnter", 0.5f);
         }
     }
 
@@ -113,6 +115,18 @@ public class PlayerTeleport : MonoBehaviour
         theCamera.limitMinY = currentTeleporter.GetComponent<Teleporter>().T_limitMinY;
         theCamera.limitMaxY = currentTeleporter.GetComponent<Teleporter>().T_limitMaxY;
         Debug.Log("변경");
+    }
+
+    private void FindItem()
+    {
+        Inventory inven = this.GetComponent<Inventory>();
+        for (int i = 0; i < inven.slots.Count; i++)
+        {
+            if (inven.slots[i].isEmpty == false && inven.slots[i].slotObj.transform.GetChild(0).name == "CardKey(Clone)")
+            {
+                key = true;
+            }
+        }
     }
 
     private void OnTriggerExit2D() 

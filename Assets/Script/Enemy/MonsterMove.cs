@@ -16,7 +16,6 @@ public class MonsterMove : MonoBehaviour
     private bool facingRight;
     private Vector3 dir;
     private float dis;
-    //public bool monteleport = false;
     public bool traceState = false;
 
     private void Awake() 
@@ -31,69 +30,57 @@ public class MonsterMove : MonoBehaviour
         {
             dis = Vector3.Distance(transform.position, montarget.position);
 
-            if(dis > 10)
-            {
-                Move();
-            }
-
             //낭떠러지 감지
             Sensor();
-
-            //추적
-            if(dis <= 10)
-            {
-                Trace();
-                traceState = true;
-                StopCoroutine("Think");
-                if(montarget.GetComponent<PlayerHide>().hideStart == true)
+            //if(montarget.GetComponent<PlayerTeleport>().door3 == true)
+            //{
+                if(dis > 10 ||(dis > 10 && traceState == true)||(dis <= 10 && montarget.GetComponent<PlayerHide>().hideStart == true))
                 {
+                    Move();
+                    Flip();
                     traceState = false;
-                    StartCoroutine("Think");
+                } 
+                // else if(dis > 10 && traceState == true)
+                // {
+                //     StartCoroutine("Think");
+                //     traceState = false;
+                // }
+                // else if(dis <= 10 && montarget.GetComponent<PlayerHide>().hideStart == true){
+                //     traceState = false;
+                //     StartCoroutine("Think");
+                // }
+                else if(dis <= 10)
+                {
+                    Trace();
+                    traceState = true;
+                    //StopCoroutine("Think");
+                    //else traceState = true;
                 }
-            }
-
-            if(dis > 10 && traceState == true)
-            {
-                StartCoroutine("Think");
-                traceState = false;
-            }
+            //}
         }
     }
     
     private void Move()
     {
-        rigid.velocity = new Vector2(nextMove * monSpeed,rigid.velocity.y);
-        Flip();
+        rigid.velocity = new Vector2(nextMove * monSpeed, rigid.velocity.y);
     }
-
-    //public void MonStop()
-    //{
-    //    traceSpeed = 0f;
-    //}
 
     IEnumerator Think()
     {
-        while (true)
-        {
+        // while (true)
+        // {
+            nextMove = Random.Range(-1, 2);
+            thinkTime = Random.Range(1, 10);
+            Debug.Log(nextMove);
+            Debug.Log(thinkTime);
             yield return new WaitForSeconds(thinkTime);
-            MonMove();
-            //nextMove = Random.Range(-1, 2);
-            //thinkTime = Random.Range(1, 10);
-            //yield return new WaitForSeconds(thinkTime);
-        }
-    }
-
-    public void MonMove()
-    {
-        nextMove = Random.Range(-1, 2);
-        thinkTime = Random.Range(1, 10);
-        Debug.Log(nextMove);
-        Debug.Log(thinkTime);
+        // }
     }
 
     private void Trace()
     {
-        transform.position = Vector2.MoveTowards(transform.position, montarget.position, Time.smoothDeltaTime * traceSpeed);
+        transform.position = Vector2.MoveTowards(transform.position , montarget.position, Time.smoothDeltaTime * traceSpeed);
+        dir = montarget.position - transform.position;
         Flip();
     }
 
@@ -105,8 +92,6 @@ public class MonsterMove : MonoBehaviour
             {
                 Debug.Log("gameover");
                 SceneManager.LoadScene(1);
-                //PlayerMouseControll.instance.StopMove();
-                //traceSpeed = 0f;
             }
         }
     }
@@ -120,15 +105,6 @@ public class MonsterMove : MonoBehaviour
         {
             //Debug.Log("낭떠러지");
             nextMove = nextMove * (-1);
-            //if(dis > 10)
-            //{
-            //    CancelInvoke();
-            //    Invoke("Think", 5);
-            //}
-            //if(dis <= 10)
-            //{
-            //   CancelInvoke();
-            //}
         }
     }
 
@@ -142,7 +118,7 @@ public class MonsterMove : MonoBehaviour
 
             facingRight = !facingRight;
         }
-        if ((nextMove < 0 && facingRight == true && traceState == false) || (dir.x < 0 && facingRight == true && traceState == false))
+        if ((nextMove < 0 && facingRight == true && traceState == false) || (dir.x < 0 && facingRight == true && traceState == true))
         {
             Vector3 currentScale = gameObject.transform.localScale;
             currentScale.x *= -1;

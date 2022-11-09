@@ -13,13 +13,13 @@ public class PlayerHide : MonoBehaviour
         {
             if(other.CompareTag("Hide"))
             {
-                Invoke("HideEnter", 0.5f);
+                Invoke("Hide", 0.5f);
                 Debug.Log("hide");
             }
         }
     }
 
-    private void HideEnter()
+    private void Hide()
     {
         PlayerMouseControll.instance.StopMove();
         hideFadeEffect.GetComponent<FadeIn>().Fade();

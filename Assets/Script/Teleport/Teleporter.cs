@@ -9,11 +9,8 @@ public class Teleporter : ClickablePortal
     public Camera getCamera;
     public Transform PlayerPosition;
 
-    //public float walkspeed = 5f;
-    //public Vector3 target;
     private Vector3 transPos;
 
-    //private CameraFollow theCamera;
     [SerializeField]
     public float T_limitMinX, T_limitMaxX, T_limitMinY, T_limitMaxY;
 
@@ -21,31 +18,6 @@ public class Teleporter : ClickablePortal
     {
         return destination;
     }
-
-    private void Update() 
-    {
-        if(Input.GetMouseButton(0))
-        {
-            Ray ray = getCamera.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
-            if(Physics2D.Raycast(ray, out hit))
-            {
-                string objectName = hit.collider.gameObject.name;
-                Debug.Log(objectName);
-            }
-        }
-        //if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && Input.GetMouseButtonDown(0))
-        //{
-        //    Move();
-        //}
-    }
-    
-    //void Move()
-    //{
-        //transPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //target = new Vector3(transPos.x, PlayerPosition.position.y, 0);
-        //PlayerPosition.position = Vector2.MoveTowards(PlayerPosition.position, target, Time.smoothDeltaTime * walkspeed);
-    //}
     
     public void DoctorTalkMove()
     {
@@ -55,37 +27,7 @@ public class Teleporter : ClickablePortal
     private void OnMouseDown() 
     {
         PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
-        //PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
         Debug.Log("MouseDown : true");
     }
-
-    //private void OnMouseEnter() 
-    //{
-    //    CursorController.instance.Portal_Click();
-
-        //if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter == null)
-        //{
-        //    PlayerPosition.GetComponent<PlayerTeleport>().transferStart = false;
-        //    Debug.Log("MouseEnter : false");
-        //}
-    //}
-
-    //private void OnMouseExit() 
-    //{
-    //    CursorController.instance.Default();
-
-        //if(Input.GetMouseButtonDown(0))
-        //{
-        //    PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter = null;
-        //    Debug.Log("MouseExit : null");
-        //}
-
-        //if(PlayerPosition.GetComponent<PlayerTeleport>().transferStart == true && PlayerPosition.GetComponent<PlayerTeleport>().currentTeleporter == null)
-        //{
-        //    PlayerPosition.GetComponent<PlayerTeleport>().transferStart = false;
-        //    Debug.Log("MouseExit : fasle");
-        //}
-        //}
-    //}
    
 }

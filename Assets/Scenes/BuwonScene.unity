@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1613870295}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -22.5
   T_limitMaxX: -2.8
@@ -776,6 +777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 382233267}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -6.5
   T_limitMaxX: 13.5
@@ -2510,6 +2512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 2096571280}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 30
@@ -2831,6 +2834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 635450508}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45.5
   T_limitMaxX: -25.8
@@ -3680,6 +3684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 709473599}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45.5
   T_limitMaxX: 11
@@ -3759,6 +3764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 479264807}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -4874,6 +4880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1346499487}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: 14.3
   T_limitMaxX: 36
@@ -5662,6 +5669,50 @@ Transform:
   m_Father: {fileID: 1563835948}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &335506722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335506724}
+  - component: {fileID: 335506723}
+  m_Layer: 0
+  m_Name: GameControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &335506723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335506722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3721072320194acca079f62bc18eb98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &335506724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335506722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.859164, y: -38.999245, z: -1.0820841}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341571654 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 125852, guid: 58ac37417e60e534f91138088a3e6f70, type: 3}
@@ -5753,6 +5804,42 @@ MonoBehaviour:
   m_saveCurrentScene: 1
   m_framesToWaitBeforeApplyData: 1
   m_debug: 0
+--- !u!114 &341571664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 341571654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99738be95cdf96a4c83561277430a7a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseDuringTransition: 1
+  leaveSceneTransition:
+    animator: {fileID: 9596216, guid: 57901d8399fd6e74fbabbc9956f39557, type: 3}
+    trigger: Show
+    animationDuration: 1
+    minTransitionDuration: 0
+    onTransitionStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onTransitionEnd:
+      m_PersistentCalls:
+        m_Calls: []
+  loadingSceneName: 
+  enterSceneTransition:
+    animator: {fileID: 9596216, guid: 57901d8399fd6e74fbabbc9956f39557, type: 3}
+    trigger: Hide
+    animationDuration: 0
+    minTransitionDuration: 0
+    onTransitionStart:
+      m_PersistentCalls:
+        m_Calls: []
+    onTransitionEnd:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &342700960
 GameObject:
   m_ObjectHideFlags: 0
@@ -6173,6 +6260,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 773145925}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 30
@@ -7246,6 +7334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 247474350}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 30
@@ -7519,6 +7608,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1180342959}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45.5
   T_limitMaxX: 11
@@ -7537,7 +7627,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16438675, y: 0.025958061}
+  m_Offset: {x: 0.08003616, y: -0.0021576881}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7548,7 +7638,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3782883, y: 4.046026}
+  m_Size: {x: 2.8281403, y: 4.270953}
   m_EdgeRadius: 0
 --- !u!212 &462483974
 SpriteRenderer:
@@ -9392,6 +9482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1979650427}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -25.2
   T_limitMaxX: -7.4
@@ -9727,6 +9818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 167042113}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -9745,7 +9837,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16438675, y: 0.025958061}
+  m_Offset: {x: -0.004310608, y: 0.02595818}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9756,7 +9848,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3782883, y: 4.046026}
+  m_Size: {x: 2.9968338, y: 4.270952}
   m_EdgeRadius: 0
 --- !u!212 &562308649
 SpriteRenderer:
@@ -10443,6 +10535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 480618129}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 30
@@ -10461,7 +10554,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.16438675, y: 0.025958061}
+  m_Offset: {x: 0.037864685, y: 0.05407417}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10472,7 +10565,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3782883, y: 4.046026}
+  m_Size: {x: 2.9124908, y: 4.3271847}
   m_EdgeRadius: 0
 --- !u!212 &602095290
 SpriteRenderer:
@@ -11040,6 +11133,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &637100719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637100712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63bd3198a71a244d8dc6d21e0e91585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: 
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 1
+  m_restoreStateOnStart: 0
 --- !u!1 &638930023
 GameObject:
   m_ObjectHideFlags: 0
@@ -11253,6 +11362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 511672817}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: 0.5
   T_limitMaxX: 18
@@ -12085,6 +12195,68 @@ Transform:
   - {fileID: 865091813}
   m_Father: {fileID: 1193468836}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &671628734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 671628736}
+  - component: {fileID: 671628735}
+  m_Layer: 0
+  m_Name: portal to Scene2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &671628735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671628734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7203074dfbd78bc4fa51314c98bf4720, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_requiredTag: Player
+  m_destinationSceneName: game
+  m_spawnpointNameInDestinationScene: Spawnpoint from BuwonScene
+  m_onUsePortal:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &671628736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671628734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.683319, y: -39.16406, z: -0.4031245}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &673106856
 GameObject:
@@ -13801,6 +13973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1287740769}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -16634,6 +16807,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1349676477}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 30
@@ -16883,6 +17057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 173150792}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 30
@@ -17853,6 +18028,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 480618129}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 30
@@ -18989,6 +19165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1177148832}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: 19
   T_limitMaxX: 36.5
@@ -19744,6 +19921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 517270766}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -20043,6 +20221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1427534535}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: -23.5
@@ -20683,6 +20862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1538744490}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -21886,6 +22066,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 313736440}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -23758,6 +23939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1126336142}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -2.3
   T_limitMaxX: 15.4
@@ -23941,6 +24123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1886991629}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -24073,6 +24256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1365274170}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45.5
   T_limitMaxX: -28.3
@@ -24553,11 +24737,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTeleporter: {fileID: 0}
   fadeEffect: {fileID: 760909152}
-  mon: {fileID: 637100712}
+  mon: {fileID: 0}
   transferStart: 0
   transferState: 0
   p_Teleport: {x: 0, y: 0, z: 0}
+  targetPoint: {x: 0, y: 0, z: 0}
   key: 0
+  door3: 0
 --- !u!4 &1363097358 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -7552582706839291426, guid: 34a06007f6880bc43af01e79bbf87051, type: 3}
@@ -24597,8 +24783,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.082035065, y: 1.6634862}
-  m_Size: {x: 0.9922104, y: 3.2696328}
+  m_Offset: {x: -0.06065178, y: 1.7131163}
+  m_Size: {x: 0.7082939, y: 3.4014418}
   m_Direction: 0
 --- !u!95 &1363097361
 Animator:
@@ -24639,6 +24825,22 @@ MonoBehaviour:
   m_target: {fileID: 0}
   m_usePlayerSpawnpoint: 1
   m_multiscene: 0
+--- !u!114 &1363097363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1363097352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63bd3198a71a244d8dc6d21e0e91585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: 
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 1
+  m_restoreStateOnStart: 0
 --- !u!1 &1365274169
 GameObject:
   m_ObjectHideFlags: 0
@@ -26359,6 +26561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 890608966}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -27469,6 +27672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1238930521}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: 57.3
   T_limitMaxX: 77.2
@@ -27899,7 +28103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d1d35055ef414901b99d20d3b555dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1363097352}
 --- !u!61 &1555764893
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -30328,6 +30532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1405189587}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: 34.2
   T_limitMaxX: 56.8
@@ -30916,6 +31121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1231413003}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 30
@@ -31385,6 +31591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1180342959}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -31697,6 +31904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 89113513}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -27.5
   T_limitMaxX: -0.5
@@ -32107,6 +32315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1619556892}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: 12
   T_limitMaxX: 49.5
@@ -32238,6 +32447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1644730076}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: 12
   T_limitMaxX: 49.7
@@ -33598,6 +33808,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 585965510}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: 16
   T_limitMaxX: 33.7
@@ -35313,9 +35524,17 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4125612171632752043, guid: 2706c53d0bacd4237863e00f84eb2f42, type: 3}
+      propertyPath: test
+      value: 
+      objectReference: {fileID: 1869697905}
+    - target: {fileID: 4125612171632752043, guid: 2706c53d0bacd4237863e00f84eb2f42, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1363097352}
+    - target: {fileID: 4125612171632752043, guid: 2706c53d0bacd4237863e00f84eb2f42, type: 3}
+      propertyPath: playerLight
+      value: 
+      objectReference: {fileID: 1869697907}
     - target: {fileID: 4125612171632752047, guid: 2706c53d0bacd4237863e00f84eb2f42, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -36440,6 +36659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1065861433}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -37179,6 +37399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 167042113}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 11
@@ -37499,6 +37720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1257779272}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -45
   T_limitMaxX: 30
@@ -38351,6 +38573,37 @@ Transform:
   m_Father: {fileID: 1434318583}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2055770264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2055770265}
+  m_Layer: 0
+  m_Name: Spawnpoint from Scene2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2055770265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2055770264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.683319, y: -39.16406, z: -0.4031245}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2062902136
 GameObject:
   m_ObjectHideFlags: 0
@@ -39132,6 +39385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 1650744325}
+  getCamera: {fileID: 0}
   PlayerPosition: {fileID: 1363097358}
   T_limitMinX: -38
   T_limitMaxX: 0
@@ -39903,6 +40157,25 @@ MonoBehaviour:
   useBarkTitlePicker: 1
   useQuestNamePicker: 1
   selectedDatabase: {fileID: 11400000, guid: 6c13e6d334731b143b403029d2763db7, type: 2}
+--- !u!114 &1670789331564565112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 569652437504248337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03526e258566dc247a4eb8525aeeb667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_key: 
+  m_appendSaverTypeToKey: 0
+  m_saveAcrossSceneChanges: 1
+  m_restoreStateOnStart: 0
+  m_mode: 1
+  m_destroyMode: 0
+  m_destroyedVersionPrefab: {fileID: 149954983652433165, guid: 888a74e5760eb3147a8f77a2e6dacb61, type: 3}
 --- !u!1001 &2821635179027637026
 PrefabInstance:
   m_ObjectHideFlags: 0
