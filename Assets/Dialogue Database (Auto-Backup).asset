@@ -5289,7 +5289,7 @@ MonoBehaviour:
   - id: 22
     fields:
     - title: Title
-      value: Gass Machine
+      value: Gas Machine
       type: 0
       typeString: CustomFieldType_Text
     - title: Description
