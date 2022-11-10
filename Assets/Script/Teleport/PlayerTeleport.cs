@@ -15,6 +15,9 @@ public class PlayerTeleport : MonoBehaviour
     public Vector3 targetPoint;
     private Vector3 transPosition;
     private Vector3 mouse;
+    private Vector3 transPos;
+    private Vector3 target;
+    private Vector3 mousePos;
 
     public bool key = false;
     public bool door3 = false;
@@ -26,11 +29,26 @@ public class PlayerTeleport : MonoBehaviour
         theCamera = Camera.main.GetComponent<CameraFollow>();
     }
 
+    private void Update() 
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            //Get the mouse position on the screen and send a raycast into the game world from that position.
+            Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
+
+            //If something was hit, the RaycastHit2D.collider will not be null.
+            if (hit.collider != null)
+            {
+                name = hit.collider.name;
+                Debug.Log(name);
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         FindItem();
-        if(transferStart == true)
-        {
             if (other.name == "door3_1")
             {
                 currentTeleporter = null;
@@ -40,18 +58,15 @@ public class PlayerTeleport : MonoBehaviour
                     transferStart = false;
                     door3 = true;
                     Invoke("DoorEnter", 0.5f);
-                    Debug.Log("이동1");
-                    
                 }
             }
-            else
+            if(other.name == name)
             {
                 currentTeleporter = other.gameObject;
                 transferStart = false;
                 Invoke("DoorEnter", 0.5f);
                 Debug.Log("이동2");
             }
-        }
     }
 
     private void OnTriggerStay2D(Collider2D other) 
