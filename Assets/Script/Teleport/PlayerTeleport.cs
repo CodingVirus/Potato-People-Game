@@ -40,16 +40,16 @@ public class PlayerTeleport : MonoBehaviour
                     transferStart = false;
                     door3 = true;
                     Invoke("DoorEnter", 0.5f);
-                    Debug.Log("이동");
+                    Debug.Log("이동1");
                     
                 }
             }
             else
             {
-                Debug.Log("이동");
                 currentTeleporter = other.gameObject;
                 transferStart = false;
                 Invoke("DoorEnter", 0.5f);
+                Debug.Log("이동2");
             }
         }
     }
@@ -58,10 +58,10 @@ public class PlayerTeleport : MonoBehaviour
     {
         if(transferStart == true)
         {
-            Debug.Log("이동");
-                currentTeleporter = other.gameObject;
-                transferStart = false;
-                Invoke("DoorEnter", 0.5f);
+            currentTeleporter = other.gameObject;
+            transferStart = false;
+            Invoke("DoorEnter", 0.5f);
+            Debug.Log("이동3");
         }
     }
 

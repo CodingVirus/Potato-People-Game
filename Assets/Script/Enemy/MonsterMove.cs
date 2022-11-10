@@ -17,6 +17,7 @@ public class MonsterMove : MonoBehaviour
     private Vector3 dir;
     private float dis;
     public bool traceState = false;
+    private int count = 0;
 
     private void Awake() 
     {
@@ -39,6 +40,11 @@ public class MonsterMove : MonoBehaviour
                     Move();
                     Flip();
                     traceState = false;
+                    if(count == 1)
+                    {
+                        StartCoroutine("Think");
+                        count = 0;
+                    }
                 } 
                 // else if(dis > 10 && traceState == true)
                 // {
@@ -53,8 +59,10 @@ public class MonsterMove : MonoBehaviour
                 {
                     Trace();
                     traceState = true;
-                    //StopCoroutine("Think");
-                    //else traceState = true;
+                    if(count == 0)
+                    {
+                        count++;
+                    }      
                 }
             //}
         }
@@ -66,15 +74,15 @@ public class MonsterMove : MonoBehaviour
     }
 
     IEnumerator Think()
-    {
-        // while (true)
-        // {
+    {   
+        while (true)
+        {
             nextMove = Random.Range(-1, 2);
             thinkTime = Random.Range(1, 10);
             Debug.Log(nextMove);
             Debug.Log(thinkTime);
             yield return new WaitForSeconds(thinkTime);
-        // }
+        }
     }
 
     private void Trace()
