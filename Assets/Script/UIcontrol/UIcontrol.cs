@@ -28,6 +28,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
+                    hit.transform.GetComponent<UItriggerOff>().TriggerOff();
                     gameData.GetComponent<GameDataControl>().UIstart = true;
                     //Invoke("PlyMoveStart", 0.5f);
                 }
@@ -36,6 +37,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
+                    hit.transform.GetComponent<UItriggerOff>().TriggerOff();
                     gameData.GetComponent<GameDataControl>().UIstart = true;
                     //Invoke("PlyMoveStart", 0.5f);
                 }
