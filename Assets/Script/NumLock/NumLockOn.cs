@@ -9,14 +9,15 @@ public class NumLockOn : MonoBehaviour
     private void OnMouseDown()
     {
         NumLock.SetActive(true);
-        ObservationAdoor.SetActive(false);
+        //ObservationAdoor.SetActive(false);
         Time.timeScale = 0;
+        this.GetComponent<UItriggerOff>().TriggerOff();
     }
 
     public void Exit()
     {
         NumLock.SetActive(false);
-        ObservationAdoor.SetActive(true);
+        //ObservationAdoor.SetActive(true);
         Time.timeScale = 1;
     }
     void Start()
