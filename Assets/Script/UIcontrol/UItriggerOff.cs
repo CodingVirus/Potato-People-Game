@@ -5,7 +5,7 @@ using UnityEngine;
 public class UItriggerOff : MonoBehaviour
 {
     public GameObject stopTrigger;
-
+    public List<GameObject> triggerList = new List<GameObject>();
 
     public void TriggerOff()
     {
