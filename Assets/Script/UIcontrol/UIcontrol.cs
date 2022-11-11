@@ -22,14 +22,13 @@ public class UIcontrol : MonoBehaviour
             MousePostion = Camera.ScreenToWorldPoint(MousePostion);
 
             RaycastHit2D hit = Physics2D.Raycast(MousePostion, transform.forward, MaxDistance);
-            if (hit && gameData.GetComponent<GameDataControl>().UIstart == false)
+            if (hit)
             {
                 if (hit.transform.gameObject.tag == "Sheet")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
                     hit.transform.GetComponent<UItriggerOff>().TriggerOff();
-                    gameData.GetComponent<GameDataControl>().UIstart = true;
                     //Invoke("PlyMoveStart", 0.5f);
                 }
 
@@ -38,7 +37,6 @@ public class UIcontrol : MonoBehaviour
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
                     hit.transform.GetComponent<UItriggerOff>().TriggerOff();
-                    gameData.GetComponent<GameDataControl>().UIstart = true;
                     //Invoke("PlyMoveStart", 0.5f);
                 }
 
@@ -46,7 +44,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
-                    gameData.GetComponent<GameDataControl>().UIstart = true;
+                    hit.transform.GetComponent<UItriggerOff>().TriggerOff();
                     //Invoke("PlyMoveStart", 0.5f);
                 }
 
@@ -54,6 +52,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
+                    hit.transform.GetComponent<UItriggerOff>().TriggerOff();
 
                     //Invoke("PlyMoveStart", 0.5f);
                 }

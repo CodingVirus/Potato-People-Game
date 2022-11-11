@@ -5908,7 +5908,7 @@ GameObject:
   - component: {fileID: 301768519}
   - component: {fileID: 301768518}
   m_Layer: 0
-  m_Name: Button (Legacy)
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6006,6 +6006,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1363097356}
         m_TargetAssemblyTypeName: PlayerMouseControll, Assembly-CSharp
         m_MethodName: StartMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 595476601}
+        m_TargetAssemblyTypeName: UItriggerOff, Assembly-CSharp
+        m_MethodName: TriggerOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11953,6 +11965,7 @@ GameObject:
   - component: {fileID: 595476598}
   - component: {fileID: 595476600}
   - component: {fileID: 595476599}
+  - component: {fileID: 595476601}
   m_Layer: 0
   m_Name: Center Computer
   m_TagString: Untagged
@@ -12066,6 +12079,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.83, y: 5.96}
   m_EdgeRadius: 0
+--- !u!114 &595476601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595476596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb49843dad7c84fd58363f7230f4eb67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopTrigger: {fileID: 0}
+  triggerList:
+  - {fileID: 595476596}
+  - {fileID: 1472247896}
 --- !u!1 &598567448
 GameObject:
   m_ObjectHideFlags: 0
@@ -16044,7 +16073,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopTrigger: {fileID: 1102969914}
-  triggerList: []
+  triggerList:
+  - {fileID: 1102969914}
+  - {fileID: 769125450}
+  - {fileID: 2008038828}
 --- !u!1 &772249526
 GameObject:
   m_ObjectHideFlags: 0
@@ -16710,18 +16742,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1363097356}
         m_TargetAssemblyTypeName: PlayerMouseControll, Assembly-CSharp
         m_MethodName: StartMove
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1157142035}
-        m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
-        m_MethodName: SetUIstartFalse
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24709,7 +24729,6 @@ MonoBehaviour:
   cirCuitGame: 0
   gasMachineState: 0
   monsterState: 0
-  UIstart: 0
   ventLadderState: {fileID: 1402067085}
 --- !u!4 &1157142036
 Transform:
@@ -34588,18 +34607,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1157142035}
-        m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
-        m_MethodName: SetUIstartFalse
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 769125455}
         m_TargetAssemblyTypeName: UItriggerOff, Assembly-CSharp
         m_MethodName: TriggerOn
@@ -35309,6 +35316,22 @@ MonoBehaviour:
   - {x: -4.066935, y: 6.072714, z: 0.0000003874302}
   - {x: -6.0410414, y: 5.7492948, z: 0}
   - {x: -3.3924277, y: 1.3840184, z: 0.0000003874302}
+--- !u!1 &1662753481 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4489419045412388068, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+  m_PrefabInstance: {fileID: 4489419044397354630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1662753487 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6766556619231724999, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+  m_PrefabInstance: {fileID: 4489419044397354630}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1662753481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb49843dad7c84fd58363f7230f4eb67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1669059667
 GameObject:
   m_ObjectHideFlags: 0
@@ -38894,7 +38917,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stopTrigger: {fileID: 1964328841}
-  triggerList: []
+  triggerList:
+  - {fileID: 1811542505}
+  - {fileID: 1792947469}
+  - {fileID: 1964328841}
 --- !u!1 &1794875500
 GameObject:
   m_ObjectHideFlags: 0
@@ -39489,6 +39515,7 @@ GameObject:
   - component: {fileID: 1811542506}
   - component: {fileID: 1811542509}
   - component: {fileID: 1811542508}
+  - component: {fileID: 1811542510}
   m_Layer: 0
   m_Name: bookcase 2_1
   m_TagString: Untagged
@@ -39602,6 +39629,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.61, y: 5.45}
   m_EdgeRadius: 0
+--- !u!114 &1811542510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811542505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb49843dad7c84fd58363f7230f4eb67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopTrigger: {fileID: 0}
+  triggerList:
+  - {fileID: 1792947469}
+  - {fileID: 1811542505}
+  - {fileID: 1964328841}
 --- !u!1 &1814300054
 GameObject:
   m_ObjectHideFlags: 0
@@ -41149,9 +41193,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1157142035}
-        m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
-        m_MethodName: SetUIstartFalse
+      - m_Target: {fileID: 1811542510}
+        m_TargetAssemblyTypeName: UItriggerOff, Assembly-CSharp
+        m_MethodName: TriggerOn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -48785,10 +48829,14 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
@@ -48796,7 +48844,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1157142035}
     - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1662753487}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
@@ -48804,11 +48860,23 @@ PrefabInstance:
       value: SetUIstartFalse
       objectReference: {fileID: 0}
     - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: TriggerOn
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: GameDataControl, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UItriggerOff, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2193849661214662892, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2912963844848101957, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
@@ -48867,6 +48935,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6766556619231724999, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: triggerList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6766556619231724999, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: triggerList.Array.data[0]
+      value: 
+      objectReference: {fileID: 1662753481}
+    - target: {fileID: 6766556619231724999, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: triggerList.Array.data[1]
+      value: 
+      objectReference: {fileID: 976078923}
+    - target: {fileID: 6766556619231724999, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: triggerList.Array.data[2]
+      value: 
+      objectReference: {fileID: 899408042}
+    - target: {fileID: 6766556619231724999, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: triggerList.Array.data[3]
+      value: 
+      objectReference: {fileID: 1909161023}
+    - target: {fileID: 6766556619231724999, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: triggerList.Array.data[4]
+      value: 
+      objectReference: {fileID: 1231022502}
+    - target: {fileID: 6766556619231724999, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
+      propertyPath: triggerList.Array.data[5]
+      value: 
+      objectReference: {fileID: 2014361740}
     - target: {fileID: 7232462790664101669, guid: 41afcba1405474ebdb91f74a284ab281, type: 3}
       propertyPath: events.onSelect.m_PersistentCalls.m_Calls.Array.size
       value: 0

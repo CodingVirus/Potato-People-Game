@@ -23,7 +23,7 @@ public class GetItem : MonoBehaviour
             MousePostion = Camera.ScreenToWorldPoint(MousePostion);
 
             RaycastHit2D hit = Physics2D.Raycast(MousePostion, transform.forward, MaxDistance);
-            if (hit && gameData.GetComponent<GameDataControl>().UIstart == false)
+            if (hit)
             {
                 if (hit.transform.gameObject.tag == "Item")
                 {

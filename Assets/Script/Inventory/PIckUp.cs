@@ -38,8 +38,8 @@ public class PIckUp : MonoBehaviour
             this.transform.GetChild(0).gameObject.SetActive(true);
             ply = collision.gameObject;
             this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<DrugCombination>().drugCombinerPlayerObj = ply.gameObject;
+            this.GetComponent<UItriggerOff>().TriggerOff();
             ply.GetComponent<PlayerMouseControll>().StopMove();
-            gameData.GetComponent<GameDataControl>().UIstart = true;
         }
     }
 

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7819506439142994334}
   - component: {fileID: 8604272549436512648}
   - component: {fileID: 7232462790664101669}
+  - component: {fileID: 6766556619231724999}
   m_Layer: 0
   m_Name: Drug Combiner
   m_TagString: DrugCombiner
@@ -228,6 +229,20 @@ MonoBehaviour:
     onUse:
       m_PersistentCalls:
         m_Calls: []
+--- !u!114 &6766556619231724999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4489419045412388068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb49843dad7c84fd58363f7230f4eb67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stopTrigger: {fileID: 0}
+  triggerList: []
 --- !u!1001 &4489419043820466164
 PrefabInstance:
   m_ObjectHideFlags: 0

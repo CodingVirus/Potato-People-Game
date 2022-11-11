@@ -221,7 +221,7 @@ public class DrugCombination : MonoBehaviour
                     break;
                 }
             }
-            gameData.GetComponent<GameDataControl>().UIstart = false;
+            
         }
 
         else

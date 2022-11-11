@@ -29,8 +29,6 @@ public class GameDataControl : MonoBehaviour
 
     public bool monsterState = false;
 
-    public bool UIstart = false;
-
     public GameObject ventLadderState;
 
     private void Update()
@@ -49,10 +47,6 @@ public class GameDataControl : MonoBehaviour
         }    
     }
 
-    public void SetUIstartFalse()
-    {
-        UIstart = false;
-    }
     public void ClueyQuestClear()
     {
         clueyQuest = true;
