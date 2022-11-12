@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 305
+  controlID: 154
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 125
+  controlID: 134
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -164,7 +164,7 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1148
-    height: 565
+    height: 553
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
@@ -189,11 +189,11 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 565
+    y: 553
     width: 1148
-    height: 422
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    height: 434
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -368,7 +368,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 1147
-    height: 544
+    height: 532
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -592,9 +592,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 6.910462, y: -72.03411, z: -0.091336876}
+    m_Target: {x: -15.744889, y: -5.4685173, z: -4.7550797}
     speed: 2
-    m_Value: {x: 6.910462, y: -72.03411, z: -0.091336876}
+    m_Value: {x: -15.744889, y: -5.4685173, z: -4.7550797}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -645,9 +645,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 18.455929
+    m_Target: 7.286175
     speed: 2
-    m_Value: 18.455929
+    m_Value: 7.286175
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -695,7 +695,7 @@ MonoBehaviour:
     x: 0
     y: 73
     width: 1147
-    height: 494
+    height: 544
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -721,9 +721,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 638
+    y: 626
     width: 1147
-    height: 401
+    height: 413
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -771,22 +771,22 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 1147
-      height: 380
-    m_Scale: {x: 0.35185185, y: 0.35185185}
-    m_Translation: {x: 573.5, y: 190}
+      height: 392
+    m_Scale: {x: 0.36296296, y: 0.36296296}
+    m_Translation: {x: 573.5, y: 196}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1629.9474
+      x: -1580.051
       y: -540
-      width: 3259.8948
+      width: 3160.102
       height: 1080
     m_MinimalGUI: 1
-  m_defaultScale: 0.35185185
-  m_LastWindowPixelSize: {x: 1147, y: 401}
+  m_defaultScale: 0.36296296
+  m_LastWindowPixelSize: {x: 1147, y: 413}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -918,7 +918,7 @@ MonoBehaviour:
   watches: []
   autoUpdateWatches: 0
   watchUpdateFrequency: 1
-  nextWatchUpdateTime: 12194.3035622
+  nextWatchUpdateTime: 2417.289038
   watchableVariableNames:
   - Actor
   - ActorIndex
@@ -927,6 +927,7 @@ MonoBehaviour:
   - Conversant
   - ConversantIndex
   - DrugUse
+  - Ladder
   - TriggerCount
   - TryAgain
   watchableQuestNames:
@@ -972,7 +973,7 @@ MonoBehaviour:
   - Final Door
   - Crematorium
   - Cluey Daed
-  conversationIndex: -1
+  conversationIndex: 15
   snapToGridAmount: 0
   confirmDelete: 1
   trimWhitespaceAroundPipes: 1
@@ -1183,10 +1184,10 @@ MonoBehaviour:
     m_SaveData: []
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 272}
-      m_SelectedIDs: aa780100
-      m_LastClickedID: 96426
-      m_ExpandedIDs: d88cfffff2daffff18e1ffff82faffffc07800002c7b0000007d00002885000088e4000058760100f476010002770100387a0100f07c0100927e0100507f0100d8820100
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 48aa0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 9058ffffdc69ffffb0eeffff14f5ffff28fbffffe27700008c78000010790000da790000c67b0000aa7d0000827e0000a07e000024800000e2800000fc81000078840000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1251,22 +1252,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Script/UIcontrol
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Script/UIcontrol
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\GitClone\Potato-People-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 327}
-    m_SelectedIDs: 04980000
-    m_LastClickedID: 38916
-    m_ExpandedIDs: 000000008e97000090970000929700009497000096970000989700009a9700009c970000ca97000000ca9a3b
+    scrollPos: {x: 0, y: 120}
+    m_SelectedIDs: 50970000
+    m_LastClickedID: 38736
+    m_ExpandedIDs: 00000000089700000a9700000c9700000e970000109700001297000014970000169700005297000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1294,7 +1295,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008e97000090970000929700009497000096970000989700009a9700009c970000
+    m_ExpandedIDs: 00000000089700000a9700000c9700000e97000010970000129700001497000016970000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
