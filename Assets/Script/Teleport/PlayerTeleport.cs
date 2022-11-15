@@ -18,6 +18,7 @@ public class PlayerTeleport : MonoBehaviour
     private Vector3 transPos;
     private Vector3 target;
     private Vector3 mousePos;
+    public string n;
 
     public bool key = false;
     public bool door3 = false;
@@ -29,24 +30,26 @@ public class PlayerTeleport : MonoBehaviour
         theCamera = Camera.main.GetComponent<CameraFollow>();
     }
 
-    private void Update() 
+    private void FixedUpdate() 
     {
         if (Input.GetMouseButtonDown(0))
         {
-            //Get the mouse position on the screen and send a raycast into the game world from that position.
             Vector2 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(worldPoint, Vector2.zero);
 
-            //If something was hit, the RaycastHit2D.collider will not be null.
             if (hit.collider != null)
             {
-                name = hit.collider.name;
-                Debug.Log(name);
+                n = hit.collider.name;
+                //Debug.Log(n);
+                if(transferStart == true)
+                {
+                    Invoke("Fade", 0.5f);
+                }
             }
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         FindItem();
             if (other.name == "door3_1")
@@ -57,41 +60,15 @@ public class PlayerTeleport : MonoBehaviour
                     currentTeleporter = other.gameObject;
                     transferStart = false;
                     door3 = true;
-                    Invoke("DoorEnter", 0.5f);
+                    Invoke("Moving", 0.5f);
                 }
             }
-            if(other.name == name)
+            if(other.name == n)
             {
                 currentTeleporter = other.gameObject;
-                transferStart = false;
-                Invoke("DoorEnter", 0.5f);
-                Debug.Log("이동2");
+                transferStart = true;
+                //Invoke("Moving", 1.0f);
             }
-    }
-
-    private void OnTriggerStay2D(Collider2D other) 
-    {
-        if(transferStart == true)
-        {
-            currentTeleporter = other.gameObject;
-            transferStart = false;
-            Invoke("DoorEnter", 0.5f);
-            Debug.Log("이동3");
-        }
-    }
-
-    public void DoorEnter() 
-    {
-        if(currentTeleporter == null)
-        {
-            transferStart = false;
-            //Debug.Log("Moving : 이동 false");
-        }
-        else
-        {
-            //if(mon.GetComponent<MonsterMove>().traceState == true) mon.GetComponent<MonsterMove>().MonStop();
-            Invoke("Fade", 0.5f);
-        }
     }
 
     private void Fade()
@@ -104,7 +81,7 @@ public class PlayerTeleport : MonoBehaviour
             fadeEffect.GetComponent<FadeScript>().Fade();
             //Debug.Log("fade");
             //currentTeleporter.GetComponent<AudioSource>().Play();
-            Invoke("Moving", 1.0f);
+            Invoke("Moving", 1.2f);
         }
     }
 
@@ -118,18 +95,15 @@ public class PlayerTeleport : MonoBehaviour
         PlayerMouseControll.instance.StartMove();
         transferStart = false;
         transferState = false;
-        currentTeleporter = null;
-        //mon.GetComponent<MonsterMove>().traceSpeed = 4.5f;
+        //currentTeleporter = null;
     }
 
     private void CameraMove()
     {
-        //T_camera = true;
         theCamera.limitMinX = currentTeleporter.GetComponent<Teleporter>().T_limitMinX;
         theCamera.limitMaxX = currentTeleporter.GetComponent<Teleporter>().T_limitMaxX;
         theCamera.limitMinY = currentTeleporter.GetComponent<Teleporter>().T_limitMinY;
         theCamera.limitMaxY = currentTeleporter.GetComponent<Teleporter>().T_limitMaxY;
-        Debug.Log("변경");
     }
 
     private void FindItem()
@@ -147,7 +121,6 @@ public class PlayerTeleport : MonoBehaviour
     private void OnTriggerExit2D() 
     {
         currentTeleporter = null;
-        //Debug.Log("Exit : null");
     }
 
     public void DoctorTalkAndMove()
@@ -155,13 +128,13 @@ public class PlayerTeleport : MonoBehaviour
         Moving();
     }
 
-    public void SceneTeleport()
-    {
-        transform.position = new Vector2(-16.3f, -82.61f);
-        theCamera.limitMinX = -27.5f;
-        theCamera.limitMaxX = -0.5f;
-        theCamera.limitMinY = -83.5f;
-        theCamera.limitMaxY = -72.5f;
-    }
+    // public void SceneTeleport()
+    // {
+    //     transform.position = new Vector2(-16.3f, -82.61f);
+    //     theCamera.limitMinX = -27.5f;
+    //     theCamera.limitMaxX = -0.5f;
+    //     theCamera.limitMinY = -83.5f;
+    //     theCamera.limitMaxY = -72.5f;
+    // }
 
 }
