@@ -12,23 +12,23 @@ public class PIckUp : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (this.name == "Vending Machine" && collision.CompareTag("Player") && active == true)
-        {
-            ply = collision.gameObject;
-            //ply.GetComponent<PlayerMouseControll>().StopMove();
-            Inventory inven = ply.GetComponent<Inventory>();
-            for (int i = 0; i < inven.slots.Count; i++)
-            {
-                if (inven.slots[i].isEmpty)
-                {
-                    Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
-                    inven.slots[i].isEmpty = false;
-                    //this.GetComponent<BoxCollider2D>().enabled = false;
-                    break;
-                }
-            }
-            active = false;
-        }
+        //if (this.name == "Vending Machine" && collision.CompareTag("Player") && active == true)
+        //{
+        //    ply = collision.gameObject;
+        //    //ply.GetComponent<PlayerMouseControll>().StopMove();
+        //    Inventory inven = ply.GetComponent<Inventory>();
+        //    for (int i = 0; i < inven.slots.Count; i++)
+        //    {
+        //        if (inven.slots[i].isEmpty)
+        //        {
+        //            Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
+        //            inven.slots[i].isEmpty = false;
+        //            //this.GetComponent<BoxCollider2D>().enabled = false;
+        //            break;
+        //        }
+        //    }
+        //    active = false;
+        //}
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,6 +43,22 @@ public class PIckUp : MonoBehaviour
         }
     }
 
+    public void GetItem()
+    {
+        //ply = collision.gameObject;
+        //ply.GetComponent<PlayerMouseControll>().StopMove();
+        Inventory inven = ply.GetComponent<Inventory>();
+        for (int i = 0; i < inven.slots.Count; i++)
+        {
+            if (inven.slots[i].isEmpty)
+            {
+                Instantiate(slotItem, inven.slots[i].slotObj.transform, false);
+                inven.slots[i].isEmpty = false;
+                //this.GetComponent<BoxCollider2D>().enabled = false;
+                break;
+            }
+        }
+    }
     private void OnMouseDown()
     {
         active = true;

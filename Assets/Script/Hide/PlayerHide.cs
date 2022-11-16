@@ -19,7 +19,7 @@ public class PlayerHide : MonoBehaviour
         }
     }
 
-    private void HideEnter()
+    public void HideEnter()
     {
         PlayerMouseControll.instance.StopMove();
         hideFadeEffect.GetComponent<FadeIn>().Fade();

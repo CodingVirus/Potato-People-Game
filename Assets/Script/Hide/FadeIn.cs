@@ -29,6 +29,16 @@ public class FadeIn : MonoBehaviour
         Invoke("HideMove", 0.4f);
     }
 
+    public void OutButton()
+    {
+        Black.gameObject.SetActive(true);
+    }
+
+    public void PlayerOut()
+    {
+        player.SetActive(true);
+    }
+
     private void HideMove()
     {
         player.GetComponent<PlayerMouseControll>().target = player.transform.position;
@@ -44,7 +54,7 @@ public class FadeIn : MonoBehaviour
         test2.SetActive(false);
         test.SetActive(false);
         player.SetActive(false);
-        Black.gameObject.SetActive(true);
+        Invoke("OutButton", 1.3f);
         time = 0f;
         while (playerLight.intensity > 0f)
         {
@@ -74,6 +84,7 @@ public class FadeIn : MonoBehaviour
         test2.SetActive(true);
         test.SetActive(true);
         player.SetActive(true);
+        //Invoke("PlayerOut", 0.5f);
         Black.gameObject.SetActive(false);
         time = 0f;
         while (playerLight.intensity < 0.3f)
