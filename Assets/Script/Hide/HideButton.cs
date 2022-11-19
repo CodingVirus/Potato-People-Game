@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test2 : MonoBehaviour
+public class HideButton : MonoBehaviour
 {
+    // Start is called before the first frame update
     public GameObject ply;
 
     private void OnMouseDown()

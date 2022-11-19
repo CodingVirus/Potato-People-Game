@@ -43,13 +43,13 @@ public class Teleporter : ClickablePortal
 
     private void OnMouseDown() 
     {
-        PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
+        //PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
 
-        if(PlayerPosition.GetComponent<PlayerTeleport>().next == false)
-        {
-            PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
-            PlayerPosition.GetComponent<PlayerTeleport>().next = true;
-        }
+        //if(PlayerPosition.GetComponent<PlayerTeleport>().next == false)
+        //{
+        //    PlayerPosition.GetComponent<PlayerTeleport>().transferStart = true;
+        //    PlayerPosition.GetComponent<PlayerTeleport>().next = true;
+        //}
     }
 
     //private void OnMouseEnter() 

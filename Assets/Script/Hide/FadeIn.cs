@@ -84,6 +84,7 @@ public class FadeIn : MonoBehaviour
         test2.SetActive(true);
         test.SetActive(true);
         player.SetActive(true);
+
         //Invoke("PlayerOut", 0.5f);
         Black.gameObject.SetActive(false);
         time = 0f;
