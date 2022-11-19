@@ -5,20 +5,40 @@ using UnityEngine;
 public class Test3 : MonoBehaviour
 {
     public GameObject ply;
+    public GameObject des;
+    public GameObject test;
+
+    public Vector3 p_Teleport;
+    public CameraFollow theCamera;
 
     private void OnMouseDown()
     {
-        ply.GetComponent<PlayerTeleport>().DoorEnter();
-        this.gameObject.SetActive(false);
+        //ply.GetComponent<PlayerTeleport>().Fade();
+
+        //CameraMove();
+        //ply.transform.position = this.GetComponent<Teleporter>().GetDestination().position;
+
+        //ply.GetComponent<PlayerMouseControll>().target = transform.position;
+        //p_Teleport = transform.position;
+        
+        //PlayerMouseControll.instance.StartMove();
+        // ply.transform.position = des.transform.position;
     }
 
-    private void OnMouseEnter()
+    private void CameraMove()
     {
-        ply.GetComponent<PlayerMouseControll>().StopMove();
+        //T_camera = true;
+        theCamera.limitMinX = test.GetComponent<Teleporter>().T_limitMinX;
+        theCamera.limitMaxX = test.GetComponent<Teleporter>().T_limitMaxX;
+        theCamera.limitMinY = test.GetComponent<Teleporter>().T_limitMinY;
+        theCamera.limitMaxY = test.GetComponent<Teleporter>().T_limitMaxY;
+        Debug.Log("º¯°æ");
     }
 
-    private void OnMouseExit()
+    public void MoveTest()
     {
-        ply.GetComponent<PlayerMouseControll>().StartMove();
+        
+        ply.transform.position = test.GetComponent<Teleporter>().GetDestination().position;
+        CameraMove();
     }
 }

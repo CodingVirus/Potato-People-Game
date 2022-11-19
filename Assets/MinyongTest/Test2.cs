@@ -9,7 +9,6 @@ public class Test2 : MonoBehaviour
     private void OnMouseDown()
     {
         ply.GetComponent<PlayerHide>().HideEnter();
-        this.gameObject.SetActive(false);
     }
 
     public void HideTest()
