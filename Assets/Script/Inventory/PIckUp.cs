@@ -35,11 +35,11 @@ public class PIckUp : MonoBehaviour
     {
         if (this.name == "Drug Combiner" && collision.CompareTag("Player1") && active == true)
         {
-            this.transform.GetChild(0).gameObject.SetActive(true);
-            ply = collision.gameObject;
-            this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<DrugCombination>().drugCombinerPlayerObj = ply.gameObject;
-            this.GetComponent<UItriggerOff>().TriggerOff();
-            ply.GetComponent<PlayerMouseControll>().StopMove();
+            //this.transform.GetChild(0).gameObject.SetActive(true);
+            //ply = collision.gameObject;
+            //this.transform.GetChild(0).GetChild(0).gameObject.GetComponent<DrugCombination>().drugCombinerPlayerObj = ply.gameObject;
+            //this.GetComponent<UItriggerOff>().TriggerOff();
+            //ply.GetComponent<PlayerMouseControll>().StopMove();
         }
     }
 

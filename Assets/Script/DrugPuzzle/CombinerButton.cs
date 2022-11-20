@@ -9,8 +9,10 @@ public class CombinerButton : MonoBehaviour
     public GameObject gameData;
     private void OnMouseDown()
     {
-        this.gameObject.SetActive(false);
-        //Invoke("DelayActive", 0.2f);
+        //ply.GetComponent<PlayerMouseControll>().StopMove();
+        //this.gameObject.SetActive(false);
+
+        Invoke("DelayActive", 0.2f);
         if (gameData.GetComponent<GameDataControl>().clueyQuestActive == true)
         {
             combinerUI.SetActive(true);

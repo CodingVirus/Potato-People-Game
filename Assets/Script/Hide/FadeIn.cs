@@ -21,6 +21,11 @@ public class FadeIn : MonoBehaviour
         StartCoroutine(FadeStart());
     }
 
+    public void BasicFade()
+    {
+        StartCoroutine(BasicFadeStart());
+    }
+
     public void HideEnd()
     {
         StartCoroutine(FadeEnd());
@@ -44,7 +49,17 @@ public class FadeIn : MonoBehaviour
         player.GetComponent<PlayerMouseControll>().target = player.transform.position;
         PlayerMouseControll.instance.StartMove();
     }
-
+    IEnumerator BasicFadeStart()
+    {
+        playerLight = player.GetComponent<LightControll>().global;
+        time = 0f;
+        while (playerLight.intensity > 0f)
+        {
+            time += Time.deltaTime / F_time;
+            playerLight.intensity = Mathf.Lerp(0.3f, 0f, time);
+            yield return null;
+        }
+    }
     IEnumerator FadeStart()
     {
         playerLight = player.GetComponent<LightControll>().global;
