@@ -33,7 +33,7 @@ public class PIckUp : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (this.name == "Drug Combiner" && collision.CompareTag("Player") && active == true)
+        if (this.name == "Drug Combiner" && collision.CompareTag("Player1") && active == true)
         {
             this.transform.GetChild(0).gameObject.SetActive(true);
             ply = collision.gameObject;

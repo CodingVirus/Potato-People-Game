@@ -37,4 +37,7 @@ MonoBehaviour:
   - functionName: GameDataControl/ReturnMonsterState
     parameters: 
     returnValue: 1
-  scriptFunctions: []
+  scriptFunctions:
+  - functionName: GameDataControl/ReturnClueyQuestActive
+    parameters: 
+    returnValue: 1

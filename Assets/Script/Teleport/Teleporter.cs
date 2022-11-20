@@ -7,7 +7,6 @@ public class Teleporter : ClickablePortal
 {
     [SerializeField] private Transform destination;
     public Transform PlayerPosition;
-
     //public float walkspeed = 5f;
     //public Vector3 target;
     //private Vector3 transPos;
@@ -16,6 +15,10 @@ public class Teleporter : ClickablePortal
     [SerializeField]
     public float T_limitMinX, T_limitMaxX, T_limitMinY, T_limitMaxY;
 
+    public GameObject GetDesObj()
+    {
+        return destination.transform.parent.gameObject;
+    }
     public Transform GetDestination()
     {
         return destination;

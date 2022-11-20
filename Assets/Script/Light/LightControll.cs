@@ -19,27 +19,21 @@ public class LightControll : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //Debug.Log(Random.Range(0, 2));
-            //test1.intensity = Random.Range(0, 2);
-            //test2.intensity = Random.Range(0, 2);
-            if (time < 0.5f)
-            {
-                //allB1.SetActive(false);
-                test1.intensity = 0;
-                test2.intensity = 0;
-            }
+            
+            test1.GetComponent<LightProduction>().enabled = true;
+            test2.GetComponent<LightProduction>().enabled = true;
 
-            else
-            {
-                //allB1.SetActive(true);
-                test1.intensity = 1;
-                test2.intensity = 1;
-                if (time > 1f)
-                {
-                    time = 0;
-                }
-            }
-            time += Time.deltaTime;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+
+            test1.GetComponent<LightProduction>().enabled = false;
+            test2.GetComponent<LightProduction>().enabled = false;
+
         }
     }
 }

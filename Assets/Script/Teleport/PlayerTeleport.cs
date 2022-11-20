@@ -152,7 +152,6 @@ public class PlayerTeleport : MonoBehaviour
         if(currentTeleporter == null)
         {
             transferStart = false;
-            //Debug.Log("Moving : 이동 false");
         }
         else
         {

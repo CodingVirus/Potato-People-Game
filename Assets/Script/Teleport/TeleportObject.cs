@@ -8,8 +8,10 @@ public class TeleportObject : MonoBehaviour
     private void OnMouseDown()
     {
         ply.GetComponent<PlayerTeleport>().DoorEnter();
+        gameObject.transform.parent.GetComponent<Teleporter>().GetDesObj().GetComponent<BoxCollider2D>().enabled = false;
+        Invoke("test2", 3.0f);
         //this.gameObject.SetActive(false);
-        Invoke("test", 0.1f);
+        Invoke("test", 0.2f);
     }
 
     private void OnMouseEnter()
@@ -26,5 +28,10 @@ public class TeleportObject : MonoBehaviour
     private void test()
     {
         this.gameObject.SetActive(false);
+    }
+
+    public void test2()
+    {
+        gameObject.transform.parent.GetComponent<Teleporter>().GetDesObj().GetComponent<BoxCollider2D>().enabled = true;
     }
 }
