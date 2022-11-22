@@ -11,7 +11,7 @@ public class CombinerButton : MonoBehaviour
     {
         //ply.GetComponent<PlayerMouseControll>().StopMove();
         //this.gameObject.SetActive(false);
-
+        gameData.GetComponent<GameDataControl>().PlayerMouseControllOff();
         Invoke("DelayActive", 0.2f);
         if (gameData.GetComponent<GameDataControl>().clueyQuestActive == true)
         {

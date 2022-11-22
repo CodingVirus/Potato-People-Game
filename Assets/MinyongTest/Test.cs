@@ -6,8 +6,8 @@ public class Test : MonoBehaviour
 {
     public GameObject test;
 
-    private void OnMouseEnter()
+    private void OnMouseDown()
     {
-        //test.GetComponent<PlayerMouseControll>().StopMove();
+        test.GetComponent<GameDataControl>().PlayerMouseControllOff();
     }
 }

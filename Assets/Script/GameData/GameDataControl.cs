@@ -11,6 +11,7 @@ public class GameDataControl : MonoBehaviour
     public GameObject endingDoctor;
     public GameObject cluey;
     public GameObject clueyDie;
+    public GameObject mainCamera;
 
     public bool b3Door = false;
     public bool b2Door = false;
@@ -32,6 +33,31 @@ public class GameDataControl : MonoBehaviour
 
     public GameObject ventLadderState;
 
+    public void MainCameraGetItemOff()
+    {
+        mainCamera.GetComponent<GetItem>().enabled = false;
+    }
+
+    public void MainCameraGetItemOn()
+    {
+        mainCamera.GetComponent<GetItem>().enabled = true;
+    }
+    public void PlayerMouseControllOff()
+    {
+        ply.GetComponent<PlayerMouseControll>().enabled = false;
+    }
+
+    public void PlayerMouseControllOn()
+    {  
+        Invoke("DelayPlyMouseControllOn", 0.3f);
+    }
+
+    private void DelayPlyMouseControllOn()
+    {      
+        ply.GetComponent<PlayerMouseControll>().enabled = true;
+        //ply.GetComponent<PlayerMouseControll>().MaintainPosition();
+        //ply.GetComponent<PlayerMouseControll>().StartMove();
+    }
     private void Update()
     {
         // for test

@@ -5,8 +5,10 @@ using UnityEngine.Rendering;
 
 public class BlurControll : MonoBehaviour
 {
-    public GameObject test;
+    public GameObject volume;
     public GameObject fade;
+    public GameObject gameData;
+
     float time = 0f;
     float F_time = 2.5f;
     float count = 0f;
@@ -14,9 +16,9 @@ public class BlurControll : MonoBehaviour
     {
         //weight = test.GetComponent<Volume>().weight;
     }
-    public void test2()
+    public void BlurStart()
     {
-        StartCoroutine(test1());
+        StartCoroutine(BlurIn());
 
     }
 
@@ -27,13 +29,13 @@ public class BlurControll : MonoBehaviour
         //Debug.Log(count);
     }
 
-    IEnumerator test1()
+    IEnumerator BlurIn()
     {
         time = 0f;
-        while (test.GetComponent<Volume>().weight < 1f)
+        while (volume.GetComponent<Volume>().weight < 1f)
         {
             time += Time.deltaTime / F_time;
-            test.GetComponent<Volume>().weight = Mathf.Lerp(count, 1f, time);
+            volume.GetComponent<Volume>().weight = Mathf.Lerp(count, 1f, time);
             yield return null;
         }
 
@@ -43,28 +45,32 @@ public class BlurControll : MonoBehaviour
 
             yield return new WaitForSeconds(2f);
             this.GetComponent<PlayerTeleport>().SceneTeleport();
-            test.GetComponent<Volume>().weight = 0f;
+            volume.GetComponent<Volume>().weight = 0f;
 
             yield return new WaitForSeconds(2f);
             fade.GetComponent<FadeScript>().FadeOut();
 
+            yield return new WaitForSeconds(2f);
+            gameData.GetComponent<GameDataControl>().PlayerMouseControllOn();
+            this.GetComponent<PlayerMouseControll>().StartMove();
+
             yield break;
         }
         count += 0.4f;
-        StartCoroutine(test3());
+        StartCoroutine(BlurOut());
     }
 
-    IEnumerator test3()
+    IEnumerator BlurOut()
     {
         time = 0f;
-        while (test.GetComponent<Volume>().weight > count)
+        while (volume.GetComponent<Volume>().weight > count)
         {
             time += Time.deltaTime / F_time;
-            test.GetComponent<Volume>().weight = Mathf.Lerp(1f, count, time);
+            volume.GetComponent<Volume>().weight = Mathf.Lerp(1f, count, time);
 
             yield return null;
         }
 
-        StartCoroutine(test1());
+        StartCoroutine(BlurIn());
     }
 }

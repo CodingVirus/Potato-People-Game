@@ -83,6 +83,7 @@ public class GetItem : MonoBehaviour
                     if (hit.transform.GetChild(0).gameObject.activeSelf == true)
                     {
                         ply.GetComponent<PlayerMouseControll>().StopMove();
+                        
                         Inventory inven = ply.GetComponent<Inventory>();
                         for (int i = 0; i < inven.slots.Count; i++)
                         {
@@ -93,7 +94,7 @@ public class GetItem : MonoBehaviour
                                 break;
                             }
                         }
-                        Invoke("PlyMoveStart", 0.5f);
+                        Invoke("PlyMoveStart", 0.2f);
                         hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                     }
                 }
@@ -191,6 +192,7 @@ public class GetItem : MonoBehaviour
 
     public void PlyMoveStart()
     {
+        gameData.GetComponent<GameDataControl>().PlayerMouseControllOn();
         ply.GetComponent<PlayerMouseControll>().MaintainPosition();
         ply.GetComponent<PlayerMouseControll>().StartMove();
     }
