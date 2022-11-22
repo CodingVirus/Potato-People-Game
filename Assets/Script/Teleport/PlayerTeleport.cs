@@ -41,10 +41,10 @@ public class PlayerTeleport : MonoBehaviour
             {
                 n = hit.collider.name;
                 //Debug.Log(n);
-                if(transferStart == true)
-                {
-                    Invoke("Fade", 0.5f);
-                }
+                // if(transferStart == true)
+                // {
+                //     Invoke("Fade", 0.5f);
+                // }
             }
         }
     }
@@ -67,7 +67,7 @@ public class PlayerTeleport : MonoBehaviour
             {
                 currentTeleporter = other.gameObject;
                 transferStart = true;
-                //Invoke("Moving", 1.0f);
+                Invoke("Moving", 1.0f);
             }
     }
 

@@ -14,7 +14,6 @@ public class PlayerData{
     // public PlayerData(int playerPosition){
     //     this.playerPosition = playerPosition;
     // }
-
 }
 
 class Monster{

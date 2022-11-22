@@ -11,16 +11,4 @@ public class Main : MonoBehaviour
             SceneManager.LoadScene("BuwonScene");
         
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-       
-
-    }
 }
