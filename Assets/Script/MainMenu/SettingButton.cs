@@ -14,19 +14,16 @@ public class SettingButton : MonoBehaviour
         menu.gameObject.SetActive(false);
     }
 
-    void Update() 
+    public void GoMenu()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
-        { 
-            Debug.Log("열림");
-            menu.gameObject.SetActive(true);
-            count++;
-            if(count == 2 && Input.GetKeyDown(KeyCode.Space))
-            {
-                menu.gameObject.SetActive(false);
-                Debug.Log("닫음");
-                count = 0;
-            }
+        Debug.Log("열림");
+        menu.gameObject.SetActive(true);
+        count++;
+        if(count == 2)
+        {
+            menu.gameObject.SetActive(false);
+            Debug.Log("닫음");
+            count = 0;
         }
     }
 
