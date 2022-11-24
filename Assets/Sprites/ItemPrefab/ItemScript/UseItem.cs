@@ -42,15 +42,33 @@ public class UseItem : MonoBehaviour
         }
     }
 
-    public void UseClueyQuest()
+    public void ThrowItem(string name)
+    {
+        num = int.Parse(this.name.Substring(this.name.IndexOf("_") + 1));
+
+        if (name == "Coke(Clone)")
+        {
+            Debug.Log("Thorw Coke!!!");
+            Destroy(this.transform.GetChild(0).gameObject);
+            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
+        }
+
+        else
+        {
+            Destroy(this.transform.GetChild(0).gameObject);
+            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
+        }
+    }
+
+    public void UseItemDialogue(string input)
     {
         for (int i = 0; i < playerObj.GetComponent<Inventory>().slots.Count; i++)
         {
-            if (playerObj.GetComponent<Inventory>().slots[i].isEmpty == false && playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).name == "Drug(Clone)")
+            if (playerObj.GetComponent<Inventory>().slots[i].isEmpty == false && playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).name == input)
             {
-                //Debug.Log("HI");
                 Destroy(playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).gameObject);
                 playerObj.GetComponent<Inventory>().slots[i].isEmpty = true;
+                break;
             }
 
             else

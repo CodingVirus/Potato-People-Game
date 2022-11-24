@@ -7,19 +7,22 @@ public class PlayerHide : MonoBehaviour
     public GameObject hideFadeEffect;
     public bool hideStart = false;
 
+    private void Start()
+    {
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(hideStart == true)
         {
             if(other.CompareTag("Hide"))
             {
-                Invoke("Hide", 0.5f);
+                Invoke("HideEnter", 0.5f);
                 Debug.Log("hide");
             }
         }
     }
 
-    private void Hide()
+    public void HideEnter()
     {
         PlayerMouseControll.instance.StopMove();
         hideFadeEffect.GetComponent<FadeIn>().Fade();

@@ -14,10 +14,16 @@ public class FadeIn : MonoBehaviour
 
     public Light2D playerLight;
     public GameObject test;
+    public GameObject test2;
 
     public void Fade()
     {
         StartCoroutine(FadeStart());
+    }
+
+    public void BasicFade()
+    {
+        StartCoroutine(BasicFadeStart());
     }
 
     public void HideEnd()
@@ -28,26 +34,47 @@ public class FadeIn : MonoBehaviour
         Invoke("HideMove", 0.4f);
     }
 
+    public void OutButton()
+    {
+        Black.gameObject.SetActive(true);
+    }
+
+    public void PlayerOut()
+    {
+        player.SetActive(true);
+    }
+
     private void HideMove()
     {
         player.GetComponent<PlayerMouseControll>().target = player.transform.position;
         PlayerMouseControll.instance.StartMove();
     }
-
-    IEnumerator FadeStart()
+    IEnumerator BasicFadeStart()
     {
         playerLight = player.GetComponent<LightControll>().global;
-
-        test = player.GetComponent<LightControll>().allB3;
-
-        test.SetActive(false);
-        player.SetActive(false);
-        Black.gameObject.SetActive(true);
         time = 0f;
         while (playerLight.intensity > 0f)
         {
             time += Time.deltaTime / F_time;
-            playerLight.intensity = Mathf.Lerp(1, 0f, time);
+            playerLight.intensity = Mathf.Lerp(0.3f, 0f, time);
+            yield return null;
+        }
+    }
+    IEnumerator FadeStart()
+    {
+        playerLight = player.GetComponent<LightControll>().global;
+        test2 = player.GetComponent<LightControll>().allB2;
+        test = player.GetComponent<LightControll>().allB3;
+
+        test2.SetActive(false);
+        test.SetActive(false);
+        player.SetActive(false);
+        Invoke("OutButton", 1.3f);
+        time = 0f;
+        while (playerLight.intensity > 0f)
+        {
+            time += Time.deltaTime / F_time;
+            playerLight.intensity = Mathf.Lerp(0.3f, 0f, time);
             //Black.color = alpha;
             yield return null;
         }
@@ -66,13 +93,19 @@ public class FadeIn : MonoBehaviour
     IEnumerator FadeEnd()
     {
         playerLight = player.GetComponent<LightControll>().global;
+        test = player.GetComponent<LightControll>().allB3;
+        test2 = player.GetComponent<LightControll>().allB2;
+
+        test2.SetActive(true);
+        test.SetActive(true);
         player.SetActive(true);
+        //Invoke("PlayerOut", 0.5f);
         Black.gameObject.SetActive(false);
         time = 0f;
-        while (playerLight.intensity < 1.0f)
+        while (playerLight.intensity < 0.3f)
         {
             time += Time.deltaTime / F_time;
-            playerLight.intensity = Mathf.Lerp(0, 1, time);
+            playerLight.intensity = Mathf.Lerp(0f, 0.3f, time);
             //Black.color = alpha;
             yield return null;
         }

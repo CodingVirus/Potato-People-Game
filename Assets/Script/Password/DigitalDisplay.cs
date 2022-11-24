@@ -13,6 +13,7 @@ public class DigitalDisplay : MonoBehaviour
     public Text codeText;
     public GameObject pad;
     public GameObject player;
+    public GameObject gameData;
     //public bool uiOn = false;
 
     private string codeTextValue;    
@@ -48,6 +49,7 @@ public class DigitalDisplay : MonoBehaviour
         if(codeTextValue == "0921")
         {
             Debug.Log("Correct!");
+            gameData.GetComponent<GameDataControl>().CrematoriumPassword = true;
             pad.SetActive(false);
             //uiOn = false;
             Invoke("StartToMove", 0.3f);

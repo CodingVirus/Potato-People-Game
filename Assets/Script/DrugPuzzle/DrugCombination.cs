@@ -9,6 +9,7 @@ public class DrugCombination : MonoBehaviour
     public GameObject threeSprite, fourSprite, fiveSprite;
     public GameObject drugCombinerPlayerObj;
     public GameObject drugItem;
+    public GameObject gameData;
 
     public Button fourButton;
 
@@ -220,6 +221,7 @@ public class DrugCombination : MonoBehaviour
                     break;
                 }
             }
+            
         }
 
         else
@@ -232,8 +234,8 @@ public class DrugCombination : MonoBehaviour
     public void ExitUI()
     {
         this.transform.parent.gameObject.SetActive(false);
-        this.transform.parent.parent.GetComponent<PIckUp>().active = false;
-        drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().target = drugCombinerPlayerObj.transform.position;
-        drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().StartMove();
+        //this.transform.parent.parent.GetComponent<PIckUp>().active = false;
+        //drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().target = drugCombinerPlayerObj.transform.position;
+        //drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().StartMove();
     }
 }

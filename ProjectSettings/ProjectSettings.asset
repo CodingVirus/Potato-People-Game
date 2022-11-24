@@ -756,21 +756,21 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: TextMeshPro;USE_PHYSICS2D
-    CloudRendering: TextMeshPro
-    EmbeddedLinux: TextMeshPro
-    GameCoreXboxOne: TextMeshPro
-    Lumin: TextMeshPro
-    Nintendo Switch: TextMeshPro
-    PS4: TextMeshPro
-    PS5: TextMeshPro
-    Stadia: TextMeshPro
-    Standalone: TextMeshPro;USE_PHYSICS2D;USE_ARTICY
-    WebGL: TextMeshPro
-    Windows Store Apps: TextMeshPro
-    XboxOne: TextMeshPro
+    Android: TextMeshPro;USE_PHYSICS2D;UNITY_POST_PROCESSING_STACK_V2
+    CloudRendering: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    EmbeddedLinux: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    GameCoreXboxOne: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Lumin: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Nintendo Switch: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    PS4: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    PS5: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Stadia: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Standalone: TextMeshPro;USE_PHYSICS2D;UNITY_POST_PROCESSING_STACK_V2
+    WebGL: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    Windows Store Apps: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
+    XboxOne: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
     iPhone: TextMeshPro;USE_PHYSICS2D
-    tvOS: TextMeshPro
+    tvOS: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend: {}

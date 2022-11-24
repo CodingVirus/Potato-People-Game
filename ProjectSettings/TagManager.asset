@@ -11,6 +11,13 @@ TagManager:
   - EndPoint
   - Obstacles
   - ObjToPush
+  - Refrigerator
+  - ClueyKey
+  - Item
+  - Ladder
+  - Sheet
+  - Diary
+  - Gas
   layers:
   - Default
   - TransparentFX

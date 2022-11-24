@@ -26,6 +26,7 @@ public class PlayerMouseControll : MonoBehaviour
     private void Awake() 
     {
         instance = this;
+        //Application.targetFrameRate = 120;
     }
     
     void Start()
@@ -35,21 +36,12 @@ public class PlayerMouseControll : MonoBehaviour
 
     private void Update()
     {
-        //카메라 영역 내 이동 제한
+        //Debug.Log(this.GetComponent<PlayerTeleport>().transferStart);
         target.y = transform.position.y;
-        Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
-        if (pos.x < 0.05f) {
-            playerMove = false;
-            pos.x = 0.05f;
-        }
-        if (pos.x > 0.95f) {
-            playerMove = false;
-            pos.x = 0.95f;
-        }
-
-        transform.position = Camera.main.ViewportToWorldPoint(pos);
         if(Input.GetMouseButton(0))
         {
+            //this.GetComponent<PlayerTeleport>().transferStart = false;
+            
             playerWalk = true;
             playerMove = true;
             if(playerMove == true)
@@ -132,17 +124,32 @@ public class PlayerMouseControll : MonoBehaviour
         anim.SetBool("isWalking", false);
     }
 
+    public void DialogueStartMove()
+    {
+        MaintainPosition();
+        Invoke("StartMove", 0.5f);
+    }
+
     public void StartMove()
     {
         walkspeed = 5.0f;
         //runspeed = 10.0f;
         playerFilp = true;
-        anim.SetBool("isWalking", true);
+        anim.SetBool("isWalking", false);
     }
+
+    //public void DiealogueMove()
+    //{
+    //    walkspeed = 5.0f;
+    //    //runspeed = 10.0f;
+    //    playerFilp = true;
+    //    anim.SetBool("isWalking", false);
+    //}
 
     public void MaintainPosition()
     {
         target = this.transform.position;
+        anim.SetBool("isWalking", false);
     }
 
     void Flip()
