@@ -8,6 +8,7 @@ public class GetItem : MonoBehaviour
     Vector3 MousePostion;
     Camera Camera;
     public GameObject ply;
+    public GameObject gameData;
     public List<GameObject> ItemList = new List<GameObject>();
 
     private void Start()
@@ -40,6 +41,24 @@ public class GetItem : MonoBehaviour
                     Invoke("PlyMoveStart", 0.5f);
                     hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                 }
+                else if (hit.transform.gameObject.name == "key box (open)")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    Inventory inven = ply.GetComponent<Inventory>();
+                    for (int i = 0; i < inven.slots.Count; i++)
+                    {
+                        if (inven.slots[i].isEmpty)
+                        {
+                            Instantiate(ItemList[6], inven.slots[i].slotObj.transform, false);
+                            inven.slots[i].isEmpty = false;
+                            break;
+                        }
+                    }
+                    Invoke("PlyMoveStart", 0.5f);
+                    hit.transform.GetComponent<SpriteRenderer>().enabled = false;
+                    hit.transform.GetComponent<BoxCollider2D>().enabled = false;
+                    hit.transform.GetChild(0).transform.gameObject.SetActive(true);
+                }
 
                 else if (hit.transform.gameObject.tag == "Ladder")
                 {
@@ -64,6 +83,7 @@ public class GetItem : MonoBehaviour
                     if (hit.transform.GetChild(0).gameObject.activeSelf == true)
                     {
                         ply.GetComponent<PlayerMouseControll>().StopMove();
+                        
                         Inventory inven = ply.GetComponent<Inventory>();
                         for (int i = 0; i < inven.slots.Count; i++)
                         {
@@ -74,7 +94,7 @@ public class GetItem : MonoBehaviour
                                 break;
                             }
                         }
-                        Invoke("PlyMoveStart", 0.5f);
+                        Invoke("PlyMoveStart", 0.2f);
                         hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                     }
                 }
@@ -115,19 +135,19 @@ public class GetItem : MonoBehaviour
                 
                 else if (hit.transform.gameObject.name == "drawer 1")
                 {
-                    ply.GetComponent<PlayerMouseControll>().StopMove();
-                    Inventory inven = ply.GetComponent<Inventory>();
-                    for (int i = 0; i < inven.slots.Count; i++)
-                    {
-                        if (inven.slots[i].isEmpty)
-                        {
-                            Instantiate(ItemList[6], inven.slots[i].slotObj.transform, false);
-                            inven.slots[i].isEmpty = false;
-                            break;
-                        }
-                    }
-                    Invoke("PlyMoveStart", 0.5f);
-                    hit.transform.GetComponent<BoxCollider2D>().enabled = false;
+                    //ply.GetComponent<PlayerMouseControll>().StopMove();
+                    //Inventory inven = ply.GetComponent<Inventory>();
+                    //for (int i = 0; i < inven.slots.Count; i++)
+                    //{
+                    //    if (inven.slots[i].isEmpty)
+                    //    {
+                    //        Instantiate(ItemList[6], inven.slots[i].slotObj.transform, false);
+                    //        inven.slots[i].isEmpty = false;
+                    //        break;
+                    //    }
+                    //}
+                    //Invoke("PlyMoveStart", 0.5f);
+                    //hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                 }
 
                 else if (hit.transform.gameObject.name == "drawer 2")
@@ -172,6 +192,7 @@ public class GetItem : MonoBehaviour
 
     public void PlyMoveStart()
     {
+        gameData.GetComponent<GameDataControl>().PlayerMouseControllOn();
         ply.GetComponent<PlayerMouseControll>().MaintainPosition();
         ply.GetComponent<PlayerMouseControll>().StartMove();
     }

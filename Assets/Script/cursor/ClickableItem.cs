@@ -6,6 +6,10 @@ using UnityEngine;
 
 public class ClickableItem : MonoBehaviour
 {
+    private void Start()
+    {
+        
+    }
     public void OnMouseEnter() 
     {
         CursorController.instance.Item_Click();  

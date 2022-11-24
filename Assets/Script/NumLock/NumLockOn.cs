@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class NumLockOn : MonoBehaviour
 {
+    public GameObject ply;
     public GameObject NumLock;
     public GameObject ObservationAdoor;
     private void OnMouseDown()
     {
         NumLock.SetActive(true);
-        ObservationAdoor.SetActive(false);
+        ply.GetComponent<PlayerMouseControll>().MaintainPosition();
+        ply.GetComponent<PlayerMouseControll>().StopMove();
+        //ObservationAdoor.SetActive(false);
         Time.timeScale = 0;
+        this.GetComponent<UItriggerOff>().TriggerOff();
     }
 
     public void Exit()
     {
         NumLock.SetActive(false);
-        ObservationAdoor.SetActive(true);
+        //ObservationAdoor.SetActive(true);
         Time.timeScale = 1;
     }
     void Start()

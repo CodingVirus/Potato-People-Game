@@ -17,8 +17,11 @@ public class NumLock : MonoBehaviour
    
     [SerializeField]
     List<GameObject> NumList = new List<GameObject>();
+    public GameObject ply;
     public GameObject numLock;
     public GameObject observationAdoor;
+    public GameObject keyBoxOpen;
+    public GameObject keyBoxFull;
     public static int Locknum1;
     public static int Locknum2;
     public static int Locknum3;
@@ -194,7 +197,7 @@ public class NumLock : MonoBehaviour
     public void LockExit()
     {
         numLock.SetActive(false);
-        observationAdoor.SetActive(true);
+        //observationAdoor.SetActive(true);
         Time.timeScale = 1;
     }
     public void UnLock()
@@ -202,7 +205,12 @@ public class NumLock : MonoBehaviour
         if (Locknum1 == 1 && Locknum2 == 9 && Locknum3 == 3 && Locknum4 == 7)
         {
             numLock.SetActive(false);
-            observationAdoor.SetActive(true);
+            keyBoxOpen.SetActive(true);
+            ply.GetComponent<PlayerMouseControll>().MaintainPosition();
+            ply.GetComponent<PlayerMouseControll>().StartMove();
+            keyBoxFull.GetComponent<UItriggerOff>().TriggerOn();
+            keyBoxFull.SetActive(false);
+            //observationAdoor.SetActive(true);
             Time.timeScale = 1;
         }
     }

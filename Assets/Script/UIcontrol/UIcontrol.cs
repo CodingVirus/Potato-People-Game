@@ -8,6 +8,7 @@ public class UIcontrol : MonoBehaviour
     Vector3 MousePostion;
     Camera Camera;
     public GameObject ply;
+    public GameObject gameData;
 
     private void Start()
     {
@@ -27,7 +28,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
-
+                    hit.transform.GetComponent<UItriggerOff>().TriggerOff();
                     //Invoke("PlyMoveStart", 0.5f);
                 }
 
@@ -35,7 +36,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
-
+                    hit.transform.GetComponent<UItriggerOff>().TriggerOff();
                     //Invoke("PlyMoveStart", 0.5f);
                 }
 
@@ -43,7 +44,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
-
+                    hit.transform.GetComponent<UItriggerOff>().TriggerOff();
                     //Invoke("PlyMoveStart", 0.5f);
                 }
 
@@ -51,6 +52,7 @@ public class UIcontrol : MonoBehaviour
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
                     hit.transform.GetChild(0).gameObject.SetActive(true);
+                    hit.transform.GetComponent<UItriggerOff>().TriggerOff();
 
                     //Invoke("PlyMoveStart", 0.5f);
                 }

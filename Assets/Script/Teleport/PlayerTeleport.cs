@@ -37,24 +37,13 @@ public class PlayerTeleport : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(transferStart == true)
+        transferStart = true;
+        currentTeleporter = other.gameObject;
+        if (transferStart == true)
         {
-            if (other.name == "door3_1")
+            if (other.name == "door3_1" && gameData.GetComponent<GameDataControl>().prisonDoor == false)
             {
                 currentTeleporter = null;
-                Inventory inven = this.GetComponent<Inventory>();
-
-                if (inven.FindItem("Key(Clone)") == true)
-                {
-                    currentTeleporter = other.gameObject;
-                    Invoke("DoorEnter", 0.5f);
-                    gameData.GetComponent<GameDataControl>().prisonDoor = true;
-                    dialogueData.GetComponent<UseItem>().UseItemDialogue("Key(Clone)");
-                    other.transform.GetChild(1).position += new Vector3(-2, 0, 0);
-                    other.name = "door3_1_open";
-                    transferStart = false;
-                }
-
 
             }
 
@@ -65,7 +54,6 @@ public class PlayerTeleport : MonoBehaviour
                 if (inven.FindItem("CardKeyA1(Clone)") == true)
                 {
                     currentTeleporter = other.gameObject;
-                    Invoke("DoorEnter", 0.5f);
                     transferStart = false;
                 }
             }
@@ -89,7 +77,6 @@ public class PlayerTeleport : MonoBehaviour
                 if (gameData.GetComponent<GameDataControl>().b3Door == true)
                 {
                     currentTeleporter = other.gameObject;
-                    Invoke("DoorEnter", 0.5f);
                     transferStart = false;
                 }
             }
@@ -100,7 +87,6 @@ public class PlayerTeleport : MonoBehaviour
                 if (gameData.GetComponent<GameDataControl>().CrematoriumPassword == true)
                 {
                     currentTeleporter = other.gameObject;
-                    Invoke("DoorEnter", 0.5f);
                     transferStart = false;
                 }
             }
@@ -111,7 +97,6 @@ public class PlayerTeleport : MonoBehaviour
                 if (gameData.GetComponent<GameDataControl>().clueyQuest == true)
                 {
                     currentTeleporter = other.gameObject;
-                    Invoke("DoorEnter", 0.5f);
                     transferStart = false;
                 }
             }
@@ -123,7 +108,6 @@ public class PlayerTeleport : MonoBehaviour
                 if (inven.FindItem("OfficeKey(Clone)") == true)
                 {
                     currentTeleporter = other.gameObject;
-                    Invoke("DoorEnter", 0.5f);
                     gameData.GetComponent<GameDataControl>().officeDoor = true;
                     dialogueData.GetComponent<UseItem>().UseItemDialogue("OfficeKey(Clone)");
                     other.name = "door1_1_open";
@@ -138,7 +122,6 @@ public class PlayerTeleport : MonoBehaviour
                 if (inven.FindItem("FinalCardKey(Clone)") == true)
                 {
                     currentTeleporter = other.gameObject;
-                    Invoke("DoorEnter", 0.5f);
                     gameData.GetComponent<GameDataControl>().b1Door = true;
                     gameData.GetComponent<GameDataControl>().doctor.SetActive(false);
                     gameData.GetComponent<GameDataControl>().endingDoctor.SetActive(true);
@@ -149,11 +132,19 @@ public class PlayerTeleport : MonoBehaviour
             else
             {
                 currentTeleporter = other.gameObject;
-                Invoke("DoorEnter", 0.5f);
                 transferStart = false;
-                //Debug.Log("이동");
             }
         }
+    }
+
+    public void OpenPrisonDoor(GameObject other)
+    {
+        currentTeleporter = other.gameObject;
+        gameData.GetComponent<GameDataControl>().prisonDoor = true;
+        DoorEnter();
+        dialogueData.GetComponent<UseItem>().UseItemDialogue("Key(Clone)");
+        other.transform.GetChild(2).position += new Vector3(-2, 0, 0);
+        other.name = "door3_1_open";
     }
 
     public void DoorEnter() 
@@ -161,7 +152,6 @@ public class PlayerTeleport : MonoBehaviour
         if(currentTeleporter == null)
         {
             transferStart = false;
-            //Debug.Log("Moving : 이동 false");
         }
         else
         {
