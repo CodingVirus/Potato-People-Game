@@ -10224,6 +10224,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 3575327342792731262, guid: 5ee79d01b3ddb47a2baa174defce4690, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 732080991}
+    - target: {fileID: 3575327342792731262, guid: 5ee79d01b3ddb47a2baa174defce4690, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1363097356}
+    - target: {fileID: 3575327342792731262, guid: 5ee79d01b3ddb47a2baa174defce4690, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SlotOpen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575327342792731262, guid: 5ee79d01b3ddb47a2baa174defce4690, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: StopMove
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ee79d01b3ddb47a2baa174defce4690, type: 3}
 --- !u!224 &470606089 stripped
@@ -16777,6 +16793,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2520543597663714891, guid: 2383c119dc9bd47eb9192566bf5944ba, type: 3}
   m_PrefabInstance: {fileID: 732080989}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &732080991 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2520543597663714895, guid: 2383c119dc9bd47eb9192566bf5944ba, type: 3}
+  m_PrefabInstance: {fileID: 732080989}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 811d2048a4855458dbee462ab75e1ddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &738813543
 GameObject:
   m_ObjectHideFlags: 0
