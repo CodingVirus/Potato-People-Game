@@ -11,15 +11,13 @@ public class CursorController : MonoBehaviour
 
     private void Awake() 
     {
-        if(instance == null)
-        {
+        if(instance == null){
             instance = this;
-            DontDestroyOnLoad(gameObject);
         }
-        else
-        {
+        else if(instance != this){
             Destroy(gameObject);
         }
+        DontDestroyOnLoad(gameObject);
     }
 
     private void Start() 

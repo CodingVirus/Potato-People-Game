@@ -9,7 +9,6 @@ public class Hide : ClickableHide
     private void OnMouseDown() 
     {
         player.GetComponent<PlayerHide>().hideStart = true;
-        Debug.Log("MouseDown : true");
     }
 
 }

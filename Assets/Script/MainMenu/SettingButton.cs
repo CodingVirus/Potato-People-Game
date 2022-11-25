@@ -1,31 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SettingButton : MonoBehaviour
 {
-
+    public GameObject menu;
     public GameObject SettingMenu;
-    public bool state = false;
+    private int count = 0;
 
-    void Start()
+    private void Start() 
     {
-
+        menu.gameObject.SetActive(false);
     }
 
-    void Update()
+    public void GoMenu()
     {
-
+        Debug.Log("열림");
+        menu.gameObject.SetActive(true);
+        count++;
+        if(count == 2)
+        {
+            menu.gameObject.SetActive(false);
+            Debug.Log("닫음");
+            count = 0;
+        }
     }
 
-    public void settingMenu()
+    public void GoMain()
     {
-        state = true;
-        SettingMenu.SetActive(state);
+        SceneManager.LoadScene(0);
     }
-    public void settingMenuExit()
+
+    public void GoSetting()
     {
         
-        SettingMenu.SetActive(state);
+        SettingMenu.SetActive(true);
+    }
+
+    public void CloseSetting()
+    {
+        SettingMenu.SetActive(false);
     }
 }

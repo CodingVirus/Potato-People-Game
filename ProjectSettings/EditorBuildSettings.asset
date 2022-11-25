@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sokoban.unity
     guid: e4b5f1f55cd087c46b10a136699cb7c2
+  - enabled: 1
+    path: Assets/Scenes/game.unity
+    guid: 2e62e8d8e625541658873a4eeaf0a55d
   m_configObjects: {}
