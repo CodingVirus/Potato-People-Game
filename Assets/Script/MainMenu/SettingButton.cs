@@ -11,7 +11,7 @@ public class SettingButton : MonoBehaviour
 
     private void Start() 
     {
-        menu.gameObject.SetActive(false);
+        menu.gameObject.SetActive(true);
     }
 
     public void GoMenu()
