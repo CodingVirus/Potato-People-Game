@@ -8,6 +8,7 @@ public class Test : MonoBehaviour
 
     private void OnMouseDown()
     {
-        test.GetComponent<GameDataControl>().PlayerMouseControllOff();
+        test.GetComponent<PlayerMouseControll>().StopMove();
+        this.transform.GetChild(0).gameObject.SetActive(true);
     }
 }
