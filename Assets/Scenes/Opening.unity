@@ -357,7 +357,7 @@ MonoBehaviour:
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
   endValueString: "\uC9C0\uAE08\uC740 \uC8FC\uC778\uACF5\uC774 \uC790\uB3D9\uCC28\uB97C
-    \uD0C0\uACE0\n\uBC15\uC0AC\uC758 \uC9D1\uC5D0 \uAC00\uB294\uC911\uC785\uB2C8\uB2E4.\n\uC8FC\uC778\uACF5\uC740
+    \uD0C0\uACE0\n\uBC15\uC0AC\uC758 \uC9D1\uC73C\uB85C \uAC00\uB294\uC911\uC785\uB2C8\uB2E4.\n\uC8FC\uC778\uACF5\uC740
     \uC774\uB530\uAC00 \uCC28\uB97C \uB9C8\uC2DC\uACE0 \n\uAE30\uC808\uD560 \uC608\uC815\uC785\uB2C8\uB2E4."
   endValueRect:
     serializedVersion: 2
@@ -1437,8 +1437,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 79bc22838bb2bc448a317458433d700a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1526,7 +1526,7 @@ MonoBehaviour:
   hasOnStepComplete: 0
   hasOnComplete: 1
   hasOnTweenCreated: 0
-  hasOnRewind: 1
+  hasOnRewind: 0
   onStart:
     m_PersistentCalls:
       m_Calls: []
@@ -1564,7 +1564,7 @@ MonoBehaviour:
   targetGO: {fileID: 0}
   tweenTargetIsTargetGO: 1
   delay: 0.92
-  duration: 6.38
+  duration: 2.18
   easeType: 1
   easeCurve:
     serializedVersion: 2
@@ -1593,7 +1593,7 @@ MonoBehaviour:
   loopType: 0
   loops: 1
   id: 
-  isRelative: 1
+  isRelative: 0
   isFrom: 0
   isIndependentUpdate: 0
   autoKill: 1
@@ -1610,9 +1610,8 @@ MonoBehaviour:
   endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
-  endValueString: "\uC774\uAC83\uC740 \uD14C\uC2A4\uD2B8\uC6A9 \uD14D\uC2A4\uD2B8
-    \uC785\uB2C8\uB2E4.\n\uC548\uB155\uD558\uC138\uC694 \uC81C \uC774\uB984\uC740
-    \uC774\uBBFC\uC6A9 \uC785\uB2C8\uB2E4.\n\uB9CC\uB098\uC11C \uBC18\uAC11\uC2B5\uB2C8\uB2E4!!"
+  endValueString: "\uC9C0\uAE08\uC740 \uC8FC\uC778\uACF5\uC774 \uC804\uD654\uB97C
+    \uD558\uACE0 \uC788\uC2B5\uB2C8\uB2E4."
   endValueRect:
     serializedVersion: 2
     x: 0

@@ -1111,6 +1111,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739934972525330869}
     m_Modifications:
+    - target: {fileID: 377096037397319865, guid: a9d33c374f962d5418c11ff1b1c16189, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 377096037397319865, guid: a9d33c374f962d5418c11ff1b1c16189, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 377096037397319865, guid: a9d33c374f962d5418c11ff1b1c16189, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2132517567182939554, guid: a9d33c374f962d5418c11ff1b1c16189, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
