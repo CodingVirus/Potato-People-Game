@@ -3802,7 +3802,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 576.09436
-        y: 144.87628
+        y: 145.89255
         width: 160
         height: 30
     - id: 3
@@ -6531,14 +6531,15 @@ MonoBehaviour:
         destinationDialogueID: 4
         isConnector: 0
         priority: 2
-      conditionsString: FindItem("OfficeKey(Clone)")  == true
+      conditionsString: FindItem("OfficeKey(Clone)")  == true and (ReturnOfficeDoor() 
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 415
+        x: 418
         y: 169
         width: 160
         height: 30

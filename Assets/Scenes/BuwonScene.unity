@@ -44840,6 +44840,50 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - guid: 6712c229-360a-4aa6-83c1-155d702e6d1f
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1157142035}
+          m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
+          m_MethodName: PlayerMouseControllOn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1363097357}
+          m_TargetAssemblyTypeName: PlayerTeleport, Assembly-CSharp
+          m_MethodName: OpenOfficeDoor
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 181428001}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - guid: 9b08f46d-0a0b-4b86-b51b-ce2dc9c38b8a
+    onExecute:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1157142035}
+          m_TargetAssemblyTypeName: GameDataControl, Assembly-CSharp
+          m_MethodName: PlayerMouseControllOn
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!4 &1814300056
 Transform:
   m_ObjectHideFlags: 0
