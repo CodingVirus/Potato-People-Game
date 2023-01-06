@@ -104,6 +104,7 @@ public class PlayerTeleport : MonoBehaviour
             else if (other.name == "door1_1")
             {
                 currentTeleporter = null;
+                /*
                 Inventory inven = this.GetComponent<Inventory>();
                 if (inven.FindItem("OfficeKey(Clone)") == true)
                 {
@@ -113,6 +114,7 @@ public class PlayerTeleport : MonoBehaviour
                     other.name = "door1_1_open";
                     transferStart = false;
                 }
+                */
             }
 
             else if (other.name == "Upstairs_B1")

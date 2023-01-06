@@ -93,6 +93,7 @@ public class GameDataControl : MonoBehaviour
     public void DoorOpen3F()
     {
         b3Door = true;
+        //Vector3 des = new Vector3(-1.77f, -0.13f, 0);
         door3.transform.position += new Vector3(-2, 0, 0);
     }
     public void SetMonsterState()

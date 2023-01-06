@@ -6,12 +6,15 @@ public class CirCuitOn : MonoBehaviour
 {
     public GameObject CirCuit;
     public GameObject machinedoor;
+    public GameObject ply;
 
     private void OnMouseDown()
     {
+        this.GetComponent<UItriggerOff>().TriggerOff();
+        ply.GetComponent<PlayerMouseControll>().StopMove();
         CirCuit.SetActive(true);
-        machinedoor.SetActive(false);
-        Time.timeScale = 0;
+        
+        //Time.timeScale = 0;
     }
     void Start()
     {
