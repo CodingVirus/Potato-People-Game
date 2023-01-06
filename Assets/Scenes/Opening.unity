@@ -1012,7 +1012,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Next
 --- !u!222 &1374648185
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1610,8 +1610,7 @@ MonoBehaviour:
   endValueV3: {x: 0, y: 0, z: 0}
   endValueV2: {x: 0, y: 0}
   endValueColor: {r: 1, g: 1, b: 1, a: 1}
-  endValueString: "\uC9C0\uAE08\uC740 \uC8FC\uC778\uACF5\uC774 \uC804\uD654\uB97C
-    \uD558\uACE0 \uC788\uC2B5\uB2C8\uB2E4."
+  endValueString: "\uC5EC\uBCF4\uC138\uC694?"
   endValueRect:
     serializedVersion: 2
     x: 0
