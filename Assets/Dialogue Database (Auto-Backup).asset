@@ -3732,14 +3732,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: ReturnPrisonDoor()  == false and (FindItem("Key(Clone)") 
-        == false) and (FindItem("")  == true) and (FindItem("")  == true)
+        == false)
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 274.0619
+        x: 275.07812
         y: 147.98373
         width: 160
         height: 30
@@ -3794,15 +3794,15 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: ReturnPrisonDoor()  == false and (FindItem("Key(Clone)") 
-        == true) and (FindItem("")  == true)
+        == true)
       userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 576.09436
-        y: 145.89255
+        x: 574.0618
+        y: 144.87628
         width: 160
         height: 30
     - id: 3
@@ -3838,7 +3838,7 @@ MonoBehaviour:
       - title: EventGuid
         value: 0e99be8d-3bad-4362-9f7c-b20621a9398f
         type: 0
-        typeString: CustomFieldType_Text
+        typeString: 
       conversationID: 15
       isRoot: 0
       isGroup: 0
@@ -6423,8 +6423,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 278
-        y: 65
+        x: 283
+        y: 120
         width: 160
         height: 30
     - id: 1
@@ -6478,7 +6478,7 @@ MonoBehaviour:
       canvasRect:
         serializedVersion: 2
         x: 215
-        y: 173
+        y: 194
         width: 160
         height: 30
     - id: 2
@@ -6504,7 +6504,7 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\uC0AC\uBB34\uC2E4 \uC5F4\uC1E0\uB97C \uC0AC\uC6A9\uD558\uC2DC\uACA0\uB2C8\uAE4C?"
+        value: "\uC0AC\uBB34\uC2E4 \uC5F4\uC1E0\uB97C \uC0AC\uC6A9\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
@@ -6539,8 +6539,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 418
-        y: 169
+        x: 414
+        y: 190
         width: 160
         height: 30
     - id: 3
@@ -6566,13 +6566,17 @@ MonoBehaviour:
         type: 0
         typeString: CustomFieldType_Text
       - title: Dialogue Text
-        value: "\uB124"
+        value: "\uC608"
         type: 0
         typeString: CustomFieldType_Text
       - title: Sequence
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 6712c229-360a-4aa6-83c1-155d702e6d1f
+        type: 0
+        typeString: 
       conversationID: 24
       isRoot: 0
       isGroup: 0
@@ -6582,14 +6586,14 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: ReturnClueyQuestActive()
+      userScript: 
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 327
-        y: 239
+        x: 293
+        y: 272
         width: 160
         height: 30
     - id: 4
@@ -6622,6 +6626,10 @@ MonoBehaviour:
         value: 
         type: 0
         typeString: CustomFieldType_Text
+      - title: EventGuid
+        value: 9b08f46d-0a0b-4b86-b51b-ce2dc9c38b8a
+        type: 0
+        typeString: 
       conversationID: 24
       isRoot: 0
       isGroup: 0
@@ -6637,8 +6645,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 550
-        y: 237
+        x: 509
+        y: 271
         width: 160
         height: 30
     entryGroups: []
