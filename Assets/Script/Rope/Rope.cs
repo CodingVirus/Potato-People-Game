@@ -14,6 +14,7 @@ public class Rope : MonoBehaviour
   
     public void Press_MouseL()
     {
+        
         if (Input.GetMouseButtonUp(0))
         {
             if (mouseL <= 5)
@@ -62,6 +63,7 @@ public class Rope : MonoBehaviour
         {
             MouseLR.SetActive(false);
             rope.SetActive(false);
+            Time.timeScale = 1;
 
         }
     }
@@ -70,7 +72,7 @@ public class Rope : MonoBehaviour
 
     void Start()
     {
-       
+        Time.timeScale = 0;
 
     }
 
