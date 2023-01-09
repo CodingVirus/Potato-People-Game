@@ -4,89 +4,66 @@ using UnityEngine;
 
 public class Rope : MonoBehaviour
 {
-    public GameObject W;
-    public GameObject A;
-    public GameObject D;
+    public GameObject MouseL;
+    public GameObject MouseR;
+    public GameObject MouseLR;
     public GameObject rope;
-    public GameObject LeftRight;
-    public int w;
-    public int a;
-    public int d;
-    public int leftRight;
+    public int mouseL;
+    public int mouseR;
+    public int mouseLR;
   
-
-
-
-    
-
-
-    public void Press_W()
+    public void Press_MouseL()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        
+        if (Input.GetMouseButtonUp(0))
         {
-            if (w <= 5)
+            if (mouseL <= 5)
             {
-                w++;
+                mouseL++;
                 
             }
         }
-        if (w >= 5)
+        if (mouseL >= 5)
         {
-            W.SetActive(false);
-            A.SetActive(true);
+            MouseL.SetActive(false);
+            MouseR.SetActive(true);
             
         }
     }
-    public void Press_A()
+    public void Press_MouseR()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetMouseButtonUp(1))
         {
-            if (a <= 5)
+            if (mouseR <= 5)
             {
-                a++;
+                mouseR++;
                
             }
 
         }
-        if (a >= 5)
+        if (mouseR >= 5)
         {
-            A.SetActive(false);
-            D.SetActive(true);
+            MouseR.SetActive(false);
+            MouseLR.SetActive(true);
         }
     }
-    public void Press_D()
-    {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            if (d <= 5)
-            {
-                d++;
-                
-            }
-
-        }
-        if (d >= 5)
-        {
-            D.SetActive(false);
-            LeftRight.SetActive(true);
-
-        }
-    }
+  
     public void Press_LR()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetMouseButtonUp(0) && Input.GetMouseButtonUp(1))
         {
-            if (leftRight <= 5)
+            if (mouseLR <= 5)
             {
-                leftRight++;
+                mouseLR++;
 
             }
 
         }
-        if (leftRight >= 5)
+        if (mouseLR >= 5)
         {
-            LeftRight.SetActive(false);
+            MouseLR.SetActive(false);
             rope.SetActive(false);
+            Time.timeScale = 1;
 
         }
     }
@@ -95,18 +72,20 @@ public class Rope : MonoBehaviour
 
     void Start()
     {
-       
+        Time.timeScale = 0;
 
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        Press_W();
-        
-        Press_A();
-        Press_D();
-        Press_LR();
+        Press_MouseL();
+       
+            Press_MouseR();
+            
+                Press_LR();
+         
+
        
     
 
