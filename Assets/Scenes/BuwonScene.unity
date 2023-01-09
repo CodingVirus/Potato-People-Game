@@ -30296,6 +30296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rope
       objectReference: {fileID: 0}
+    - target: {fileID: 5830657799452349536, guid: b74b3a8fdad2be446aa3657812777f28, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5830657799452349548, guid: b74b3a8fdad2be446aa3657812777f28, type: 3}
       propertyPath: m_Pivot.x
       value: 0
