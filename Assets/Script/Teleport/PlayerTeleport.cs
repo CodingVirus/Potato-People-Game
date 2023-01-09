@@ -104,8 +104,9 @@ public class PlayerTeleport : MonoBehaviour
             else if (other.name == "door1_1")
             {
                 currentTeleporter = null;
+                /*
                 Inventory inven = this.GetComponent<Inventory>();
-                if (inven.FindItem("OfficeKey(Clone)") == true)
+                if (inven.FindItem("OfficeKey(Clone)") == true)
                 {
                     currentTeleporter = other.gameObject;
                     gameData.GetComponent<GameDataControl>().officeDoor = true;
@@ -113,6 +114,7 @@ public class PlayerTeleport : MonoBehaviour
                     other.name = "door1_1_open";
                     transferStart = false;
                 }
+                */
             }
 
             else if (other.name == "Upstairs_B1")
@@ -145,6 +147,16 @@ public class PlayerTeleport : MonoBehaviour
         dialogueData.GetComponent<UseItem>().UseItemDialogue("Key(Clone)");
         other.transform.GetChild(2).position += new Vector3(-2, 0, 0);
         other.name = "door3_1_open";
+    }
+
+    public void OpenOfficeDoor(GameObject other)
+    {
+        currentTeleporter = other.gameObject;
+        gameData.GetComponent<GameDataControl>().officeDoor = true;
+        DoorEnter();
+        dialogueData.GetComponent<UseItem>().UseItemDialogue("OfficeKey(Clone)");
+        //other.transform.GetChild(2).position += new Vector3(-2, 0, 0);
+        other.name = "door1_1_open";
     }
 
     public void DoorEnter() 

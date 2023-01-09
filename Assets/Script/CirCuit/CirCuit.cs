@@ -12,6 +12,7 @@ public class CirCuit : MonoBehaviour
     public GameObject machineDoor;
     public GameObject gameData;
     public GameObject ply;
+    public GameObject UiTriggerOn;
     public static int a1;
     public static int a2;
     public static int a3;
@@ -206,10 +207,17 @@ public class CirCuit : MonoBehaviour
             Debug.Log("UnLock");
             Circuit.SetActive(false);
             machineDoor.SetActive(true);
-            gameData.GetComponent<GameDataControl>().DoorOpen3F();
+
+            if (gameData.GetComponent<GameDataControl>().b3Door == false)
+            {
+                gameData.GetComponent<GameDataControl>().DoorOpen3F();
+            }
+
             ply.GetComponent<PlayerMouseControll>().MaintainPosition();
+            ply.GetComponent<PlayerMouseControll>().StartMove();
+            UiTriggerOn.GetComponent<UItriggerOff>().TriggerOn();
             //ply.GetComponent<PlayerMouseControll>().StartMove();
-            Time.timeScale = 1;
+            //Time.timeScale = 1;
         }
     }
    
