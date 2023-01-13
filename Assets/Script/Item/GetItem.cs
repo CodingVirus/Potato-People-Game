@@ -51,6 +51,7 @@ public class GetItem : MonoBehaviour
                         {
                             Instantiate(ItemList[6], inven.slots[i].slotObj.transform, false);
                             inven.slots[i].isEmpty = false;
+                            hit.transform.GetChild(1).gameObject.SetActive(false);
                             break;
                         }
                     }
@@ -91,6 +92,7 @@ public class GetItem : MonoBehaviour
                             {
                                 Instantiate(ItemList[1], inven.slots[i].slotObj.transform, false);
                                 inven.slots[i].isEmpty = false;
+                                hit.transform.GetChild(1).gameObject.SetActive(false);
                                 break;
                             }
                         }
