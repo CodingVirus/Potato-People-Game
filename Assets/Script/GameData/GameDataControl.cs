@@ -33,6 +33,16 @@ public class GameDataControl : MonoBehaviour
 
     public GameObject ventLadderState;
 
+    public void MainCameraUIcontrolOff()
+    {
+        mainCamera.GetComponent<UIcontrol>().enabled = false;
+    }
+
+    public void MainCameraUIcontrolOn()
+    {
+        mainCamera.GetComponent<UIcontrol>().enabled = true;
+    }
+
     public void MainCameraGetItemOff()
     {
         mainCamera.GetComponent<GetItem>().enabled = false;
