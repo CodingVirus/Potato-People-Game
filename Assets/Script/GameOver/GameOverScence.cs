@@ -3,18 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameOverScence : MonoBehaviour
+public class GameOver : MonoBehaviour
 {
-    public void Mainscence()
-    {
-        SceneManager.LoadScene("MainScene");
-    }
+    
     void Start()
     {
         
     }
 
-    
+    // Update is called once per frame
     void Update()
     {
         

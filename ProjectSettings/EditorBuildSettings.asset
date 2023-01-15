@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/game.unity
     guid: 2e62e8d8e625541658873a4eeaf0a55d
+  - enabled: 1
+    path: Assets/Scenes/Rope.unity
+    guid: a544497ad4b85874ea7d666eea910e5a
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: e5f4906cb80ea9d4abd0e8cb0e2fb79e
   m_configObjects: {}
