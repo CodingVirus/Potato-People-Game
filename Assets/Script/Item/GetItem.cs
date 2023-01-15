@@ -41,6 +41,25 @@ public class GetItem : MonoBehaviour
                     Invoke("PlyMoveStart", 0.5f);
                     hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                 }
+
+                else if (hit.transform.gameObject.name == "Drug Combiner")
+                {
+                    ply.GetComponent<PlayerMouseControll>().StopMove();
+                    Inventory inven = ply.GetComponent<Inventory>();
+                    hit.transform.GetChild(0).gameObject.SetActive(false);
+                    for (int i = 0; i < inven.slots.Count; i++)
+                    {
+                        if (inven.slots[i].isEmpty)
+                        {
+                            Instantiate(ItemList[0], inven.slots[i].slotObj.transform, false);
+                            inven.slots[i].isEmpty = false;
+                            break;
+                        }
+                    }
+                    Invoke("PlyMoveStart", 0.5f);
+                    hit.transform.GetComponent<BoxCollider2D>().enabled = false;
+                }
+
                 else if (hit.transform.gameObject.name == "key box (open)")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();

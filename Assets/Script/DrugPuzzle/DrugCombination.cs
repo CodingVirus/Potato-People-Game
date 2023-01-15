@@ -10,6 +10,7 @@ public class DrugCombination : MonoBehaviour
     public GameObject drugCombinerPlayerObj;
     public GameObject drugItem;
     public GameObject gameData;
+    public GameObject completeDrug;
 
     public Button fourButton;
 
@@ -141,7 +142,6 @@ public class DrugCombination : MonoBehaviour
             five.GetComponent<Text>().text = fiveCurrentState + "L";
             three.GetComponent<Text>().text = threeCurrentState + "L";
             fourButton.GetComponent<Button>().interactable = false;
-            
         }
 
         else
@@ -210,6 +210,9 @@ public class DrugCombination : MonoBehaviour
 
             notice.GetComponent<Text>().text = "Success!!!";
             Invoke("NoticeInitialization", 1.0f);
+
+            completeDrug.SetActive(true);
+            completeDrug.transform.parent.gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
             Inventory inven = drugCombinerPlayerObj.GetComponent<Inventory>();
             for (int i = 0; i < inven.slots.Count; i++)
