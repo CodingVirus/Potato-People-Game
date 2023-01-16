@@ -20,7 +20,7 @@ public class ComputerControl : MonoBehaviour
             Invoke("DelayActive", 0.2f);
         }
 
-        else
+        else if (gameData.GetComponent<GameDataControl>().clueyQuestActive == true)
         {
             ply.GetComponent<PlayerMouseControll>().StopMove();
             computer.SetActive(true);
@@ -45,6 +45,11 @@ public class ComputerControl : MonoBehaviour
     private void DelayActive()
     {
         this.gameObject.SetActive(false);
+    }
+
+    public void ComputerControlOn()
+    {
+        this.GetComponent<ComputerControl>().enabled = true;
     }
 
     public void TriggerOn()
