@@ -4124,7 +4124,7 @@ MonoBehaviour:
   triggerList:
   - {fileID: 192544350}
   - {fileID: 796114878}
-  inven: {fileID: 0}
+  inven: {fileID: 1629717660}
 --- !u!1 &195078217
 GameObject:
   m_ObjectHideFlags: 0
@@ -13427,7 +13427,7 @@ MonoBehaviour:
   triggerList:
   - {fileID: 595476596}
   - {fileID: 1472247896}
-  inven: {fileID: 0}
+  inven: {fileID: 1629717660}
 --- !u!1 &598292334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7929067444644701940, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
@@ -13880,6 +13880,10 @@ PrefabInstance:
       propertyPath: gameData
       value: 
       objectReference: {fileID: 1157142034}
+    - target: {fileID: 5581950222296790880, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: inven
+      value: 
+      objectReference: {fileID: 1629717660}
     - target: {fileID: 5581950222296790880, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: triggerList.Array.size
       value: 5
@@ -24313,6 +24317,10 @@ PrefabInstance:
       value: 120.00003
       objectReference: {fileID: 0}
     - target: {fileID: 5581950222296790880, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: inven
+      value: 
+      objectReference: {fileID: 1629717660}
+    - target: {fileID: 5581950222296790880, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: triggerList.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -24468,9 +24476,17 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7929067444644701938, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7929067444644701940, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: m_Name
       value: computer 1_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7929067444644701940, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7929067444644701941, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: m_RootOrder
@@ -24865,7 +24881,7 @@ MonoBehaviour:
   - {fileID: 1001913916}
   - {fileID: 2004318709}
   - {fileID: 1053843900}
-  inven: {fileID: 0}
+  inven: {fileID: 1629717660}
 --- !u!1 &1005345002
 GameObject:
   m_ObjectHideFlags: 0
@@ -36624,6 +36640,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 120.00003
       objectReference: {fileID: 0}
+    - target: {fileID: 5581950222296790880, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: inven
+      value: 
+      objectReference: {fileID: 1629717660}
     - target: {fileID: 5581950222296790880, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: triggerList.Array.size
       value: 2
