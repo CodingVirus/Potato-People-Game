@@ -14,12 +14,20 @@ public class ComputerControl : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if (!enabled) return;
-        ply.GetComponent<PlayerMouseControll>().StopMove();
-        computer.SetActive(true);
-        this.GetComponent<UItriggerOff>().TriggerOff();
-        gameData.GetComponent<GameDataControl>().MainCameraGetItemOff();
-        gameData.GetComponent<GameDataControl>().MainCameraUIcontrolOff();
+        if (!enabled)
+        {
+            ply.GetComponent<PlayerMouseControll>().StopMove();
+            Invoke("DelayActive", 0.2f);
+        }
+
+        else
+        {
+            ply.GetComponent<PlayerMouseControll>().StopMove();
+            computer.SetActive(true);
+            this.GetComponent<UItriggerOff>().TriggerOff();
+            gameData.GetComponent<GameDataControl>().MainCameraGetItemOff();
+            gameData.GetComponent<GameDataControl>().MainCameraUIcontrolOff();
+        }
     }
 
     private void OnMouseEnter()
@@ -32,6 +40,11 @@ public class ComputerControl : MonoBehaviour
     {
         
         ply.GetComponent<PlayerMouseControll>().StartMove();
+    }
+
+    private void DelayActive()
+    {
+        this.gameObject.SetActive(false);
     }
 
     public void TriggerOn()
