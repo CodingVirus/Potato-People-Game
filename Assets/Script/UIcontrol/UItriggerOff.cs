@@ -5,9 +5,11 @@ using UnityEngine;
 public class UItriggerOff : MonoBehaviour
 {
     public List<GameObject> triggerList = new List<GameObject>();
+    public GameObject inven;
 
     public void TriggerOff()
     {
+        inven.SetActive(false);
         //stopTrigger.GetComponent<BoxCollider2D>().enabled = false;
         for (int i = 0; i < triggerList.Count; i++)
         {
@@ -23,6 +25,7 @@ public class UItriggerOff : MonoBehaviour
 
     public void TriggerOn()
     {
+        inven.SetActive(true);
         //stopTrigger.GetComponent<BoxCollider2D>().enabled = true;
         for (int i = 0; i < triggerList.Count; i++)
         {

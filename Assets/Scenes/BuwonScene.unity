@@ -4124,6 +4124,7 @@ MonoBehaviour:
   triggerList:
   - {fileID: 192544350}
   - {fileID: 796114878}
+  inven: {fileID: 0}
 --- !u!1 &195078217
 GameObject:
   m_ObjectHideFlags: 0
@@ -13426,6 +13427,7 @@ MonoBehaviour:
   triggerList:
   - {fileID: 595476596}
   - {fileID: 1472247896}
+  inven: {fileID: 0}
 --- !u!1 &598292334 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7929067444644701940, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
@@ -17730,6 +17732,7 @@ MonoBehaviour:
   - {fileID: 1102969914}
   - {fileID: 769125450}
   - {fileID: 598292334}
+  inven: {fileID: 1629717660}
 --- !u!1 &772249526
 GameObject:
   m_ObjectHideFlags: 0
@@ -24862,6 +24865,7 @@ MonoBehaviour:
   - {fileID: 1001913916}
   - {fileID: 2004318709}
   - {fileID: 1053843900}
+  inven: {fileID: 0}
 --- !u!1 &1005345002
 GameObject:
   m_ObjectHideFlags: 0
@@ -36476,6 +36480,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1707785856314465018, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707785857401858417, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2120653709323544037, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -36581,6 +36593,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4855587727423748819, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070807124312098075, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070807125399467664, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -43758,6 +43778,7 @@ MonoBehaviour:
   - {fileID: 1811542505}
   - {fileID: 1792947469}
   - {fileID: 1964328841}
+  inven: {fileID: 1629717660}
 --- !u!1 &1794875500
 GameObject:
   m_ObjectHideFlags: 0
@@ -44499,6 +44520,7 @@ MonoBehaviour:
   - {fileID: 1792947469}
   - {fileID: 1811542505}
   - {fileID: 1964328841}
+  inven: {fileID: 1629717660}
 --- !u!1 &1814300054
 GameObject:
   m_ObjectHideFlags: 0
@@ -46803,6 +46825,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1707785856314465018, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1707785857401858417, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2120653709323544037, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -46911,6 +46941,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5070807124312098075, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5070807125399467664, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5517910793109151363, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -46931,6 +46969,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 119.99991
       objectReference: {fileID: 0}
+    - target: {fileID: 5581950222296790880, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
+      propertyPath: inven
+      value: 
+      objectReference: {fileID: 1629717660}
     - target: {fileID: 5581950222296790880, guid: f9861d0dbf84d4ad08d59f9635b74c98, type: 3}
       propertyPath: triggerList.Array.size
       value: 3
