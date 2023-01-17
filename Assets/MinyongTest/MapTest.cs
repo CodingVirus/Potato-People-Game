@@ -17,34 +17,38 @@ public class MapTest : MonoBehaviour
 
         public mapPostion(float a, float b, float c, float d)
         {
-            minX = a;
-            maxX = b;
-            minY = c;
-            maxY = d;
+            this.minX = a;
+            this.maxX = b;
+            this.minY = c;
+            this.maxY = d;
 
-            arr[0] = minX;
-            arr[1] = maxX;
-            arr[2] = minY;
-            arr[3] = maxY;
+            this.arr[0] = minX;
+            this.arr[1] = maxX;
+            this.arr[2] = minY;
+            this.arr[3] = maxY;
         }
 
         public bool comparePosition(float[] cmp)
         {
             for (int i = 0; i < 4; i++)
             {
-                if (arr[i] == cmp[i])
+                if (this.arr[i] == cmp[i])
                 {
                     count++;
                 }
             }
 
+            Debug.Log(count);
+
             if (count >= 4)
             {
+                count = 0;
                 return true;
             }
 
             else
             {
+                count = 0;
                 return false;
             }
             
@@ -71,18 +75,4 @@ public class MapTest : MonoBehaviour
             
         }
     }
-
-    /*
- 3층 
--45
-11
--72
--61
-
-2층
--45
-30
--46
--35
-     */ 
 }

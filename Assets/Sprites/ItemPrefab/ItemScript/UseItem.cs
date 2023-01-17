@@ -9,7 +9,6 @@ public class UseItem : MonoBehaviour
 
     public void Useitem()
     {
-        //playerObj.GetComponent<PlayerMouseControll>().StopMove();
         num = int.Parse(this.name.Substring(this.name.IndexOf("_") + 1));
         
         if (this.transform.GetChild(0).name == "Coke(Clone)")
