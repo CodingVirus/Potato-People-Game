@@ -14,7 +14,7 @@ public class GameDataControl : MonoBehaviour
     public GameObject mainCamera;
 
     public bool b3Door = false;
-    public bool b2Door = false;
+    //public bool b2Door = false;
     public bool b1Door = false;
     public bool prisonDoor = false;
     public bool officeDoor = false;
@@ -81,7 +81,7 @@ public class GameDataControl : MonoBehaviour
         {
             cluey.SetActive(true);
             clueyDie.SetActive(false);
-        }    
+        }
     }
 
     public void ClueyQuestClear()
@@ -103,8 +103,8 @@ public class GameDataControl : MonoBehaviour
     public void DoorOpen3F()
     {
         b3Door = true;
-        //Vector3 des = new Vector3(-1.77f, -0.13f, 0);
         door3.transform.position += new Vector3(-2, 0, 0);
+        cirCuitGame = true;
     }
     public void SetMonsterState()
     {
