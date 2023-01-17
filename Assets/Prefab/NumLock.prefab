@@ -421,8 +421,11 @@ MonoBehaviour:
   Num9: {fileID: 666685224779925447}
   Num0: {fileID: 666685226111777224}
   NumList: []
+  ply: {fileID: 0}
   numLock: {fileID: 666685224843394810}
   observationAdoor: {fileID: 0}
+  keyBoxOpen: {fileID: 0}
+  keyBoxFull: {fileID: 0}
   clip:
   - {fileID: 8300000, guid: 379f63f16c251784482f05dcdc7f7af6, type: 3}
   - {fileID: 8300000, guid: 85c4ffde9d0b84d4195b3d912c199d10, type: 3}
@@ -756,8 +759,11 @@ MonoBehaviour:
   Num9: {fileID: 666685226246741066}
   Num0: {fileID: 666685226086297254}
   NumList: []
+  ply: {fileID: 0}
   numLock: {fileID: 666685224843394810}
   observationAdoor: {fileID: 0}
+  keyBoxOpen: {fileID: 0}
+  keyBoxFull: {fileID: 0}
   clip:
   - {fileID: 8300000, guid: 379f63f16c251784482f05dcdc7f7af6, type: 3}
   - {fileID: 8300000, guid: 85c4ffde9d0b84d4195b3d912c199d10, type: 3}
@@ -1541,8 +1547,11 @@ MonoBehaviour:
   Num9: {fileID: 666685226246741066}
   Num0: {fileID: 666685226086297254}
   NumList: []
+  ply: {fileID: 0}
   numLock: {fileID: 666685224843394810}
   observationAdoor: {fileID: 0}
+  keyBoxOpen: {fileID: 0}
+  keyBoxFull: {fileID: 0}
   clip:
   - {fileID: 8300000, guid: 379f63f16c251784482f05dcdc7f7af6, type: 3}
   - {fileID: 8300000, guid: 85c4ffde9d0b84d4195b3d912c199d10, type: 3}
@@ -2217,6 +2226,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: NumLockOn, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: NumLockOn, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &666685225668958087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2229,6 +2262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76ee3777dee3f0a42a3289cdf90d87ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ply: {fileID: 0}
   NumLock: {fileID: 666685224843394810}
   ObservationAdoor: {fileID: 0}
 --- !u!1 &666685225698509350
@@ -2399,8 +2433,11 @@ MonoBehaviour:
   Num9: {fileID: 666685226297734238}
   Num0: {fileID: 666685225070893427}
   NumList: []
+  ply: {fileID: 0}
   numLock: {fileID: 666685224843394810}
   observationAdoor: {fileID: 0}
+  keyBoxOpen: {fileID: 0}
+  keyBoxFull: {fileID: 0}
   clip:
   - {fileID: 8300000, guid: 379f63f16c251784482f05dcdc7f7af6, type: 3}
   - {fileID: 8300000, guid: 85c4ffde9d0b84d4195b3d912c199d10, type: 3}
@@ -3353,8 +3390,11 @@ MonoBehaviour:
   Num9: {fileID: 666685225825729923}
   Num0: {fileID: 666685225841603434}
   NumList: []
+  ply: {fileID: 0}
   numLock: {fileID: 666685224843394810}
   observationAdoor: {fileID: 0}
+  keyBoxOpen: {fileID: 0}
+  keyBoxFull: {fileID: 0}
   clip:
   - {fileID: 8300000, guid: 379f63f16c251784482f05dcdc7f7af6, type: 3}
   - {fileID: 8300000, guid: 85c4ffde9d0b84d4195b3d912c199d10, type: 3}

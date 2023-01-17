@@ -10,4 +10,9 @@ public class ClickDialogueControll : MonoBehaviour
         gameData.GetComponent<GameDataControl>().PlayerMouseControllOff();
         //this.GetComponent<DialogueSystemTrigger>().enabled = true;
     }
+
+    public void ColliderOff()
+    {
+        this.GetComponent<CapsuleCollider2D>().enabled = false;
+    }
 }

@@ -248,6 +248,9 @@ MonoBehaviour:
   SlashUpWire: {fileID: 7970986775446030192}
   Circuit: {fileID: 7970986775494960763}
   machineDoor: {fileID: 0}
+  gameData: {fileID: 0}
+  ply: {fileID: 0}
+  UiTriggerOn: {fileID: 0}
   WireList: []
 --- !u!1 &7970986773410768778
 GameObject:
@@ -757,6 +760,9 @@ MonoBehaviour:
   SlashUpWire: {fileID: 7970986774617756593}
   Circuit: {fileID: 7970986775494960763}
   machineDoor: {fileID: 0}
+  gameData: {fileID: 0}
+  ply: {fileID: 0}
+  UiTriggerOn: {fileID: 0}
   WireList: []
 --- !u!1 &7970986773526506299
 GameObject:
@@ -2025,6 +2031,9 @@ MonoBehaviour:
   SlashUpWire: {fileID: 7970986774945976115}
   Circuit: {fileID: 7970986775494960763}
   machineDoor: {fileID: 0}
+  gameData: {fileID: 0}
+  ply: {fileID: 0}
+  UiTriggerOn: {fileID: 0}
   WireList: []
 --- !u!1 &7970986774617756593
 GameObject:
@@ -3050,6 +3059,9 @@ MonoBehaviour:
   SlashUpWire: {fileID: 7970986774741523693}
   Circuit: {fileID: 7970986775494960763}
   machineDoor: {fileID: 0}
+  gameData: {fileID: 0}
+  ply: {fileID: 0}
+  UiTriggerOn: {fileID: 0}
   WireList: []
 --- !u!1 &7970986775023818092
 GameObject:
@@ -3204,6 +3216,9 @@ MonoBehaviour:
   SlashUpWire: {fileID: 7970986774945976115}
   Circuit: {fileID: 7970986775494960763}
   machineDoor: {fileID: 0}
+  gameData: {fileID: 0}
+  ply: {fileID: 0}
+  UiTriggerOn: {fileID: 0}
   WireList: []
 --- !u!1 &7970986775024817493
 GameObject:
@@ -3377,6 +3392,9 @@ MonoBehaviour:
   SlashUpWire: {fileID: 7970986774419321778}
   Circuit: {fileID: 7970986775494960763}
   machineDoor: {fileID: 0}
+  gameData: {fileID: 0}
+  ply: {fileID: 0}
+  UiTriggerOn: {fileID: 0}
   WireList: []
 --- !u!1 &7970986775029434256
 GameObject:
@@ -3702,6 +3720,9 @@ MonoBehaviour:
   SlashUpWire: {fileID: 7970986773684369585}
   Circuit: {fileID: 7970986775494960763}
   machineDoor: {fileID: 0}
+  gameData: {fileID: 0}
+  ply: {fileID: 0}
+  UiTriggerOn: {fileID: 0}
   WireList: []
 --- !u!1 &7970986775259795452
 GameObject:
@@ -3951,6 +3972,9 @@ MonoBehaviour:
   SlashUpWire: {fileID: 7970986774480483585}
   Circuit: {fileID: 7970986775494960763}
   machineDoor: {fileID: 0}
+  gameData: {fileID: 0}
+  ply: {fileID: 0}
+  UiTriggerOn: {fileID: 0}
   WireList: []
 --- !u!1 &7970986775334973491
 GameObject:
