@@ -30,7 +30,9 @@ public class Drag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHand
         testPos = eventData.position - defaultPos;
         if (Mathf.Sqrt(Mathf.Pow(testPos.x, 2) + Mathf.Pow(testPos.y, 2)) > 108f)
         {
+            Instantiate(this.transform.GetChild(0), mousePos, this.transform.rotation);
             parentSlot.GetComponent<UseItem>().ThrowItem(this.transform.name);
+            
         }
         
         else
