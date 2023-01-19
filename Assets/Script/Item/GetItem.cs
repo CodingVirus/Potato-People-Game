@@ -7,6 +7,8 @@ public class GetItem : MonoBehaviour
     float MaxDistance = 15f;
     Vector3 MousePostion;
     Camera Camera;
+    Inventory inven;
+
     public GameObject ply;
     public GameObject gameData;
     public List<GameObject> ItemList = new List<GameObject>();
@@ -14,6 +16,7 @@ public class GetItem : MonoBehaviour
     private void Start()
     {
         Camera = GetComponent<Camera>();
+        inven = ply.GetComponent<Inventory>();
     }
     void Update()
     {
@@ -28,7 +31,6 @@ public class GetItem : MonoBehaviour
                 if (hit.transform.gameObject.tag == "Item")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
-                    Inventory inven = ply.GetComponent<Inventory>();
                     for (int i = 0; i < inven.slots.Count; i++)
                     {
                         if (inven.slots[i].isEmpty)
@@ -39,13 +41,13 @@ public class GetItem : MonoBehaviour
                         }
                     }
                     Invoke("PlyMoveStart", 0.5f);
+                    Destroy(hit.transform.gameObject);
                     hit.transform.GetComponent<BoxCollider2D>().enabled = false;
                 }
 
                 else if (hit.transform.gameObject.name == "Drug Combiner")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
-                    Inventory inven = ply.GetComponent<Inventory>();
                     hit.transform.GetChild(0).gameObject.SetActive(false);
                     for (int i = 0; i < inven.slots.Count; i++)
                     {
@@ -63,7 +65,6 @@ public class GetItem : MonoBehaviour
                 else if (hit.transform.gameObject.name == "key box (open)")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
-                    Inventory inven = ply.GetComponent<Inventory>();
                     for (int i = 0; i < inven.slots.Count; i++)
                     {
                         if (inven.slots[i].isEmpty)
@@ -82,8 +83,8 @@ public class GetItem : MonoBehaviour
 
                 else if (hit.transform.gameObject.tag == "Ladder")
                 {
+                    int count = 0;
                     ply.GetComponent<PlayerMouseControll>().StopMove();
-                    Inventory inven = ply.GetComponent<Inventory>();
                     for (int i = 0; i < inven.slots.Count; i++)
                     {
                         if (inven.slots[i].isEmpty)
@@ -92,10 +93,23 @@ public class GetItem : MonoBehaviour
                             inven.slots[i].isEmpty = false;
                             break;
                         }
+
+                        else
+                            count++;
                     }
-                    Invoke("PlyMoveStart", 0.5f);
-                    //hit.transform.GetComponent<BoxCollider2D>().enabled = false;
-                    hit.transform.gameObject.SetActive(false);
+
+                    if (count >= inven.slots.Count)
+                    {
+                        Debug.Log("Pull!!!");
+                        Invoke("PlyMoveStart", 0.5f);
+                    }
+
+                    else
+                    {
+                        Invoke("PlyMoveStart", 0.5f);
+                        //hit.transform.GetComponent<BoxCollider2D>().enabled = false;
+                        hit.transform.gameObject.SetActive(false);
+                    }
                 }
 
                 else if (hit.transform.gameObject.tag == "ClueyKey")
@@ -104,7 +118,6 @@ public class GetItem : MonoBehaviour
                     {
                         ply.GetComponent<PlayerMouseControll>().StopMove();
                         
-                        Inventory inven = ply.GetComponent<Inventory>();
                         for (int i = 0; i < inven.slots.Count; i++)
                         {
                             if (inven.slots[i].isEmpty)
@@ -123,7 +136,6 @@ public class GetItem : MonoBehaviour
                 else if (hit.transform.gameObject.name == "box 2_1")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
-                    Inventory inven = ply.GetComponent<Inventory>();
                     for (int i = 0; i < inven.slots.Count; i++)
                     {
                         if (inven.slots[i].isEmpty)
@@ -140,7 +152,6 @@ public class GetItem : MonoBehaviour
                 else if (hit.transform.gameObject.name == "casket 1_2")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
-                    Inventory inven = ply.GetComponent<Inventory>();
                     for (int i = 0; i < inven.slots.Count; i++)
                     {
                         if (inven.slots[i].isEmpty)
@@ -174,7 +185,6 @@ public class GetItem : MonoBehaviour
                 else if (hit.transform.gameObject.name == "drawer 2")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
-                    Inventory inven = ply.GetComponent<Inventory>();
                     for (int i = 0; i < inven.slots.Count; i++)
                     {
                         if (inven.slots[i].isEmpty)
@@ -191,7 +201,6 @@ public class GetItem : MonoBehaviour
                 else if (hit.transform.gameObject.tag == "Gas")
                 {
                     ply.GetComponent<PlayerMouseControll>().StopMove();
-                    Inventory inven = ply.GetComponent<Inventory>();
                     for (int i = 0; i < inven.slots.Count; i++)
                     {
                         if (inven.slots[i].isEmpty)

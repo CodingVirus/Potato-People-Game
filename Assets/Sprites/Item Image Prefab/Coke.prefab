@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 5816910305916173070}
   - component: {fileID: 5816910305916173071}
   - component: {fileID: 5816910305916173068}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Coke
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,6 +144,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
       propertyPath: m_Name
       value: CFX2_PickupDiamond2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: aa3fed151f536ee49b583c6a3ac4a2e1, type: 3}
       propertyPath: m_RootOrder

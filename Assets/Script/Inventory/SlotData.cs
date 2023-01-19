@@ -6,6 +6,7 @@ using UnityEngine;
 public class SlotData : MonoBehaviour
 {
     public bool isEmpty;
+    public bool isPull = false;
     public bool usingItem = false;
     public GameObject slotObj;
 }

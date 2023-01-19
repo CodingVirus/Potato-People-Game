@@ -1,41 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UseItem : MonoBehaviour
 {
     public int num;
     public GameObject playerObj;
 
+    private Inventory inven;
+
+    private void Start()
+    {
+        inven = playerObj.GetComponent<Inventory>();
+    }
+
     public void Useitem()
     {
         num = int.Parse(this.name.Substring(this.name.IndexOf("_") + 1));
-        
+
         if (this.transform.GetChild(0).name == "Coke(Clone)")
         {
             Debug.Log("Coke!!!");
             Destroy(this.transform.GetChild(0).gameObject);
-            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
+            inven.slots[num].isEmpty = true;
         }
 
         else if (this.transform.GetChild(0).name == "Drug(Clone)")
         {
             Destroy(this.transform.GetChild(0).gameObject);
             Debug.Log(this.transform.GetChild(0).name);
-            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
+            inven.slots[num].isEmpty = true;
         }
 
         else if (this.transform.GetChild(0).name == "Lighter(Clone)")
         { 
-            if (playerObj.GetComponent<Inventory>().slots[num].usingItem == false)
+            if (inven.slots[num].usingItem == false)
             {
-                playerObj.GetComponent<Inventory>().slots[num].usingItem = true;
+                inven.slots[num].usingItem = true;
                 playerObj.transform.Find("Lighter").gameObject.SetActive(true);
             }
 
-            else if (playerObj.GetComponent<Inventory>().slots[num].usingItem == true)
+            else if (inven.slots[num].usingItem == true)
             {
-                playerObj.GetComponent<Inventory>().slots[num].usingItem = false;
+                inven.slots[num].usingItem = false;
                 playerObj.transform.Find("Lighter").gameObject.SetActive(false);
             }
         }
@@ -49,24 +57,24 @@ public class UseItem : MonoBehaviour
         {
             Debug.Log("Thorw Coke!!!");
             Destroy(this.transform.GetChild(0).gameObject);
-            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
+            inven.slots[num].isEmpty = true;
         }
 
         else
         {
             Destroy(this.transform.GetChild(0).gameObject);
-            playerObj.GetComponent<Inventory>().slots[num].isEmpty = true;
+            inven.slots[num].isEmpty = true;
         }
     }
 
     public void UseItemDialogue(string input)
     {
-        for (int i = 0; i < playerObj.GetComponent<Inventory>().slots.Count; i++)
+        for (int i = 0; i < inven.slots.Count; i++)
         {
-            if (playerObj.GetComponent<Inventory>().slots[i].isEmpty == false && playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).name == input)
+            if (inven.slots[i].isEmpty == false && inven.slots[i].slotObj.transform.GetChild(0).name == input)
             {
-                Destroy(playerObj.GetComponent<Inventory>().slots[i].slotObj.transform.GetChild(0).gameObject);
-                playerObj.GetComponent<Inventory>().slots[i].isEmpty = true;
+                Destroy(inven.slots[i].slotObj.transform.GetChild(0).gameObject);
+                inven.slots[i].isEmpty = true;
                 break;
             }
 
