@@ -8,25 +8,25 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainScene.unity
     guid: 10e9f1306f918734f8671ba6c3090e75
   - enabled: 1
     path: Assets/Scenes/BuwonScene.unity
     guid: b6e7f22617901bd4d9f573990d900e40
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/ShootingGame.unity
     guid: adfd9b94943e41243808849845b11929
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Lock.unity
     guid: b1adde5baf76e4d48bd24bab1d62d7cd
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Sokoban.unity
     guid: e4b5f1f55cd087c46b10a136699cb7c2
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/game.unity
     guid: 2e62e8d8e625541658873a4eeaf0a55d
   - enabled: 0
