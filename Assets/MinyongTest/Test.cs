@@ -29,6 +29,8 @@ public class Test : MonoBehaviour
 
     }
 
+    
+
     void Update()
     {
         if (isClicked)

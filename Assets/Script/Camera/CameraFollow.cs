@@ -14,18 +14,14 @@ public class CameraFollow : MonoBehaviour
     public float limitMinX, limitMaxX, limitMinY, limitMaxY;
     float cameraHalfWidth, cameraHalfHeight;
 
-    // Start is called before the first frame update
     void Start()
     {
         cameraTarget = GameObject.Find("Player").GetComponent<Transform>();
         cameraHalfWidth = Camera.main.aspect * Camera.main.orthographicSize;
         cameraHalfHeight = Camera.main.orthographicSize;
     }
-
-    // Update is called once per frame
     void LateUpdate()
     {
-        //cameraPosition.y = 4f;
         transform.position = Vector3.Lerp(transform.position, cameraTarget.position + cameraPosition, Time.smoothDeltaTime * cameraMoveSpeed);
 
         float clampX = Mathf.Clamp(cameraTarget.position.x + offset.x, limitMinX + cameraHalfWidth, limitMaxX - cameraHalfWidth);
