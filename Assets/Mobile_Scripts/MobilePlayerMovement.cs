@@ -7,23 +7,19 @@ public class MobilePlayerMovement : MBCharactorStat
 {
     public FixedJoystick joystickObj;
     public Button doorButton;
-    public Button interactionButton;
 
     private Teleporter destinationDoor;
-    private Animator playerAnim;
+    public Animator playerAnim;
     private CameraFollow theCamera;
 
     private void Awake()
     {
         theCamera = Camera.main.GetComponent<CameraFollow>();
-        playerAnim = this.GetComponent<Animator>();
     }
     void Update()
     {
         transform.position += new Vector3(
             joystickObj.Horizontal * moveSpeed * Time.deltaTime, 0, 0);
-
-        Vector3 changeScale = new Vector3(-1, 1, 1);
 
         if (joystickObj.Horizontal >= 1)
         {
@@ -48,10 +44,6 @@ public class MobilePlayerMovement : MBCharactorStat
             doorButton.interactable = true;
             destinationDoor = collision.GetComponent<Teleporter>();            
         }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Interaction"))
-        {
-            interactionButton.interactable = true;
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -59,10 +51,6 @@ public class MobilePlayerMovement : MBCharactorStat
         if (collision.gameObject.layer == LayerMask.NameToLayer("Door"))
         {
             doorButton.interactable = false;
-        }
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("Interaction"))
-        {
-            interactionButton.interactable = false;
         }
     }
 

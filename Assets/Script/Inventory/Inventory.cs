@@ -27,6 +27,19 @@ public class Inventory : MonoBehaviour
         }
     }
 
+    public void AddItem(GameObject item)
+    {
+        for (int i = 0; i < slots.Count; i++)
+        {
+            if (slots[i].isEmpty)
+            {
+                Instantiate(item, slots[i].slotObj.transform, false);
+                slots[i].isEmpty = false;
+                break;
+            }
+        }
+    }
+
     //public string currentItem = null;
     public bool FindItem(string itemName)
     {

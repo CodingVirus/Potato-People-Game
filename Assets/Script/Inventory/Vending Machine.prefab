@@ -11,8 +11,6 @@ GameObject:
   - component: {fileID: 8242355195736867305}
   - component: {fileID: 8242355195736867222}
   - component: {fileID: 8242355195736867220}
-  - component: {fileID: 8242355195736867223}
-  - component: {fileID: 4996992070309642054}
   m_Layer: 0
   m_Name: Vending Machine
   m_TagString: Untagged
@@ -113,34 +111,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.0510674, y: 3.9108353}
   m_EdgeRadius: 0
---- !u!114 &8242355195736867223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8242355195736867304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dc3d4ad387309d46ac460d4d8d401e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  active: 0
-  slotItem: {fileID: 6142454421711314284, guid: d0131a817c0b50b45b359c96efcd9867, type: 3}
-  ply: {fileID: 0}
-  gameData: {fileID: 0}
---- !u!114 &4996992070309642054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8242355195736867304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a611073595d83314286adbe050e40428, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ply: {fileID: 0}
-  sld: {fileID: 0}
-  item: {fileID: 0}

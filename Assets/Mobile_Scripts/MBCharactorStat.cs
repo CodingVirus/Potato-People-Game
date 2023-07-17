@@ -6,7 +6,7 @@ public class MBCharactorStat : MonoBehaviour
 {
     enum Stat
     {
-        Dead, Walk, 
+        Dead, Move, Questing, DontMove,
     };
 
     public float moveSpeed = 5f;

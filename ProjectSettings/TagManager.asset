@@ -32,6 +32,7 @@ TagManager:
   - Door
   - Item
   - Interaction
+  - Monster
   - 
   - 
   - 
@@ -49,8 +50,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Nothing
   m_SortingLayers:
   - name: Default
     uniqueID: 0

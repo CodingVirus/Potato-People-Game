@@ -286,7 +286,8 @@ GameObject:
   - component: {fileID: 7929067444644701938}
   - component: {fileID: 7929067444644701936}
   - component: {fileID: 7929067444644701950}
-  m_Layer: 0
+  - component: {fileID: 1633040727859808130}
+  m_Layer: 12
   m_Name: computer 1_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -400,6 +401,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6f57c43510e514298aa2ee42cf6482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1633040727859808130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7929067444644701940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e838f62f419041941a6a3dbe025893dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 0}
+  computerWindow: {fileID: 7227558575128664969}
 --- !u!1 &9011911528561293923
 GameObject:
   m_ObjectHideFlags: 0
@@ -3192,6 +3207,10 @@ PrefabInstance:
     - target: {fileID: 6344110995535748238, guid: cf34bd719d81c1247a053ab98943d581, type: 3}
       propertyPath: m_UiScaleMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6344110995535748238, guid: cf34bd719d81c1247a053ab98943d581, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6344110995535748238, guid: cf34bd719d81c1247a053ab98943d581, type: 3}
       propertyPath: m_ReferenceResolution.x
