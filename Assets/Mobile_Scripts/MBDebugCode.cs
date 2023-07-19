@@ -6,7 +6,8 @@ public class MBDebugCode : MonoBehaviour
 {
     delegate void DebugCode();
     DebugCode dg;
-
+    public float TimeScale = 1.0f;
+    public DialogueManager dialogueManager;
     public void print1()
     {
         Debug.Log("test!");
@@ -28,8 +29,12 @@ public class MBDebugCode : MonoBehaviour
         dg += new DebugCode(print2);
         dg += new DebugCode(print3);
 
-
-
+        
         //Time.timeScale = 0f;
+    }
+
+    private void Update()
+    {
+        Time.timeScale = TimeScale;
     }
 }

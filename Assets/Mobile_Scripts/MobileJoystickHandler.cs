@@ -6,14 +6,14 @@ using UnityEngine.UI;
 public class MobileJoystickHandler : MonoBehaviour
 {
     private bool isClicked = false;
-
     private GameObject player;
+
     public Slider sld;
-    public GameObject item;
+    //public GameObject item;
 
     private void Awake()
     {
-        player = GameObject.Find("Player");
+        player = MBGameManger.instance.GetPlayerObj();
     }
     public void OnInteractionButtonDown()
     {

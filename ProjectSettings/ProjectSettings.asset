@@ -756,7 +756,7 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLDecompressionFallback: 0
   scriptingDefineSymbols:
-    Android: TextMeshPro;USE_PHYSICS2D;UNITY_POST_PROCESSING_STACK_V2
+    Android: TextMeshPro;USE_PHYSICS2D;UNITY_POST_PROCESSING_STACK_V2;USE_ARTICY
     CloudRendering: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
     EmbeddedLinux: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
     GameCoreXboxOne: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
@@ -765,7 +765,7 @@ PlayerSettings:
     PS4: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
     PS5: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
     Stadia: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
-    Standalone: TextMeshPro;USE_PHYSICS2D;UNITY_POST_PROCESSING_STACK_V2
+    Standalone: TextMeshPro;USE_PHYSICS2D;UNITY_POST_PROCESSING_STACK_V2;USE_ARTICY
     WebGL: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
     Windows Store Apps: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
     XboxOne: TextMeshPro;UNITY_POST_PROCESSING_STACK_V2
