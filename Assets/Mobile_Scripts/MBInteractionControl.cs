@@ -9,7 +9,7 @@ public class MBInteractionControl : MonoBehaviour
     [SerializeField] private GameObject computerWindow;
     private Inventory inven;
 
-    private void Awake()
+    private void Start()
     {
         inven = MBGameManger.instance.GetPlayerObj().GetComponent<Inventory>();
     }
@@ -19,11 +19,6 @@ public class MBInteractionControl : MonoBehaviour
         computerWindow.SetActive(true);
     }
 
-    public void NpcTalkTest()
-    {
-        Input.GetKeyDown(KeyCode.Space);
-        
-    }
     public void GetItemTest()
     {
         if (computerWindow != null)

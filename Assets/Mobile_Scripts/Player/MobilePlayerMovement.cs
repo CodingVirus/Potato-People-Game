@@ -14,29 +14,15 @@ public class MobilePlayerMovement : MonoBehaviour
     public Animator playerAnim;
     private CameraFollow theCamera;
 
+    public bool isPlayerMove = true;
+
     private void Awake()
     {
         theCamera = Camera.main.GetComponent<CameraFollow>();
     }
     void Update()
     {
-        transform.position += new Vector3(
-            joystickObj.Horizontal * moveSpeed * Time.deltaTime, 0, 0);
-
-        if (joystickObj.Horizontal >= 1)
-        {
-            playerAnim.SetBool("isWalking", true);
-            this.transform.localScale = new Vector3(
-                1, this.transform.localScale.y, 1);
-        }
-        else if (joystickObj.Horizontal <= -1)
-        {
-            playerAnim.SetBool("isWalking", true);
-            this.transform.localScale = new Vector3(
-                -1, this.transform.localScale.y, 1);
-        }
-        else
-            playerAnim.SetBool("isWalking", false);
+        PlayerMovement();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -55,14 +41,39 @@ public class MobilePlayerMovement : MonoBehaviour
             doorButton.interactable = false;
         }
     }
+    
+    private void PlayerMovement()
+    {
+        transform.position += new Vector3(
+            joystickObj.Horizontal * moveSpeed * Time.deltaTime, 0, 0);
 
+        if (joystickObj.Horizontal >= 1 && isPlayerMove == true)
+        {
+            playerAnim.SetBool("isWalking", true);
+            this.transform.localScale = new Vector3(
+                1, this.transform.localScale.y, 1);
+        }
+        else if (joystickObj.Horizontal <= -1 && isPlayerMove == true)
+        {
+            playerAnim.SetBool("isWalking", true);
+            this.transform.localScale = new Vector3(
+                -1, this.transform.localScale.y, 1);
+        }
+        else
+        {
+            playerAnim.SetBool("isWalking", false);
+        }
+    }
     public void PlayerMoveStop()
     {
+        isPlayerMove = false;
         moveSpeed = 0f;
     }
 
     public void PlayerMoveStart()
     {
+        isPlayerMove = true;
+ 
         moveSpeed = 5f;
     }
 

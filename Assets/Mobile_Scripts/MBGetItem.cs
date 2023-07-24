@@ -26,7 +26,6 @@ public class MBGetItem : MonoBehaviour
         {
             getItem = collision.GetComponent<MBInteractionControl>();
             interactionButton.interactable = true;
-            interactionButton.onClick.AddListener(() => { getItem.NpcTalkTest(); });
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -58,7 +57,6 @@ public class MBGetItem : MonoBehaviour
     {
         if (buttonClick)
         {
-            MBGameManger.instance.GetPlayerObj().GetComponent<MobilePlayerMovement>().PlayerMoveStop();
             sld.value += Time.deltaTime;
             if (sld.value >= 1.0f)
             {
@@ -66,11 +64,10 @@ public class MBGetItem : MonoBehaviour
                 getItem.GetItemTest();
                 
                 buttonClick = false;
+
+                MBGameManger.instance.GetPlayerObj().
+                    GetComponent<MobilePlayerMovement>().PlayerMoveStart();
             }
-        }
-        else
-        {
-            MBGameManger.instance.GetPlayerObj().GetComponent<MobilePlayerMovement>().PlayerMoveStart();
         }
     }
 }

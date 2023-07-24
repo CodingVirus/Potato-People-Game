@@ -35,6 +35,6 @@ public class MBDebugCode : MonoBehaviour
 
     private void Update()
     {
-        Time.timeScale = TimeScale;
+        //Time.timeScale = TimeScale;
     }
 }
