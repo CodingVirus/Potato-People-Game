@@ -16,7 +16,8 @@ public class MBDialogueManager : MonoBehaviour
     public UnityEvent DialogueEndEvents;
 
     public GameObject conversationUI;
-    public GameObject testUI;
+    public GameObject noticeUI;
+    public GameObject noticeUI2;
 
     public Image actorImage;
 
@@ -28,13 +29,13 @@ public class MBDialogueManager : MonoBehaviour
         int i = 0;
         while (true)
         {
-            if (i >= copyConversation[count].text.Length)
+            if (i >= copyConversation[count].text[0].Length)
             {
                 i = 0;
                 break;
             }
                 
-            txt.text += copyConversation[count].text[i];
+            txt.text += copyConversation[count].text[0][i];
             i++;
             yield return new WaitForSeconds(waitSecond);
         }
@@ -42,27 +43,28 @@ public class MBDialogueManager : MonoBehaviour
         yield return true;
     }
 
+    private void DialogueStart()
+    {
+        actorImage.sprite = copyConversation[count].whoIsTalk.img;
+        ClearConversation();
+        StartCoroutine("Test");
+        copyConversation[count].eventSystem.Invoke();
+    }
     public void StartConversation()
     {
         DialogueStartEvents.Invoke();
-        testUI.SetActive(false);
+        noticeUI.SetActive(false);
         ShowTriggerUI();
         
-        if (copyConversation[count].test == null)
+        if (copyConversation[count].whoIsTalk == null)
         {
             txt.color = Color.red;
-            actorImage.sprite = copyConversation[count].test.img;
-            ClearConversation();
-            StartCoroutine("Test");
-            copyConversation[count].eventSystem.Invoke();
+            DialogueStart();
         }
         else
         {
-            actorImage.sprite = copyConversation[count].test.img;
-            txt.color = copyConversation[count].test.textColor;
-            ClearConversation();
-            StartCoroutine("Test");
-            copyConversation[count].eventSystem.Invoke();
+            txt.color = copyConversation[count].whoIsTalk.textColor;
+            DialogueStart();
         }
     }
     public void NextConversation()
@@ -76,21 +78,15 @@ public class MBDialogueManager : MonoBehaviour
             ExitConversation();
         }
 
-        if (copyConversation[count].test == null)
+        if (copyConversation[count].whoIsTalk == null)
         {
             txt.color = Color.red;
-            actorImage.sprite = copyConversation[count].test.img;
-            ClearConversation();
-            StartCoroutine("Test");
-            copyConversation[count].eventSystem.Invoke();
+            DialogueStart();
         }
         else
         {
-            actorImage.sprite = copyConversation[count].test.img;
-            txt.color = copyConversation[count].test.textColor;
-            ClearConversation();
-            StartCoroutine("Test");
-            copyConversation[count].eventSystem.Invoke();
+            txt.color = copyConversation[count].whoIsTalk.textColor;
+            DialogueStart();
         }
     }
     private void EndConversation()

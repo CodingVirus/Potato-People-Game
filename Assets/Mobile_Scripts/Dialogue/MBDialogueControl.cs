@@ -1,5 +1,8 @@
+using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -8,11 +11,11 @@ using UnityEngine.UI;
 [System.Serializable]
 public class Conversation
 {
-    public MBDialogueSetting test;
-    [TextArea(1, 3)]
-    public string text;
-    [Header("Events")]
-    public UnityEvent eventSystem;
+    public MBDialogueSetting whoIsTalk = null;
+
+    public bool isOption = false;
+    [TextArea(1, 3)] public List<string> text;
+    [Header("Events")] public UnityEvent eventSystem;
 }
 
 [RequireComponent(typeof(MBDialogueSetting))]
@@ -22,7 +25,19 @@ public class MBDialogueControl : MonoBehaviour
     public GameObject target;
     public List<Conversation> conversations;
 
-
+    public bool isTest = false;
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (isTest) 
+            {
+                dialogueManager.noticeUI2.SetActive(false);
+                dialogueManager.StartConversation();
+                isTest = false;
+            }
+        }
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == target)
@@ -32,10 +47,16 @@ public class MBDialogueControl : MonoBehaviour
                 dialogueManager.copyConversation = conversations;
                 dialogueManager.StartConversation();
             }
+            else if (this.gameObject.layer == LayerMask.NameToLayer("TestConversation"))
+            {
+                isTest = true;
+                dialogueManager.noticeUI2.SetActive(true);
+                dialogueManager.copyConversation = conversations;
+            }
             else
             {
                 dialogueManager.copyConversation = conversations;
-                dialogueManager.testUI.SetActive(true);
+                dialogueManager.noticeUI.SetActive(true);
             }
         }
     }
@@ -44,7 +65,8 @@ public class MBDialogueControl : MonoBehaviour
     {
         if (collision.gameObject == target) 
         {
-            dialogueManager.testUI.SetActive(false);
+            isTest = false;
+            dialogueManager.noticeUI.SetActive(false);
         }
     }
 }

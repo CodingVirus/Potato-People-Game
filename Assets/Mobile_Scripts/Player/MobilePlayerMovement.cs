@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class MobilePlayerMovement : MonoBehaviour
@@ -52,12 +53,18 @@ public class MobilePlayerMovement : MonoBehaviour
             playerAnim.SetBool("isWalking", true);
             this.transform.localScale = new Vector3(
                 1, this.transform.localScale.y, 1);
+
+            this.transform.GetChild(0).localScale = new Vector3(
+                0.02f, 0.02f, 0);
         }
         else if (joystickObj.Horizontal <= -1 && isPlayerMove == true)
         {
             playerAnim.SetBool("isWalking", true);
             this.transform.localScale = new Vector3(
                 -1, this.transform.localScale.y, 1);
+
+            this.transform.GetChild(0).localScale = new Vector3(
+                -0.02f, 0.02f, 0);
         }
         else
         {
@@ -66,6 +73,7 @@ public class MobilePlayerMovement : MonoBehaviour
     }
     public void PlayerMoveStop()
     {
+        joystickObj.SetInputZero();
         isPlayerMove = false;
         moveSpeed = 0f;
     }
@@ -73,7 +81,6 @@ public class MobilePlayerMovement : MonoBehaviour
     public void PlayerMoveStart()
     {
         isPlayerMove = true;
- 
         moveSpeed = 5f;
     }
 

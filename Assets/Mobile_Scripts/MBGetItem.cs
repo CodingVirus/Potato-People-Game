@@ -21,12 +21,6 @@ public class MBGetItem : MonoBehaviour
             interactionButton.interactable = true;
             //interactionButton.onClick.AddListener(() => { getItem.GetItemTest(); }); 
         }
-
-        else if (collision.gameObject.layer == LayerMask.NameToLayer("NPC"))
-        {
-            getItem = collision.GetComponent<MBInteractionControl>();
-            interactionButton.interactable = true;
-        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
