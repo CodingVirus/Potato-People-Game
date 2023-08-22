@@ -22,20 +22,21 @@ public class MBDialogueManager : MonoBehaviour
     public Image actorImage;
 
     [HideInInspector] public int count = 0;
+    public int spaceCount = 0;
     public float waitSecond = 0.08f;
     
-    IEnumerator Test()
+    IEnumerator TextEffect()
     {
         int i = 0;
         while (true)
         {
-            if (i >= copyConversation[count].text[0].Length)
+            if (i >= copyConversation[count].text.Length)
             {
                 i = 0;
                 break;
             }
                 
-            txt.text += copyConversation[count].text[0][i];
+            txt.text += copyConversation[count].text[i];
             i++;
             yield return new WaitForSeconds(waitSecond);
         }
@@ -47,7 +48,7 @@ public class MBDialogueManager : MonoBehaviour
     {
         actorImage.sprite = copyConversation[count].whoIsTalk.img;
         ClearConversation();
-        StartCoroutine("Test");
+        StartCoroutine("TextEffect");
         copyConversation[count].eventSystem.Invoke();
     }
     public void StartConversation()
@@ -70,7 +71,7 @@ public class MBDialogueManager : MonoBehaviour
     public void NextConversation()
     {
         count++;
-        StopCoroutine("Test");
+        StopCoroutine("TextEffect");
 
         if (count >= copyConversation.Count) 
         {
@@ -89,15 +90,6 @@ public class MBDialogueManager : MonoBehaviour
             DialogueStart();
         }
     }
-    private void EndConversation()
-    {
-        
-    }
-    private void CurrentConversation()
-    {
-
-    }
-    
     private void ClearConversation()
     {
         //copyConversation.Clear();
@@ -108,6 +100,7 @@ public class MBDialogueManager : MonoBehaviour
         DialogueEndEvents.Invoke();
         ClearConversation();
         count = 0;
+        spaceCount = 0;
         conversationUI.SetActive(false);
     }
     private void ShowTriggerUI()

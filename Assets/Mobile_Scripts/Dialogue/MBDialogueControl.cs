@@ -13,8 +13,7 @@ public class Conversation
 {
     public MBDialogueSetting whoIsTalk = null;
 
-    public bool isOption = false;
-    [TextArea(1, 3)] public List<string> text;
+    [TextArea(1, 3)] public string text;
     [Header("Events")] public UnityEvent eventSystem;
 }
 
@@ -25,16 +24,32 @@ public class MBDialogueControl : MonoBehaviour
     public GameObject target;
     public List<Conversation> conversations;
 
-    public bool isTest = false;
+    public bool isConversationStart = false;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (isTest) 
+            if (isConversationStart) 
             {
-                dialogueManager.noticeUI2.SetActive(false);
-                dialogueManager.StartConversation();
-                isTest = false;
+                if (dialogueManager.spaceCount > 0)
+                {
+                    dialogueManager.NextConversation();
+                }
+                else
+                {
+                    dialogueManager.spaceCount++;
+                    dialogueManager.noticeUI2.SetActive(false);
+                    dialogueManager.StartConversation();
+                }
+                //isConversationStart = false;
+            }
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            if (isConversationStart) 
+            {
+                dialogueManager.ExitConversation();
             }
         }
     }
@@ -49,7 +64,7 @@ public class MBDialogueControl : MonoBehaviour
             }
             else if (this.gameObject.layer == LayerMask.NameToLayer("TestConversation"))
             {
-                isTest = true;
+                isConversationStart = true;
                 dialogueManager.noticeUI2.SetActive(true);
                 dialogueManager.copyConversation = conversations;
             }
@@ -65,7 +80,7 @@ public class MBDialogueControl : MonoBehaviour
     {
         if (collision.gameObject == target) 
         {
-            isTest = false;
+            isConversationStart = false;
             dialogueManager.noticeUI.SetActive(false);
         }
     }

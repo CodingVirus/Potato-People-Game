@@ -9881,27 +9881,21 @@ MonoBehaviour:
   target: {fileID: 1482609144}
   conversations:
   - whoIsTalk: {fileID: 454253263}
-    isOption: 1
-    text:
-    - "\uC548\uB155\uD558\uC138\uC694."
+    text: "\uC548\uB155\uD558\uC138\uC694"
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 454253263}
-    isOption: 0
-    text:
-    - "\uB9CC\uB098\uC11C \uBC18\uAC11\uC2B5\uB2C8\uB2E4."
+    text: "\uC81C \uC774\uB984\uC740"
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 454253263}
-    isOption: 0
-    text:
-    - "\uC774\uAC74 \uB300\uD654 \uD14C\uC2A4\uD2B8\uC785\uB2C8\uB2E4."
+    text: "\uC774\uBBFC\uC6A9 \uC785\uB2C8\uB2E4."
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
-  isTest: 0
+  isConversationStart: 0
 --- !u!114 &454253263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13632,6 +13626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialogue
       objectReference: {fileID: 0}
+    - target: {fileID: 5973500425789443457, guid: 8f0bde2bd7bf18a4688b0084d58b27ed, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6439245163419247489, guid: 8f0bde2bd7bf18a4688b0084d58b27ed, type: 3}
       propertyPath: endEvents.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -15253,13 +15251,11 @@ MonoBehaviour:
   target: {fileID: 1482609144}
   conversations:
   - whoIsTalk: {fileID: 659817489}
-    isOption: 0
-    text:
-    - "\uC0DD\uAC01\uBCF4\uB2E4 \uC624\uB798 \uAC78\uB9AC\uACA0\uAD70"
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
-  isTest: 0
+  isConversationStart: 0
 --- !u!114 &659817489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18484,41 +18480,31 @@ MonoBehaviour:
   target: {fileID: 1482609144}
   conversations:
   - whoIsTalk: {fileID: 804827087}
-    isOption: 0
-    text:
-    - "\uD14C\uC2A4\uD2B8 \uB300\uD6541"
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 804827087}
-    isOption: 0
-    text:
-    - "\u3145\u3137\u3134\u3145\u3137\u3134\u3145\u3134"
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 804827087}
-    isOption: 0
-    text:
-    - "\uD14C\uC2A4\uD2B8 \uB300\uD6542"
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 1482609155}
-    isOption: 0
-    text:
-    - testestests
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 1482609155}
-    isOption: 0
-    text:
-    - fgdfgfdgfdgfdgfdg
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
-  isTest: 0
+  isConversationStart: 0
 --- !u!114 &804827087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55401,789 +55387,56 @@ MonoBehaviour:
   target: {fileID: 1482609144}
   conversations:
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
   - whoIsTalk: {fileID: 0}
-    isOption: 0
-    text:
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
-    - 
+    text: 
     eventSystem:
       m_PersistentCalls:
         m_Calls: []
-  isTest: 0
+  isConversationStart: 0
 --- !u!114 &1670789331564565116
 MonoBehaviour:
   m_ObjectHideFlags: 0
