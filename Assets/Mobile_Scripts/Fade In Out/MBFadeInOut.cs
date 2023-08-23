@@ -14,7 +14,7 @@ public class MBFadeInOut : MonoBehaviour
         {
             if (fadeImage.color.a >= 1.0f)
                 break;
-            fadeImage.color += new Color(0, 0, 0, 0.01f);
+            fadeImage.color += new Color(0, 0, 0, 2 * Time.deltaTime);
             yield return new WaitForSeconds(fadeDelay);
         }
         
@@ -26,7 +26,7 @@ public class MBFadeInOut : MonoBehaviour
         {
             if (fadeImage.color.a <= 0f) 
                 break;
-            fadeImage.color -= new Color(0, 0, 0, 0.01f);
+            fadeImage.color -= new Color(0, 0, 0, 2 * Time.deltaTime);
             yield return new WaitForSeconds(fadeDelay);
         }
         gameObject.SetActive(false);

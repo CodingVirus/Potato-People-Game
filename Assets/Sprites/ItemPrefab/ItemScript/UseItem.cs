@@ -15,6 +15,10 @@ public class UseItem : MonoBehaviour
         inven = playerObj.GetComponent<Inventory>();
     }
 
+    public void AddItem(GameObject item)
+    {
+        inven.AddItem(item);
+    }
     public void Useitem()
     {
         num = int.Parse(this.name.Substring(this.name.IndexOf("_") + 1));

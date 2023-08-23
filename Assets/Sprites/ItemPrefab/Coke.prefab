@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5287861049055998888}
   - component: {fileID: 4327169082430505354}
   - component: {fileID: 8243596824621877365}
-  - component: {fileID: 1483887790664706206}
+  - component: {fileID: 1030209036253371433}
   m_Layer: 5
   m_Name: Coke
   m_TagString: Untagged
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1483887790664706206
+--- !u!114 &1030209036253371433
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,6 +145,18 @@ PrefabInstance:
     - target: {fileID: 5816910305916173069, guid: c0d74f088a6c8604c830effc17d20941, type: 3}
       propertyPath: m_Name
       value: Coke
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816910305916173070, guid: c0d74f088a6c8604c830effc17d20941, type: 3}
+      propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816910305916173070, guid: c0d74f088a6c8604c830effc17d20941, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816910305916173071, guid: c0d74f088a6c8604c830effc17d20941, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d74f088a6c8604c830effc17d20941, type: 3}

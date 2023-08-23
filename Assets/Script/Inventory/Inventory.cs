@@ -40,7 +40,6 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    //public string currentItem = null;
     public bool FindItem(string itemName)
     {
         bool checkItem = false;
@@ -53,14 +52,14 @@ public class Inventory : MonoBehaviour
         }
         return checkItem;
     }
-    void OnEnable()
-    {
-        Lua.RegisterFunction("FindItem", this, SymbolExtensions.GetMethodInfo(() => FindItem(string.Empty)));
-        //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
-    }
+    //void OnEnable()
+    //{
+    //    Lua.RegisterFunction("FindItem", this, SymbolExtensions.GetMethodInfo(() => FindItem(string.Empty)));
+    //    //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
+    //}
 
-    void OnDisable()
-    {
-        Lua.UnregisterFunction("FindItem");
-    }
+    //void OnDisable()
+    //{
+    //    Lua.UnregisterFunction("FindItem");
+    //}
 }
