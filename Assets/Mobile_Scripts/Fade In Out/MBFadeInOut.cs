@@ -7,6 +7,29 @@ public class MBFadeInOut : MonoBehaviour
 {
     public Image fadeImage;
     public float fadeDelay = 0.01f;
+    IEnumerator FadeIn()
+    {
+        while (fadeImage.color.a <= 1.0f)
+        {
+            if (fadeImage.color.a >= 1.0f)
+                break;
+            fadeImage.color += new Color(0, 0, 0, 2 * Time.deltaTime);
+            yield return new WaitForSeconds(fadeDelay);
+        }
+    }
+
+    IEnumerator FadeOut()
+    {
+        while (fadeImage.color.a >= 0f)
+        {
+            if (fadeImage.color.a <= 0f)
+                break;
+            fadeImage.color -= new Color(0, 0, 0, 2 * Time.deltaTime);
+            yield return new WaitForSeconds(fadeDelay);
+        }
+        gameObject.SetActive(false);
+    }
+
     IEnumerator FadeInOut()
     {
         // Fade In
@@ -36,5 +59,17 @@ public class MBFadeInOut : MonoBehaviour
     {
         gameObject.SetActive(true);
         StartCoroutine("FadeInOut");
+    }
+
+    public void FadeInStart() 
+    {
+        gameObject.SetActive(true);
+        StartCoroutine("FadeIn");
+    }
+
+    public void FadeOutStart()
+    {
+        gameObject.SetActive(true);
+        StartCoroutine("FadeOut");
     }
 }

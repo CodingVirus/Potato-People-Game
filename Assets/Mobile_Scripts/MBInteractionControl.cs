@@ -7,6 +7,7 @@ public class MBInteractionControl : MonoBehaviour
 {
     [SerializeField] private GameObject Item;
     [SerializeField] private GameObject computerWindow;
+    [SerializeField] private GameObject hide;
     private Inventory inven;
 
     private void Start()
@@ -24,6 +25,10 @@ public class MBInteractionControl : MonoBehaviour
         if (computerWindow != null)
         {
             computerWindow.SetActive(true);
+        }
+        else if (hide != null)
+        {
+            GetComponent<MBHide>().HidePlayer();
         }
         else
         {            

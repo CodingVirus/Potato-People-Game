@@ -12,23 +12,10 @@ public class BlurControll : MonoBehaviour
     float time = 0f;
     float F_time = 2.5f;
     float count = 0f;
-    private void Start()
-    {
-        //weight = test.GetComponent<Volume>().weight;
-    }
     public void BlurStart()
     {
         StartCoroutine(BlurIn());
-
     }
-
-    private void Update()
-    {
-        //Debug.Log(test.GetComponent<Volume>().weight);
-        //Debug.Log(time);
-        //Debug.Log(count);
-    }
-
     IEnumerator BlurIn()
     {
         time = 0f;
@@ -41,18 +28,11 @@ public class BlurControll : MonoBehaviour
 
         if (count > 1f)
         {
-            fade.GetComponent<FadeScript>().FadeIn();
+            fade.GetComponent<MBFadeInOut>().FadeStart();
 
-            yield return new WaitForSeconds(2f);
-            this.GetComponent<PlayerTeleport>().SceneTeleport();
+            yield return new WaitForSeconds(1.5f);
+            this.GetComponent<MobilePlayerMovement>().SceneTeleport();
             volume.GetComponent<Volume>().weight = 0f;
-
-            yield return new WaitForSeconds(2f);
-            fade.GetComponent<FadeScript>().FadeOut();
-
-            yield return new WaitForSeconds(2f);
-            gameData.GetComponent<GameDataControl>().PlayerMouseControllOn();
-            this.GetComponent<PlayerMouseControll>().StartMove();
 
             yield break;
         }

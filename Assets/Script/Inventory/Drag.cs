@@ -2,42 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Drag : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    public static Vector2 defaultPos;
-    public Vector2 testPos;
-    GameObject parentSlot;
+    [HideInInspector]public Transform parentAfterDrag;
     void IBeginDragHandler.OnBeginDrag(PointerEventData eventData)
-    {
-        defaultPos = this.transform.position;
-        parentSlot = this.transform.parent.gameObject;
-        //Debug.Log("Lo1!!!");
+    {  
+        parentAfterDrag = transform.parent;
+        transform.SetParent(transform.root);
+        transform.SetAsLastSibling();
+        GetComponent<Image>().raycastTarget = false;
     }
 
     void IDragHandler.OnDrag(PointerEventData eventData)
     {
-        Vector2 currentPos = eventData.position;
-        this.transform.position = currentPos;
-
-        //Debug.Log(parentSlot.name);
+        transform.position = Input.mousePosition;
     }
 
     void IEndDragHandler.OnEndDrag(PointerEventData eventData)
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //Debug.Log(eventData.position - defaultPos);
-        testPos = eventData.position - defaultPos;
-        if (Mathf.Sqrt(Mathf.Pow(testPos.x, 2) + Mathf.Pow(testPos.y, 2)) > 108f)
-        {
-            Instantiate(this.transform.GetChild(0), mousePos, this.transform.rotation);
-            parentSlot.GetComponent<UseItem>().ThrowItem(this.transform.name);
-            
-        }
-        
-        else
-        {
-            this.transform.position = defaultPos;
-        }
+        transform.SetParent(parentAfterDrag);
+        GetComponent<Image>().raycastTarget = true;
     }
 }

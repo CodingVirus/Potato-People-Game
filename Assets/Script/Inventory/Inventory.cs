@@ -11,8 +11,6 @@ public class Inventory : MonoBehaviour
     private int maxSlot = 4;
     public GameObject slotPrefab;
 
-    //public bool usingItem = false;
-
     private void Start()
     {
         for (int i = 0; i < maxSlot; i++)
@@ -52,14 +50,4 @@ public class Inventory : MonoBehaviour
         }
         return checkItem;
     }
-    //void OnEnable()
-    //{
-    //    Lua.RegisterFunction("FindItem", this, SymbolExtensions.GetMethodInfo(() => FindItem(string.Empty)));
-    //    //Lua.RegisterFunction("AddOne", this, SymbolExtensions.GetMethodInfo(() => AddOne((double)0)));
-    //}
-
-    //void OnDisable()
-    //{
-    //    Lua.UnregisterFunction("FindItem");
-    //}
 }

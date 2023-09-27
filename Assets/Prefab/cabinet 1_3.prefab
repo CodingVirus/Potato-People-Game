@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 6756852288972481063}
   - component: {fileID: 6756852288972481057}
   - component: {fileID: 6756852288972481058}
-  m_Layer: 0
+  - component: {fileID: 462456958231037706}
+  - component: {fileID: 4945356415534411288}
+  m_Layer: 12
   m_Name: cabinet 1_3
   m_TagString: Hide
   m_Icon: {fileID: 0}
@@ -76,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: bbad2fc5eca35c4419f2d278aad70b39, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -126,6 +128,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa6f57c43510e514298aa2ee42cf6482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &462456958231037706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756852288972481061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecccf433c21c1a4392911a83d265975, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4945356415534411288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6756852288972481061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e838f62f419041941a6a3dbe025893dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 0}
+  computerWindow: {fileID: 0}
+  hide: {fileID: 6756852288972481061}
 --- !u!1 &6756852290519799345
 GameObject:
   m_ObjectHideFlags: 0

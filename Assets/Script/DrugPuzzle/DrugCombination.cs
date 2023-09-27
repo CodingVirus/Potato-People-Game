@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class DrugCombination : MonoBehaviour
 {
-    public GameObject three, four, five, notice;
-    public GameObject threeSprite, fourSprite, fiveSprite;
-    public GameObject drugCombinerPlayerObj;
-    public GameObject drugItem;
-    public GameObject gameData;
-    public GameObject completeDrug;
+    [SerializeField] private GameObject three, four, five, notice;
+    [SerializeField] private GameObject threeSprite, fourSprite, fiveSprite;
+    [SerializeField] private GameObject drugCombinerPlayerObj;
+    [SerializeField] private GameObject drugItem;
+    [SerializeField] private GameObject gameData;
+    [SerializeField] private GameObject completeDrug;
 
     public Button fourButton;
 
@@ -211,20 +211,8 @@ public class DrugCombination : MonoBehaviour
             notice.GetComponent<Text>().text = "Success!!!";
             Invoke("NoticeInitialization", 1.0f);
 
-            completeDrug.SetActive(true);
-            completeDrug.transform.parent.gameObject.GetComponent<BoxCollider2D>().enabled = true;
-
             Inventory inven = drugCombinerPlayerObj.GetComponent<Inventory>();
-            for (int i = 0; i < inven.slots.Count; i++)
-            {
-                if (inven.slots[i].isEmpty)
-                {
-                    Instantiate(drugItem, inven.slots[i].slotObj.transform, false);
-                    inven.slots[i].isEmpty = false;
-                    break;
-                }
-            }
-            
+            inven.AddItem(drugItem);
         }
 
         else
@@ -237,8 +225,5 @@ public class DrugCombination : MonoBehaviour
     public void ExitUI()
     {
         this.transform.parent.gameObject.SetActive(false);
-        //this.transform.parent.parent.GetComponent<PIckUp>().active = false;
-        //drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().target = drugCombinerPlayerObj.transform.position;
-        //drugCombinerPlayerObj.GetComponent<PlayerMouseControll>().StartMove();
     }
 }

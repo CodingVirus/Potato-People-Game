@@ -5,7 +5,7 @@ using UnityEngine;
 public class MBMonsterMovement : MonoBehaviour
 {
     private GameObject player;
-    [SerializeField] private float moveSpeed = 2.0f;
+    [SerializeField] private float moveSpeed = 5.0f;
 
     private void Awake()
     {
