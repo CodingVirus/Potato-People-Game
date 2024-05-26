@@ -61,7 +61,11 @@ sysinfo.txt
 *.unitypackage
 *.app
 
+# ignore png
 *.png
+*.png.meta
+*.psb
+* psb.meta
 
 # Crashlytics generated file
 crashlytics-build.properties
