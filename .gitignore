@@ -51,6 +51,12 @@ ExportedObj/
 # Unity3D generated file on crash reports
 sysinfo.txt
 
+# ignore png
+*.png
+*.png.meta
+*.psb
+* psb.meta
+
 # Builds
 *.apk
 *.unitypackage
